@@ -1,4 +1,3 @@
-// @ts-check
 export default {
     /** Wether warnings are critical. If true, warnings are treated as errors. Defaults to false. */
     WARNINGS_ARE_CRITICAL: false,

@@ -1,4 +1,3 @@
-// @ts-check
 import Logger from '../interface/Logger.js';
 
 export default class ConsoleLogger extends Logger {

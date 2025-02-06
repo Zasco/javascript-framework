@@ -1,4 +1,3 @@
-// @ts-check
 export default class Logger {
     constructor() {
         if (this.constructor === Logger) throw new Error(`Cannot instantiate abstract ${this.constructor.name} class directly.`);

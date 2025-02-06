@@ -1,4 +1,3 @@
-// @ts-check
 import ErrorHandler from "./ErrorHandler.js";
 
 import Logger from "../interface/Logger.js";
