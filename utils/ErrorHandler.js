@@ -175,4 +175,16 @@ export default {
             rethrow,
         );
     },
+
+    /**
+     * Returns a standardized message with subject.
+     * 
+     * @since ${NEXT_VERSION}
+     * @param {string} message The message to display.
+     * @param {string} subject The subject of the message.
+     * @returns {string}
+     */
+    getStdSubjectMessage(message, subject) {
+        return `${message} : ${subject}`;
+    },
 };
