@@ -2,15 +2,9 @@ import ErrorHandler from "./ErrorHandler.js";
 
 import Logger from "../interface/Logger.js";
 
-export default {
-    LOG_LEVELS: {
-        DEBUG: 0,
-        INFO: 1,
-        WARNING: 2,
-        ERROR: 3,
-        LOG: 4,
-    },
+import LOG_LEVELS from '../config/LogLevelsConfig.js';
 
+export default {
     /** @type {Logger[]} The list of registered logger instances. */
     loggers: [],
 
@@ -41,7 +35,7 @@ export default {
      * @param {string|undefined} summaryMessage The summary message to display in the VSCode window. Defaults to the first line of the message.
      * @returns {boolean} If the message was displayed successfully in every output.
      */
-    fullDisplay(message, level = this.LOG_LEVELS.LOG, summaryMessage = undefined) {
+    fullDisplay(message, level = LOG_LEVELS.LOG, summaryMessage = undefined) {
         try {
             if (!summaryMessage) summaryMessage = String(message); // Only get first line here...
             
@@ -49,7 +43,7 @@ export default {
             
             return true;
         } catch (error) {
-            this.log(`Error while doing a "full display" of "${message}": ${error.message}`, this.LOG_LEVELS.ERROR);
+            this.log(`Error while doing a "full display" of "${message}": ${error.message}`, LOG_LEVELS.ERROR);
             return false;
         }
     },
@@ -59,26 +53,26 @@ export default {
      * @param {*} message The message to log.
      * @param {number} level The log level. Defaults to LOG.
      */
-    log(message, level = this.LOG_LEVELS.LOG) {
+    log(message, level = LOG_LEVELS.LOG) {
         let logFunction;
         switch (level) {
-            case this.LOG_LEVELS.DEBUG:
+            case LOG_LEVELS.DEBUG:
                 logFunction = console.debug;
                 break;
 
-            case this.LOG_LEVELS.INFO:
+            case LOG_LEVELS.INFO:
                 logFunction = console.info;
                 break;
 
-            case this.LOG_LEVELS.WARNING:
+            case LOG_LEVELS.WARNING:
                 logFunction = console.warn;
                 break;
 
-            case this.LOG_LEVELS.ERROR:
+            case LOG_LEVELS.ERROR:
                 logFunction = console.error;
                 break;
                 
-            case this.LOG_LEVELS.LOG:
+            case LOG_LEVELS.LOG:
             default:
                 logFunction = console.log;
                 break;
