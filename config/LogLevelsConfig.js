@@ -1,8 +1,10 @@
 /**
+ * @since ${NEXT_VERSION}
  * @typedef {number} LogLevel
  */
 
 /**
+ * @since ${NEXT_VERSION}
  * @typedef {{
  *  DEBUG: LogLevel, 
  *  INFO: LogLevel, 
