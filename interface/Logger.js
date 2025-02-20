@@ -1,8 +1,6 @@
 import ErrorUtils from "../utils/ErrorUtils.js";
 
-/**
- * @typedef {import('../config/LogLevelsConfig.js').LogLevel} LogLevel
- */
+/** @typedef {import('../config/LogLevelsConfig.js').LogLevel} LogLevel */
 
 export default class Logger {
     constructor() {
@@ -11,6 +9,7 @@ export default class Logger {
 
     /**
      * Logs a message to the output.
+     * 
      * @abstract
      * @param {*} message The message to log.
      * @param {LogLevel} level The log level.

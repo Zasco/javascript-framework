@@ -11,6 +11,7 @@ export default {
     
     /**
      * Creates a new error with a cause.
+     * 
      * @param {string} errorMessage The error message.
      * @param {Error} causingError The error that caused this error.
      * @returns {Error} The new error with a cause.
@@ -23,6 +24,7 @@ export default {
 
     /**
      * Builds a consolidated error message including all causes
+     * 
      * @param {Error} error The error to process
      * @returns {string} Consolidated error message
      */
@@ -68,6 +70,7 @@ export default {
 
     /**
      * Handles an error and displays it appropriately.
+     * 
      * @param {Error} handledError The error to handle.
      * @param {number} [level] The failure level (error or warning). Defaults to ERROR.
      * @param {boolean} [rethrow] Whether to rethrow the error after handling. Only applies to ERROR.
@@ -111,6 +114,7 @@ export default {
 
     /**
     * Runs a function with warning/error handling.
+    * 
     * @param {() => (* | Promise<*>)} fn The function to execute.
     * @param {string} message The message if the function fails.
     * @param {number} [level] The error level (WARNING or ERROR).
@@ -145,6 +149,7 @@ export default {
 
     /**
      * Runs a function with warning handling. Never rethrows and always returns a fallback value on failure.
+     * 
      * @param {() => (* | Promise<*>)} fn The function to execute.
      * @param {string} message The warning message if the function fails.
      * @param {*} [fallbackValue] The value to return on failure.
@@ -162,6 +167,7 @@ export default {
 
     /**
      * Runs a function with error handling.
+     * 
      * @param {() => (* | Promise<*>)} fn The function to execute.
      * @param {string} message The error message if the function fails.
      * @param {boolean} [rethrow] Whether to rethrow the error.

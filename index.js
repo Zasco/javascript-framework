@@ -7,9 +7,7 @@ import LogHelper from './utils/LogHelper.js';
 import Logger from './interface/Logger.js';
 import ConsoleLogger from './entity/ConsoleLogger.js';
 
-/**
- * @typedef {import('./config/LogLevelsConfig.js').LogLevel} LogLevel
- */
+/** @typedef {import('./config/LogLevelsConfig.js').LogLevel} LogLevel */
 
 export {
     // Config

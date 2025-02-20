@@ -10,6 +10,7 @@ export default {
 
     /**
      * Registers a logger instance.
+     * 
      * @param {Logger} logger The logger instance to register.
      */
     registerLogger(logger) {
@@ -31,6 +32,7 @@ export default {
     /**
      * Displays a message in the console, the output and the VSCode window.
      * @param {*} message The message to display.
+     * 
      * @param {number} level The log level. Defaults to LOG.
      * @param {string|undefined} summaryMessage The summary message to display in the VSCode window. Defaults to the first line of the message.
      * @returns {boolean} If the message was displayed successfully in every output.
@@ -50,6 +52,7 @@ export default {
     
     /**
      * Logs a message to the console with the extension log prefix.
+     * 
      * @param {*} message The message to log.
      * @param {number} level The log level. Defaults to LOG.
      */
@@ -83,6 +86,7 @@ export default {
     
     /**
      * Outputs a message to the the registered loggers.
+     * 
      * @param {*} message The message to output.
      * @returns {boolean} If the message was output successfully.
      */
@@ -100,6 +104,7 @@ export default {
 
     /**
      * Exposes an object.
+     * 
      * @param {*} obj The object to expose.
      * @returns {object} An object containing the constructor, prototype, properties, descriptors, toString, and type of the exposed object.
      */
