@@ -5,13 +5,7 @@
 
 /**
  * @since ${NEXT_VERSION}
- * @typedef {{
- *  DEBUG: LogLevel, 
- *  INFO: LogLevel, 
- *  WARNING: LogLevel, 
- *  ERROR: LogLevel, 
- *  LOG: LogLevel, 
- * }} LogLevelsConfig
+ * @typedef {{[LevelLabel: string]: LogLevel}} LogLevelsConfig
  */
 
 /**
