@@ -82,7 +82,7 @@ export default {
         handledError, 
         level = this.LEVELS.ERROR, 
         rethrow = true, 
-        fallbackValue = undefined
+        fallbackValue = undefined, 
     ) {
         /* if (!(handledError instanceof Error)) {
             console.ERROR('The provided error must be an instance of "Error"');
@@ -127,7 +127,7 @@ export default {
         message, 
         level = this.LEVELS.ERROR, 
         rethrow = level === this.LEVELS.ERROR, 
-        fallbackValue = undefined
+        fallbackValue = undefined, 
     ) {
         // Prevent rethrow for warnings
         if (level === this.LEVELS.WARNING) rethrow = false;
@@ -157,11 +157,11 @@ export default {
      */
     withWarningHandling(fn, message, fallbackValue) {
         return this.withHandling(
-            fn,
-            message,
-            this.LEVELS.WARNING,
+            fn, 
+            message, 
+            this.LEVELS.WARNING, 
             false, // Never rethrow warnings
-            fallbackValue
+            fallbackValue, 
         );
     },
 
@@ -175,10 +175,10 @@ export default {
      */
     withErrorHandling(fn, message, rethrow = true) {
         return this.withHandling(
-            fn,
-            message,
-            this.LEVELS.ERROR,
-            rethrow,
+            fn, 
+            message, 
+            this.LEVELS.ERROR, 
+            rethrow, 
         );
     },
 };

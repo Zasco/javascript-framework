@@ -15,9 +15,9 @@
  * @type {LogLevelsConfig}
  */
 export default {
-    DEBUG: 0,
-    INFO: 1,
-    WARNING: 2,
-    ERROR: 3,
-    LOG: 4,
+    DEBUG: 0, 
+    INFO: 1, 
+    WARNING: 2, 
+    ERROR: 3, 
+    LOG: 4, 
 };

@@ -40,7 +40,11 @@ export default {
      * @param {string|undefined} summaryMessage The summary message to display in the VSCode window. Defaults to the first line of the message.
      * @returns {boolean} If the message was displayed successfully in every output.
      */
-    fullDisplay(message, level = LOG_LEVELS.LOG, summaryMessage = undefined) {
+    fullDisplay(
+        message, 
+        level = LOG_LEVELS.LOG, 
+        summaryMessage = undefined, 
+    ) {
         try {
             if (!summaryMessage) summaryMessage = String(message); // Only get first line here...
             
@@ -100,9 +104,9 @@ export default {
                 if (!this.loggers.length) throw new Error('No loggers registered.');
                 this.loggers.forEach(logger => logger.log(message, level));
                 return true;
-            },
-            'Failed while outputting message to registered loggers.',
-            false,
+            }, 
+            'Failed while outputting message to registered loggers.', 
+            false, 
         );
     },
 
@@ -114,12 +118,12 @@ export default {
      */
     exposeObject(obj) {
         return {
-            'constructor': obj.constructor,
-            'prototype': Object.getPrototypeOf(obj),
-            'properties': Object.getOwnPropertyNames(obj),
-            'descriptors': Object.getOwnPropertyDescriptors(obj),
-            'toString': obj.toString(),
-            'type': Object.prototype.toString.call(obj)
+            'constructor': obj.constructor, 
+            'prototype': Object.getPrototypeOf(obj), 
+            'properties': Object.getOwnPropertyNames(obj), 
+            'descriptors': Object.getOwnPropertyDescriptors(obj), 
+            'toString': obj.toString(), 
+            'type': Object.prototype.toString.call(obj), 
         };
     },
 }

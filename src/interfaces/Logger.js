@@ -5,7 +5,7 @@ import ErrorUtils from "../utils/ErrorUtils.js";
 export default class Logger {
     constructor() {
         if (this.constructor === Logger) throw ErrorUtils.getAbstractClassError(this.constructor.name);
-    }
+    };
 
     /**
      * Logs a message to the output.
@@ -17,5 +17,5 @@ export default class Logger {
      */
     log(message, level) {
         throw ErrorUtils.getAbstractMethodError('log()');
-    }
+    };
 }

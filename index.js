@@ -12,16 +12,16 @@ import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
 export {
     // Config
-    LOG_LEVELS,
+    LOG_LEVELS, 
     
     // Helpers & Utils
-    ErrorHandler,
-    ErrorUtils,
-    LogHelper,
+    ErrorHandler, 
+    ErrorUtils, 
+    LogHelper, 
 
     // Interfaces
-    Logger,
+    Logger, 
 
     // Entities
-    ConsoleLogger,
+    ConsoleLogger, 
 };
