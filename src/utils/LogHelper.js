@@ -66,11 +66,11 @@ export default {
     },
     
     /**
-     * Logs a message to the console with the extension log prefix.
+     * Logs a message to the console.
      * 
      * @since 0.0.1
      * @param {*} message The message to log.
-     * @param {number} level The log level. Defaults to LOG.
+     * @param {LogLevel} [level] The log level. Defaults to `LOG`.
      */
     log(message, level = LOG_LEVELS.LOG) {
         let logFunction;
