@@ -40,7 +40,6 @@ export default {
      * 
      * @since 0.0.1
      * @param {*} message The message to display.
-     * 
      * @param {number} level The log level. Defaults to LOG.
      * @param {string|undefined} summaryMessage The summary message to display in the VSCode window. Defaults to the first line of the message.
      * @returns {boolean} If the message was displayed successfully in every output.
