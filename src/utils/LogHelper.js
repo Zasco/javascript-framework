@@ -42,7 +42,7 @@ export default {
         try {
             if (!summaryMessage) summaryMessage = String(message); // Only get first line here...
             
-            this.output(message);
+            this.output(message, level);
             
             return true;
         } catch (error) {
@@ -95,7 +95,7 @@ export default {
         return ErrorHandler.withWarningHandling(
             () => {
                 if (!this.loggers.length) throw new Error('No loggers registered.');
-                this.loggers.forEach(logger => logger.log(message));
+                this.loggers.forEach(logger => logger.log(message, level));
                 return true;
             },
             'Failed while outputting message to registered loggers.',
