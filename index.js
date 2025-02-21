@@ -1,8 +1,8 @@
 import LOG_LEVELS from './src/config/LogLevelsConfig.js';
 
-import ErrorHandler from './utils/ErrorHandler.js';
-import ErrorUtils from './utils/ErrorUtils.js';
-import LogHelper from './utils/LogHelper.js';
+import ErrorHandler from './src/utils/ErrorHandler.js';
+import ErrorUtils from './src/utils/ErrorUtils.js';
+import LogHelper from './src/utils/LogHelper.js';
 
 import Logger from './src/interface/Logger.js';
 import ConsoleLogger from './src/entity/ConsoleLogger.js';
