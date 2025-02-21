@@ -4,6 +4,8 @@ import Logger from "../interfaces/Logger.js";
 
 import LOG_LEVELS from '../config/LogLevelsConfig.js';
 
+/** @typedef {import('../config/LogLevelsConfig.js').LogLevel} LogLevel */
+
 export default {
     /** @type {Logger[]} The list of registered logger instances. */
     loggers: [],
@@ -89,9 +91,10 @@ export default {
      * Outputs a message to the the registered loggers.
      * 
      * @param {*} message The message to output.
+     * @param {LogLevel} level The log level.
      * @returns {boolean} If the message was output successfully.
      */
-    output(message) {
+    output(message, level) {
         return ErrorHandler.withWarningHandling(
             () => {
                 if (!this.loggers.length) throw new Error('No loggers registered.');
