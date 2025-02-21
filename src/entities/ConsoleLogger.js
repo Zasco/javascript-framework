@@ -1,4 +1,4 @@
-import Logger from '../interface/Logger.js';
+import Logger from '../interfaces/Logger.js';
 
 export default class ConsoleLogger extends Logger {
     /**
