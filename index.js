@@ -5,7 +5,7 @@ import ErrorUtils from './utils/ErrorUtils.js';
 import LogHelper from './utils/LogHelper.js';
 
 import Logger from './interface/Logger.js';
-import ConsoleLogger from './entity/ConsoleLogger.js';
+import ConsoleLogger from './src/entity/ConsoleLogger.js';
 
 /** @typedef {import('./src/config/LogLevelsConfig.js').LogLevel} LogLevel */
 
