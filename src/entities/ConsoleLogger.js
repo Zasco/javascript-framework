@@ -8,8 +8,9 @@ import LOG_LEVELS from '../config/LogLevelsConfig.js';
  * @since 0.0.1
  */
 export default class ConsoleLogger extends Logger {
-    log(message) {
-        console.log(message);
+    log(message, level) {
+        const logFunction = this.getLogFunctionForLogLevel(level);
+        logFunction(message);
     };
 
     /**
