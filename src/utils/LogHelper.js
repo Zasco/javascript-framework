@@ -31,6 +31,7 @@ export default {
 
     /**
      * Displays a message in the console, the output and the VSCode window.
+     * 
      * @param {*} message The message to display.
      * 
      * @param {number} level The log level. Defaults to LOG.
