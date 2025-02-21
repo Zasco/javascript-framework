@@ -1,6 +1,7 @@
 import ErrorHandler from "./ErrorHandler.js";
 
 import Logger from "../interfaces/Logger.js";
+import ConsoleLogger from "../entities/ConsoleLogger.js";
 
 import LOG_LEVELS from '../config/LogLevelsConfig.js';
 
@@ -12,6 +13,9 @@ import LOG_LEVELS from '../config/LogLevelsConfig.js';
 export default {
     /** @type {Logger[]} The list of registered logger instances. */
     loggers: [],
+
+    /** @type {ConsoleLogger} Singleton instance for console logging */
+    _consoleLogger: new ConsoleLogger(),
 
     /**
      * Registers a logger instance.
@@ -73,31 +77,7 @@ export default {
      * @param {LogLevel} [level] The log level. Defaults to `LOG`.
      */
     log(message, level = LOG_LEVELS.LOG) {
-        let logFunction;
-        switch (level) {
-            case LOG_LEVELS.DEBUG:
-                logFunction = console.debug;
-                break;
-
-            case LOG_LEVELS.INFO:
-                logFunction = console.info;
-                break;
-
-            case LOG_LEVELS.WARNING:
-                logFunction = console.warn;
-                break;
-
-            case LOG_LEVELS.ERROR:
-                logFunction = console.error;
-                break;
-                
-            case LOG_LEVELS.LOG:
-            default:
-                logFunction = console.log;
-                break;
-        }
-
-        logFunction(message);
+        this._consoleLogger.log(message, level);
     },
     
     /**
