@@ -1,4 +1,4 @@
-import LOG_LEVELS from './config/LogLevelsConfig.js';
+import LOG_LEVELS from './src/config/LogLevelsConfig.js';
 
 import ErrorHandler from './utils/ErrorHandler.js';
 import ErrorUtils from './utils/ErrorUtils.js';
@@ -7,7 +7,7 @@ import LogHelper from './utils/LogHelper.js';
 import Logger from './interface/Logger.js';
 import ConsoleLogger from './entity/ConsoleLogger.js';
 
-/** @typedef {import('./config/LogLevelsConfig.js').LogLevel} LogLevel */
+/** @typedef {import('./src/config/LogLevelsConfig.js').LogLevel} LogLevel */
 
 export {
     // Config
