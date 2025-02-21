@@ -50,7 +50,8 @@ export default {
         summaryMessage = undefined, 
     ) {
         try {
-            if (!summaryMessage) summaryMessage = String(message); // Only get first line here...
+            // [TODO] Extract the first line only here...
+            if (!summaryMessage) summaryMessage = String(message);
             
             this.output(message, level);
             
