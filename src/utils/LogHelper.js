@@ -6,6 +6,9 @@ import LOG_LEVELS from '../config/LogLevelsConfig.js';
 
 /** @typedef {import('../config/LogLevelsConfig.js').LogLevel} LogLevel */
 
+/**
+ * @since 0.0.1
+ */
 export default {
     /** @type {Logger[]} The list of registered logger instances. */
     loggers: [],
@@ -13,6 +16,7 @@ export default {
     /**
      * Registers a logger instance.
      * 
+     * @since 0.0.1
      * @param {Logger} logger The logger instance to register.
      */
     registerLogger(logger) {
@@ -34,6 +38,7 @@ export default {
     /**
      * Displays a message in the console, the output and the VSCode window.
      * 
+     * @since 0.0.1
      * @param {*} message The message to display.
      * 
      * @param {number} level The log level. Defaults to LOG.
@@ -60,6 +65,7 @@ export default {
     /**
      * Logs a message to the console with the extension log prefix.
      * 
+     * @since 0.0.1
      * @param {*} message The message to log.
      * @param {number} level The log level. Defaults to LOG.
      */
@@ -94,6 +100,7 @@ export default {
     /**
      * Outputs a message to the the registered loggers.
      * 
+     * @since 0.0.1
      * @param {*} message The message to output.
      * @param {LogLevel} level The log level.
      * @returns {boolean} If the message was output successfully.
@@ -113,6 +120,7 @@ export default {
     /**
      * Exposes an object.
      * 
+     * @since 0.0.1
      * @param {*} obj The object to expose.
      * @returns {object} An object containing the constructor, prototype, properties, descriptors, toString, and type of the exposed object.
      */

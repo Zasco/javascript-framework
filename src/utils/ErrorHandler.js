@@ -1,3 +1,6 @@
+/**
+ * @since 0.0.1
+ */
 export default {
     /** Wether warnings are critical. If true, warnings are treated as errors. Defaults to false. */
     WARNINGS_ARE_CRITICAL: false,
@@ -12,6 +15,7 @@ export default {
     /**
      * Creates a new error with a cause.
      * 
+     * @since 0.0.1
      * @param {string} errorMessage The error message.
      * @param {Error} causingError The error that caused this error.
      * @returns {Error} The new error with a cause.
@@ -25,6 +29,7 @@ export default {
     /**
      * Builds a consolidated error message including all causes
      * 
+     * @since 0.0.1
      * @param {Error} error The error to process
      * @returns {string} Consolidated error message
      */
@@ -71,6 +76,7 @@ export default {
     /**
      * Handles an error and displays it appropriately.
      * 
+     * @since 0.0.1
      * @param {Error} handledError The error to handle.
      * @param {number} [level] The failure level (error or warning). Defaults to ERROR.
      * @param {boolean} [rethrow] Whether to rethrow the error after handling. Only applies to ERROR.
@@ -115,6 +121,7 @@ export default {
     /**
     * Runs a function with warning/error handling.
     * 
+    * @since 0.0.1
     * @param {() => (* | Promise<*>)} fn The function to execute.
     * @param {string} message The message if the function fails.
     * @param {number} [level] The error level (WARNING or ERROR).
@@ -150,6 +157,7 @@ export default {
     /**
      * Runs a function with warning handling. Never rethrows and always returns a fallback value on failure.
      * 
+     * @since 0.0.1
      * @param {() => (* | Promise<*>)} fn The function to execute.
      * @param {string} message The warning message if the function fails.
      * @param {*} [fallbackValue] The value to return on failure.
@@ -168,6 +176,7 @@ export default {
     /**
      * Runs a function with error handling.
      * 
+     * @since 0.0.1
      * @param {() => (* | Promise<*>)} fn The function to execute.
      * @param {string} message The error message if the function fails.
      * @param {boolean} [rethrow] Whether to rethrow the error.
