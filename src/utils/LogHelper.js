@@ -53,6 +53,9 @@ export default {
             // [TODO] Extract the first line only here...
             if (!summaryMessage) summaryMessage = String(message);
             
+            // [NOTE] This ensures console logging even without having a `ConsoleLogger` registered. 
+            //this.log(message, level);
+            
             this.output(message, level);
             
             return true;
