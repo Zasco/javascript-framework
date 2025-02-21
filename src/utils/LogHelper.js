@@ -1,6 +1,6 @@
 import ErrorHandler from "./ErrorHandler.js";
 
-import Logger from "../interface/Logger.js";
+import Logger from "../interfaces/Logger.js";
 
 import LOG_LEVELS from '../config/LogLevelsConfig.js';
 
