@@ -1,3 +1,8 @@
+import LogHelper from "./LogHelper.js";
+import LOG_LEVELS from '../config/LogLevelsConfig.js'
+
+/** @typedef {import('../config/LogLevelsConfig.js').LogLevel} LogLevel */
+
 /** 
  * @since ${NEXT_VERSION}
  * @typedef {number} ErrorLevel
@@ -17,6 +22,20 @@ export default {
     LEVELS: {
         WARNING: 1,
         ERROR: 2,
+    },
+
+    /**
+     * Returns the log level for a given error level.
+     * 
+     * @since ${NEXT_VERSION}
+     * @param {ErrorLevel} level The error level. Defaults to `ERROR`.
+     * @returns {LogLevel} The log level for the given error level.
+     */
+    getLogLevelForErrorLevel(level) {
+        return level === this.LEVELS.ERROR 
+            ? LOG_LEVELS.ERROR
+            : LOG_LEVELS.WARNING
+        ;
     },
     
     /**
