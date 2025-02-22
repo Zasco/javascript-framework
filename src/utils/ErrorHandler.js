@@ -103,7 +103,7 @@ export default {
         
         try {
             // If handling a warning and warnings are treated as critical, treat it as an error.
-            if (level === this.LEVELS.WARNING && this.WARNINGS_ARE_CRITICAL) {
+            if (this.WARNINGS_ARE_CRITICAL && level === this.LEVELS.WARNING) {
                 level = this.LEVELS.ERROR;
                 rethrow = true;
             }
