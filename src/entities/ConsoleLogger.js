@@ -2,6 +2,8 @@ import Logger from '../interfaces/Logger.js';
 
 import LOG_LEVELS from '../config/LogLevelsConfig.js';
 
+import ErrorUtils from '../utils/ErrorUtils.js';
+
 /** @typedef {import('../config/LogLevelsConfig.js').LogLevel} LogLevel */
 
 /**
@@ -10,6 +12,7 @@ import LOG_LEVELS from '../config/LogLevelsConfig.js';
 export default class ConsoleLogger extends Logger {
     log(message, level) {
         const logFunction = this.getLogFunctionForLogLevel(level);
+        if (message instanceof Error) message = ErrorUtils.buildConsolidatedMessage(message);
         logFunction(message);
     };
 
