@@ -1,4 +1,5 @@
 import ErrorHandler from "./ErrorHandler.js";
+import LogUtils from "./LogUtils.js";
 
 import Logger from "../interfaces/Logger.js";
 import ConsoleLogger from "../entities/ConsoleLogger.js";
@@ -104,5 +105,16 @@ export default {
         } catch (error) {
             return false;
         }
+    },
+
+    // [TODO] Allow node-fetch `Response` object as a valid param type here. Find how to support browser/Node environments...
+    /**
+     * Logs a `Response` object to the console in a readable format.
+     * 
+     * @since ${NEXT_VERSION}
+     * @param {Response} response The response object to output.
+     */
+    logResponse(response) {
+        console.debug(LogUtils.exposeResponse(response));
     },
 }
