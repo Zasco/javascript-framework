@@ -12,7 +12,7 @@ import ErrorUtils from '../utils/ErrorUtils.js';
 export default class ConsoleLogger extends Logger {
     log(message, level) {
         const logFunction = this.getLogFunctionForLogLevel(level);
-        if (message instanceof Error) message = ErrorUtils.buildConsolidatedMessage(message);
+        if (message instanceof Error) message = ErrorUtils.buildFormattedErrorMessage(message);
         logFunction(message);
     };
 
