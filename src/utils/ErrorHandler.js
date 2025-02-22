@@ -53,53 +53,6 @@ export default {
     },
 
     /**
-     * Builds a consolidated error message including all causes.
-     * 
-     * @since 0.0.1
-     * @param {Error} error The error to process
-     * @returns {string} Consolidated error message
-     */
-    buildConsolidatedMessage(error) {
-        let message = error.message;
-        
-        // Add main error stack in a collapsible group
-        if (error.stack && this.DISPLAY_STACKS) {
-            message += '\nStack trace:';
-            message += '\n┌─────────────────────';
-            message += `\n${error.stack.split('\n').slice(1).join('\n')}`;
-            message += '\n└─────────────────────';
-        }
-        
-        let errorCause = error.cause;
-        let depth = 0;
-        
-        while (errorCause) {
-            const indent = '   '.repeat(depth);
-            const causeMessage = errorCause instanceof Error 
-                ? /* errorCause.stack || */ errorCause.message
-                : errorCause;
-                
-            message += `\n${indent}└─ ${depth + 1}. Caused by: ${causeMessage}`;
-
-            // Add cause stack in a collapsible group
-            if (errorCause instanceof Error && errorCause.stack && this.DISPLAY_STACKS) {
-                message += `\n${indent}  Stack trace:`;
-                message += `\n${indent}  ┌─────────────────────`;
-                message += `\n${indent}  ${errorCause.stack.split('\n').slice(1).join(`\n${indent}  `)}`;
-                message += `\n${indent}  └─────────────────────`;
-            }
-            
-            errorCause = errorCause instanceof Error 
-                ? errorCause.cause 
-                : undefined;
-            depth++;
-        }
-        message += '\n';
-        
-        return message;
-    },
-
-    /**
      * Handles an error and displays it appropriately.
      * 
      * @since 0.0.1
