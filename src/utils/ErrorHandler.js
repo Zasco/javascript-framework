@@ -74,6 +74,8 @@ export default {
         } */
         
         try {
+            LogHelper.fullDisplay(handledError, this.getLogLevelForErrorLevel(level));
+            
             // If handling a warning and warnings are treated as critical, treat it as an error.
             if (this.WARNINGS_ARE_CRITICAL && level === this.LEVELS.WARNING) {
                 level = this.LEVELS.ERROR;
