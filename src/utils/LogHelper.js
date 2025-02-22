@@ -89,15 +89,21 @@ export default {
      * @returns {boolean} If the message was output successfully.
      */
     output(message, level) {
-        return ErrorHandler.withWarningHandling(
-            () => {
+        // FIXME: Using warning/error handling here causes an infinite loop if there are no registered loggers...
+        // Handler calls withHandling() that calls handle() that calls fullDisplay() that calls output() and it starts over.
+        try {
+        //return ErrorHandler.withWarningHandling(
+        //    () => {
                 if (!this.loggers.length) throw new Error('No loggers registered.');
                 this.loggers.forEach(logger => logger.log(message, level));
                 return true;
-            }, 
-            'Failed while outputting message to registered loggers.', 
-            false, 
-        );
+        //    },
+        //    'Failed while outputting message to registered loggers.',
+        //    false,
+        //);
+        } catch (error) {
+            return false;
+        }
     },
 
     /**
