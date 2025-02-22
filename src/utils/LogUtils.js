@@ -26,4 +26,28 @@ export default {
             'type': Object.prototype.toString.call(obj), 
         };
     },
+
+    // [TODO] Allow node-fetch `Response` object as a valid param type here. Find how to support browser/Node environments...
+    /**
+     * Exposes a `Response` object.
+     * 
+     * @since ${NEXT_VERSION}
+     * @param {Response} response
+     * @returns {{
+     *  'status': number, 
+     *  'statusText': string, 
+     *  'headers': {[header: string]: string}, 
+     *  'body': ReadableStream<Uint8Array> | null,
+     * }}
+     */
+    exposeResponse(response) {
+        return {
+            'status': response.status,
+            'statusText': response.statusText,
+            'headers': Object.fromEntries(response.headers),
+            // [NOTE] The `size` property only exists in the node-fretch `Response` object.
+            //'size': response.size,
+            'body': response.body,
+        };
+    },
 };
