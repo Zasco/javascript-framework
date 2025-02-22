@@ -34,7 +34,7 @@ export default {
     },
 
     /**
-     * Builds a consolidated error message including all causes
+     * Builds a consolidated error message including all causes.
      * 
      * @since 0.0.1
      * @param {Error} error The error to process
@@ -131,7 +131,7 @@ export default {
     * @since 0.0.1
     * @param {() => (* | Promise<*>)} fn The function to execute.
     * @param {string} message The message if the function fails.
-    * @param {ErrorLevel} [level] The error level (WARNING or ERROR).
+    * @param {ErrorLevel} [level] The error level (`WARNING` or `ERROR`).
     * @param {boolean} [rethrow] Whether to rethrow the error. For ERROR only.
     * @param {*} [fallbackValue] The value to return on failure. For WARNING only.
     * @returns {(* | undefined) | Promise<* | undefined>} The result of the function or, if the function fails, the fallback value if WARNING or undefined if ERROR. A promise if the function is async.
