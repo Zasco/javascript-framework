@@ -69,6 +69,7 @@ export default {
         rethrow = true, 
         fallbackValue = undefined, 
     ) {
+        // [TODO] Implement the validity check...
         /* if (!(handledError instanceof Error)) {
             console.ERROR('The provided error must be an instance of "Error"');
         } */
