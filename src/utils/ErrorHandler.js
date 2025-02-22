@@ -1,3 +1,9 @@
+/** 
+ * @since ${NEXT_VERSION}
+ * @typedef {number} ErrorLevel
+ * @typedef {{[ErrorLabel: string]: ErrorLevel}} ErrorLevelsConfig
+ */
+
 /**
  * @since 0.0.1
  */
@@ -7,6 +13,7 @@ export default {
     /** Whether to display stack traces in error messages. Defaults to false.*/
     DISPLAY_STACKS: false,
     
+    /** @type {ErrorLevelsConfig} */
     LEVELS: {
         WARNING: 1,
         ERROR: 2,
@@ -78,8 +85,8 @@ export default {
      * 
      * @since 0.0.1
      * @param {Error} handledError The error to handle.
-     * @param {number} [level] The failure level (error or warning). Defaults to ERROR.
-     * @param {boolean} [rethrow] Whether to rethrow the error after handling. Only applies to ERROR.
+     * @param {ErrorLevel} [level] The failure level (error or warning). Defaults to `ERROR`.
+     * @param {boolean} [rethrow] Whether to rethrow the error after handling. Only applies to `ERROR`.
      * @param {*} [fallbackValue] The value to return. Only applies to WARNING.
      * @returns {* | undefined} The fallback value if handling a warning, undefined if handling an error and not rethrowing.
      * @throws {Error} The rethrown error.
@@ -124,7 +131,7 @@ export default {
     * @since 0.0.1
     * @param {() => (* | Promise<*>)} fn The function to execute.
     * @param {string} message The message if the function fails.
-    * @param {number} [level] The error level (WARNING or ERROR).
+    * @param {ErrorLevel} [level] The error level (WARNING or ERROR).
     * @param {boolean} [rethrow] Whether to rethrow the error. For ERROR only.
     * @param {*} [fallbackValue] The value to return on failure. For WARNING only.
     * @returns {(* | undefined) | Promise<* | undefined>} The result of the function or, if the function fails, the fallback value if WARNING or undefined if ERROR. A promise if the function is async.
