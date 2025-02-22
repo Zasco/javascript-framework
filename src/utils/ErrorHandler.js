@@ -127,7 +127,7 @@ export default {
     * @param {number} [level] The error level (WARNING or ERROR).
     * @param {boolean} [rethrow] Whether to rethrow the error. For ERROR only.
     * @param {*} [fallbackValue] The value to return on failure. For WARNING only.
-    * @returns {(* | undefined) | Promise<* | undefined>} The result of the function or, if the function fails, the fallback value if WARNING or undefined if ERROR.
+    * @returns {(* | undefined) | Promise<* | undefined>} The result of the function or, if the function fails, the fallback value if WARNING or undefined if ERROR. A promise if the function is async.
     */
     withHandling(
         fn, 
@@ -161,7 +161,7 @@ export default {
      * @param {() => (* | Promise<*>)} fn The function to execute.
      * @param {string} message The warning message if the function fails.
      * @param {*} [fallbackValue] The value to return on failure.
-     * @returns {*} The result of the function or the fallback value.
+     * @returns {* | Promise<*>} The result of the function or the fallback value if the function fails. A promise if the function is async.
      */
     withWarningHandling(fn, message, fallbackValue) {
         return this.withHandling(
@@ -180,7 +180,7 @@ export default {
      * @param {() => (* | Promise<*>)} fn The function to execute.
      * @param {string} message The error message if the function fails.
      * @param {boolean} [rethrow] Whether to rethrow the error.
-     * @returns {* | Promise<*>} The result of the function or undefined if the function fails.
+     * @returns {* | Promise<*>} The result of the function or undefined if the function fails. A promise if the function is async.
      */
     withErrorHandling(fn, message, rethrow = true) {
         return this.withHandling(
