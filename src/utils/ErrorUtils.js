@@ -1,11 +1,11 @@
 /**
- * @since {NEXT_VERSION}
+ * @since ${NEXT_VERSION}
  */
 export default {
     /**
      * Returns an error indicating that an abstract class cannot be instantiated directly.
      * 
-     * @since {NEXT_VERSION}
+     * @since ${NEXT_VERSION}
      * @param {string} [className] The name of the abstract class.
      * @returns {Error} The error indicating that the abstract class cannot be instantiated directly.
      */
@@ -16,7 +16,7 @@ export default {
     /**
      * Returns an error indicating that an abstract method must be implemented.
      * 
-     * @since {NEXT_VERSION}
+     * @since ${NEXT_VERSION}
      * @param {string} [methodName] The name of the abstract method.
      * @returns {Error} The error indicating that the abstract method must be implemented.
      */
