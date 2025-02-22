@@ -22,4 +22,4 @@ export default class Logger {
     log(message, level) {
         throw ErrorUtils.getAbstractMethodError('log()');
     };
-}
+};

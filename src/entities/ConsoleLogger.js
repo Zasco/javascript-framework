@@ -42,4 +42,4 @@ export default class ConsoleLogger extends Logger {
                 return console.log;
         }
     };
-}
+};

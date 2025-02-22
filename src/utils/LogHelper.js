@@ -117,4 +117,4 @@ export default {
     logResponse(response) {
         console.debug(LogUtils.exposeResponse(response));
     },
-}
+};
