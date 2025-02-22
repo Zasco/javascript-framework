@@ -14,8 +14,6 @@ import LOG_LEVELS from '../config/LogLevelsConfig.js'
 export default {
     /** Wether warnings are critical. If true, warnings are treated as errors. Defaults to false. */
     WARNINGS_ARE_CRITICAL: false,
-    /** Whether to display stack traces in error messages. Defaults to false.*/
-    DISPLAY_STACKS: false,
 
     /**
      * Returns the log level for a given error level.

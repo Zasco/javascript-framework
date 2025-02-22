@@ -2,6 +2,9 @@
  * @since ${NEXT_VERSION}
  */
 export default {
+    /** Whether to display stack traces in error messages. Defaults to false.*/
+    DISPLAY_STACKS: false,
+    
     /**
      * Returns an error indicating that an abstract class cannot be instantiated directly.
      * 
