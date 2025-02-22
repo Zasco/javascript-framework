@@ -104,8 +104,15 @@ export default {
      * Exposes an object.
      * 
      * @since 0.0.1
-     * @param {*} obj The object to expose.
-     * @returns {object} An object containing the constructor, prototype, properties, descriptors, toString, and type of the exposed object.
+     * @param {Object} obj The object to expose.
+     * @returns {{
+     *  'constructor': *, 
+     *  'prototype': *, 
+     *  'properties': string[], 
+     *  'descriptors': {[property: string]: PropertyDescriptor}, 
+     *  'toString': string, 
+     *  'type': *, 
+     * }} An object containing the constructor, prototype, properties, descriptors, toString, and type of the exposed object.
      */
     exposeObject(obj) {
         return {
