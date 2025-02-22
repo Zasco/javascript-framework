@@ -1,12 +1,11 @@
 import LogHelper from "./LogHelper.js";
+
+import ERROR_LEVELS from "../config/ErrorLevelsConfig.js";
 import LOG_LEVELS from '../config/LogLevelsConfig.js'
 
-/** @typedef {import('../config/LogLevelsConfig.js').LogLevel} LogLevel */
-
-/** 
- * @since ${NEXT_VERSION}
- * @typedef {number} ErrorLevel
- * @typedef {{[ErrorLabel: string]: ErrorLevel}} ErrorLevelsConfig
+/**
+ * @typedef {import('../config/ErrorLevelsConfig.js').ErrorLevel} ErrorLevel
+ * @typedef {import('../config/LogLevelsConfig.js').LogLevel} LogLevel
  */
 
 /**
@@ -17,12 +16,6 @@ export default {
     WARNINGS_ARE_CRITICAL: false,
     /** Whether to display stack traces in error messages. Defaults to false.*/
     DISPLAY_STACKS: false,
-    
-    /** @type {ErrorLevelsConfig} */
-    LEVELS: {
-        WARNING: 1,
-        ERROR: 2,
-    },
 
     /**
      * Returns the log level for a given error level.
@@ -32,7 +25,7 @@ export default {
      * @returns {LogLevel} The log level for the given error level.
      */
     getLogLevelForErrorLevel(level) {
-        return level === this.LEVELS.ERROR 
+        return level === ERROR_LEVELS.ERROR 
             ? LOG_LEVELS.ERROR
             : LOG_LEVELS.WARNING
         ;
@@ -65,7 +58,7 @@ export default {
      */
     handle(
         handledError, 
-        level = this.LEVELS.ERROR, 
+        level = ERROR_LEVELS.ERROR, 
         rethrow = true, 
         fallbackValue = undefined, 
     ) {
@@ -78,12 +71,12 @@ export default {
             LogHelper.fullDisplay(handledError, this.getLogLevelForErrorLevel(level));
             
             // If handling a warning and warnings are treated as critical, treat it as an error.
-            if (this.WARNINGS_ARE_CRITICAL && level === this.LEVELS.WARNING) {
-                level = this.LEVELS.ERROR;
+            if (this.WARNINGS_ARE_CRITICAL && level === ERROR_LEVELS.WARNING) {
+                level = ERROR_LEVELS.ERROR;
                 rethrow = true;
             }
 
-            if (level === this.LEVELS.ERROR) {
+            if (level === ERROR_LEVELS.ERROR) {
                 if (rethrow) throw handledError;
                 // If handling an error and it is not rethrown, treat it as a warning.
                 return undefined;
@@ -114,12 +107,12 @@ export default {
     withHandling(
         fn, 
         message, 
-        level = this.LEVELS.ERROR, 
-        rethrow = level === this.LEVELS.ERROR, 
+        level = ERROR_LEVELS.ERROR, 
+        rethrow = level === ERROR_LEVELS.ERROR, 
         fallbackValue = undefined, 
     ) {
         // Prevent rethrow for warnings
-        if (level === this.LEVELS.WARNING) rethrow = false;
+        if (level === ERROR_LEVELS.WARNING) rethrow = false;
         
         /** @param {Error} error The error to handle. */
         const handleError = (error) => {
@@ -149,7 +142,7 @@ export default {
         return this.withHandling(
             fn, 
             message, 
-            this.LEVELS.WARNING, 
+            ERROR_LEVELS.WARNING, 
             false, // Never rethrow warnings
             fallbackValue, 
         );
@@ -168,7 +161,7 @@ export default {
         return this.withHandling(
             fn, 
             message, 
-            this.LEVELS.ERROR, 
+            ERROR_LEVELS.ERROR, 
             rethrow, 
         );
     },
