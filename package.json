@@ -2,9 +2,9 @@
     "name": "javascript-framework",
     "version": "0.0.1",
     "type": "module",
-    "author": "Zasco",
     "main": "index.js",
     "exports": {
       ".": "./index.js"
-    }
+    },
+    "author": "Zasco"
 }
