@@ -7,6 +7,9 @@
     ".": "./index.js"
   },
   "author": "Zasco",
+  "scripts": {
+    "version": "node node_modules/coding-utils/src/scripts/auto-release.js ./.autoreleaserc.json"
+  },
   "devDependencies": {
     "coding-utils": "github:zasco/coding-utils"
   }
