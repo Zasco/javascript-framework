@@ -36,7 +36,7 @@ export default {
      * @returns {string}
      */
     getStdSubjectMessage(message, subject) {
-        return `${message} : ${subject}`;
+        return `${message}: ${subject}`;
     },
 
     /**
