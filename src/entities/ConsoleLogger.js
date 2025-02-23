@@ -19,7 +19,7 @@ export default class ConsoleLogger extends Logger {
     /**
      * Returns the log function for a given log level.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.2
      * @param {LogLevel} level
      * @returns {function}
      */

@@ -18,7 +18,7 @@ export default {
     /**
      * Returns the log level for a given error level.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.2
      * @param {ErrorLevel} level The error level. Defaults to `ERROR`.
      * @returns {LogLevel} The log level for the given error level.
      */

@@ -1,11 +1,11 @@
 /**
- * @since ${NEXT_VERSION}
+ * @since 0.0.2
  */
 export default {
     /**
      * Exposes an object.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.2
      * @param {Object} obj The object to expose.
      * @returns {{
      *  'constructor': *, 
@@ -31,7 +31,7 @@ export default {
     /**
      * Exposes a `Response` object.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.2
      * @param {Response} response
      * @returns {{
      *  'status': number, 

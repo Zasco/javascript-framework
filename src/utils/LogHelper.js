@@ -111,7 +111,7 @@ export default {
     /**
      * Logs a `Response` object to the console in a readable format.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.2
      * @param {Response} response The response object to output.
      */
     logResponse(response) {

@@ -1,11 +1,11 @@
 /** 
- * @since ${NEXT_VERSION}
+ * @since 0.0.2
  * @typedef {number} ErrorLevel
  * @typedef {{[ErrorLabel: string]: ErrorLevel}} ErrorLevelsConfig
  */
 
 /** 
- * @since ${NEXT_VERSION}
+ * @since 0.0.2
  * @type {ErrorLevelsConfig} 
  */
 export default {

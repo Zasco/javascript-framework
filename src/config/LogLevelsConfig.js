@@ -1,17 +1,17 @@
 /**
- * @since ${NEXT_VERSION}
+ * @since 0.0.2
  * @typedef {number} LogLevel
  */
 
 /**
- * @since ${NEXT_VERSION}
+ * @since 0.0.2
  * @typedef {{[LevelLabel: string]: LogLevel}} LogLevelsConfig
  */
 
 /**
  * Defines the different levels of log.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.2
  * @type {LogLevelsConfig}
  */
 export default {

@@ -1,5 +1,5 @@
 /**
- * @since ${NEXT_VERSION}
+ * @since 0.0.2
  */
 export default {
     /** Whether to display stack traces in error messages. Defaults to false.*/
@@ -8,7 +8,7 @@ export default {
     /**
      * Returns an error indicating that an abstract class cannot be instantiated directly.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.2
      * @param {string} className The name of the abstract class.
      * @returns {Error} The error indicating that the abstract class cannot be instantiated directly.
      */
@@ -19,7 +19,7 @@ export default {
     /**
      * Returns an error indicating that an abstract method must be implemented.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.2
      * @param {string} methodName The name of the abstract method.
      * @returns {Error} The error indicating that the abstract method must be implemented.
      */
@@ -30,7 +30,7 @@ export default {
     /**
      * Returns a standardized message with subject.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.2
      * @param {string} message The message to display.
      * @param {string} subject The subject of the message.
      * @returns {string}
@@ -42,7 +42,7 @@ export default {
     /**
      * Builds a formatted error message including all causes.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.2
      * @param {Error} error The error to process
      * @returns {string} Consolidated error message
      */
