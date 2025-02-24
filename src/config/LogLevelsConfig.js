@@ -1,7 +1,7 @@
 /**
  * @since 0.0.2
  * @typedef {number} LogLevel
- * @typedef {{[LevelLabel: string]: LogLevel}} LogLevelsConfig
+ * @typedef {{[levelLabel: string]: LogLevel}} LogLevelsConfig
  */
 
 /**

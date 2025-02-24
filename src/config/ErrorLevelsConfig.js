@@ -1,7 +1,7 @@
 /** 
  * @since 0.0.2
  * @typedef {number} ErrorLevel
- * @typedef {{[ErrorLabel: string]: ErrorLevel}} ErrorLevelsConfig
+ * @typedef {{[errorLabel: string]: ErrorLevel}} ErrorLevelsConfig
  */
 
 /** 
