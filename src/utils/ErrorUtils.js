@@ -40,6 +40,26 @@ export default {
     },
 
     /**
+     * Returns a standardized error message with an action, an optional subject and a value.
+     * 
+     * @since ${NEXT_VERSION}
+     * @param {string} action The action that was performed when the error happened.
+     * @param {string} [subject] The subject of the action.
+     * @param {string} [value] The value associated with the action/subject.
+     * @returns {string} `Error while [action] [subject?].` OR `Error while [action] [subject]: [value]`
+     */
+    generateStdErrorMsg(action, subject = undefined, value = undefined) {
+        let msg = 'Error while '+ action;
+        
+        if (subject !== undefined) msg += ' '+ subject;
+        
+        if (value === undefined) msg += '.';
+        else msg += ': '+ value;
+        
+        return msg;
+    },
+
+    /**
      * Builds a formatted error message including all causes.
      * 
      * @since 0.0.2
