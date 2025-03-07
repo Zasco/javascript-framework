@@ -32,22 +32,16 @@ export default class TypeUtils {
     // String
     
     /**
-     * Returns if the provided value is a string.
-     * 
      * @since ${NEXT_VERSION}
      * @static
-     * @param {*} value
-     * @returns {boolean}
+     * @param {unknown} payload
      */
     static isString = isString;
 
     /**
-     * Returns if the provided value is an empty string.
-     * 
      * @since ${NEXT_VERSION}
      * @static
-     * @param {*} value
-     * @returns {boolean}
+     * @param {unknown} payload
      */
     static isEmptyString = isEmptyString;
 
@@ -55,32 +49,23 @@ export default class TypeUtils {
     // Number
     
     /**
-     * Returns if the provided value is a number.
-     * 
      * @since ${NEXT_VERSION}
      * @static
-     * @param {*} value
-     * @returns {boolean}
+     * @param {unknown} payload
      */
     static isNumber = isNumber;
 
     /**
-     * Returns if the provided value is a negative number.
-     * 
      * @since ${NEXT_VERSION}
      * @static
-     * @param {*} value
-     * @returns {boolean}
+     * @param {unknown} payload
      */
     static isNegativeNumber = isNegativeNumber;
 
     /**
-     * Returns if the provided value is a positive number.
-     * 
      * @since ${NEXT_VERSION}
      * @static
-     * @param {*} value
-     * @returns {boolean}
+     * @param {unknown} payload
      */
     static isPositiveNumber = isPositiveNumber;
 
@@ -88,22 +73,16 @@ export default class TypeUtils {
     // Array-related
     
     /**
-     * Returns if the provided value is an array.
-     * 
      * @since ${NEXT_VERSION}
      * @static
-     * @param {*} value
-     * @returns {boolean}
+     * @param {unknown} payload
      */
     static isArray = isArray;
 
     /**
-     * Returns if the provided value is an empty array.
-     * 
      * @since ${NEXT_VERSION}
      * @static
-     * @param {*} value
-     * @returns {boolean}
+     * @param {unknown} payload
      */
     static isEmptyArray = isEmptyArray;
 
@@ -111,22 +90,16 @@ export default class TypeUtils {
     // Object-related
     
     /**
-     * Returns if the provided value is an object.
-     * 
      * @since ${NEXT_VERSION}
      * @static
-     * @param {*} value
-     * @returns {boolean}
+     * @param {unknown} payload
      */
     static isObject = isObject;
 
     /**
-     * Returns if the provided value is a function.
-     * 
      * @since ${NEXT_VERSION}
      * @static
-     * @param {*} value
-     * @returns {boolean}
+     * @param {unknown} payload
      */
     static isFunction = isFunction;
 
@@ -134,22 +107,16 @@ export default class TypeUtils {
     // Nullish
     
     /**
-     * Returns if the provided value is `null`.
-     * 
      * @since ${NEXT_VERSION}
      * @static
-     * @param {*} value
-     * @returns {boolean}
+     * @param {unknown} payload
      */
     static isNull = isNull;
     
     /**
-     * Returns if the provided value is `undefined`.
-     * 
      * @since ${NEXT_VERSION}
      * @static
-     * @param {*} value
-     * @returns {boolean}
+     * @param {unknown} payload
      */
     static isUndefined = isUndefined;
 
