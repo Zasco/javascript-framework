@@ -28,6 +28,17 @@ export default {
     },
 
     /**
+     * Returns an error indicating that a singleton class cannot be instantiated.
+     * 
+     * @since ${NEXT_VERSION}
+     * @param {string} className The name of the class
+     * @returns {Error}
+     */
+    getSingletonInstanceErr(className) {
+        return new Error(`Cannot instantiate singleton class "${className}". Singleton classes are used statically and cannot be instantiated directly.`);
+    },
+
+    /**
      * Returns a standardized message with subject.
      * 
      * @since 0.0.2
