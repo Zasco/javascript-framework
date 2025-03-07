@@ -6,6 +6,18 @@ export default {
     DISPLAY_STACKS: false,
     
     /**
+     * Returns a {@link TypeError} with the standard "mismatch" message.
+     * 
+     * @since ${NEXT_VERSION}
+     * @param {string} expectedType The expected type
+     * @param {string} actualType The actual type
+     * @returns {TypeError}
+     */
+    getStdTypeMismatchErr(expectedType, actualType) {
+        return new TypeError(`Expected a "${expectedType}" but got a "${actualType}".`);
+    },
+    
+    /**
      * Returns an error indicating that an abstract class cannot be instantiated directly.
      * 
      * @since 0.0.2
