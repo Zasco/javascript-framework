@@ -9,14 +9,14 @@ export default {
     // Messages
 
     /**
-     * Returns a standardized message with subject.
+     * Returns a standard format message with subject.
      * 
-     * @since 0.0.2
-     * @param {string} message The message to display.
-     * @param {string} subject The subject of the message.
+     * @since ${NEXT_VERSION}
+     * @param {string} message The message
+     * @param {string} subject The subject of the message
      * @returns {string}
      */
-    getStdSubjectMessage(message, subject) {
+    getStdSubjectMsg(message, subject) {
         return `${message}: ${subject}`;
     },
 
@@ -137,4 +137,17 @@ export default {
 
 
     // Deprecated
+
+    /**
+     * Returns a standardized message with subject.
+     * 
+     * @since 0.0.2
+     * @deprecated ${NEXT_VERSION}
+     * @param {string} message The message to display.
+     * @param {string} subject The subject of the message.
+     * @returns {string}
+     */
+    getStdSubjectMessage(message, subject) {
+        return this.getStdSubjectMsg(message, subject);
+    },
 };
