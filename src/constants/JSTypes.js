@@ -11,6 +11,7 @@
 *   'FUNCTION': string, 
 *   'SYMBOL': string, 
 *   'BIGINT': string, 
+*   'NULL': string, 
 * }}
 */
 const JSTYPES = {
@@ -22,6 +23,7 @@ const JSTYPES = {
    FUNCTION: typeof function(){}, 
    SYMBOL: typeof Symbol(), 
    BIGINT: typeof BigInt(0), 
+    NULL: typeof null, /** Same as `OBJECT` */
 };
 
 export default Object.freeze(JSTYPES);
