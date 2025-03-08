@@ -6,6 +6,7 @@ import LogHelper from './src/utils/LogHelper.js';
 
 import Logger from './src/interfaces/Logger.js';
 
+import FileSystemPath from './src/models/FileSystemPath.js';
 import Action from './src/models/Action.js';
 import Repository from './src/models/Repository.js';
 import Commit from './src/models/Commit.js';
@@ -32,6 +33,7 @@ export {
     Logger, 
 
     // Models
+    FileSystemPath, 
     Action, 
     Repository, 
     Commit, 
