@@ -21,7 +21,7 @@ import {
     isUndefined, 
 } from 'is-what';
 
-import ErrorUtils from './ErrorUtils';
+import ErrorUtils from './ErrorUtils.js';
 
 /**
  * An utility for type operations and validations.
