@@ -136,7 +136,7 @@ export default class ErrorUtils {
     /**
      * Returns an error indicating that an abstract class cannot be instantiated directly.
      * 
-     * @since 0.0.2
+     * @since ${NEXT_VERSION}
      * @readonly
      * @static
      * @param {string} className The name of the abstract class.
