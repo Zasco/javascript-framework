@@ -9,8 +9,7 @@ export default class ErrorUtils {
 
     /** @throws {Error} If instantiated directly and not as a child class */
     constructor() {
-        const className = this.constructor.name;
-        if (className === ErrorUtils.name) throw ErrorUtils.getSingletonInstanceErr(className);
+        ErrorUtils.checkIsSingletonInstance(this, ErrorUtils);
     }
     
     
