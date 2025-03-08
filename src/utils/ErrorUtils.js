@@ -1,3 +1,5 @@
+import TypeUtils from './TypeUtils.js';
+
 /**
  * @since 0.0.2
  */
@@ -169,6 +171,79 @@ export default class ErrorUtils {
      */
     static getSingletonInstanceErr(className) {
         return this.getRestrictedInstanceErr(`Cannot instantiate singleton class "${className}". Singleton classes are used statically and cannot be instantiated directly.`);
+    }
+
+
+    // Checks
+
+    /**
+     * Checks if the provided instance is directly of the provided class and throws a {@link TypeError} if not.
+     * 
+     * @since ${NEXT_VERSION}
+     * @static
+     * @param {Object} instance The instance to check
+     * @param {Function} instanceClass The class to check against
+     * @throws {TypeError}
+     */
+    static checkIsDirectInstanceOf(instance, instanceClass) {
+        if (!TypeUtils.isDirectInstanceOf(instance, instanceClass)) throw new TypeError(`"${instance.constructor.name}" is not a direct instance of "${instanceClass.name}".`);
+    }
+
+
+    /**
+     * Checks if the provided instance is of the provided class and throws a {@link TypeError} if not.
+     * 
+     * @since ${NEXT_VERSION}
+     * @static
+     * @param {Object} instance The instance to check
+     * @param {Function} instanceClass The class to check against
+     * @throws {TypeError}
+     */
+    static checkIsInstanceOf(instance, instanceClass) {
+        if (!TypeUtils.isInstanceOf(instance, instanceClass)) throw new TypeError(`${instance.constructor.name}" is not an instance of "${instanceClass.name}".`);
+    }
+
+    /**
+     * Checks if the provided instance is of a restricted class and throws a {@link TypeError} if so.
+     * 
+     * @since ${NEXT_VERSION}
+     * @static
+     * @param {Object} instance The instance to check
+     * @param {Function} restrictedClass The class to check against
+     * @param {Error} error
+     * @throws {TypeError}
+     */
+    static checkIsRestrictedInstance(instance, restrictedClass, error) {
+        try {
+            this.checkIsDirectInstanceOf(instance, restrictedClass);
+            throw error;
+        } catch (error) {}
+    }
+    
+    /**
+     * Checks if the provided instance is of the provided singleton class and throws a {@link TypeError} if so.
+     * 
+     * @since ${NEXT_VERSION}
+     * @static
+     * @param {Object} instance The instance to check
+     * @param {Function} singletonClass The class to check against
+     * @throws {TypeError}
+     */
+    static checkIsSingletonInstance(instance, singletonClass) {
+        this.checkIsRestrictedInstance(instance, singletonClass, this.getSingletonInstanceErr(singletonClass.name));
+    }
+    
+    /**
+     * Checks if the provided instance is of the provided abstract class and throws a {@link TypeError} if so.
+     * 
+     * @since ${NEXT_VERSION}
+     * @static
+     * @param {Object} instance The instance to check
+     * @param {Function} abstractClass The class to check against
+     * @throws {TypeError}
+     */
+    static checkIsAbstractInstance(instance, abstractClass) {
+        this.checkIsRestrictedInstance(instance, abstractClass, this.getAbstractInstanceErr(abstractClass.name));
     }
 
 
