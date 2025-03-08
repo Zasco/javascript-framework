@@ -179,7 +179,7 @@ export default class TypeUtils {
 
     /** @throws {Error} If trying to create an instance. */
     constructor() {
-        throw ErrorUtils.getSingletonInstanceErr(this.constructor.name);
+        ErrorUtils.checkIsSingletonInstance(this, TypeUtils);
     }
 
     
