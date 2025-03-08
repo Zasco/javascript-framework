@@ -120,16 +120,29 @@ export default class ErrorUtils {
     }
     
     /**
+     * Returns a {@link TypeError} with the provided message.
+     * 
+     * @since ${NEXT_VERSION}
+     * @readonly
+     * @static
+     * @param {string} errorMessage
+     * @returns {TypeError}
+     */
+    static getRestrictedInstanceErr(errorMessage) {
+        return new TypeError(errorMessage);
+    }
+    
+    /**
      * Returns an error indicating that an abstract class cannot be instantiated directly.
      * 
      * @since 0.0.2
      * @readonly
      * @static
      * @param {string} className The name of the abstract class.
-     * @returns {Error} The error indicating that the abstract class cannot be instantiated directly.
+     * @returns {ReturnType<typeof ErrorUtils.getRestrictedInstanceErr>}
      */
     static getAbstractInstanceErr(className) {
-        return new Error(`Cannot instantiate abstract class "${className}".`);
+        return this.getRestrictedInstanceErr(`Cannot instantiate abstract class "${className}".`);
     }
     
     /**
@@ -152,10 +165,10 @@ export default class ErrorUtils {
      * @readonly
      * @static
      * @param {string} className The name of the class
-     * @returns {Error}
+     * @returns {ReturnType<typeof ErrorUtils.getRestrictedInstanceErr>}
      */
     static getSingletonInstanceErr(className) {
-        return new Error(`Cannot instantiate singleton class "${className}". Singleton classes are used statically and cannot be instantiated directly.`);
+        return this.getRestrictedInstanceErr(`Cannot instantiate singleton class "${className}". Singleton classes are used statically and cannot be instantiated directly.`);
     }
 
 
