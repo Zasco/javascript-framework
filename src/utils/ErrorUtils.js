@@ -147,15 +147,15 @@ export default class ErrorUtils {
     }
     
     /**
-     * Returns an error indicating that an abstract method must be implemented.
+     * Returns an {@link Error} indicating that an abstract method must be implemented.
      * 
-     * @since 0.0.2
+     * @since ${NEXT_VERSION}
      * @readonly
      * @static
-     * @param {string} methodName The name of the abstract method.
-     * @returns {Error} The error indicating that the abstract method must be implemented.
+     * @param {string} methodName The name of the abstract method
+     * @returns {Error}
      */
-    static getAbstractMethodError(methodName) {
+    static getAbstractMethodErr(methodName) {
         return new Error(`Abstract method "${methodName}" must be implemented.`);
     }
 
@@ -275,6 +275,20 @@ export default class ErrorUtils {
      */
     static getAbstractClassError(className) {
         return this.getAbstractInstanceErr(className);
+    }
+    
+    /**
+     * Returns an error indicating that an abstract method must be implemented.
+     * 
+     * @since 0.0.2
+     * @deprecated ${NEXT_VERSION}
+     * @readonly
+     * @static
+     * @param {string} methodName The name of the abstract method.
+     * @returns {Error} The error indicating that the abstract method must be implemented.
+     */
+    static getAbstractMethodError(methodName) {
+        return this.getAbstractMethodErr(methodName);
     }
 
     /**
