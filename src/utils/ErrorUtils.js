@@ -52,14 +52,15 @@ export default class ErrorUtils {
     }
 
     /**
-     * Builds a formatted error message including all causes.
+     * Returns a detailed message for the provided {@link Error} including stack trace and causes.
      * 
-     * @since 0.0.2
+     * @since ${NEXT_VERSION}
+     * @readonly
      * @static
-     * @param {Error} error The error to process
-     * @returns {string} Consolidated error message
+     * @param {Error} error
+     * @returns {string}
      */
-    static buildFormattedErrorMessage(error) {
+    static getDetailedErrMsg(error) {
         let message = error.message;
         
         // Add main error stack in a collapsible group
@@ -166,5 +167,18 @@ export default class ErrorUtils {
      */
     static getStdSubjectMessage(message, subject) {
         return this.getStdSubjectMsg(message, subject);
+    }
+
+    /**
+     * Builds a formatted error message including all causes.
+     * 
+     * @since 0.0.2
+     * @deprecated ${NEXT_VERSION}
+     * @static
+     * @param {Error} error The error to process
+     * @returns {string} Consolidated error message
+     */
+    static buildFormattedErrorMessage(error) {
+        return this.getDetailedErrMsg(error);
     }
 };
