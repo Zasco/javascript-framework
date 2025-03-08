@@ -8,7 +8,7 @@ import JSTYPES from '../constants/JSTypes.js';
  * 
  * @since ${NEXT_VERSION}
  */
-export class FileSystemPath {
+export default class FileSystemPath {
     /**
      * The path string.
      * 
