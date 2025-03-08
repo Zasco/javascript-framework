@@ -23,6 +23,14 @@ import {
 
 import ErrorUtils from './ErrorUtils.js';
 
+import JSTYPES from '../constants/JSTypes.js';
+import EXPANDED_TYPES from '../constants/ExpandedTypes.js';
+
+/**
+ * @typedef {import('../constants/ExpandedTypes.js').ClassInstanceObject} ClassInstanceObject
+ * @typedef {import('../constants/ExpandedTypes.js').ClassFunction} ClassFunction
+ */
+
 /**
  * An utility for type operations and validations.
  * 
