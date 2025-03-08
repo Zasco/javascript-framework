@@ -18,6 +18,7 @@ export default class ErrorUtils {
      * Returns a standard format message with subject.
      * 
      * @since ${NEXT_VERSION}
+     * @readonly
      * @static
      * @param {string} message The message
      * @param {string} subject The subject of the message
@@ -34,6 +35,7 @@ export default class ErrorUtils {
      * - Error while <{@link action}> <{@link subject}>: <{@link value}>
      * 
      * @since ${NEXT_VERSION}
+     * @readonly
      * @static
      * @param {string} action The action that was performed when the error happened
      * @param {string} [subject] The subject of the action
@@ -107,6 +109,7 @@ export default class ErrorUtils {
      * Returns a {@link TypeError} with the standard "mismatch" message.
      * 
      * @since ${NEXT_VERSION}
+     * @readonly
      * @static
      * @param {string} expectedType The expected type
      * @param {string} actualType The actual type
@@ -120,6 +123,7 @@ export default class ErrorUtils {
      * Returns an error indicating that an abstract class cannot be instantiated directly.
      * 
      * @since 0.0.2
+     * @readonly
      * @static
      * @param {string} className The name of the abstract class.
      * @returns {Error} The error indicating that the abstract class cannot be instantiated directly.
@@ -132,6 +136,7 @@ export default class ErrorUtils {
      * Returns an error indicating that an abstract method must be implemented.
      * 
      * @since 0.0.2
+     * @readonly
      * @static
      * @param {string} methodName The name of the abstract method.
      * @returns {Error} The error indicating that the abstract method must be implemented.
@@ -144,6 +149,7 @@ export default class ErrorUtils {
      * Returns an error indicating that a singleton class cannot be instantiated.
      * 
      * @since ${NEXT_VERSION}
+     * @readonly
      * @static
      * @param {string} className The name of the class
      * @returns {Error}
@@ -160,6 +166,7 @@ export default class ErrorUtils {
      * 
      * @since 0.0.2
      * @deprecated ${NEXT_VERSION}
+     * @readonly
      * @static
      * @param {string} message The message to display.
      * @param {string} subject The subject of the message.
@@ -174,6 +181,7 @@ export default class ErrorUtils {
      * 
      * @since 0.0.2
      * @deprecated ${NEXT_VERSION}
+     * @readonly
      * @static
      * @param {Error} error The error to process
      * @returns {string} Consolidated error message
