@@ -1,9 +1,15 @@
 /**
  * @since 0.0.2
  */
-export default {
+export default class ErrorUtils {
     /** Whether to display stack traces in error messages. Defaults to false.*/
-    DISPLAY_STACKS: false,
+    static DISPLAY_STACKS = false;
+
+    /** @throws {Error} If instantiated directly and not as a child class */
+    constructor() {
+        const className = this.constructor.name;
+        if (className === ErrorUtils.name) throw ErrorUtils.getSingletonInstanceErr(className);
+    }
     
     
     // Messages
@@ -12,13 +18,14 @@ export default {
      * Returns a standard format message with subject.
      * 
      * @since ${NEXT_VERSION}
+     * @static
      * @param {string} message The message
      * @param {string} subject The subject of the message
      * @returns {string}
      */
-    getStdSubjectMsg(message, subject) {
+    static getStdSubjectMsg(message, subject) {
         return `${message}: ${subject}`;
-    },
+    }
 
     /**
      * Returns an error message with standard format:
@@ -27,12 +34,13 @@ export default {
      * - Error while <{@link action}> <{@link subject}>: <{@link value}>
      * 
      * @since ${NEXT_VERSION}
+     * @static
      * @param {string} action The action that was performed when the error happened
      * @param {string} [subject] The subject of the action
      * @param {string} [value] The value associated with the action/subject
      * @returns {string}
      */
-    getStdErrorMsg(action, subject = undefined, value = undefined) {
+    static getStdErrorMsg(action, subject = undefined, value = undefined) {
         let msg = 'Error while '+ action;
         
         if (subject !== undefined) msg += ' '+ subject;
@@ -41,16 +49,17 @@ export default {
         else msg += ': '+ value;
         
         return msg;
-    },
+    }
 
     /**
      * Builds a formatted error message including all causes.
      * 
      * @since 0.0.2
+     * @static
      * @param {Error} error The error to process
      * @returns {string} Consolidated error message
      */
-    buildFormattedErrorMessage(error) {
+    static buildFormattedErrorMessage(error) {
         let message = error.message;
         
         // Add main error stack in a collapsible group
@@ -88,7 +97,7 @@ export default {
         message += '\n';
         
         return message;
-    },
+    }
 
     
     // Getters
@@ -97,46 +106,50 @@ export default {
      * Returns a {@link TypeError} with the standard "mismatch" message.
      * 
      * @since ${NEXT_VERSION}
+     * @static
      * @param {string} expectedType The expected type
      * @param {string} actualType The actual type
      * @returns {TypeError}
      */
-    getStdTypeMismatchErr(expectedType, actualType) {
+    static getStdTypeMismatchErr(expectedType, actualType) {
         return new TypeError(`Expected a "${expectedType}" but got a "${actualType}".`);
-    },
+    }
     
     /**
      * Returns an error indicating that an abstract class cannot be instantiated directly.
      * 
      * @since 0.0.2
+     * @static
      * @param {string} className The name of the abstract class.
      * @returns {Error} The error indicating that the abstract class cannot be instantiated directly.
      */
-    getAbstractClassError(className) {
+    static getAbstractClassError(className) {
         return new Error(`Cannot instantiate abstract class "${className}".`);
-    },
+    }
     
     /**
      * Returns an error indicating that an abstract method must be implemented.
      * 
      * @since 0.0.2
+     * @static
      * @param {string} methodName The name of the abstract method.
      * @returns {Error} The error indicating that the abstract method must be implemented.
      */
-    getAbstractMethodError(methodName) {
+    static getAbstractMethodError(methodName) {
         return new Error(`Abstract method "${methodName}" must be implemented.`);
-    },
+    }
 
     /**
      * Returns an error indicating that a singleton class cannot be instantiated.
      * 
      * @since ${NEXT_VERSION}
+     * @static
      * @param {string} className The name of the class
      * @returns {Error}
      */
-    getSingletonInstanceErr(className) {
+    static getSingletonInstanceErr(className) {
         return new Error(`Cannot instantiate singleton class "${className}". Singleton classes are used statically and cannot be instantiated directly.`);
-    },
+    }
 
 
     // Deprecated
@@ -146,11 +159,12 @@ export default {
      * 
      * @since 0.0.2
      * @deprecated ${NEXT_VERSION}
+     * @static
      * @param {string} message The message to display.
      * @param {string} subject The subject of the message.
      * @returns {string}
      */
-    getStdSubjectMessage(message, subject) {
+    static getStdSubjectMessage(message, subject) {
         return this.getStdSubjectMsg(message, subject);
-    },
+    }
 };
