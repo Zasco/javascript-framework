@@ -3,25 +3,27 @@
  * 
  * @since ${NEXT_VERSION}
  * @type {{
-*   'STRING': string, 
-*   'NUMBER': string, 
-*   'BOOLEAN': string, 
-*   'OBJECT': string, 
-*   'UNDEFINED': string, 
-*   'FUNCTION': string, 
-*   'SYMBOL': string, 
-*   'BIGINT': string, 
-* }}
-*/
+ *   'STRING': string, 
+ *   'NUMBER': string, 
+ *   'BOOLEAN': string, 
+ *   'OBJECT': string, 
+ *   'UNDEFINED': string, 
+ *   'FUNCTION': string, 
+ *   'SYMBOL': string, 
+ *   'BIGINT': string, 
+ *   'NULL': string, 
+ * }}
+ */
 const JSTYPES = {
-   STRING: typeof String(), 
-   NUMBER: typeof Number(), 
-   BOOLEAN: typeof Boolean(), 
-   OBJECT: typeof {}, 
-   UNDEFINED: typeof undefined, 
-   FUNCTION: typeof function(){}, 
-   SYMBOL: typeof Symbol(), 
-   BIGINT: typeof BigInt(0), 
+    STRING: typeof String(), 
+    NUMBER: typeof Number(), 
+    BOOLEAN: typeof Boolean(), 
+    OBJECT: typeof {}, 
+    UNDEFINED: typeof undefined, 
+    FUNCTION: typeof function(){}, 
+    SYMBOL: typeof Symbol(), 
+    BIGINT: typeof BigInt(0), 
+    NULL: typeof null, /** Same as `OBJECT` */
 };
 
 export default Object.freeze(JSTYPES);
