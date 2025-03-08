@@ -5,50 +5,8 @@ export default {
     /** Whether to display stack traces in error messages. Defaults to false.*/
     DISPLAY_STACKS: false,
     
-    /**
-     * Returns a {@link TypeError} with the standard "mismatch" message.
-     * 
-     * @since ${NEXT_VERSION}
-     * @param {string} expectedType The expected type
-     * @param {string} actualType The actual type
-     * @returns {TypeError}
-     */
-    getStdTypeMismatchErr(expectedType, actualType) {
-        return new TypeError(`Expected a "${expectedType}" but got a "${actualType}".`);
-    },
     
-    /**
-     * Returns an error indicating that an abstract class cannot be instantiated directly.
-     * 
-     * @since 0.0.2
-     * @param {string} className The name of the abstract class.
-     * @returns {Error} The error indicating that the abstract class cannot be instantiated directly.
-     */
-    getAbstractClassError(className) {
-        return new Error(`Cannot instantiate abstract class "${className}".`);
-    },
-    
-    /**
-     * Returns an error indicating that an abstract method must be implemented.
-     * 
-     * @since 0.0.2
-     * @param {string} methodName The name of the abstract method.
-     * @returns {Error} The error indicating that the abstract method must be implemented.
-     */
-    getAbstractMethodError(methodName) {
-        return new Error(`Abstract method "${methodName}" must be implemented.`);
-    },
-
-    /**
-     * Returns an error indicating that a singleton class cannot be instantiated.
-     * 
-     * @since ${NEXT_VERSION}
-     * @param {string} className The name of the class
-     * @returns {Error}
-     */
-    getSingletonInstanceErr(className) {
-        return new Error(`Cannot instantiate singleton class "${className}". Singleton classes are used statically and cannot be instantiated directly.`);
-    },
+    // Messages
 
     /**
      * Returns a standardized message with subject.
@@ -128,4 +86,55 @@ export default {
         
         return message;
     },
+
+    
+    // Getters
+    
+    /**
+     * Returns a {@link TypeError} with the standard "mismatch" message.
+     * 
+     * @since ${NEXT_VERSION}
+     * @param {string} expectedType The expected type
+     * @param {string} actualType The actual type
+     * @returns {TypeError}
+     */
+    getStdTypeMismatchErr(expectedType, actualType) {
+        return new TypeError(`Expected a "${expectedType}" but got a "${actualType}".`);
+    },
+    
+    /**
+     * Returns an error indicating that an abstract class cannot be instantiated directly.
+     * 
+     * @since 0.0.2
+     * @param {string} className The name of the abstract class.
+     * @returns {Error} The error indicating that the abstract class cannot be instantiated directly.
+     */
+    getAbstractClassError(className) {
+        return new Error(`Cannot instantiate abstract class "${className}".`);
+    },
+    
+    /**
+     * Returns an error indicating that an abstract method must be implemented.
+     * 
+     * @since 0.0.2
+     * @param {string} methodName The name of the abstract method.
+     * @returns {Error} The error indicating that the abstract method must be implemented.
+     */
+    getAbstractMethodError(methodName) {
+        return new Error(`Abstract method "${methodName}" must be implemented.`);
+    },
+
+    /**
+     * Returns an error indicating that a singleton class cannot be instantiated.
+     * 
+     * @since ${NEXT_VERSION}
+     * @param {string} className The name of the class
+     * @returns {Error}
+     */
+    getSingletonInstanceErr(className) {
+        return new Error(`Cannot instantiate singleton class "${className}". Singleton classes are used statically and cannot be instantiated directly.`);
+    },
+
+
+    // Deprecated
 };
