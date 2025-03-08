@@ -128,7 +128,7 @@ export default class ErrorUtils {
      * @param {string} className The name of the abstract class.
      * @returns {Error} The error indicating that the abstract class cannot be instantiated directly.
      */
-    static getAbstractClassError(className) {
+    static getAbstractInstanceErr(className) {
         return new Error(`Cannot instantiate abstract class "${className}".`);
     }
     
@@ -174,6 +174,20 @@ export default class ErrorUtils {
      */
     static getStdSubjectMessage(message, subject) {
         return this.getStdSubjectMsg(message, subject);
+    }
+
+    /**
+     * Returns an error indicating that an abstract class cannot be instantiated directly.
+     * 
+     * @since 0.0.2
+     * @deprecated ${NEXT_VERSION}
+     * @readonly
+     * @static
+     * @param {string} className The name of the abstract class.
+     * @returns {Error} The error indicating that the abstract class cannot be instantiated directly.
+     */
+    static getAbstractClassError(className) {
+        return this.getAbstractInstanceErr(className);
     }
 
     /**
