@@ -13,7 +13,7 @@ import {
     isEmptyArray, 
     
     // Object-related
-    isObject, 
+    isPlainObject, 
     isFunction, 
 
     // Nullish
@@ -94,7 +94,7 @@ export default class TypeUtils {
      * @static
      * @param {unknown} payload
      */
-    static isObject = isObject;
+    static isPlainObject = isPlainObject;
 
     /**
      * @since ${NEXT_VERSION}
