@@ -92,6 +92,7 @@ export default {
     output(message, level) {
         // FIXME: Using warning/error handling here causes an infinite loop if there are no registered loggers...
         // Handler calls withHandling() that calls handle() that calls fullDisplay() that calls output() and it starts over.
+        // [TODO] Add fallback with default console if no registered logger...
         try {
         //return ErrorHandler.withWarningHandling(
         //    () => {
