@@ -7,7 +7,7 @@ import ErrorUtils from "../utils/ErrorUtils.js";
  */
 export default class Logger {
     constructor() {
-        if (this.constructor === Logger) throw ErrorUtils.getAbstractClassError(this.constructor.name);
+        ErrorUtils.checkIsAbstractInstance(this, Logger);
     };
 
     /**
@@ -20,6 +20,6 @@ export default class Logger {
      * @throws {Error} Must be implemented by concrete logger.
      */
     log(message, level) {
-        throw ErrorUtils.getAbstractMethodError('log()');
+        throw ErrorUtils.getAbstractMethodErr(this.log.name);
     };
 };
