@@ -4,26 +4,22 @@
  */
 
 /**
- * @since 0.0.4
+ * @since ${NEXT_VERSION}
  */
 export default class CommitMessageSubjectLine {
     /**
-     * @since 0.0.4
      * @type {optionalStringComponent}
      */
     _type;
     /**
-     * @since 0.0.4
      * @type {optionalStringComponent}
      */
     _scope;
     /**
-     * @since 0.0.4
      * @type {isBreakingChange}
      */
     _isBreakingChange;
     /**
-     * @since 0.0.4
      * @type {string}
      */
     _subject;
@@ -42,7 +38,7 @@ export default class CommitMessageSubjectLine {
     }
 
     /**
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get type() {
@@ -50,7 +46,7 @@ export default class CommitMessageSubjectLine {
     }
 
     /**
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get scope() {
@@ -58,7 +54,7 @@ export default class CommitMessageSubjectLine {
     }
 
     /**
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get isBreakingChange() {
@@ -66,7 +62,7 @@ export default class CommitMessageSubjectLine {
     }
 
     /**
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get subject() {
@@ -76,7 +72,7 @@ export default class CommitMessageSubjectLine {
     /**
      * Returns the string representation of the {@link CommitMessageSubjectLine}.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @return {string}
      */
     toString() {
@@ -98,7 +94,7 @@ export default class CommitMessageSubjectLine {
     /**
      * Returns the length of the {@link CommitMessageSubjectLine}.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get length() {

@@ -1,11 +1,10 @@
 /**
- * @since 0.0.2
+ * @since ${NEXT_VERSION}
  */
 export default class Repository {
     /**
      * The path of the repository.
      * 
-     * @since 0.0.2
      * @type {string}
      */
     _path;
@@ -20,7 +19,7 @@ export default class Repository {
     /**
      * The path of the repository.
      * 
-     * @since 0.0.2
+     * @since ${NEXT_VERSION}
      * @readonly
      * @returns {string}
      */

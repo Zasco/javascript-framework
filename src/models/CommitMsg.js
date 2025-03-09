@@ -7,25 +7,22 @@ import SubjectLine from './CommitMsgSubjectLine.js';
  */
 
 /**
- * @since 0.0.4
+ * @since ${NEXT_VERSION}
  */
 export default class CommitMsg {
     /**
-     * @since 0.0.4
      * @protected
      * @type {SubjectLine}
      */
     _subjectLine;
     
     /**
-     * @since 0.0.4
      * @protected
      * @type {CommitMsgBody}
      */
     _body;
     
     /**
-     * @since 0.0.4
      * @protected
      * @type {CommitMsgFooter}
      */
@@ -45,7 +42,7 @@ export default class CommitMsg {
     /**
      * Returns the {@link SubjectLine} of the {@link CommitMsg}.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get subjectLine() {
@@ -55,7 +52,7 @@ export default class CommitMsg {
     /**
      * Returns the {@link CommitMsgBody} of the {@link CommitMsg}.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get body() {
@@ -65,7 +62,7 @@ export default class CommitMsg {
     /**
      * Returns the {@link CommitMsgFooter} of the {@link CommitMsg}.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get footer() {
@@ -75,7 +72,7 @@ export default class CommitMsg {
     /**
      * Returns the {@link CommitMsgContent} of the {@link CommitMsg} as a single string.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      * @returns {CommitMsgContent}
      */
@@ -101,7 +98,7 @@ export default class CommitMsg {
     /**
      * Returns the string representation of the {@link CommitMsg}.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @return {string}
      */
     toString() {
@@ -117,7 +114,7 @@ export default class CommitMsg {
     /**
      * Returns the width of the {@link CommitMsg} content.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      * @returns {number}
      */
