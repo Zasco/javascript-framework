@@ -1,11 +1,12 @@
 import ErrorUtils from '../utils/ErrorUtils.js';
 
 /**
+ * @since ${NEXT_VERSION}
  * @typedef {{'isDryRun': boolean}} DefaultActionConfig
  */
 
 /**
- * Base class for implementing action classes with standardized execution flow and configuration handling.
+ * A base class with standardized execution flow and configuration handling for actions.
  * 
  * @since ${NEXT_VERSION}
  * @abstract
@@ -21,7 +22,7 @@ export default class Action {
      */
     static get _DEFAULT_CONFIG() {
         return {
-            /** Whether the action is running in `dry-run` mode. */
+            /** @see {@link Action._isDryRun} */
             isDryRun: false, 
         }
     };
@@ -36,6 +37,8 @@ export default class Action {
     static _config;
 
     /**
+     * Whether the action is running in `dry-run` mode.
+     * 
      * @protected
      * @readonly
      * @static
@@ -71,7 +74,7 @@ export default class Action {
     }
 
     /**
-     * Abstract method that must be implemented by child classes to define action-specific logic.
+     * Defines action-specific logic in child classes.
      * 
      * @protected
      * @abstract
