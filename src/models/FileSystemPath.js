@@ -19,6 +19,8 @@ export default class FileSystemPath {
 
     /** @param {string} pathString A path string */
     constructor(pathString) {
+        // [TODO] Add validation for empty path string...
+        // [TODO] Validation should be handled in a dedicated service instead of in models...
         if (!TypeUtils.isString(pathString)) throw ErrorUtils.getStdTypeMismatchErr(JSTYPES.STRING, pathString);
 
         this._path = pathString;
