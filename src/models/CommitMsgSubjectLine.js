@@ -8,27 +8,35 @@
  */
 export default class CommitMessageSubjectLine {
     /**
+     * @see {@link CommitMessageSubjectLine.type}
+     * @protected
      * @type {optionalStringComponent}
      */
     _type;
     /**
+     * @see {@link CommitMessageSubjectLine.scope}
+     * @protected
      * @type {optionalStringComponent}
      */
     _scope;
     /**
+     * @see {@link CommitMessageSubjectLine.isBreakingChange}
+     * @protected
      * @type {isBreakingChange}
      */
     _isBreakingChange;
     /**
+     * @see {@link CommitMessageSubjectLine.subject}
+     * @protected
      * @type {string}
      */
     _subject;
 
     /**
-     * @param {string} subject
-     * @param {optionalStringComponent} [type]
-     * @param {optionalStringComponent} [scope]
-     * @param {isBreakingChange} [isBreakingChange]
+     * @param {string} subject See {@link CommitMessageSubjectLine.subject}
+     * @param {optionalStringComponent} [type] See {@link CommitMessageSubjectLine.type}
+     * @param {optionalStringComponent} [scope] See {@link CommitMessageSubjectLine.scope}
+     * @param {isBreakingChange} [isBreakingChange] See {@link CommitMessageSubjectLine.isBreakingChange}
      */
     constructor(subject, type = undefined, scope = undefined, isBreakingChange = undefined) {
         this._type = type;
@@ -38,6 +46,8 @@ export default class CommitMessageSubjectLine {
     }
 
     /**
+     * The type of the {@link CommitMessageSubjectLine}.
+     * 
      * @since ${NEXT_VERSION}
      * @readonly
      */
@@ -46,6 +56,8 @@ export default class CommitMessageSubjectLine {
     }
 
     /**
+     * The scope of the {@link CommitMessageSubjectLine}.
+     * 
      * @since ${NEXT_VERSION}
      * @readonly
      */
@@ -54,6 +66,8 @@ export default class CommitMessageSubjectLine {
     }
 
     /**
+     * The breaking change status of the {@link CommitMessageSubjectLine}.
+     * 
      * @since ${NEXT_VERSION}
      * @readonly
      */
@@ -62,6 +76,8 @@ export default class CommitMessageSubjectLine {
     }
 
     /**
+     * The subject of the {@link CommitMessageSubjectLine}.
+     * 
      * @since ${NEXT_VERSION}
      * @readonly
      */
@@ -92,10 +108,11 @@ export default class CommitMessageSubjectLine {
     }
     
     /**
-     * Returns the length of the {@link CommitMessageSubjectLine}.
+     * The length of the {@link CommitMessageSubjectLine}.
      * 
      * @since ${NEXT_VERSION}
      * @readonly
+     * @type {number}
      */
     get length() {
         return this.toString().length;

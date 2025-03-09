@@ -23,32 +23,33 @@ import SubjectLine from './CommitMsgSubjectLine.js';
 
 
 /**
- * Represents a Git commit implementing the `Conventional Commits` specification (https://www.conventionalcommits.org)
+ * Represents a git commit implementing the `Conventional Commits` specification (https://www.conventionalcommits.org)
  * 
  * @since ${NEXT_VERSION}
  */
 export default class Commit {
     /**
+     * @see {@link Commit.hash}
      * @protected
      * @type {string}
      */
     _hash;
 
     /**
+     * @see {@link Commit.commitDate}
      * @protected
      * @type {Date}
      */
     _commitDate;
 
     /**
+     * @see {@link Commit.msg}
      * @protected
      * @type {CommitMsg}
      */
     _msg;
 
-    /**
-     * @param {CommitConstructorParams} params
-     */
+    /** @param {CommitConstructorParams} params */
     constructor({hash, commitDate, msg}) {
         this._hash = hash;
         this._commitDate = commitDate;
@@ -56,7 +57,7 @@ export default class Commit {
     }
 
     /**
-     * Returns the hash of the commit.
+     * The hash of the commit.
      * 
      * @since ${NEXT_VERSION}
      * @readonly
@@ -66,7 +67,7 @@ export default class Commit {
     }
 
     /**
-     * Return the commit date of the commit.
+     * The commit date of the commit.
      * 
      * @since ${NEXT_VERSION}
      * @readonly
@@ -76,7 +77,7 @@ export default class Commit {
     }
 
     /**
-     * Returns the {@link SubjectLine.type} of the commit.
+     * The {@link SubjectLine.type} of the commit.
      * 
      * @since ${NEXT_VERSION}
      * @readonly
@@ -86,7 +87,7 @@ export default class Commit {
     }
 
     /**
-     * Returns if the commit {@link isBreakingChange}.
+     * If the commit {@link isBreakingChange}.
      * 
      * @since ${NEXT_VERSION}
      * @readonly

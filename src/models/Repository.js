@@ -3,15 +3,13 @@
  */
 export default class Repository {
     /**
-     * The path of the repository.
-     * 
+     * @see {@link Repository.path}
+     * @protected
      * @type {string}
      */
     _path;
 
-    /**
-     * @param {string} path The path of the repository.
-     */
+    /** @param {string} path See {@link Repository.path} */
     constructor(path) {
         this._path = path;
     };
@@ -21,7 +19,6 @@ export default class Repository {
      * 
      * @since ${NEXT_VERSION}
      * @readonly
-     * @returns {string}
      */
     get path() {
         return this._path;
