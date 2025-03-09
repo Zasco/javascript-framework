@@ -2,7 +2,7 @@ import CommitMsg from './CommitMsg.js';
 import SubjectLine from './CommitMsgSubjectLine.js';
 
 /**
- * @since 0.0.4
+ * @since ${NEXT_VERSION}
  * @typedef {string | undefined} optionalStringComponent A string component of the {@link CommitMsg} that is optional.
  * 
  * @typedef {boolean | undefined} isBreakingChange A flag indicating whether the {@link Commit} is a breaking change or not. `undefined` for neither `true` nor `false`.
@@ -13,7 +13,7 @@ import SubjectLine from './CommitMsgSubjectLine.js';
  */
 
 /**
- * @since 0.0.4
+ * @since ${NEXT_VERSION}
  * @typedef {{
  *   'hash': string, 
  *   'commitDate': Date, 
@@ -25,25 +25,22 @@ import SubjectLine from './CommitMsgSubjectLine.js';
 /**
  * Represents a Git commit implementing the `Conventional Commits` specification (https://www.conventionalcommits.org)
  * 
- * @since 0.0.4
+ * @since ${NEXT_VERSION}
  */
 export default class Commit {
     /**
-     * @since 0.0.4
      * @protected
      * @type {string}
      */
     _hash;
 
     /**
-     * @since 0.0.4
      * @protected
      * @type {Date}
      */
     _commitDate;
 
     /**
-     * @since 0.0.4
      * @protected
      * @type {CommitMsg}
      */
@@ -61,7 +58,7 @@ export default class Commit {
     /**
      * Returns the hash of the commit.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get hash() {
@@ -71,7 +68,7 @@ export default class Commit {
     /**
      * Return the commit date of the commit.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get commitDate() {
@@ -81,7 +78,7 @@ export default class Commit {
     /**
      * Returns the {@link SubjectLine.type} of the commit.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get type() {
@@ -91,7 +88,7 @@ export default class Commit {
     /**
      * Returns if the commit {@link isBreakingChange}.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get isBreakingChange() {
@@ -101,7 +98,7 @@ export default class Commit {
     /**
      * Returns the {@link SubjectLine.subject} of the commit.
      * 
-     * @since 0.0.4
+     * @since ${NEXT_VERSION}
      * @readonly
      */
     get subject() {
