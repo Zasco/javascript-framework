@@ -1,7 +1,16 @@
 import JSTypes from './JSTypes.js';
 
 /**
+ * The type of a `class instance` object.
+ * 
+ * @since ${NEXT_VERSION}
  * @typedef {Object} ClassInstanceObject
+ */
+
+/**
+ * The type of a `class` function.
+ * 
+ * @since ${NEXT_VERSION}
  * @typedef {Function} ClassFunction
  */
 
