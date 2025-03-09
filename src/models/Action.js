@@ -82,7 +82,7 @@ export default class Action {
      * @throws {Error} When called directly without implementation in child class
      */
     static _executeAction() {
-        throw ErrorUtils.getAbstractMethodErr(this._executeAction.name);
+        throw ErrorUtils.getStdAbstractMethodErr(this._executeAction.name, Action.name, this.name);
     }
 
     /**

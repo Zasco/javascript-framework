@@ -20,6 +20,6 @@ export default class Logger {
      * @throws {Error} Must be implemented by concrete logger.
      */
     log(message, level) {
-        throw ErrorUtils.getAbstractMethodErr(this.log.name);
+        throw ErrorUtils.getStdAbstractMethodErr(this.log.name, Logger.name, this.constructor.name);
     };
 };
