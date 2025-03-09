@@ -11,27 +11,30 @@ import SubjectLine from './CommitMsgSubjectLine.js';
  */
 export default class CommitMsg {
     /**
+     * @see {@link CommitMsg.subjectLine}
      * @protected
      * @type {SubjectLine}
      */
     _subjectLine;
     
     /**
+     * @see {@link CommitMsg.body}
      * @protected
      * @type {CommitMsgBody}
      */
     _body;
     
     /**
+     * @see {@link CommitMsg.footer}
      * @protected
      * @type {CommitMsgFooter}
      */
     _footer;
 
     /**
-     * @param {SubjectLine} subjectLine
-     * @param {CommitMsgBody} [body]
-     * @param {CommitMsgFooter} [footer]
+     * @param {SubjectLine} subjectLine See {@link CommitMsg.subjectLine}
+     * @param {CommitMsgBody} [body] See {@link CommitMsg.body}
+     * @param {CommitMsgFooter} [footer] See {@link CommitMsg.footer}
      */
     constructor(subjectLine, body = undefined, footer = undefined) {
         this._subjectLine = subjectLine;
@@ -40,7 +43,7 @@ export default class CommitMsg {
     }
 
     /**
-     * Returns the {@link SubjectLine} of the {@link CommitMsg}.
+     * The {@link SubjectLine} of the {@link CommitMsg}.
      * 
      * @since ${NEXT_VERSION}
      * @readonly
@@ -50,7 +53,7 @@ export default class CommitMsg {
     }
 
     /**
-     * Returns the {@link CommitMsgBody} of the {@link CommitMsg}.
+     * The {@link CommitMsgBody} of the {@link CommitMsg}.
      * 
      * @since ${NEXT_VERSION}
      * @readonly
@@ -60,7 +63,7 @@ export default class CommitMsg {
     }
 
     /**
-     * Returns the {@link CommitMsgFooter} of the {@link CommitMsg}.
+     * The {@link CommitMsgFooter} of the {@link CommitMsg}.
      * 
      * @since ${NEXT_VERSION}
      * @readonly
@@ -70,11 +73,11 @@ export default class CommitMsg {
     }
 
     /**
-     * Returns the {@link CommitMsgContent} of the {@link CommitMsg} as a single string.
+     * The {@link CommitMsgContent} of the {@link CommitMsg} as a single string.
      * 
      * @since ${NEXT_VERSION}
      * @readonly
-     * @returns {CommitMsgContent}
+     * @type {CommitMsgContent}
      */
     get content() {
         let content = '';
@@ -112,11 +115,11 @@ export default class CommitMsg {
     }
 
     /**
-     * Returns the width of the {@link CommitMsg} content.
+     * The width of the {@link CommitMsg.content}.
      * 
      * @since ${NEXT_VERSION}
      * @readonly
-     * @returns {number}
+     * @type {number}
      */
     get contentWidth() {
         if (this.content === undefined) return 0;
