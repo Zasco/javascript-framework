@@ -48,8 +48,7 @@ export default class Action {
 
     /** @throws {Error} If instantiated directly and not as a child class */
     constructor() {
-        const className = this.constructor.name;
-        if (className === Action.name) throw ErrorUtils.getAbstractClassError(className);
+        ErrorUtils.checkIsAbstractInstance(this, Action);
     }
 
     /**
@@ -83,7 +82,7 @@ export default class Action {
      * @throws {Error} When called directly without implementation in child class
      */
     static _executeAction() {
-        throw ErrorUtils.getAbstractMethodError(this._executeAction.name);
+        throw ErrorUtils.getAbstractMethodErr(this._executeAction.name);
     }
 
     /**
