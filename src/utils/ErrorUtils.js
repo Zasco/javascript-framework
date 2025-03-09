@@ -149,6 +149,7 @@ export default class ErrorUtils {
     /**
      * Returns an {@link Error} indicating that an abstract method must be implemented.
      * 
+     * @see {@link ErrorUtils.getStdAbstractMethodErr} that provides more details.
      * @since ${NEXT_VERSION}
      * @readonly
      * @static
@@ -157,6 +158,21 @@ export default class ErrorUtils {
      */
     static getAbstractMethodErr(methodName) {
         return new Error(`Abstract method "${methodName}" must be implemented.`);
+    }
+
+    /**
+     * Returns an {@link Error} indicating that an abstract method must be implemented.
+     * 
+     * @since ${NEXT_VERSION}
+     * @readonly
+     * @static
+     * @param {string} methodName The name of the abstract method
+     * @param {string} baseClassName The name of the class in which the abstract method is defined
+     * @param {string} childClassName The name of the class in which the abstract method should be implemented
+     * @returns {Error}
+     */
+    static getStdAbstractMethodErr(methodName, baseClassName, childClassName) {
+        return new Error(`Abstract method "${methodName}" of "${baseClassName}" must be implemented in "${childClassName}".`);
     }
 
     /**
