@@ -1,4 +1,4 @@
-import { ErrorUtils } from 'javascript-framework';
+import ErrorUtils from '../utils/ErrorUtils.js';
 
 /**
  * @typedef {{'isDryRun': boolean}} DefaultActionConfig
