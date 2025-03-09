@@ -5,6 +5,90 @@
 
 
 
+### [v0.0.3](https://github.com/Zasco/javascript-framework/compare/v0.0.2...v0.0.3) -  8 March 2025 
+
+
+
+
+
+
+
+
+#### New Features
+
+- feat(ErrorUtils): add standard error message generator  ([6c814d3](https://github.com/Zasco/javascript-framework/commit/6c814d3b9c8f780edb3f2413c2bd7443a43dfb08))
+- feat: add error getter for singleton instantiation  ([5e9d6c4](https://github.com/Zasco/javascript-framework/commit/5e9d6c42384695e8508ff4703581c6ac83d4b9bd))
+- feat: add types utility  ([272c6e7](https://github.com/Zasco/javascript-framework/commit/272c6e7cf5c418691d158ea21756868a55a4dab4))
+- feat: add JavaScript types constants  ([1e4d259](https://github.com/Zasco/javascript-framework/commit/1e4d2599e006ab248bf50678403c15b789916271))
+- feat: add getter for a standard TypeError  ([8311c71](https://github.com/Zasco/javascript-framework/commit/8311c7184f6c7e2aaad10136f3207a2b53cc0449))
+- feat: add the FileSystemPath model  ([cfa4c2b](https://github.com/Zasco/javascript-framework/commit/cfa4c2ba7e2d4900c72f67ab8de71b74a5728635))
+- feat: add expanded JavaScript data types  ([b4220ca](https://github.com/Zasco/javascript-framework/commit/b4220cae6dbc8bb8a6651fbd09f4d5a273820beb))
+- feat: add NULL to JavaScript data types  ([81f4a06](https://github.com/Zasco/javascript-framework/commit/81f4a0606d12da502db9837f55d01e4be8558090))
+- feat: import types and type definitions  ([1d90a1d](https://github.com/Zasco/javascript-framework/commit/1d90a1dbfacbd60c7a7a7bafef98d533f657ddd8))
+- feat: add numerous type checking methods  ([dc872ef](https://github.com/Zasco/javascript-framework/commit/dc872efe41046b65593d07560517db657755c3bd))
+- feat: add a getter for restricted instance error  ([248edc2](https://github.com/Zasco/javascript-framework/commit/248edc22f88b173719edff45bbf1f834907d4cd3))
+- feat: add various instance check methods  ([54e3efa](https://github.com/Zasco/javascript-framework/commit/54e3efa4f75efbf3b9a9e0905591d6f03019f972))
+- feat: add Action model  ([1defac9](https://github.com/Zasco/javascript-framework/commit/1defac9c5eab76065d924ea998997d6b165e663c))
+- feat: add Repository model  ([8d72984](https://github.com/Zasco/javascript-framework/commit/8d72984b425f145a85928716f08127c184f0e72b))
+- feat: add commit-related models  ([fc95610](https://github.com/Zasco/javascript-framework/commit/fc95610aefd09efe9a05dcf6f1c9937450cf343e))
+- feat: export newly added models  ([573d776](https://github.com/Zasco/javascript-framework/commit/573d7763ea98339549dd963db7fef42580df5aea))
+- feat: export FileSystemPath model  ([45bf8a8](https://github.com/Zasco/javascript-framework/commit/45bf8a82dc7781a6ebedcf3b4dd00263de9bf050))
+- feat: add getStdAbstractMethodErr() in ErrorUtils  ([b02347b](https://github.com/Zasco/javascript-framework/commit/b02347b9b2fc282a2672e17bad2aef9719cfcbab))
+
+#### Fixes
+
+- fix: make fallbackValue optional as documented  ([feca817](https://github.com/Zasco/javascript-framework/commit/feca817d5bb1a1c7b83f4ca27ffeb45953f03dc7))
+- fix: fix import of ErrorUtils missing file ext.  ([f5a07d8](https://github.com/Zasco/javascript-framework/commit/f5a07d84f5fb5634fcf4ce3df6e684058151fa63))
+- fix: make FileSystemPath export as default  ([3a21f5a](https://github.com/Zasco/javascript-framework/commit/3a21f5a8a4e1e029f27101530fd8baa85aac87f9))
+- fix: update ErrorUtils import to local path  ([5b28b6a](https://github.com/Zasco/javascript-framework/commit/5b28b6ab89323f5e45d484bc70286cc3deb492db))
+
+#### Chores And Housekeeping
+
+- chore: add auto-changelog config  ([168eb12](https://github.com/Zasco/javascript-framework/commit/168eb12f749afff99f5de086c6c460a126f0e426))
+- chore: add jsconfig file for better IDE support  ([80c875e](https://github.com/Zasco/javascript-framework/commit/80c875e88cf64e28ed9de43de99cf96d615962d9))
+
+#### Documentation Changes
+
+- docs(JSDoc): adjust check methods documentation  ([e2e91fe](https://github.com/Zasco/javascript-framework/commit/e2e91fe2288e9bd685b3ae9027588903c68df671))
+- docs(JSDoc): add missing @readonly tags on getters  ([bcf86ca](https://github.com/Zasco/javascript-framework/commit/bcf86ca9844c79dcf6db2b025574e75a77676d49))
+- docs(JSDoc): fix @since tag version  ([adaaad8](https://github.com/Zasco/javascript-framework/commit/adaaad8e89503f4c6766c13f2ae1269cf862609b))
+- docs(TODO): add fallback logger task  ([9ce90a0](https://github.com/Zasco/javascript-framework/commit/9ce90a01d15854948d855508a9a7f62ea7ff0530))
+- docs(CHANGELOG): init file with existing releases  ([ccaa6f4](https://github.com/Zasco/javascript-framework/commit/ccaa6f481625cf46ad7ca5acbe743b843e54a789))
+- docs(JSDoc): reset @since tags to placeholder  ([c43e783](https://github.com/Zasco/javascript-framework/commit/c43e7835890ce6851b9d4b45f3e16e930ea6f887))
+- docs(TODO): add validation TODOs in FSPath  ([f11035d](https://github.com/Zasco/javascript-framework/commit/f11035d37ef5a36e2fbd77a9464f2cb903bb54f6))
+- docs(JSDoc): miscelaneous improvements  ([696f01e](https://github.com/Zasco/javascript-framework/commit/696f01e413ac1be71d068ee26598a617071990fc))
+- docs(JSDoc): miscelaneous improvements  ([7034463](https://github.com/Zasco/javascript-framework/commit/70344636a97090eb58e230ebbd3806629e3acd59))
+- docs(JSDoc): miscelaneous improvements  ([eff92b5](https://github.com/Zasco/javascript-framework/commit/eff92b58a4253802e3360ba7c1921aee2a512474))
+- docs(JSDoc): improve and fix expanded type defs  ([81b4912](https://github.com/Zasco/javascript-framework/commit/81b49120ace42885bf9818b265411fcf2f6743e1))
+
+#### Refactoring and Updates
+
+- refactor: make ErrorUtils class-based  ([2a47bdb](https://github.com/Zasco/javascript-framework/commit/2a47bdb93eb17057d73b85b1f7b7ebb07bf9d9d3))
+- refactor: use isPlainObject instead of isObject  ([398bb41](https://github.com/Zasco/javascript-framework/commit/398bb41d91b53828128e3e5f3771e3ab8ec22088))
+- refactor: use instance check in constructor  ([f4e4f7c](https://github.com/Zasco/javascript-framework/commit/f4e4f7c45f70643b1cdec2ccb0ea8c6cb937492f))
+- refactor: use instance check in constructor  ([1cd998f](https://github.com/Zasco/javascript-framework/commit/1cd998f93c65a097e3524174098e75a3f389b576))
+- refactor: update usage of ErrorUtils  ([547a42f](https://github.com/Zasco/javascript-framework/commit/547a42fb36b8e4d8771004fdef0b304a50b60492))
+- refactor: update usage of ErrorUtils  ([1db5ad4](https://github.com/Zasco/javascript-framework/commit/1db5ad4c2dad5fd39bd9286846c8fa67c041e548))
+- refactor: use getStdAbstractMethodErr() in models  ([d022cb3](https://github.com/Zasco/javascript-framework/commit/d022cb3055a244cd6fcdb2e7cef6b7ed5c88a76e))
+
+
+#### Tidying of Code eg Whitespace
+
+- style(JSDoc): implement typedef layout convention  ([b752fd7](https://github.com/Zasco/javascript-framework/commit/b752fd7ed711fd91e3738dae69ec7452fe7e5712))
+- style(JSDoc): use camelCase in typedef  ([9f89561](https://github.com/Zasco/javascript-framework/commit/9f89561847b03d918b60de225f0ab8ae50a837bc))
+- style: group related methods together  ([01cf884](https://github.com/Zasco/javascript-framework/commit/01cf884c43c2ba17cbbf0d584dc199588e22351b))
+- style: fix indentation  ([f1b9926](https://github.com/Zasco/javascript-framework/commit/f1b99262b221100e7f358bccb3d2f5291fe20ac3))
+- style: small change to JSDoc description  ([13c09e5](https://github.com/Zasco/javascript-framework/commit/13c09e57bc3e23d7f42c3b5ea9942fe7029b6028))
+
+
+#### General Changes
+
+- refactor!: rename method to getStdSubjectMsg()  ([53156e9](https://github.com/Zasco/javascript-framework/commit/53156e9843025b60321a539f6618ef93c1417b8b))
+- refactor!: rename method to getStdErrorMsg()  ([b15a29f](https://github.com/Zasco/javascript-framework/commit/b15a29f0f3ccf7c4d97582d952113fe48f25cdec))
+- refactor!: rename method to getDetailedErrMsg()  ([3cdf7fe](https://github.com/Zasco/javascript-framework/commit/3cdf7fe6ac606523880a4f069c62c9314381755c))
+- refactor!: rename abstract instance error getter  ([5e1cc21](https://github.com/Zasco/javascript-framework/commit/5e1cc21d20255fbf45a02bcfddb316307d06c81c))
+- refactor!: rename getAbstractMethodErr()  ([7f09e5c](https://github.com/Zasco/javascript-framework/commit/7f09e5cd25dbcb2e9df05b4f7e2160e97316de04))
+
 ### [v0.0.2](https://github.com/Zasco/javascript-framework/compare/0.0.1...v0.0.2) -  22 February 2025 
 
 

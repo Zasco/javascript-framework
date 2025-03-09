@@ -4,7 +4,7 @@
  */
 
 /**
- * @since ${NEXT_VERSION}
+ * @since 0.0.3
  */
 export default class CommitMessageSubjectLine {
     /**
@@ -48,7 +48,7 @@ export default class CommitMessageSubjectLine {
     /**
      * The type of the {@link CommitMessageSubjectLine}.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @readonly
      */
     get type() {
@@ -58,7 +58,7 @@ export default class CommitMessageSubjectLine {
     /**
      * The scope of the {@link CommitMessageSubjectLine}.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @readonly
      */
     get scope() {
@@ -68,7 +68,7 @@ export default class CommitMessageSubjectLine {
     /**
      * The breaking change status of the {@link CommitMessageSubjectLine}.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @readonly
      */
     get isBreakingChange() {
@@ -78,7 +78,7 @@ export default class CommitMessageSubjectLine {
     /**
      * The subject of the {@link CommitMessageSubjectLine}.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @readonly
      */
     get subject() {
@@ -88,7 +88,7 @@ export default class CommitMessageSubjectLine {
     /**
      * Returns the string representation of the {@link CommitMessageSubjectLine}.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @return {string}
      */
     toString() {
@@ -110,7 +110,7 @@ export default class CommitMessageSubjectLine {
     /**
      * The length of the {@link CommitMessageSubjectLine}.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @readonly
      * @type {number}
      */

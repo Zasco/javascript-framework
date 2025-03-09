@@ -1,5 +1,5 @@
 /**
- * @since ${NEXT_VERSION}
+ * @since 0.0.3
  */
 export default class Repository {
     /**
@@ -17,7 +17,7 @@ export default class Repository {
     /**
      * The path of the repository.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @readonly
      */
     get path() {

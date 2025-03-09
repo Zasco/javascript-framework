@@ -2,7 +2,7 @@ import CommitMsg from './CommitMsg.js';
 import SubjectLine from './CommitMsgSubjectLine.js';
 
 /**
- * @since ${NEXT_VERSION}
+ * @since 0.0.3
  * @typedef {string | undefined} optionalStringComponent A string component of the {@link CommitMsg} that is optional.
  * 
  * @typedef {boolean | undefined} isBreakingChange A flag indicating whether the {@link Commit} is a breaking change or not. `undefined` for neither `true` nor `false`.
@@ -13,7 +13,7 @@ import SubjectLine from './CommitMsgSubjectLine.js';
  */
 
 /**
- * @since ${NEXT_VERSION}
+ * @since 0.0.3
  * @typedef {{
  *   'hash': string, 
  *   'commitDate': Date, 
@@ -25,7 +25,7 @@ import SubjectLine from './CommitMsgSubjectLine.js';
 /**
  * Represents a git commit implementing the `Conventional Commits` specification (https://www.conventionalcommits.org)
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.3
  */
 export default class Commit {
     /**
@@ -59,7 +59,7 @@ export default class Commit {
     /**
      * The hash of the commit.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @readonly
      */
     get hash() {
@@ -69,7 +69,7 @@ export default class Commit {
     /**
      * The commit date of the commit.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @readonly
      */
     get commitDate() {
@@ -79,7 +79,7 @@ export default class Commit {
     /**
      * The {@link SubjectLine.type} of the commit.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @readonly
      */
     get type() {
@@ -89,7 +89,7 @@ export default class Commit {
     /**
      * If the commit {@link isBreakingChange}.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @readonly
      */
     get isBreakingChange() {
@@ -99,7 +99,7 @@ export default class Commit {
     /**
      * Returns the {@link SubjectLine.subject} of the commit.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @readonly
      */
     get subject() {

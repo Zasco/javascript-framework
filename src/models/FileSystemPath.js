@@ -6,7 +6,7 @@ import JSTYPES from '../constants/JSTypes.js';
 /**
  * Represents a filesystem path as an object for type-safe operations.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.3
  */
 export default class FileSystemPath {
     /**
@@ -29,7 +29,7 @@ export default class FileSystemPath {
     /**
      * Returns the string representation.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @returns {string}
      */
     toString() {

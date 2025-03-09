@@ -34,20 +34,20 @@ import EXPANDED_TYPES from '../constants/ExpandedTypes.js';
 /**
  * An utility for type operations and validations.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.3
  */
 export default class TypeUtils {
     // String
     
     /**
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      */
     static isString = isString;
 
     /**
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      */
@@ -57,21 +57,21 @@ export default class TypeUtils {
     // Number
     
     /**
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      */
     static isNumber = isNumber;
 
     /**
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      */
     static isNegativeNumber = isNegativeNumber;
 
     /**
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      */
@@ -81,14 +81,14 @@ export default class TypeUtils {
     // Array-related
     
     /**
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      */
     static isArray = isArray;
 
     /**
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      */
@@ -100,7 +100,7 @@ export default class TypeUtils {
     /**
      * Returns whether the payload is any {@link JSTYPES.OBJECT} (excluding {@link JSTYPES.NULL} but including special classes or objects with other prototypes).
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      * @returns {boolean}
@@ -110,7 +110,7 @@ export default class TypeUtils {
     }
     
     /**
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      */
@@ -119,7 +119,7 @@ export default class TypeUtils {
     /**
      * Returns whether the payload is a {@link EXPANDED_TYPES.CLASS_INSTANCE_OBJECT}.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      * @returns {boolean}
@@ -133,7 +133,7 @@ export default class TypeUtils {
     }
 
     /**
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      */
@@ -144,7 +144,7 @@ export default class TypeUtils {
      * 
      * WARNING: Will also return `true` for {@link JSTYPES.FUNCTION}s with a manually set `prototype`.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      * @returns {boolean}
@@ -164,14 +164,14 @@ export default class TypeUtils {
     // Nullish
     
     /**
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      */
     static isNull = isNull;
     
     /**
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {unknown} payload
      */
@@ -188,7 +188,7 @@ export default class TypeUtils {
     /**
      * Returns if the provided object instance is of the provided class.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {ClassInstanceObject} instance
      * @param {ClassFunction} instanceClass
@@ -212,7 +212,7 @@ export default class TypeUtils {
      * 
      * An alias of {@link TypeUtils.isInstanceOf} with `direct` set to `true`.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {object} instance
      * @param {Function} instanceClass

@@ -1,7 +1,7 @@
 /**
  * Constants representing JavaScript data types with values dynamically derived using `typeof` operations.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.3
  * @type {{
  *   'STRING': string, 
  *   'NUMBER': string, 

@@ -1,14 +1,14 @@
 import ErrorUtils from '../utils/ErrorUtils.js';
 
 /**
- * @since ${NEXT_VERSION}
+ * @since 0.0.3
  * @typedef {{'isDryRun': boolean}} DefaultActionConfig
  */
 
 /**
  * A base class with standardized execution flow and configuration handling for actions.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.3
  * @abstract
  */
 export default class Action {
@@ -88,7 +88,7 @@ export default class Action {
     /**
      * The main execution method for the action. Handles configuration, logging, and error management.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.3
      * @static
      * @param {Object} config The configuration to merge with defaults
      * @returns {boolean} Whether the action executed successfully
