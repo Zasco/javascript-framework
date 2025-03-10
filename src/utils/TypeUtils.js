@@ -138,7 +138,7 @@ export default class TypeUtils {
      * @since 0.0.3
      * @static
      * @param {unknown} payload
-     * @returns {boolean}
+     * @returns {payload is (object & { constructor: Function })}
      */
     static isClassInstanceObject(payload) {
         return this.isAnyObject(payload) 
@@ -163,7 +163,7 @@ export default class TypeUtils {
      * @since 0.0.3
      * @static
      * @param {unknown} payload
-     * @returns {boolean}
+     * @returns {payload is (new (...args: any[]) => any)}
      */
     static isClassFunction(payload) {
         if (!this.isFunction(payload)) return false;
