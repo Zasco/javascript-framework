@@ -13,6 +13,7 @@ import {
     isEmptyArray, 
     
     // Object-related
+    isAnyObject, 
     isPlainObject, 
     isFunction, 
 
@@ -98,15 +99,15 @@ export default class TypeUtils {
     // Object-related
 
     /**
-     * Returns whether the payload is any {@link JSTYPES.OBJECT} (excluding {@link JSTYPES.NULL} but including special classes or objects with other prototypes).
+     * Returns whether the payload is an any kind of object (including special classes or objects with different prototypes).
      * 
      * @since 0.0.3
      * @static
      * @param {unknown} payload
-     * @returns {boolean}
+     * @returns {payload is object}
      */
     static isAnyObject(payload) {
-        return typeof payload === JSTYPES.OBJECT && !this.isNull(payload);
+        return isAnyObject(payload);
     }
     
     /**
@@ -127,7 +128,7 @@ export default class TypeUtils {
     static isClassInstanceObject(payload) {
         return this.isAnyObject(payload) 
             && !this.isPlainObject(payload) 
-            && !this.isUndefined(payload?.constructor)
+            && !this.isUndefined(payload.constructor)
             && payload.constructor.name !== Object.constructor.name
         ;
     }
