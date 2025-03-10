@@ -13,6 +13,7 @@ import {
     isEmptyArray, 
     
     // Object-related
+    isAnyObject, 
     isPlainObject, 
     isFunction, 
 
@@ -47,11 +48,16 @@ export default class TypeUtils {
     static isString = isString;
 
     /**
+     * Returns whether the payload is ''.
+     * 
      * @since 0.0.3
      * @static
      * @param {unknown} payload
+     * @returns {payload is ''}
      */
-    static isEmptyString = isEmptyString;
+    static isEmptyString(payload) {
+        return isEmptyString(payload);
+    }
 
 
     // Number
@@ -64,18 +70,28 @@ export default class TypeUtils {
     static isNumber = isNumber;
 
     /**
+     * Returns whether the payload is a negative number (but not 0).
+     * 
      * @since 0.0.3
      * @static
      * @param {unknown} payload
+     * @returns {payload is (number & { __negativeTag: true })}
      */
-    static isNegativeNumber = isNegativeNumber;
+    static isNegativeNumber(payload) {
+        return isNegativeNumber(payload);
+    }
 
     /**
+     * Returns whether the payload is a positive number (but not 0).
+     * 
      * @since 0.0.3
      * @static
      * @param {unknown} payload
+     * @returns {payload is (number & { __positiveTag: true })}
      */
-    static isPositiveNumber = isPositiveNumber;
+    static isPositiveNumber(payload) {
+        return isPositiveNumber(payload);
+    }
 
 
     // Array-related
@@ -98,15 +114,15 @@ export default class TypeUtils {
     // Object-related
 
     /**
-     * Returns whether the payload is any {@link JSTYPES.OBJECT} (excluding {@link JSTYPES.NULL} but including special classes or objects with other prototypes).
+     * Returns whether the payload is an any kind of object (including special classes or objects with different prototypes).
      * 
      * @since 0.0.3
      * @static
      * @param {unknown} payload
-     * @returns {boolean}
+     * @returns {payload is object}
      */
     static isAnyObject(payload) {
-        return typeof payload === JSTYPES.OBJECT && !this.isNull(payload);
+        return isAnyObject(payload);
     }
     
     /**
@@ -122,12 +138,12 @@ export default class TypeUtils {
      * @since 0.0.3
      * @static
      * @param {unknown} payload
-     * @returns {boolean}
+     * @returns {payload is (object & { constructor: Function })}
      */
     static isClassInstanceObject(payload) {
         return this.isAnyObject(payload) 
             && !this.isPlainObject(payload) 
-            && !this.isUndefined(payload?.constructor)
+            && !this.isUndefined(payload.constructor)
             && payload.constructor.name !== Object.constructor.name
         ;
     }
@@ -147,7 +163,7 @@ export default class TypeUtils {
      * @since 0.0.3
      * @static
      * @param {unknown} payload
-     * @returns {boolean}
+     * @returns {payload is (new (...args: any[]) => any)}
      */
     static isClassFunction(payload) {
         if (!this.isFunction(payload)) return false;
