@@ -18,6 +18,8 @@ import ConsoleLogger from './src/entities/ConsoleLogger.js';
 /**
  * @typedef {import('./src/models/Action.js').DefaultActionConfig} DefaultActionConfig
  * @typedef {import('./src/config/LogLevelsConfig.js').LogLevel} LogLevel
+ * @typedef {import('./src/models/Commit.js').CommitMsgContent} CommitMsgContent
+ * @typedef {import('./src/models/Commit.js').CommitMsgContentComponent} CommitMsgContentComponent
  */
 
 export {
