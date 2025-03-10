@@ -2,6 +2,7 @@ import LOG_LEVELS from './src/config/LogLevelsConfig.js';
 
 import ErrorHandler from './src/utils/ErrorHandler.js';
 import ErrorUtils from './src/utils/ErrorUtils.js';
+import TypeUtils from './src/utils/TypeUtils.js';
 import LogHelper from './src/utils/LogHelper.js';
 
 import Logger from './src/interfaces/Logger.js';
@@ -29,6 +30,7 @@ export {
     // Helpers & Utils
     ErrorHandler, 
     ErrorUtils, 
+    TypeUtils, 
     LogHelper, 
 
     // Interfaces
