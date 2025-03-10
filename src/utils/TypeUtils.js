@@ -48,11 +48,16 @@ export default class TypeUtils {
     static isString = isString;
 
     /**
+     * Returns whether the payload is ''.
+     * 
      * @since 0.0.3
      * @static
      * @param {unknown} payload
+     * @returns {payload is ''}
      */
-    static isEmptyString = isEmptyString;
+    static isEmptyString(payload) {
+        return isEmptyString(payload);
+    }
 
 
     // Number
@@ -65,18 +70,28 @@ export default class TypeUtils {
     static isNumber = isNumber;
 
     /**
+     * Returns whether the payload is a negative number (but not 0).
+     * 
      * @since 0.0.3
      * @static
      * @param {unknown} payload
+     * @returns {payload is (number & { __negativeTag: true })}
      */
-    static isNegativeNumber = isNegativeNumber;
+    static isNegativeNumber(payload) {
+        return isNegativeNumber(payload);
+    }
 
     /**
+     * Returns whether the payload is a positive number (but not 0).
+     * 
      * @since 0.0.3
      * @static
      * @param {unknown} payload
+     * @returns {payload is (number & { __positiveTag: true })}
      */
-    static isPositiveNumber = isPositiveNumber;
+    static isPositiveNumber(payload) {
+        return isPositiveNumber(payload);
+    }
 
 
     // Array-related
