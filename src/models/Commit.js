@@ -1,9 +1,9 @@
 /**
  * @since 0.0.3
  * @typedef {{
- *   'hash': string, 
- *   'commitDate': Date, 
- *   'msg': CommitMsg, 
+ *   'hash'?: string, 
+ *   'commitDate'?: Date, 
+ *   'msg'?: string, 
 * }} CommitConstructorParams The required params to construct a {@link Commit} object.
 */
 
@@ -17,21 +17,21 @@ export default class Commit {
     /**
      * @see {@link Commit.hash}
      * @protected
-     * @type {string}
+     * @type {string | undefined}
      */
     _hash;
 
     /**
      * @see {@link Commit.commitDate}
      * @protected
-     * @type {Date}
+     * @type {Date | undefined}
      */
     _commitDate;
 
     /**
      * @see {@link Commit.msg}
      * @protected
-     * @type {CommitMsg}
+     * @type {string | undefined}
      */
     _msg;
 
@@ -60,5 +60,15 @@ export default class Commit {
      */
     get commitDate() {
         return this._commitDate;
+    }
+
+    /**
+     * The message of the commit.
+     * 
+     * @since ${NEXT_VERSION}
+     * @readonly
+     */
+    get msg() {
+        return this._msg;
     }
 }
