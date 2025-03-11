@@ -9,7 +9,7 @@
 
 
 /**
- * Represents a git commit implementing the `Conventional Commits` specification (https://www.conventionalcommits.org)
+ * Represents a git commit.
  * 
  * @since 0.0.3
  */
