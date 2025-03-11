@@ -11,16 +11,12 @@ import FileSystemPath from './src/models/FileSystemPath.js';
 import Action from './src/models/Action.js';
 import Repository from './src/models/Repository.js';
 import Commit from './src/models/Commit.js';
-import CommitMsg from './src/models/CommitMsg.js';
-import CommitMsgSubjectLine from './src/models/CommitMsgSubjectLine.js';
 
 import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
 /**
  * @typedef {import('./src/models/Action.js').DefaultActionConfig} DefaultActionConfig
  * @typedef {import('./src/config/LogLevelsConfig.js').LogLevel} LogLevel
- * @typedef {import('./src/models/Commit.js').CommitMsgContent} CommitMsgContent
- * @typedef {import('./src/models/Commit.js').CommitMsgContentComponent} CommitMsgContentComponent
  */
 
 export {
@@ -41,8 +37,6 @@ export {
     Action, 
     Repository, 
     Commit, 
-    CommitMsg, 
-    CommitMsgSubjectLine, 
 
     // Entities
     ConsoleLogger, 
