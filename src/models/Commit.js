@@ -61,4 +61,14 @@ export default class Commit {
     get commitDate() {
         return this._commitDate;
     }
+
+    /**
+     * The message of the commit.
+     * 
+     * @since ${NEXT_VERSION}
+     * @readonly
+     */
+    get msg() {
+        return this._msg;
+    }
 }
