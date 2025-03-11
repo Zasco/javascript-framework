@@ -3,7 +3,10 @@
         "module": "NodeNext",
         "target": "ES2022",
         "moduleResolution": "nodenext",
-        "checkJs": true
+        "checkJs": true,
+        "strictNullChecks": true,
+        "noImplicitAny": true,
+        "noUnusedParameters": false
     },
     "include": [
         "src/**/*"
