@@ -1,4 +1,5 @@
 import ErrorHandler from "./ErrorHandler.js";
+import ErrorUtils from "../utils/ErrorUtils.js";
 import LogUtils from "../utils/LogUtils.js";
 
 import Logger from "../interfaces/Logger.js";
@@ -11,20 +12,32 @@ import LOG_LEVELS from '../config/LogLevelsConfig.js';
 /**
  * @since 0.0.1
  */
-export default {
-    /** @type {Logger[]} The list of registered logger instances. */
-    loggers: [],
+export default class LogHelper {
+    /**
+     * @static
+     * @type {Logger[]} The list of registered logger instances.
+     */
+    static loggers = [];
 
-    /** @type {ConsoleLogger} Singleton instance for console logging */
-    _consoleLogger: new ConsoleLogger(),
+    /**
+     * @static
+     * @type {ConsoleLogger} Singleton instance for console logging
+     */
+    static _consoleLogger = new ConsoleLogger();
+
+    /** @throws {Error} If instantiated */
+    constructor() {
+        ErrorUtils.checkIsSingletonInstance(this, LogHelper);
+    }
 
     /**
      * Registers a logger instance.
      * 
      * @since 0.0.1
+     * @static
      * @param {Logger} logger The logger instance to register.
      */
-    registerLogger(logger) {
+    static registerLogger(logger) {
         ErrorHandler.withWarningHandling(
             () => {
                 if (!logger) throw new Error('Logger must be provided.');
@@ -38,18 +51,19 @@ export default {
             'Failed to register logger.',
             false,
         );
-    },
+    }
 
     /**
      * Displays a message in the console, the output and the VS Code window.
      * 
      * @since 0.0.1
+     * @static
      * @param {*} message The message to display.
      * @param {LogLevel} level The log level. Defaults to `LOG`.
      * @param {string | undefined} summaryMessage The summary message to display in the VS Code window. Defaults to the first line of the message.
      * @returns {boolean} If the message was displayed successfully in every output.
      */
-    fullDisplay(
+    static fullDisplay(
         message, 
         level = LOG_LEVELS.LOG, 
         summaryMessage = undefined, 
@@ -68,28 +82,30 @@ export default {
             this.log(`Error while doing a "full display" of "${message}": ${error.message}`, LOG_LEVELS.ERROR);
             return false;
         }
-    },
+    }
     
     /**
      * Logs a message to the console.
      * 
      * @since 0.0.1
+     * @static
      * @param {*} message The message to log.
      * @param {LogLevel} [level] The log level. Defaults to `LOG`.
      */
-    log(message, level = LOG_LEVELS.LOG) {
+    static log(message, level = LOG_LEVELS.LOG) {
         this._consoleLogger.log(message, level);
-    },
+    }
     
     /**
      * Outputs a message to the the registered loggers.
      * 
      * @since 0.0.1
+     * @static
      * @param {*} message The message to output.
      * @param {LogLevel} level The log level.
      * @returns {boolean} If the message was output successfully.
      */
-    output(message, level) {
+    static output(message, level) {
         // FIXME: Using warning/error handling here causes an infinite loop if there are no registered loggers...
         // Handler calls withHandling() that calls handle() that calls fullDisplay() that calls output() and it starts over.
         // [TODO] Add fallback with default console if no registered logger...
@@ -106,16 +122,17 @@ export default {
         } catch (error) {
             return false;
         }
-    },
+    }
 
     // [TODO] Allow node-fetch `Response` object as a valid param type here. Find how to support browser/Node environments...
     /**
      * Logs a `Response` object to the console in a readable format.
      * 
      * @since 0.0.2
+     * @static
      * @param {Response} response The response object to output.
      */
-    logResponse(response) {
+    static logResponse(response) {
         console.debug(LogUtils.exposeResponse(response));
-    },
+    }
 };

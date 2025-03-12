@@ -1,4 +1,5 @@
 import LogHelper from "./LogHelper.js";
+import ErrorUtils from "../utils/ErrorUtils.js";
 
 import ERROR_LEVELS from "../config/ErrorLevelsConfig.js";
 import LOG_LEVELS from '../config/LogLevelsConfig.js'
@@ -11,42 +12,50 @@ import LOG_LEVELS from '../config/LogLevelsConfig.js'
 /**
  * @since 0.0.1
  */
-export default {
+export default class ErrorHandler {
     /** Wether warnings are critical. If true, warnings are treated as errors. Defaults to false. */
-    WARNINGS_ARE_CRITICAL: false,
+    static WARNINGS_ARE_CRITICAL = false;
+
+    /** @throws {Error} If instantiated */
+    constructor() {
+        ErrorUtils.checkIsSingletonInstance(this, ErrorHandler);
+    }
 
     /**
      * Returns the log level for a given error level.
      * 
      * @since 0.0.2
+     * @static
      * @param {ErrorLevel} level The error level. Defaults to `ERROR`.
      * @returns {LogLevel} The log level for the given error level.
      */
-    getLogLevelForErrorLevel(level) {
+    static getLogLevelForErrorLevel(level) {
         return level === ERROR_LEVELS.ERROR 
             ? LOG_LEVELS.ERROR
             : LOG_LEVELS.WARNING
         ;
-    },
+    }
     
     /**
      * Creates a new error with a cause.
      * 
      * @since 0.0.1
+     * @static
      * @param {string} errorMessage The error message.
      * @param {Error} causingError The error that caused this error.
      * @returns {Error} The new error with a cause.
      */
-    getCausedError(errorMessage, causingError) {
+    static getCausedError(errorMessage, causingError) {
         const error = new Error(errorMessage);
         error.cause = causingError;
         return error;
-    },
+    }
 
     /**
      * Handles an error and displays it appropriately.
      * 
      * @since 0.0.1
+     * @static
      * @param {Error} handledError The error to handle.
      * @param {ErrorLevel} [level] The failure level (error or warning). Defaults to `ERROR`.
      * @param {boolean} [rethrow] Whether to rethrow the error after handling. Only applies to `ERROR`.
@@ -54,7 +63,7 @@ export default {
      * @returns {* | undefined} The fallback value if handling a warning, undefined if handling an error and not rethrowing.
      * @throws {Error} The rethrown error.
      */
-    handle(
+    static handle(
         handledError, 
         level = ERROR_LEVELS.ERROR, 
         rethrow = true, 
@@ -89,12 +98,13 @@ export default {
             
             throw handlingError;
         }
-    },
+    }
 
     /**
     * Runs a function with warning/error handling.
     * 
     * @since 0.0.1
+    * @static
     * @param {() => (* | Promise<*>)} fn The function to execute.
     * @param {string} message The message if the function fails.
     * @param {ErrorLevel} [level] The error level (`WARNING` or `ERROR`).
@@ -102,7 +112,7 @@ export default {
     * @param {*} [fallbackValue] The value to return on failure. Defaults to `undefined`. For WARNING only.
     * @returns {(* | undefined) | Promise<* | undefined>} The result of the function or, if the function fails, the fallback value if WARNING or undefined if ERROR. A promise if the function is async.
     */
-    withHandling(
+    static withHandling(
         fn, 
         message, 
         level = ERROR_LEVELS.ERROR, 
@@ -125,18 +135,19 @@ export default {
         } catch (error) {
             return handleError(error);
         }
-    },
+    }
 
     /**
      * Runs a function with warning handling. Never rethrows and always returns a fallback value on failure.
      * 
      * @since 0.0.1
+     * @static
      * @param {() => (* | Promise<*>)} fn The function to execute.
      * @param {string} message The warning message if the function fails.
      * @param {*} [fallbackValue] The value to return on failure. Defaults to `undefined`.
      * @returns {* | Promise<*>} The result of the function or the fallback value if the function fails. A promise if the function is async.
      */
-    withWarningHandling(fn, message, fallbackValue = undefined) {
+    static withWarningHandling(fn, message, fallbackValue = undefined) {
         return this.withHandling(
             fn, 
             message, 
@@ -144,23 +155,24 @@ export default {
             false, // Never rethrow warnings
             fallbackValue, 
         );
-    },
+    }
 
     /**
      * Runs a function with error handling.
      * 
      * @since 0.0.1
+     * @static
      * @param {() => (* | Promise<*>)} fn The function to execute.
      * @param {string} message The error message if the function fails.
      * @param {boolean} [rethrow] Whether to rethrow the error.
      * @returns {* | Promise<*>} The result of the function or undefined if the function fails. A promise if the function is async.
      */
-    withErrorHandling(fn, message, rethrow = true) {
+    static withErrorHandling(fn, message, rethrow = true) {
         return this.withHandling(
             fn, 
             message, 
             ERROR_LEVELS.ERROR, 
             rethrow, 
         );
-    },
+    }
 };
