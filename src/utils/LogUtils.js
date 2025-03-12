@@ -1,11 +1,12 @@
 /**
  * @since 0.0.2
  */
-export default {
+export default class LogUtils {
     /**
      * Exposes an object.
      * 
      * @since 0.0.2
+     * @static
      * @param {Object} obj The object to expose.
      * @returns {{
      *  'constructor': *, 
@@ -16,7 +17,7 @@ export default {
      *  'type': *, 
      * }} An object containing the constructor, prototype, properties, descriptors, toString, and type of the exposed object.
      */
-    exposeObject(obj) {
+    static exposeObject(obj) {
         return {
             'constructor': obj.constructor, 
             'prototype': Object.getPrototypeOf(obj), 
@@ -25,13 +26,14 @@ export default {
             'toString': obj.toString(), 
             'type': Object.prototype.toString.call(obj), 
         };
-    },
+    }
 
     // [TODO] Allow node-fetch `Response` object as a valid param type here. Find how to support browser/Node environments...
     /**
      * Exposes a `Response` object.
      * 
      * @since 0.0.2
+     * @static
      * @param {Response} response
      * @returns {{
      *  'status': number, 
@@ -40,7 +42,7 @@ export default {
      *  'body': ReadableStream<Uint8Array> | null,
      * }}
      */
-    exposeResponse(response) {
+    static exposeResponse(response) {
         return {
             'status': response.status,
             'statusText': response.statusText,
@@ -49,5 +51,5 @@ export default {
             //'size': response.size,
             'body': response.body,
         };
-    },
+    }
 };
