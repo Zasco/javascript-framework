@@ -1,8 +1,4 @@
-import Logger from '../interfaces/Logger.js';
-
-import LOG_LEVELS from '../config/LogLevelsConfig.js';
-
-import ErrorUtils from '../utils/ErrorUtils.js';
+import { LOG_LEVELS, ErrorUtils, Logger} from 'javascript-framework';
 
 /** @typedef {import('../config/LogLevelsConfig.js').LogLevel} LogLevel */
 

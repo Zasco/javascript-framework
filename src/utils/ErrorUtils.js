@@ -1,4 +1,4 @@
-import TypeUtils from './TypeUtils.js';
+import { TypeUtils } from 'javascript-framework';
 
 /**
  * @since 0.0.2

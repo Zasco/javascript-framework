@@ -1,8 +1,6 @@
-import LogHelper from "./LogHelper.js";
-import ErrorUtils from "../utils/ErrorUtils.js";
+import { LOG_LEVELS, ErrorUtils, LogHelper } from 'javascript-framework';
 
 import ERROR_LEVELS from "../config/ErrorLevelsConfig.js";
-import LOG_LEVELS from '../config/LogLevelsConfig.js'
 
 /**
  * @typedef {import('../config/ErrorLevelsConfig.js').ErrorLevel} ErrorLevel
