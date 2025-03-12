@@ -22,7 +22,7 @@ import {
     isUndefined, 
 } from 'is-what';
 
-import ErrorUtils from './ErrorUtils.js';
+import { ErrorUtils } from 'javascript-framework';
 
 import JSTYPES from '../constants/JSTypes.js';
 import EXPANDED_TYPES from '../constants/ExpandedTypes.js';

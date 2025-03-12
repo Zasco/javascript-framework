@@ -1,5 +1,4 @@
-import ErrorUtils from '../utils/ErrorUtils.js';
-import TypeUtils from '../utils/TypeUtils.js';
+import {ErrorUtils, TypeUtils } from 'javascript-framework';
 
 import JSTYPES from '../constants/JSTypes.js';
 

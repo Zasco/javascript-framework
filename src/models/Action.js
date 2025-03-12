@@ -1,4 +1,4 @@
-import ErrorUtils from '../utils/ErrorUtils.js';
+import { ErrorUtils } from 'javascript-framework';
 
 /**
  * @since 0.0.3
