@@ -4,6 +4,8 @@ import ErrorHandler from './src/utils/ErrorHandler.js';
 import ErrorUtils from './src/utils/ErrorUtils.js';
 import TypeUtils from './src/utils/TypeUtils.js';
 import LogHelper from './src/utils/LogHelper.js';
+import GitHelper from './src/utils/GitHelper.js';
+import PackageJsonHelper from './src/utils/PackageJsonHelper.js';
 
 import Logger from './src/interfaces/Logger.js';
 
@@ -15,6 +17,7 @@ import Commit from './src/models/Commit.js';
 import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
 /**
+ * @typedef {import('./src/utils/PackageJsonHelper.js').PackageJsonType} PackageJsonType
  * @typedef {import('./src/models/Action.js').DefaultActionConfig} DefaultActionConfig
  * @typedef {import('./src/config/LogLevelsConfig.js').LogLevel} LogLevel
  */
@@ -28,6 +31,8 @@ export {
     ErrorUtils, 
     TypeUtils, 
     LogHelper, 
+    GitHelper, 
+    PackageJsonHelper, 
 
     // Interfaces
     Logger, 
