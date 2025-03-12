@@ -1,11 +1,12 @@
 import LOG_LEVELS from './src/config/LogLevelsConfig.js';
 
-import ErrorHandler from './src/utils/ErrorHandler.js';
+import ErrorHandler from './src/helpers/ErrorHandler.js';
+import LogHelper from './src/helpers/LogHelper.js';
+import GitHelper from './src/helpers/GitHelper.js';
+import PackageJsonHelper from './src/helpers/PackageJsonHelper.js';
+
 import ErrorUtils from './src/utils/ErrorUtils.js';
 import TypeUtils from './src/utils/TypeUtils.js';
-import LogHelper from './src/utils/LogHelper.js';
-import GitHelper from './src/utils/GitHelper.js';
-import PackageJsonHelper from './src/utils/PackageJsonHelper.js';
 
 import Logger from './src/interfaces/Logger.js';
 
@@ -18,7 +19,7 @@ import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
 /**
  * @typedef {import('./src/config/LogLevelsConfig.js').LogLevel} LogLevel
- * @typedef {import('./src/utils/PackageJsonHelper.js').PackageJsonType} PackageJsonType
+ * @typedef {import('./src/helpers/PackageJsonHelper.js').PackageJsonType} PackageJsonType
  * @typedef {import('./src/models/Action.js').DefaultActionConfig} DefaultActionConfig
  */
 
@@ -28,11 +29,12 @@ export {
     
     // Helpers & Utils
     ErrorHandler, 
-    ErrorUtils, 
-    TypeUtils, 
     LogHelper, 
     GitHelper, 
     PackageJsonHelper, 
+    
+    ErrorUtils, 
+    TypeUtils, 
 
     // Interfaces
     Logger, 
