@@ -7,7 +7,7 @@ export default class ErrorUtils {
     /** Whether to display stack traces in error messages. Defaults to false.*/
     static DISPLAY_STACKS = false;
 
-    /** @throws {Error} If instantiated directly and not as a child class */
+    /** @throws {Error} If instantiated */
     constructor() {
         ErrorUtils.checkIsSingletonInstance(this, ErrorUtils);
     }

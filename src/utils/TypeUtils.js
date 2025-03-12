@@ -193,7 +193,7 @@ export default class TypeUtils {
      */
     static isUndefined = isUndefined;
 
-    /** @throws {Error} If trying to create an instance. */
+    /** @throws {Error} If instantiated */
     constructor() {
         ErrorUtils.checkIsSingletonInstance(this, TypeUtils);
     }
