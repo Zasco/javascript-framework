@@ -1,7 +1,14 @@
+import ErrorUtils from './ErrorUtils.js';
+
 /**
  * @since 0.0.2
  */
 export default class LogUtils {
+    /** @throws {Error} If instantiated */
+    constructor() {
+        ErrorUtils.checkIsSingletonInstance(this, LogUtils);
+    }
+
     /**
      * Exposes an object.
      * 

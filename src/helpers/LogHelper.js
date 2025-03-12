@@ -1,4 +1,5 @@
 import ErrorHandler from "./ErrorHandler.js";
+import ErrorUtils from "../utils/ErrorUtils.js";
 import LogUtils from "../utils/LogUtils.js";
 
 import Logger from "../interfaces/Logger.js";
@@ -23,6 +24,11 @@ export default class LogHelper {
      * @type {ConsoleLogger} Singleton instance for console logging
      */
     static _consoleLogger = new ConsoleLogger();
+
+    /** @throws {Error} If instantiated */
+    constructor() {
+        ErrorUtils.checkIsSingletonInstance(this, LogHelper);
+    }
 
     /**
      * Registers a logger instance.

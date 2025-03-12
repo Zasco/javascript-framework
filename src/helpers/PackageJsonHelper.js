@@ -42,6 +42,11 @@ export default class PackageJsonHelper {
      */
     static VERSION_KEY = 'version';
     
+    /** @throws {Error} If instantiated */
+    constructor() {
+        ErrorUtils.checkIsSingletonInstance(this, PackageJsonHelper);
+    }
+    
     /**
      * Returns the package config object.
      * 

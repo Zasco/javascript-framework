@@ -1,4 +1,5 @@
 import LogHelper from "./LogHelper.js";
+import ErrorUtils from "../utils/ErrorUtils.js";
 
 import ERROR_LEVELS from "../config/ErrorLevelsConfig.js";
 import LOG_LEVELS from '../config/LogLevelsConfig.js'
@@ -14,6 +15,11 @@ import LOG_LEVELS from '../config/LogLevelsConfig.js'
 export default class ErrorHandler {
     /** Wether warnings are critical. If true, warnings are treated as errors. Defaults to false. */
     static WARNINGS_ARE_CRITICAL = false;
+
+    /** @throws {Error} If instantiated */
+    constructor() {
+        ErrorUtils.checkIsSingletonInstance(this, ErrorHandler);
+    }
 
     /**
      * Returns the log level for a given error level.

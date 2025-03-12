@@ -11,6 +11,11 @@ import { ErrorHandler, ErrorUtils, Repository } from 'javascript-framework';
  * @since 0.0.2
  */
 export default class GitHelper {
+    /** @throws {Error} If instantiated */
+    constructor() {
+        ErrorUtils.checkIsSingletonInstance(this, GitHelper);
+    }
+    
     /**
      * Checks if the given path is a valid repository.
      * 
