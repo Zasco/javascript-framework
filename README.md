@@ -1,4 +1,5 @@
 # javascript-framework
+A set of reusable components for building **JavaScript** applications.
 
 ## Roadmap
 ### Planned
