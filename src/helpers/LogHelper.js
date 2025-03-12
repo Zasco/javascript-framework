@@ -1,5 +1,5 @@
 import ErrorHandler from "./ErrorHandler.js";
-import LogUtils from "./LogUtils.js";
+import LogUtils from "../utils/LogUtils.js";
 
 import Logger from "../interfaces/Logger.js";
 import ConsoleLogger from "../entities/ConsoleLogger.js";
