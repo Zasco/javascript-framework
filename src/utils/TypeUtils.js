@@ -38,6 +38,12 @@ import EXPANDED_TYPES from '../constants/ExpandedTypes.js';
  * @since 0.0.3
  */
 export default class TypeUtils {
+    /** @throws {Error} If instantiated */
+    constructor() {
+        ErrorUtils.checkIsSingletonInstance(this, TypeUtils);
+    }
+    
+    
     // String
     
     /**
@@ -192,11 +198,6 @@ export default class TypeUtils {
      * @param {unknown} payload
      */
     static isUndefined = isUndefined;
-
-    /** @throws {Error} If instantiated */
-    constructor() {
-        ErrorUtils.checkIsSingletonInstance(this, TypeUtils);
-    }
 
     
     // Instance of
