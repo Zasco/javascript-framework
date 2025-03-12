@@ -17,9 +17,9 @@ import Commit from './src/models/Commit.js';
 import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
 /**
+ * @typedef {import('./src/config/LogLevelsConfig.js').LogLevel} LogLevel
  * @typedef {import('./src/utils/PackageJsonHelper.js').PackageJsonType} PackageJsonType
  * @typedef {import('./src/models/Action.js').DefaultActionConfig} DefaultActionConfig
- * @typedef {import('./src/config/LogLevelsConfig.js').LogLevel} LogLevel
  */
 
 export {
