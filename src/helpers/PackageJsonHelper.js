@@ -1,50 +1,97 @@
 import fs from 'fs';
+import path from 'path';
 
-import { SingletonTrait, ErrorHandler, ErrorUtils } from 'javascript-framework';
+import { 
+    SingletonTrait, 
+    ErrorHandler, 
+    ErrorUtils, 
+    FileSystemPath 
+} from 'javascript-framework';
 
-/**
- * @since 0.0.3
- * @typedef {{
- *  'name': string,
- *  'version': string,
- *  [key: string]: any, 
- * }} PackageJsonType
- */
+/** @typedef {import('../types/package-json-types.js').PackageJson} PackageJson */
 
 /**
  * @since 0.0.3
  */
 export default class PackageJsonHelper {
     /**
-     * The default package config file name.
-     * 
-     * @since 0.0.3
+     * @see {@link PackageJsonHelper.FILE_NAME}
+     * @protected
      * @static
      * @type {string}
      */
-    static FILE_NAME = 'package.json';
+    static _FILE_NAME = 'package.json';
     
     /**
-     * The key holding the package name in the package config.
-     * 
-     * @since 0.0.3
+     * @see {@link PackageJsonHelper.NAME_KEY}
+     * @protected
      * @static
      * @type {string}
      */
-    static NAME_KEY = 'name';
+    static _NAME_KEY = 'name';
     
     /**
-     * The key holding the package version in the package config.
-     * 
-     * @since 0.0.3
+     * @see {@link PackageJsonHelper.VERSION_KEY}
+     * @protected
      * @static
      * @type {string}
      */
-    static VERSION_KEY = 'version';
+    static _VERSION_KEY = 'version';
     
     /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
     constructor() {
         SingletonTrait.singletonConstructor.call(this);
+    }
+
+    /**
+     * The default package config file name.
+     * 
+     * @since 0.0.3
+     * @readonly
+     * @static
+     */    
+    static get FILE_NAME() {
+        return this._FILE_NAME;
+    }
+
+    /**
+     * The key holding the package name in the package config.
+     * 
+     * @since 0.0.3
+     * @readonly
+     * @static
+     */
+    static get NAME_KEY() {
+        return this._NAME_KEY;
+    }
+
+    /**
+     * The key holding the package version in the package config.
+     * 
+     * @since 0.0.3
+     * @readonly
+     * @static
+     */
+    static get VERSION_KEY() {
+        return this._VERSION_KEY;
+    }
+
+    /**
+     * Checks if a `package.json` file exists in the provided directory.
+     * 
+     * @since ${NEXT_VERSION}
+     * @static
+     * @param {FileSystemPath | string} directory
+     * @returns {true} If `package.json` exists
+     * @throws {Error} If `package.json` doesn't exist
+     */
+    static checkConfigFileExists(directory) {
+        const directoryStr = String(directory);
+        const packageJsonPath = path.join(directoryStr, this.FILE_NAME);
+        
+        if (!fs.existsSync(packageJsonPath)) throw new Error(`No ${this.FILE_NAME} found in ${directoryStr}`);
+
+        return true;
     }
     
     /**
@@ -54,7 +101,7 @@ export default class PackageJsonHelper {
      * @readonly
      * @static
      * @param {string} packageConfigFilePath The path to the package config file.
-     * @returns {PackageJsonType} The package config object.
+     * @returns {PackageJson} The package config object.
      * @throws {Error} If the file does not exist or is not a valid JSON file.
      */
     static getPackageConfig(packageConfigFilePath) {
@@ -72,7 +119,7 @@ export default class PackageJsonHelper {
      * 
      * @since 0.0.3
      * @static
-     * @param {PackageJsonType} packageConfig The package config object.
+     * @param {PackageJson} packageConfig The package config object.
      * @returns {boolean}
      */
     static isValidConfig(packageConfig) {
@@ -89,7 +136,7 @@ export default class PackageJsonHelper {
      * @since 0.0.3
      * @readonly
      * @static
-     * @param {PackageJsonType} packageConfig The package config object.
+     * @param {PackageJson} packageConfig The package config object.
      * @returns {string}
      */
     static getName(packageConfig) {
@@ -102,7 +149,7 @@ export default class PackageJsonHelper {
      * @since 0.0.3
      * @readonly
      * @static
-     * @param {PackageJsonType} packageConfig
+     * @param {PackageJson} packageConfig
      * @returns {string}
      */
     static getVersion(packageConfig) {
