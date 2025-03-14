@@ -1,6 +1,12 @@
 import fs from 'fs';
+import path from 'path';
 
-import { SingletonTrait, ErrorHandler, ErrorUtils } from 'javascript-framework';
+import { 
+    SingletonTrait, 
+    ErrorHandler, 
+    ErrorUtils, 
+    FileSystemPath 
+} from 'javascript-framework';
 
 /** @typedef {import('../types/package-json-types.js').PackageJson} PackageJson */
 
@@ -68,6 +74,24 @@ export default class PackageJsonHelper {
      */
     static get VERSION_KEY() {
         return this._VERSION_KEY;
+    }
+
+    /**
+     * Checks if a `package.json` file exists in the provided directory.
+     * 
+     * @since ${NEXT_VERSION}
+     * @static
+     * @param {FileSystemPath | string} directory
+     * @returns {true} If `package.json` exists
+     * @throws {Error} If `package.json` doesn't exist
+     */
+    static checkConfigFileExists(directory) {
+        const directoryStr = String(directory);
+        const packageJsonPath = path.join(directoryStr, this.FILE_NAME);
+        
+        if (!fs.existsSync(packageJsonPath)) throw new Error(`No ${this.FILE_NAME} found in ${directoryStr}`);
+
+        return true;
     }
     
     /**
