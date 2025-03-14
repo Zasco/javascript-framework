@@ -1,3 +1,5 @@
+import SingletonTrait from './src/traits/SingletonTrait.js';
+
 import LOG_LEVELS from './src/config/LogLevelsConfig.js';
 
 import ErrorHandler from './src/helpers/ErrorHandler.js';
@@ -24,6 +26,9 @@ import ConsoleLogger from './src/entities/ConsoleLogger.js';
  */
 
 export {
+    // Traits
+    SingletonTrait, 
+    
     // Config
     LOG_LEVELS, 
     

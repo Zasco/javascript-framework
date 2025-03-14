@@ -1,6 +1,11 @@
 import { execSync } from 'child_process';
 
-import { ErrorHandler, ErrorUtils, Repository } from 'javascript-framework';
+import { 
+    SingletonTrait, 
+    ErrorHandler, 
+    ErrorUtils, 
+    Repository 
+} from 'javascript-framework';
 
 /**
  * @typedef {import('child_process').ExecSyncOptions} ExecSyncOptions
@@ -11,9 +16,9 @@ import { ErrorHandler, ErrorUtils, Repository } from 'javascript-framework';
  * @since 0.0.2
  */
 export default class GitHelper {
-    /** @throws {Error} If instantiated */
+    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
     constructor() {
-        ErrorUtils.checkIsSingletonInstance(this, GitHelper);
+        SingletonTrait.singletonConstructor.call(this);
     }
     
     /**

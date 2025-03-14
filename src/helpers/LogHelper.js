@@ -1,8 +1,9 @@
 import { 
+    SingletonTrait, 
+    
     LOG_LEVELS, 
 
     ErrorHandler, 
-    ErrorUtils, 
     Logger, 
     
     ConsoleLogger 
@@ -28,9 +29,9 @@ export default class LogHelper {
      */
     static _consoleLogger = new ConsoleLogger();
 
-    /** @throws {Error} If instantiated */
+    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
     constructor() {
-        ErrorUtils.checkIsSingletonInstance(this, LogHelper);
+        SingletonTrait.singletonConstructor.call(this);
     }
 
     /**

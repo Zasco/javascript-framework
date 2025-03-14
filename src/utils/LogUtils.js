@@ -1,12 +1,12 @@
-import { ErrorUtils } from 'javascript-framework';
+import { SingletonTrait } from 'javascript-framework';
 
 /**
  * @since 0.0.2
  */
 export default class LogUtils {
-    /** @throws {Error} If instantiated */
+    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
     constructor() {
-        ErrorUtils.checkIsSingletonInstance(this, LogUtils);
+        SingletonTrait.singletonConstructor.call(this);
     }
 
     /**
