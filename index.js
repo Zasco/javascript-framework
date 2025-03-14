@@ -21,7 +21,7 @@ import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
 /**
  * @typedef {import('./src/config/LogLevelsConfig.js').LogLevel} LogLevel
- * @typedef {import('./src/helpers/PackageJsonHelper.js').PackageJsonType} PackageJsonType
+ * @typedef {import('./src/types/package-json-types.js').PackageJson} PackageJsonType
  * @typedef {import('./src/models/Action.js').DefaultActionConfig} DefaultActionConfig
  */
 

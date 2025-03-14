@@ -2,14 +2,7 @@ import fs from 'fs';
 
 import { SingletonTrait, ErrorHandler, ErrorUtils } from 'javascript-framework';
 
-/**
- * @since 0.0.3
- * @typedef {{
- *  'name': string,
- *  'version': string,
- *  [key: string]: any, 
- * }} PackageJsonType
- */
+/** @typedef {import('../types/package-json-types.js').PackageJson} PackageJsonType */
 
 /**
  * @since 0.0.3
