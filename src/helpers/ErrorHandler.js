@@ -1,4 +1,4 @@
-import { LOG_LEVELS, ErrorUtils, LogHelper } from 'javascript-framework';
+import { SingletonTrait, LOG_LEVELS, LogHelper } from 'javascript-framework';
 
 import ERROR_LEVELS from "../config/ErrorLevelsConfig.js";
 
@@ -14,9 +14,9 @@ export default class ErrorHandler {
     /** Wether warnings are critical. If true, warnings are treated as errors. Defaults to false. */
     static WARNINGS_ARE_CRITICAL = false;
 
-    /** @throws {Error} If instantiated */
+    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
     constructor() {
-        ErrorUtils.checkIsSingletonInstance(this, ErrorHandler);
+        SingletonTrait.singletonConstructor.call(this);
     }
 
     /**

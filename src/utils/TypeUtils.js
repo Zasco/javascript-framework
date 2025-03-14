@@ -22,7 +22,7 @@ import {
     isUndefined, 
 } from 'is-what';
 
-import { ErrorUtils } from 'javascript-framework';
+import { ErrorUtils, SingletonTrait } from 'javascript-framework';
 
 import JSTYPES from '../constants/JSTypes.js';
 import EXPANDED_TYPES from '../constants/ExpandedTypes.js';
@@ -38,9 +38,9 @@ import EXPANDED_TYPES from '../constants/ExpandedTypes.js';
  * @since 0.0.3
  */
 export default class TypeUtils {
-    /** @throws {Error} If instantiated */
+    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
     constructor() {
-        ErrorUtils.checkIsSingletonInstance(this, TypeUtils);
+        SingletonTrait.singletonConstructor.call(this);
     }
     
     

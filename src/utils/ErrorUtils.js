@@ -1,4 +1,4 @@
-import { TypeUtils } from 'javascript-framework';
+import { SingletonTrait, TypeUtils } from 'javascript-framework';
 
 /**
  * @since 0.0.2
@@ -7,9 +7,9 @@ export default class ErrorUtils {
     /** Whether to display stack traces in error messages. Defaults to false.*/
     static DISPLAY_STACKS = false;
 
-    /** @throws {Error} If instantiated */
+    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
     constructor() {
-        ErrorUtils.checkIsSingletonInstance(this, ErrorUtils);
+        SingletonTrait.singletonConstructor.call(this);
     }
     
     

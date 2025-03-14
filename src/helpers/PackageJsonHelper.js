@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-import { ErrorHandler, ErrorUtils } from 'javascript-framework';
+import { SingletonTrait, ErrorHandler, ErrorUtils } from 'javascript-framework';
 
 /**
  * @since 0.0.3
@@ -42,9 +42,9 @@ export default class PackageJsonHelper {
      */
     static VERSION_KEY = 'version';
     
-    /** @throws {Error} If instantiated */
+    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
     constructor() {
-        ErrorUtils.checkIsSingletonInstance(this, PackageJsonHelper);
+        SingletonTrait.singletonConstructor.call(this);
     }
     
     /**
