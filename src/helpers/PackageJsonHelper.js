@@ -2,7 +2,7 @@ import fs from 'fs';
 
 import { SingletonTrait, ErrorHandler, ErrorUtils } from 'javascript-framework';
 
-/** @typedef {import('../types/package-json-types.js').PackageJson} PackageJsonType */
+/** @typedef {import('../types/package-json-types.js').PackageJson} PackageJson */
 
 /**
  * @since 0.0.3
@@ -47,7 +47,7 @@ export default class PackageJsonHelper {
      * @readonly
      * @static
      * @param {string} packageConfigFilePath The path to the package config file.
-     * @returns {PackageJsonType} The package config object.
+     * @returns {PackageJson} The package config object.
      * @throws {Error} If the file does not exist or is not a valid JSON file.
      */
     static getPackageConfig(packageConfigFilePath) {
@@ -65,7 +65,7 @@ export default class PackageJsonHelper {
      * 
      * @since 0.0.3
      * @static
-     * @param {PackageJsonType} packageConfig The package config object.
+     * @param {PackageJson} packageConfig The package config object.
      * @returns {boolean}
      */
     static isValidConfig(packageConfig) {
@@ -82,7 +82,7 @@ export default class PackageJsonHelper {
      * @since 0.0.3
      * @readonly
      * @static
-     * @param {PackageJsonType} packageConfig The package config object.
+     * @param {PackageJson} packageConfig The package config object.
      * @returns {string}
      */
     static getName(packageConfig) {
@@ -95,7 +95,7 @@ export default class PackageJsonHelper {
      * @since 0.0.3
      * @readonly
      * @static
-     * @param {PackageJsonType} packageConfig
+     * @param {PackageJson} packageConfig
      * @returns {string}
      */
     static getVersion(packageConfig) {
