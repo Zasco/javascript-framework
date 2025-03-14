@@ -24,14 +24,31 @@ export default class LogHelper {
     static loggers = [];
 
     /**
+     * @see {@link LogHelper._consoleLogger}
+     * @protected
      * @static
-     * @type {ConsoleLogger} Singleton instance for console logging
+     * @type {ConsoleLogger}
      */
-    static _consoleLogger = new ConsoleLogger();
+    static _consoleLoggerCache;
 
     /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
     constructor() {
         SingletonTrait.singletonConstructor.call(this);
+    }
+
+    /**
+     * The local instance of the {@link ConsoleLogger}.
+     * 
+     * @protected
+     * @readonly
+     * @static
+     */
+    static get _consoleLogger() {
+        if (!this._consoleLoggerCache) {
+            const { default: ConsoleLogger } = require('../entities/ConsoleLogger.js');
+            this._consoleLoggerCache = new ConsoleLogger();
+        }
+        return this._consoleLoggerCache;
     }
 
     /**
