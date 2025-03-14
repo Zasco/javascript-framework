@@ -9,35 +9,65 @@ import { SingletonTrait, ErrorHandler, ErrorUtils } from 'javascript-framework';
  */
 export default class PackageJsonHelper {
     /**
-     * The default package config file name.
-     * 
-     * @since 0.0.3
+     * @see {@link PackageJsonHelper.FILE_NAME}
+     * @protected
      * @static
      * @type {string}
      */
-    static FILE_NAME = 'package.json';
+    static _FILE_NAME = 'package.json';
     
     /**
-     * The key holding the package name in the package config.
-     * 
-     * @since 0.0.3
+     * @see {@link PackageJsonHelper.NAME_KEY}
+     * @protected
      * @static
      * @type {string}
      */
-    static NAME_KEY = 'name';
+    static _NAME_KEY = 'name';
     
     /**
-     * The key holding the package version in the package config.
-     * 
-     * @since 0.0.3
+     * @see {@link PackageJsonHelper.VERSION_KEY}
+     * @protected
      * @static
      * @type {string}
      */
-    static VERSION_KEY = 'version';
+    static _VERSION_KEY = 'version';
     
     /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
     constructor() {
         SingletonTrait.singletonConstructor.call(this);
+    }
+
+    /**
+     * The default package config file name.
+     * 
+     * @since 0.0.3
+     * @readonly
+     * @static
+     */    
+    static get FILE_NAME() {
+        return this._FILE_NAME;
+    }
+
+    /**
+     * The key holding the package name in the package config.
+     * 
+     * @since 0.0.3
+     * @readonly
+     * @static
+     */
+    static get NAME_KEY() {
+        return this._NAME_KEY;
+    }
+
+    /**
+     * The key holding the package version in the package config.
+     * 
+     * @since 0.0.3
+     * @readonly
+     * @static
+     */
+    static get VERSION_KEY() {
+        return this._VERSION_KEY;
     }
     
     /**
