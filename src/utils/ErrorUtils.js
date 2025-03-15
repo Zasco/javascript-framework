@@ -16,7 +16,8 @@ export default class ErrorUtils {
     // Messages
 
     /**
-     * Returns a standard format message with subject.
+     * Returns a message with subject with standard format:
+     * - <{@link message}>: <{@link subject}>
      * 
      * @since 0.0.3
      * @readonly
