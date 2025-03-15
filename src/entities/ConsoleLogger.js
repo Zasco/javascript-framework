@@ -6,6 +6,11 @@ import { LOG_LEVELS, ErrorUtils, Logger} from 'javascript-framework';
  * @since 0.0.1
  */
 export default class ConsoleLogger extends Logger {
+    /**
+     * @inheritdoc
+     * @see {@link Logger}
+     */
+    // @ts-expect-error The parameters types are inherited from the parent class.
     log(message, level) {
         const logFunction = this.getLogFunctionForLogLevel(level);
         if (message instanceof Error) message = ErrorUtils.buildFormattedErrorMessage(message);
