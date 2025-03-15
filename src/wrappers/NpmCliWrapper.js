@@ -1,3 +1,4 @@
+import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 
 import { 
@@ -12,11 +13,6 @@ import {
      
     FileSystemPath 
 } from 'javascript-framework';
-
-/**
- * @typedef {import('child_process').ExecSyncOptions} ExecSyncOptions
- * @typedef {NpmTypes.VersionBumpType} VersionBumpType
- */
 
 /**
  * A wrapper to interact with `npm`.
@@ -117,7 +113,7 @@ export default class NpmCliWrapper {
      * @static
      * @param {string} command
      * @param {FileSystemPath | string} targetDir
-     * @param {ExecSyncOptions} [options]
+     * @param {childProcess.ExecSyncOptions} [options]
      * @returns {true} If the command was executed successfully
      * @throws If an error happens during execution (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
      * - An unexpected error
@@ -147,7 +143,7 @@ export default class NpmCliWrapper {
      * @since ${NEXT_VERSION}
      * @static
      * @param {FileSystemPath | string} targetDir The path of the directory in which to execute the command
-     * @param {VersionBumpType} versionBumpType The type of version bump to perform
+     * @param {NpmTypes.VersionBumpType} versionBumpType The type of version bump to perform
      * @param {boolean} handleGit Whether to include the `--no-git-tag-version` flag and prevent `npm` to run Git operations.
      * @throws If an error happens during execution (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
      * - An unexpected error
