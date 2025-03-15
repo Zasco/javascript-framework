@@ -16,5 +16,17 @@ export default {
     abstractClassConstructor() {
         const { default: ErrorUtils } = require('../utils/ErrorUtils.js');
         throw ErrorUtils.getAbstractInstanceErr(this.constructor.name);
+    },
+
+    /**
+     * The function called in abstract methods to enfore implementation in child classes.
+     * 
+     * @since ${NEXT_VERSION}
+     * @param {string} methodName The name of the abstract method that is being called
+     * @throws If the method is called and is not implemented in the chil class (see {@link ErrorUtils.getAbstractMethodErr})
+     */
+    abstractMethod(methodName) {
+        const { default: ErrorUtils } = require('../utils/ErrorUtils.js');
+        throw ErrorUtils.getAbstractMethodErr(methodName);
     }
 }
