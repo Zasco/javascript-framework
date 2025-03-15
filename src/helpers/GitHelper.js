@@ -209,6 +209,7 @@ export default class GitHelper {
      * @throws {Error} If the changes could not be pushed.
      */
     static push(repo) {
+        // [NOTE] Look into what happens when no remote is provided...
         return ErrorHandler.withErrorHandling(
             () => {
                 this.runCommand('push', repo);
