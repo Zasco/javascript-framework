@@ -1,3 +1,4 @@
+import AbstractClassTrait from './src/traits/AbstractClassTrait.js';
 import SingletonTrait from './src/traits/SingletonTrait.js';
 
 import LOG_LEVELS from './src/config/LogLevelsConfig.js';
@@ -35,6 +36,7 @@ import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
 export {
     // Traits
+    AbstractClassTrait, 
     SingletonTrait, 
     
     // Config
