@@ -22,6 +22,7 @@ import NpmCliWrapper from './src/wrappers/NpmCliWrapper.js';
 import Logger from './src/interfaces/Logger.js';
 
 import FileSystemPath from './src/models/FileSystemPath.js';
+import CliWrapper from './src/models/CliWrapper.js';
 import Action from './src/models/Action.js';
 import Repository from './src/models/Repository.js';
 import Commit from './src/models/Commit.js';
@@ -67,6 +68,7 @@ export {
 
     // Models
     FileSystemPath, 
+    CliWrapper, 
     Action, 
     Repository, 
     Commit, 
