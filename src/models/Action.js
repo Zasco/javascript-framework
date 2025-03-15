@@ -1,4 +1,4 @@
-import { ErrorUtils } from 'javascript-framework';
+import { AbstractClassTrait, ErrorUtils } from 'javascript-framework';
 
 /**
  * @since 0.0.3
@@ -46,10 +46,10 @@ export default class Action {
      */
     static _isDryRun;
 
-    /** @throws {Error} If instantiated directly and not as a child class */
+    /** @throws If instantiated (see {@link AbstractClassTrait.abstractClassConstructor}) */
     constructor() {
-        ErrorUtils.checkIsAbstractInstance(this, Action);
-    }
+        AbstractClassTrait.abstractClassConstructor.call(this);
+    };
 
     /**
      * Executes the provided function only if not in `dry-run` mode.
