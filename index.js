@@ -17,8 +17,6 @@ import PackageJsonHelper from './src/helpers/PackageJsonHelper.js';
 import ErrorUtils from './src/utils/ErrorUtils.js';
 import TypeUtils from './src/utils/TypeUtils.js';
 
-import NpmCliWrapper from './src/wrappers/NpmCliWrapper.js';
-
 import Logger from './src/interfaces/Logger.js';
 
 import FileSystemPath from './src/models/FileSystemPath.js';
@@ -26,6 +24,8 @@ import CliWrapper from './src/models/CliWrapper.js';
 import Action from './src/models/Action.js';
 import Repository from './src/models/Repository.js';
 import Commit from './src/models/Commit.js';
+
+import NpmCliWrapper from './src/wrappers/NpmCliWrapper.js';
 
 import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
@@ -60,9 +60,6 @@ export {
     ErrorUtils, 
     TypeUtils, 
 
-    // Wrappers
-    NpmCliWrapper, 
-
     // Interfaces
     Logger, 
 
@@ -72,6 +69,9 @@ export {
     Action, 
     Repository, 
     Commit, 
+
+    // Wrappers
+    NpmCliWrapper, 
 
     // Entities
     ConsoleLogger, 
