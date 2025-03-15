@@ -68,7 +68,7 @@ export default class CliWrapper {
     }
     
     /**
-     * Executes the provided `npm` {@link command} in the {@link targetDir}.
+     * Executes the provided {@link command} in the {@link targetDir}.
      * 
      * @since 0.0.4
      * @protected
