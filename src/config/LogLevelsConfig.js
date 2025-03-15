@@ -6,15 +6,15 @@
  *  'WARNING': 2, 
  *  'ERROR': 3, 
  *  'LOG': 4, 
- * }} LogLevelsConfig
- * @typedef {LogLevelsConfig[keyof LogLevelsConfig]} LogLevel
+ * }} LogLevels
+ * @typedef {LogLevels[keyof LogLevels]} LogLevel
  */
 
 /**
  * Defines the different levels of log.
  * 
  * @since 0.0.2
- * @type {LogLevelsConfig}
+ * @type {LogLevels}
  */
 const LOG_LEVELS = {
     DEBUG: 0, 
