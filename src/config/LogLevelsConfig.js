@@ -1,7 +1,13 @@
 /**
  * @since 0.0.2
- * @typedef {number} LogLevel
- * @typedef {{[levelLabel: string]: LogLevel}} LogLevelsConfig
+ * @typedef {{
+ *  'DEBUG': 0, 
+ *  'INFO': 1, 
+ *  'WARNING': 2, 
+ *  'ERROR': 3, 
+ *  'LOG': 4, 
+ * }} LogLevelsConfig
+ * @typedef {LogLevelsConfig[keyof LogLevelsConfig]} LogLevel
  */
 
 /**
@@ -10,10 +16,12 @@
  * @since 0.0.2
  * @type {LogLevelsConfig}
  */
-export default {
+const LOG_LEVELS = {
     DEBUG: 0, 
     INFO: 1, 
     WARNING: 2, 
     ERROR: 3, 
     LOG: 4, 
 };
+
+export default Object.freeze(LOG_LEVELS);
