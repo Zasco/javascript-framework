@@ -1,6 +1,6 @@
 import { ErrorUtils } from 'javascript-framework';
 
-/** @typedef {import('../config/LogLevelsConfig.js').LogLevel} LogLevel */
+import * as LogLevelsTypes from '../config/LogLevelsConfig.js';
 
 /**
  * @since 0.0.1
@@ -16,7 +16,7 @@ export default class Logger {
      * @since 0.0.1
      * @abstract
      * @param {*} message The message to log.
-     * @param {LogLevel} level The log level.
+     * @param {LogLevelsTypes.LogLevel} level The log level.
      * @throws {Error} Must be implemented by concrete logger.
      */
     log(message, level) {

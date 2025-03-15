@@ -9,9 +9,8 @@ import {
     ConsoleLogger 
 } from 'javascript-framework';
 
-import LogUtils from "../utils/LogUtils.js";
-
-/** @typedef {import('../config/LogLevelsConfig.js').LogLevel} LogLevel */
+import * as LogLevelsTypes from '../config/LogLevelsConfig.js';
+import LogUtils from '../utils/LogUtils.js';
 
 /**
  * @since 0.0.1
@@ -80,7 +79,7 @@ export default class LogHelper {
      * @since 0.0.1
      * @static
      * @param {*} message The message to display.
-     * @param {LogLevel} level The log level. Defaults to `LOG`.
+     * @param {LogLevelsTypes.LogLevel} level The log level. Defaults to `LOG`.
      * @param {string | undefined} summaryMessage The summary message to display in the VS Code window. Defaults to the first line of the message.
      * @returns {boolean} If the message was displayed successfully in every output.
      */
@@ -111,7 +110,7 @@ export default class LogHelper {
      * @since 0.0.1
      * @static
      * @param {*} message The message to log.
-     * @param {LogLevel} [level] The log level. Defaults to `LOG`.
+     * @param {LogLevelsTypes.LogLevel} [level] The log level. Defaults to `LOG`.
      */
     static log(message, level = LOG_LEVELS.LOG) {
         this._consoleLogger.log(message, level);
@@ -123,7 +122,7 @@ export default class LogHelper {
      * @since 0.0.1
      * @static
      * @param {*} message The message to output.
-     * @param {LogLevel} level The log level.
+     * @param {LogLevelsTypes.LogLevel} level The log level.
      * @returns {boolean} If the message was output successfully.
      */
     static output(message, level) {
