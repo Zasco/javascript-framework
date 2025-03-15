@@ -13,6 +13,8 @@ import {
  */
 
 /**
+ * A wrapper to interact with `Git`.
+ * 
  * @since 0.0.2
  */
 export default class GitHelper {
@@ -75,7 +77,7 @@ export default class GitHelper {
     }
     
     /**
-     * Runs a git command.
+     * Runs a `Git` command.
      * 
      * @since 0.0.2
      * @static
@@ -96,6 +98,8 @@ export default class GitHelper {
             ErrorUtils.getStdSubjectMsg('Failed to run git command', command),
         );
     }
+
+    // [TODO] Rename `runCommand()` to `executeCommand()`...
     
     /**
      * Returns if the repository has staged changes.
