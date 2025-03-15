@@ -55,6 +55,8 @@ export default class ErrorUtils {
         return msg;
     }
 
+    // [TODO] Add static getStdErrMsg(action, subject = undefined, value = undefined) {}
+
     /**
      * Returns a detailed message for the provided {@link Error} including stack trace and causes.
      * 

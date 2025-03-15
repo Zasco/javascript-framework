@@ -137,6 +137,8 @@ export default class NpmCliWrapper {
         );
     }
 
+    // [TODO] Add static version(targetDir, versionBumpType, handleGit) {}
+
     /**
      * Executes `npm version` in the target directory with the provided version bump type and `Git tag` flag.
      * 

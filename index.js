@@ -25,6 +25,7 @@ import Commit from './src/models/Commit.js';
 
 import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
+// [TODO] Check if these could not be imported the other way...
 /**
  * @typedef {import('./src/config/LogLevelsConfig.js').LogLevel} LogLevel
  * @typedef {import('./src/types/package-json-types.js').PackageJson} PackageJsonType
