@@ -1,7 +1,7 @@
 import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 
-import { AbstractClassTrait, ErrorUtils, ErrorHandler } from 'javascript-framework';
+import { AbstractClassTrait, ErrorUtils, ErrorHandler, FileSystemPath } from 'javascript-framework';
 
 /**
  * The base model for CLI wrappers.
@@ -40,20 +40,21 @@ export default class CliWrapper {
     }
 
     /**
-     * Checks wether the tool can execute.
+     * Checks wether the tool can execute in the {@link targetDir}.
      * 
      * @protected
+     * @param {FileSystemPath | string} targetDir
      * @return {true} If the tool can execute
      * @throws If the tool is not available (see {@link CliWrapper._checkToolIsAvailable})
      */
-    static _checkCanExecute() {
+    static _checkCanExecute(targetDir) {
         this._checkToolIsAvailable();
 
         return true;
     }
 
     /**
-     * Checks if the tool is available.
+     * Checks if the tool is available on the system.
      * 
      * @abstract
      * @protected
@@ -65,12 +66,13 @@ export default class CliWrapper {
     }
     
     /**
-     * Executes the provided `npm` command in the provided directory.
+     * Executes the provided `npm` {@link command} in the {@link targetDir}.
      * 
      * @since 0.0.4
      * @protected
      * @static
      * @param {string} command
+     * @param {FileSystemPath | string} targetDir
      * @param {childProcess.ExecSyncOptions} [options]
      * @returns {true} If the command was executed successfully
      * @throws If an error happens during execution (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
@@ -78,15 +80,15 @@ export default class CliWrapper {
      * - {@link CliWrapper._checkCanExecute}
      * - {@link execSync}
      */
-    static _executeCommand(command, options = undefined) {
+    static _executeCommand(command, targetDir, options = undefined) {
         const fullCommand = this._getCompleteCommand(command);
 
         return ErrorHandler.withErrorHandling(
             () => {
-                this._checkCanExecute();
+                this._checkCanExecute(targetDir);
                 execSync(
                     fullCommand,
-                    options
+                    { cwd: String(targetDir), ...options }, 
                 );
             },
             ErrorUtils.getStdErrorMsg('executing', 'command', fullCommand)
