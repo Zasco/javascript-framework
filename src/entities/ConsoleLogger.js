@@ -13,7 +13,7 @@ export default class ConsoleLogger extends Logger {
     // @ts-expect-error The parameters types are inherited from the parent class.
     log(message, level) {
         const logFunction = this.getLogFunctionForLogLevel(level);
-        if (message instanceof Error) message = ErrorUtils.buildFormattedErrorMessage(message);
+        if (message instanceof Error) message = ErrorUtils.getDetailedErrMsg(message);
         logFunction(message);
     };
 
