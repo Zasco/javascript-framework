@@ -4,6 +4,7 @@ import LOG_LEVELS from './src/config/LogLevelsConfig.js';
 
 import * as NpmTypes from './src/types/npm-types.js';
 import * as PackageJsonTypes from './src/types/package-json-types.js';
+import * as LogLevelsTypes from './src/config/LogLevelsConfig.js';
 
 import * as NpmConstants from './src/constants/NpmConstants.js';
 
@@ -28,7 +29,6 @@ import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
 // [TODO] Check if these could not be imported the other way...
 /**
- * @typedef {import('./src/config/LogLevelsConfig.js').LogLevel} LogLevel
  * @typedef {import('./src/types/package-json-types.js').PackageJson} PackageJsonType
  * @typedef {import('./src/models/Action.js').DefaultActionConfig} DefaultActionConfig
  */
@@ -43,6 +43,7 @@ export {
     // Types
     NpmTypes, 
     PackageJsonTypes, 
+    LogLevelsTypes, 
     
     // Constants
     NpmConstants, 
