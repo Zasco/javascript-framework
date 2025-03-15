@@ -20,12 +20,12 @@ export default class ErrorHandler {
     }
 
     /**
-     * Returns the log level for a given error level.
+     * Returns the {@link LOG_LEVELS} for a given {@link ERROR_LEVELS}.
      * 
      * @since 0.0.2
      * @static
-     * @param {ErrorLevel} level The error level. Defaults to `ERROR`.
-     * @returns {LogLevel} The log level for the given error level.
+     * @param {ErrorLevel} level The error level. Defaults to {@link ERROR_LEVELS.ERROR}.
+     * @returns {LogLevel}
      */
     static getLogLevelForErrorLevel(level) {
         return level === ERROR_LEVELS.ERROR 
@@ -55,11 +55,12 @@ export default class ErrorHandler {
      * @since 0.0.1
      * @static
      * @param {Error} handledError The error to handle.
-     * @param {ErrorLevel} [level] The failure level (error or warning). Defaults to `ERROR`.
-     * @param {boolean} [rethrow] Whether to rethrow the error after handling. Only applies to `ERROR`.
-     * @param {*} [fallbackValue] The value to return. Only applies to WARNING.
-     * @returns {* | undefined} The fallback value if handling a warning, undefined if handling an error and not rethrowing.
-     * @throws {Error} The rethrown error.
+     * @param {ErrorLevel} [level] The failure level ({@link ERROR_LEVELS.ERROR} or {@link ERROR_LEVELS.WARNING}). Defaults to {@link ERROR_LEVELS.ERROR}.
+     * @param {boolean} [rethrow] Whether to rethrow the error after handling. Only applies to {@link ERROR_LEVELS.ERROR}.
+     * @param {*} [fallbackValue] The value to return. Only applies to {@link ERROR_LEVELS.WARNING}.
+     * @returns {* | undefined} The {@link fallbackValue} if handling a {@link ERROR_LEVELS.WARNING}, `undefined` if handling an {@link ERROR_LEVELS.ERROR} and {@link rethrow} is `false`.
+     * @throws If an unexpected error happens during handling
+     * @throws The {@link handledError} if handling an {@link ERROR_LEVELS.ERROR} and if {@link rethrow} is `true`
      */
     static handle(
         handledError, 
@@ -105,10 +106,12 @@ export default class ErrorHandler {
     * @static
     * @param {() => (* | Promise<*>)} fn The function to execute.
     * @param {string} message The message if the function fails.
-    * @param {ErrorLevel} [level] The error level (`WARNING` or `ERROR`).
-    * @param {boolean} [rethrow] Whether to rethrow the error. For ERROR only.
-    * @param {*} [fallbackValue] The value to return on failure. Defaults to `undefined`. For WARNING only.
-    * @returns {(* | undefined) | Promise<* | undefined>} The result of the function or, if the function fails, the fallback value if WARNING or undefined if ERROR. A promise if the function is async.
+    * @param {ErrorLevel} [level] The error level ({@link ERROR_LEVELS}).
+    * @param {boolean} [rethrow] Whether to rethrow the error. For {@link ERROR_LEVELS.ERROR} only.
+    * @param {*} [fallbackValue] The value to return on failure. Defaults to `undefined`. For {@link ERROR_LEVELS.WARNING} only.
+    * @returns {(* | undefined) | Promise<* | undefined>} The result of the function or, if the function fails, the fallback value if {@link ERROR_LEVELS.WARNING} or undefined if {@link ERROR_LEVELS.ERROR}. A promise if {@link fn} is async.
+    * @throws If an unexpected error happens during handling
+    * @throws All errors that happen in {@link ErrorHandler.handle}
     */
     static withHandling(
         fn, 
@@ -144,6 +147,8 @@ export default class ErrorHandler {
      * @param {string} message The warning message if the function fails.
      * @param {*} [fallbackValue] The value to return on failure. Defaults to `undefined`.
      * @returns {* | Promise<*>} The result of the function or the fallback value if the function fails. A promise if the function is async.
+     * @throws If an unexpected error happens during handling
+     * @throws All errors that happen in {@link ErrorHandler.withHandling}
      */
     static withWarningHandling(fn, message, fallbackValue = undefined) {
         return this.withHandling(
@@ -164,6 +169,8 @@ export default class ErrorHandler {
      * @param {string} message The error message if the function fails.
      * @param {boolean} [rethrow] Whether to rethrow the error.
      * @returns {* | Promise<*>} The result of the function or undefined if the function fails. A promise if the function is async.
+     * @throws If an unexpected error happens during handling
+     * @throws All errors that happen in {@link ErrorHandler.withHandling}
      */
     static withErrorHandling(fn, message, rethrow = true) {
         return this.withHandling(
