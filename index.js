@@ -14,6 +14,8 @@ import PackageJsonHelper from './src/helpers/PackageJsonHelper.js';
 import ErrorUtils from './src/utils/ErrorUtils.js';
 import TypeUtils from './src/utils/TypeUtils.js';
 
+import NpmCliWrapper from './src/wrappers/NpmCliWrapper.js';
+
 import Logger from './src/interfaces/Logger.js';
 
 import FileSystemPath from './src/models/FileSystemPath.js';
@@ -50,6 +52,9 @@ export {
     
     ErrorUtils, 
     TypeUtils, 
+
+    // Wrappers
+    NpmCliWrapper, 
 
     // Interfaces
     Logger, 
