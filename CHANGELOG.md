@@ -5,7 +5,99 @@
 
 
 
-### [v0.0.3](https://github.com/Zasco/javascript-framework/compare/v0.0.2...v0.0.3) -  8 March 2025 
+### [v0.0.4](https://github.com/Zasco/javascript-framework/compare/v0.0.3...v0.0.4) -  15 March 2025 
+
+
+
+
+
+
+
+
+#### New Features
+
+- feat: export commit message types  ([7b7acc4](https://github.com/Zasco/javascript-framework/commit/7b7acc4e20312e202584f3b29cecf992e90b5baf))
+- feat: export TypeUtils  ([5af3da5](https://github.com/Zasco/javascript-framework/commit/5af3da5ab08f33a34b5c23b7a318894b7c977740))
+- feat: add getter for message in Commit model  ([a2d662d](https://github.com/Zasco/javascript-framework/commit/a2d662d138c5d10be8e900614286269d7eeca471))
+- feat: add Git and PackageJson helpers  ([696f5e6](https://github.com/Zasco/javascript-framework/commit/696f5e68d826e8ad802f29377f59d4dc28b904db))
+- feat: export newly added helpers  ([4427604](https://github.com/Zasco/javascript-framework/commit/4427604e8822154db14ab15c99c594dc2471b9ab))
+- feat: implement SingletonTrait  ([7cbf8c8](https://github.com/Zasco/javascript-framework/commit/7cbf8c856013cf3a03febbc8d3e2cc0e194e0d39))
+- feat: export SingletonTrait  ([7d42346](https://github.com/Zasco/javascript-framework/commit/7d42346339f7dc70e0cd34e2a1ed4c7edf67d65d))
+- feat: add npm version bump types  ([6993029](https://github.com/Zasco/javascript-framework/commit/6993029dab846464a51226381ebf2a3e586fe38a))
+- feat: add npm version bump types constant  ([0878062](https://github.com/Zasco/javascript-framework/commit/087806254290bd4b146696a9dfb5596236bf6e82))
+- feat: add checker for package.json existence  ([817775b](https://github.com/Zasco/javascript-framework/commit/817775ba63458107321cef4f8b71f5d526fb558a))
+- feat: export npm types and constants  ([b899f1c](https://github.com/Zasco/javascript-framework/commit/b899f1c81322ebdf5930e79c3e2a219cbb85d67f))
+- feat: implement NpmCliWrapper  ([b5fe400](https://github.com/Zasco/javascript-framework/commit/b5fe400143d62eb4c0c27682c0ca55761ace85dc))
+- feat: export NpmCliWrapper  ([518e70b](https://github.com/Zasco/javascript-framework/commit/518e70bf9f7642f3b8689325550c2d077193b6a0))
+- feat: export PackageJsonTypes the new way  ([37cc2f9](https://github.com/Zasco/javascript-framework/commit/37cc2f9cbef066d2ac9cfbe096e8fba03baa3748))
+
+#### Fixes
+
+- fix: use isAnyObject() from is-what in TypeUtils  ([36684e5](https://github.com/Zasco/javascript-framework/commit/36684e5133311b256f3f0741bc62658228d78e59))
+- fix: use right type predicates for is-what  ([a8f7150](https://github.com/Zasco/javascript-framework/commit/a8f7150a7989ee0110d828a054ad1f3e10f1ed51))
+- fix: lazy-load ConsoleLogger in LogHelper  ([12910f4](https://github.com/Zasco/javascript-framework/commit/12910f4b1c23126123dab8494b24b92d7ad11c8b))
+
+#### Chores And Housekeeping
+
+- chore(typing): enable strict type checking options  ([50d3a40](https://github.com/Zasco/javascript-framework/commit/50d3a40744a5036c80fa86cbce255362cb8bc30e))
+
+#### Documentation Changes
+
+- docs(README): add Roadmap section with some tasks  ([b11b132](https://github.com/Zasco/javascript-framework/commit/b11b13287a8221e4cec5bb91f9c02fcbec891be1))
+- docs(JSDoc): update Commit class description  ([ba6464d](https://github.com/Zasco/javascript-framework/commit/ba6464dc6dc7a46afd74cfd74f553bcb7062caaa))
+- docs(README): add package description  ([0e9eb56](https://github.com/Zasco/javascript-framework/commit/0e9eb5666d13cc3df4b783c89910f1368d748183))
+- docs(NOTE): add in GitHelper  ([1a2def3](https://github.com/Zasco/javascript-framework/commit/1a2def3d5f243b75aff258b55a8d51bfa61cc723))
+- docs(README): remove completed tasks  ([fc7c1b5](https://github.com/Zasco/javascript-framework/commit/fc7c1b5a5132c154a8f28389ee83235b244fc01b))
+- docs(README): update type definitions task  ([0b946df](https://github.com/Zasco/javascript-framework/commit/0b946df1c1e82ad7625fe218ade9c26aba717333))
+- docs(README): add a bunch of tasks in Backlog  ([fdf7039](https://github.com/Zasco/javascript-framework/commit/fdf7039345992d122081ad579b76944e9688f6f2))
+- docs(JSDoc): add missing JSDoc to log()  ([b40248b](https://github.com/Zasco/javascript-framework/commit/b40248bdfda348d38276d7a3ec1037233811c20f))
+- docs: add note about directory tree traversing  ([4b6e18e](https://github.com/Zasco/javascript-framework/commit/4b6e18e12dc057c4d07a58102e76e31b8a8aba0c))
+- docs(JSDoc): improve desc. of getStdSubjectMsg()  ([cf5767d](https://github.com/Zasco/javascript-framework/commit/cf5767dca57c6dbbed9defa4220c9f4edb1a51c1))
+- docs(JSDoc): improve overall documentation  ([f5c03b6](https://github.com/Zasco/javascript-framework/commit/f5c03b61ab5b0ef428ce5e3b25dd836a7acbb4b1))
+- docs(JSDoc): improve overall descriptions  ([4ba98a9](https://github.com/Zasco/javascript-framework/commit/4ba98a985c93651f1dc1cab6b674be1b75bdbc97))
+- docs(TODO): add various TODOs  ([e992e6e](https://github.com/Zasco/javascript-framework/commit/e992e6e1b5eae5aec36e9e9706b3b2f3c0e6890e))
+- docs(JSDoc): add link in method description  ([284b889](https://github.com/Zasco/javascript-framework/commit/284b889d0d19b45506b7d0b2754ec6cd710a0b3b))
+- docs(README): update for new release  ([e8164b2](https://github.com/Zasco/javascript-framework/commit/e8164b2857aba9594de11f38e5d772c6acb25ce7))
+
+#### Refactoring and Updates
+
+- refactor: use type predicates instead of literals  ([6141f4d](https://github.com/Zasco/javascript-framework/commit/6141f4d847896142d21e749ce2a8f58a2a022308))
+- refactor: remove legacy specific Commit components  ([a5141f1](https://github.com/Zasco/javascript-framework/commit/a5141f10f06700ed07206fe379298c8cf613f982))
+- refactor: make Commit properties optional  ([cdc7058](https://github.com/Zasco/javascript-framework/commit/cdc70581a349f1499ac1056858ace5e08b5648ce))
+- refactor: move helpers to dedicated folder  ([ccce1ed](https://github.com/Zasco/javascript-framework/commit/ccce1eda0826af3ae56f9b63f4b162b2616faef7))
+- refactor: make GitHelper class-based  ([c34fe90](https://github.com/Zasco/javascript-framework/commit/c34fe90d676973868881a55fce830f55c120b20d))
+- refactor: make PackageJsonHelper class-based  ([1d79033](https://github.com/Zasco/javascript-framework/commit/1d7903399c49e34e08e43724f108f7952abf57e2))
+- refactor: make ErrorHandler class-based  ([925de33](https://github.com/Zasco/javascript-framework/commit/925de33246d351b01e4317ee909aa3c2c9221445))
+- refactor: make LogHelper class-based  ([1bbab80](https://github.com/Zasco/javascript-framework/commit/1bbab80fe5903223ba65d32d562771f476cd4f65))
+- refactor: make LogUtils class-based  ([eccc352](https://github.com/Zasco/javascript-framework/commit/eccc3521ee8cab37463aea9829ee66d726cc522d))
+- refactor: add singletons constructors  ([a8c45fb](https://github.com/Zasco/javascript-framework/commit/a8c45fb66c83136eac3f3aae5381e39f060cd7f6))
+- refactor: use package imports instead of paths  ([8aa85bf](https://github.com/Zasco/javascript-framework/commit/8aa85bfa4ae917f1f5a7685d92df3a798d713e6c))
+- refactor: implement SingletonTrait in classes  ([6541e4a](https://github.com/Zasco/javascript-framework/commit/6541e4a96776bbad0fe4124293613bcdf3937902))
+- refactor: move package.json type to own file  ([0f58727](https://github.com/Zasco/javascript-framework/commit/0f5872797e7ff94b0fee6240f83852d7b7ae9053))
+- refactor: rename package.json type in helper  ([83a5875](https://github.com/Zasco/javascript-framework/commit/83a58754b35f3fac5dca0ee3f946659fd3e79a42))
+- refactor: add getters for constants in helper  ([716b900](https://github.com/Zasco/javascript-framework/commit/716b900f88084899bdb91f262b5c884653ad8803))
+- refactor: replace use of deprecated method  ([de0328c](https://github.com/Zasco/javascript-framework/commit/de0328c3241f5939ccd028206043e7accef581cc))
+- refactor: implement _CLI_COMMAND in GitHelper  ([22cba3d](https://github.com/Zasco/javascript-framework/commit/22cba3d2834d9dade84a59e9f562f10b97bdce5f))
+- refactor: update how types are imported and used  ([c10e1d5](https://github.com/Zasco/javascript-framework/commit/c10e1d573f6e936da330906e22726e09e2eaeb15))
+- refactor: update LOG and ERROR levels types  ([7a57c37](https://github.com/Zasco/javascript-framework/commit/7a57c37d994473e252d6e979118a3cc490bf9b61))
+- refactor: update how levels types are imported  ([0a7878d](https://github.com/Zasco/javascript-framework/commit/0a7878d0d61259f1fcf2286dfe886ec8ffc63373))
+
+
+#### Tidying of Code eg Whitespace
+
+- style: change keys order in jsconfig.json  ([527437f](https://github.com/Zasco/javascript-framework/commit/527437f85091b6ddc8044533c1bf6c11e03d657d))
+- style: reorder typedef exports  ([cb7b12b](https://github.com/Zasco/javascript-framework/commit/cb7b12bc6e1f9092e6c3ebb68a719e62e3c38d2b))
+- style: standardize singletons constructors JSDoc  ([52c6e88](https://github.com/Zasco/javascript-framework/commit/52c6e88dea5f281273e330a518dde4859a1c80dd))
+- style: relocate constructor in TypeUtils  ([4f9e70e](https://github.com/Zasco/javascript-framework/commit/4f9e70eeba565cf8cd3bf72ba5d143cb25237665))
+
+
+#### General Changes
+
+- refactor!: remove splitted Commit properties  ([ab88b5f](https://github.com/Zasco/javascript-framework/commit/ab88b5fd1ebaaa33dc6fc1fc1f19857cda899333))
+- refactor!: change log levels types exports  ([7cf3dc4](https://github.com/Zasco/javascript-framework/commit/7cf3dc47c2567a2f95139a623f194ee7da061bf3))
+- refactor!: rename levels types  ([4f6f7a1](https://github.com/Zasco/javascript-framework/commit/4f6f7a1d3f510736e53ee87c232790bb4c86a05e))
+
+### [v0.0.3](https://github.com/Zasco/javascript-framework/compare/v0.0.2...v0.0.3) -  9 March 2025 
 
 
 
@@ -88,6 +180,7 @@
 - refactor!: rename method to getDetailedErrMsg()  ([3cdf7fe](https://github.com/Zasco/javascript-framework/commit/3cdf7fe6ac606523880a4f069c62c9314381755c))
 - refactor!: rename abstract instance error getter  ([5e1cc21](https://github.com/Zasco/javascript-framework/commit/5e1cc21d20255fbf45a02bcfddb316307d06c81c))
 - refactor!: rename getAbstractMethodErr()  ([7f09e5c](https://github.com/Zasco/javascript-framework/commit/7f09e5cd25dbcb2e9df05b4f7e2160e97316de04))
+- Release version 0.0.3  ([57533b1](https://github.com/Zasco/javascript-framework/commit/57533b1c9799a318497cc48d64858a10dccd9b12))
 
 ### [v0.0.2](https://github.com/Zasco/javascript-framework/compare/0.0.1...v0.0.2) -  22 February 2025 
 

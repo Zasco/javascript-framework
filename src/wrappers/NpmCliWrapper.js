@@ -17,7 +17,7 @@ import {
 /**
  * A wrapper to interact with `npm`.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.4
  */
 export default class NpmCliWrapper {
     /**
@@ -37,7 +37,7 @@ export default class NpmCliWrapper {
     /**
      * Checks if `npm` is installed and available in the system.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.4
      * @static
      * @returns {true} If `npm` is installed
      * @throws {Error} If `npm` is not installed or available (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
@@ -57,7 +57,7 @@ export default class NpmCliWrapper {
     /**
      * Checks if the given directory is a valid `npm` directory.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.4
      * @static
      * @param {FileSystemPath | string} directory The path to check
      * @returns {true} If the directory is a valid `npm` directory
@@ -79,7 +79,7 @@ export default class NpmCliWrapper {
     /**
      * Checks if the given string is valid version bump type.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.4
      * @static
      * @param {string} type
      * @returns {true} If the version bump type is valid
@@ -96,7 +96,7 @@ export default class NpmCliWrapper {
     /**
      * Returns the complete `npm` command with {@link _CLI_COMMAND}.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.4
      * @static
      * @param {string} command
      * @returns {string}
@@ -109,7 +109,7 @@ export default class NpmCliWrapper {
     /**
      * Executes the provided `npm` command in the provided directory.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.4
      * @static
      * @param {string} command
      * @param {FileSystemPath | string} targetDir
@@ -142,7 +142,7 @@ export default class NpmCliWrapper {
     /**
      * Executes `npm version` in the target directory with the provided version bump type and `Git tag` flag.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.4
      * @static
      * @param {FileSystemPath | string} targetDir The path of the directory in which to execute the command
      * @param {NpmTypes.VersionBumpType} versionBumpType The type of version bump to perform

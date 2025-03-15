@@ -65,7 +65,7 @@ export default class Commit {
     /**
      * The message of the commit.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.4
      * @readonly
      */
     get msg() {
