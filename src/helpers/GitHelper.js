@@ -18,6 +18,15 @@ import {
  * @since 0.0.2
  */
 export default class GitHelper {
+    /**
+     * The `git` CLI command identifier.
+     * 
+     * @protected
+     * @static
+     * @type {string}
+     */
+    static _CLI_COMMAND = 'git';
+    
     /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
     constructor() {
         SingletonTrait.singletonConstructor.call(this);
@@ -93,7 +102,7 @@ export default class GitHelper {
                 this.checkPathIsRepo(repoPath);
             
                 const options = {cwd: repoPath, stdio};
-                return execSync('git '+ command, options);
+                return execSync(`${this._CLI_COMMAND} ${command}`, options);
             },
             ErrorUtils.getStdSubjectMsg('Failed to run git command', command),
         );
