@@ -78,6 +78,7 @@ export default class PackageJsonHelper {
 
     /**
      * Checks if a `package.json` file exists in the provided directory.
+     * Unlike `npm` and `git` which traverse up the directory tree, this method only checks the exact provided directory.
      * 
      * @since ${NEXT_VERSION}
      * @static
