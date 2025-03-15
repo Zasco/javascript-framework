@@ -1,4 +1,4 @@
-import { ErrorUtils } from 'javascript-framework';
+import { AbstractClassTrait, ErrorUtils } from 'javascript-framework';
 
 import * as LogLevelsTypes from '../config/LogLevelsConfig.js';
 
@@ -6,8 +6,9 @@ import * as LogLevelsTypes from '../config/LogLevelsConfig.js';
  * @since 0.0.1
  */
 export default class Logger {
+    /** @throws If instantiated (see {@link AbstractClassTrait.abstractClassConstructor}) */
     constructor() {
-        ErrorUtils.checkIsAbstractInstance(this, Logger);
+        AbstractClassTrait.abstractClassConstructor.call(this);
     };
 
     /**

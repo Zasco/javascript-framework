@@ -9,7 +9,6 @@ A set of reusable components for building **JavaScript** applications.
 - Implement various new modules:
   
   **Primary**
-  - An `AbstractClassTrait` (like singleton)
   - A `CliWrapper` base model for CLI wrappers (*npm* and *Git*) to group common logic in.
   - A `CliHelper` with `promptWithRetry()` and standard format headers methods.
   
