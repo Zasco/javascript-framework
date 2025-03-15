@@ -45,7 +45,8 @@ export default class CliWrapper {
      * @protected
      * @param {FileSystemPath | string} targetDir
      * @return {true} If the tool can execute
-     * @throws If the tool is not available (see {@link CliWrapper._checkToolIsAvailable})
+     * @throws If an unexpected error happens during check
+     * @throws See {@link CliWrapper._checkToolIsAvailable}
      */
     static _checkCanExecute(targetDir) {
         this._checkToolIsAvailable();
@@ -59,6 +60,7 @@ export default class CliWrapper {
      * @abstract
      * @protected
      * @returns {true} If the tool is available
+     * @throws If an unexpected error happens during check
      * @throws If the tool is not available 
      */
     static _checkToolIsAvailable() {
