@@ -7,7 +7,8 @@ A set of reusable components for building **JavaScript** applications.
 - Implement error handling in the `Action` model through `ErrorHandler`.
 - Use the `FileSystemPath` model where applicable.
 - Fix type definitions
-  - Fix blocks content and structure
-  - Move to seprate file?
+  - Fix blocks content and structure (ensure each definition has a description for display in the IDE).
+  - Move to separate files and common folder.
+  - Adopt new types structure (see npm types/constants).
 
 ### Backlog
