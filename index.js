@@ -3,6 +3,7 @@ import SingletonTrait from './src/traits/SingletonTrait.js';
 import LOG_LEVELS from './src/config/LogLevelsConfig.js';
 
 import * as NpmTypes from './src/types/npm-types.js';
+import * as PackageJsonTypes from './src/types/package-json-types.js';
 
 import * as NpmConstants from './src/constants/NpmConstants.js';
 
@@ -41,6 +42,7 @@ export {
 
     // Types
     NpmTypes, 
+    PackageJsonTypes, 
     
     // Constants
     NpmConstants, 
