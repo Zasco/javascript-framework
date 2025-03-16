@@ -37,6 +37,7 @@ import * as errorModule from './src/modules/error.js';
 import * as logModule from './src/modules/log.js';
 import * as fsModule from './src/modules/fs.js';
 import * as gitModule from './src/modules/git.js';
+import * as packageJsonModule from './src/modules/packageJson.js';
 import * as npmModule from './src/modules/npm.js';
 
 
@@ -85,5 +86,6 @@ export {
     logModule, 
     fsModule, 
     gitModule, 
+    packageJsonModule, 
     npmModule, 
 };
