@@ -34,6 +34,7 @@ import ConsoleLogger from './src/entities/ConsoleLogger.js';
 // Modules
 import * as errorModule from './src/modules/error.js';
 import * as logModule from './src/modules/log.js';
+import * as gitModule from './src/modules/git.js';
 import * as npmModule from './src/modules/npm.js';
 
 
@@ -49,7 +50,6 @@ export {
     LogLevelsTypes, 
     
     // Config
-    LOG_LEVELS, 
     
     // Interfaces
     Logger, 
@@ -80,5 +80,6 @@ export {
     // Modules
     errorModule, 
     logModule, 
+    gitModule, 
     npmModule, 
 };
