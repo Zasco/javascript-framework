@@ -32,6 +32,7 @@ import PackageJsonHelper from './src/helpers/PackageJsonHelper.js';
 import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
 // Modules
+import * as logModule from './src/modules/log.js';
 import * as npmModule from './src/modules/npm.js';
 
 
@@ -76,5 +77,6 @@ export {
     ConsoleLogger, 
 
     // Modules
+    logModule, 
     npmModule, 
 };
