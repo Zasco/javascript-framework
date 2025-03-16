@@ -12,7 +12,7 @@ import {
 } from 'javascript-framework';
 
 import * as NpmTypes from '../types/npm-types.js';
-import * as NpmConstants from '../constants/NpmConstants.js';
+import * as NpmConstants from '../constants/npm-constants.js';
 
 /**
  * A wrapper to interact with `npm`.
