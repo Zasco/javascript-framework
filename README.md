@@ -24,7 +24,9 @@ A set of reusable components for building **JavaScript** applications.
   - Fix blocks content and structure (ensure each definition has a description for display in the IDE).
   - Move to separate files and common folder.
   - Adopt new types structure (see npm types/constants).
+  - Split types from constant in error/log levels/config
 - Refactor `Logger` interface from being "class-based" to "type-based".
 - Merge `ErrorUtils.getStdSubjectMsg` and `ErrorUtils.getStdErrorMsg` into a single function (to evaluate first).
 - Add possibility to provide error type in `ErrorHandler.withHandling()`.
 - Improve `PackageJsonHelper.checkConfigFileExists()` to traverse up the directory tree.
+- Generate the `exports` section of the `package.json` accordingly to the `src/modules/` directory.

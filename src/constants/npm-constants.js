@@ -1,4 +1,4 @@
-import { NpmTypes } from 'javascript-framework';
+import * as NpmTypes from '../types/npm-types.js';
 
 /**
  * @since {NEXT_VERSION}

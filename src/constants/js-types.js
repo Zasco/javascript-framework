@@ -14,7 +14,7 @@
  *   'NULL': string, 
  * }}
  */
-const JSTYPES = {
+const JS_TYPES = {
     STRING: typeof String(), 
     NUMBER: typeof Number(), 
     BOOLEAN: typeof Boolean(), 
@@ -26,4 +26,4 @@ const JSTYPES = {
     NULL: typeof null, /** Same as `OBJECT` */
 };
 
-export default Object.freeze(JSTYPES);
+export default Object.freeze(JS_TYPES);

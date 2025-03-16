@@ -1,6 +1,7 @@
-import {ErrorUtils, TypeUtils } from 'javascript-framework';
+import { Utils as TypeUtils } from 'javascript-framework/module/types';
+import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
-import JSTYPES from '../constants/JSTypes.js';
+import JS_TYPES from '../constants/js-types.js';
 
 /**
  * Represents a filesystem path as an object for type-safe operations.
@@ -20,7 +21,7 @@ export default class FileSystemPath {
     constructor(pathString) {
         // [TODO] Add validation for empty path string...
         // [TODO] Validation should be handled in a dedicated service instead of in models...
-        if (!TypeUtils.isString(pathString)) throw ErrorUtils.getStdTypeMismatchErr(JSTYPES.STRING, pathString);
+        if (!TypeUtils.isString(pathString)) throw ErrorUtils.getStdTypeMismatchErr(JS_TYPES.STRING, pathString);
 
         this._path = pathString;
     }

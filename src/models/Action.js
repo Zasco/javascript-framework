@@ -1,4 +1,5 @@
-import { AbstractClassTrait, ErrorUtils } from 'javascript-framework';
+import { AbstractClassTrait } from 'javascript-framework';
+import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
 /**
  * @since 0.0.3

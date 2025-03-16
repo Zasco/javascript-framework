@@ -1,16 +1,10 @@
+import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 
-import { 
-    SingletonTrait, 
-    ErrorHandler, 
-    ErrorUtils, 
-    Repository 
-} from 'javascript-framework';
+import { SingletonTrait } from 'javascript-framework';
+import { Utils as ErrorUtils, Handler as ErrorHandler} from 'javascript-framework/module/error';
 
-/**
- * @typedef {import('child_process').ExecSyncOptions} ExecSyncOptions
- * @typedef {import('child_process').StdioOptions} StdioOptions
- */
+import Repository from '../models/Repository.js';
 
 /**
  * A wrapper to interact with `Git`.
@@ -44,7 +38,7 @@ export default class GitHelper {
     static checkPathIsRepo(path) {
         return ErrorHandler.withErrorHandling(
             () => {
-                /** @type {ExecSyncOptions} */
+                /** @type {childProcess.ExecSyncOptions} */
                 const options = {cwd: path, stdio: 'pipe'};
                 // [NOTE] When running `git rev-parse --is-inside-work-tree` in a non-Git directory, Git will exit with an error status, which will cause execSync() to throw an error itself.
                 execSync('git rev-parse --is-inside-work-tree', options);
@@ -92,7 +86,7 @@ export default class GitHelper {
      * @static
      * @param {string} command The command to run.
      * @param {Repository} repo The target repository object.
-     * @param {StdioOptions} [stdio] The stdio mode.
+     * @param {childProcess.StdioOptions} [stdio] The stdio mode.
      * @returns {Buffer} The output of the command.
      */
     static runCommand(command, repo, stdio = undefined) {

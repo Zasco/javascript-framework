@@ -1,4 +1,4 @@
-import JSTypes from './JSTypes.js';
+import JSTypes from './js-types.js';
 
 /**
  * The type of a `class instance` object.
