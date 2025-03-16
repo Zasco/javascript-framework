@@ -22,7 +22,8 @@ import {
     isUndefined, 
 } from 'is-what';
 
-import { ErrorUtils, SingletonTrait } from 'javascript-framework';
+import { SingletonTrait } from 'javascript-framework';
+import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
 import JS_TYPES from '../constants/js-types.js';
 import EXPANDED_TYPES from '../constants/expanded-types.js';

@@ -1,16 +1,11 @@
-import { 
-    SingletonTrait, 
-    
-    LOG_LEVELS, 
-
-    ErrorHandler, 
-    Logger, 
-    
-    ConsoleLogger 
-} from 'javascript-framework';
+import { SingletonTrait } from 'javascript-framework';
+import { Handler as ErrorHandler } from 'javascript-framework/module/error';
 
 import * as LogLevelsTypes from '../config/LogLevelsConfig.js';
+import LOG_LEVELS from '../config/LogLevelsConfig.js';
 import LogUtils from '../utils/LogUtils.js';
+import Logger from '../interfaces/Logger.js';
+import ConsoleLogger from '../entities/ConsoleLogger.js';
 
 /**
  * @since 0.0.1

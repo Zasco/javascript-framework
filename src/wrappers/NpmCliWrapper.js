@@ -1,15 +1,10 @@
 import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 
-import { 
-    SingletonTrait, 
-    
-    ErrorUtils, 
-    ErrorHandler,
-    PackageJsonHelper, 
-     
-    FileSystemPath, 
-} from 'javascript-framework';
+import { SingletonTrait } from 'javascript-framework';
+import { FileSystemPath } from 'javascript-framework/module/fs';
+import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
+import { Helper as PackageJsonHelper } from 'javascript-framework/module/packageJson';
 
 import * as NpmTypes from '../types/npm-types.js';
 import * as NpmConstants from '../constants/npm-constants.js';

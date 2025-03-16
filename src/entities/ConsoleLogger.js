@@ -1,6 +1,8 @@
-import { LOG_LEVELS, ErrorUtils, Logger} from 'javascript-framework';
+import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
 import * as LogLevelsTypes from '../config/LogLevelsConfig.js';
+import LOG_LEVELS from '../config/LogLevelsConfig.js';
+import Logger from '../interfaces/Logger.js';
 
 /**
  * @since 0.0.1
