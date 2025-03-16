@@ -39,6 +39,7 @@ import * as fsModule from './src/modules/fs.js';
 import * as gitModule from './src/modules/git.js';
 import * as packageJsonModule from './src/modules/packageJson.js';
 import * as npmModule from './src/modules/npm.js';
+import * as actionModule from './src/modules/action.js';
 
 
 // [TODO] Check if these could not be imported the other way...
@@ -88,4 +89,5 @@ export {
     gitModule, 
     packageJsonModule, 
     npmModule, 
+    actionModule, 
 };
