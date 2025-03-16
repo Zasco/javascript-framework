@@ -4,15 +4,15 @@ import { execSync } from 'child_process';
 import { 
     SingletonTrait, 
     
-    NpmTypes, 
-    NpmConstants, 
-    
     ErrorUtils, 
     ErrorHandler,
     PackageJsonHelper, 
      
-    FileSystemPath 
+    FileSystemPath, 
 } from 'javascript-framework';
+
+import * as NpmTypes from '../types/npm-types.js';
+import * as NpmConstants from '../constants/NpmConstants.js';
 
 /**
  * A wrapper to interact with `npm`.
