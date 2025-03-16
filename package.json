@@ -6,6 +6,7 @@
   "exports": {
     ".": "./index.js",
     
+    "./module/core": "./src/modules/core.js",
     "./module/types": "./src/modules/types.js",
     "./module/error": "./src/modules/error.js",
     "./module/log": "./src/modules/log.js",
