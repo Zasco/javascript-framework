@@ -24,12 +24,12 @@ import {
 
 import { ErrorUtils, SingletonTrait } from 'javascript-framework';
 
-import JSTYPES from '../constants/JSTypes.js';
-import EXPANDED_TYPES from '../constants/ExpandedTypes.js';
+import JSTYPES from '../constants/js-types.js';
+import EXPANDED_TYPES from '../constants/expanded-types.js';
 
 /**
- * @typedef {import('../constants/ExpandedTypes.js').ClassInstanceObject} ClassInstanceObject
- * @typedef {import('../constants/ExpandedTypes.js').ClassFunction} ClassFunction
+ * @typedef {import('../constants/expanded-types.js').ClassInstanceObject} ClassInstanceObject
+ * @typedef {import('../constants/expanded-types.js').ClassFunction} ClassFunction
  */
 
 /**
