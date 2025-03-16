@@ -32,6 +32,7 @@ import PackageJsonHelper from './src/helpers/PackageJsonHelper.js';
 import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
 // Modules
+import * as typesModule from './src/modules/types.js';
 import * as errorModule from './src/modules/error.js';
 import * as logModule from './src/modules/log.js';
 import * as gitModule from './src/modules/git.js';
@@ -78,6 +79,7 @@ export {
     ConsoleLogger, 
 
     // Modules
+    typesModule, 
     errorModule, 
     logModule, 
     gitModule, 
