@@ -1,6 +1,10 @@
-import { SingletonTrait, LOG_LEVELS, LogHelper } from 'javascript-framework';
+import { SingletonTrait } from 'javascript-framework';
+import { 
+    Types as LogLevelsTypes, 
+    LOG_LEVELS, 
+    Helper as LogHelper 
+} from 'javascript-framework/module/log';
 
-import * as LogLevelsTypes from '../config/LogLevelsConfig.js';
 import * as ErrorLevelTypes from "../config/ErrorLevelsConfig.js";
 import ERROR_LEVELS from "../config/ErrorLevelsConfig.js";
 

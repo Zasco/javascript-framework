@@ -1,4 +1,5 @@
-import { SingletonTrait, TypeUtils } from 'javascript-framework';
+import { SingletonTrait } from 'javascript-framework';
+import { Utils as TypeUtils } from 'javascript-framework/module/types';
 
 /**
  * @since 0.0.2

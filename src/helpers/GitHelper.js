@@ -1,11 +1,9 @@
 import { execSync } from 'child_process';
 
-import { 
-    SingletonTrait, 
-    ErrorHandler, 
-    ErrorUtils, 
-    Repository 
-} from 'javascript-framework';
+import { SingletonTrait } from 'javascript-framework';
+import { Utils as ErrorUtils, Handler as ErrorHandler} from 'javascript-framework/module/error';
+
+import Repository from '../models/Repository.js';
 
 /**
  * @typedef {import('child_process').ExecSyncOptions} ExecSyncOptions

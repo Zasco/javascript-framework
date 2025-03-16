@@ -1,4 +1,5 @@
-import { AbstractClassTrait, ErrorUtils } from 'javascript-framework';
+import { AbstractClassTrait } from 'javascript-framework';
+import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
 import * as LogLevelsTypes from '../config/LogLevelsConfig.js';
 
