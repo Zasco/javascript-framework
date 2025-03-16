@@ -28,3 +28,4 @@ A set of reusable components for building **JavaScript** applications.
 - Merge `ErrorUtils.getStdSubjectMsg` and `ErrorUtils.getStdErrorMsg` into a single function (to evaluate first).
 - Add possibility to provide error type in `ErrorHandler.withHandling()`.
 - Improve `PackageJsonHelper.checkConfigFileExists()` to traverse up the directory tree.
+- Generate the `exports` section of the `package.json` accordingly to the `src/modules/` directory.
