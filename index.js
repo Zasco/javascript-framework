@@ -3,11 +3,8 @@ import SingletonTrait from './src/traits/SingletonTrait.js';
 
 import LOG_LEVELS from './src/config/LogLevelsConfig.js';
 
-import * as NpmTypes from './src/types/npm-types.js';
 import * as PackageJsonTypes from './src/types/package-json-types.js';
 import * as LogLevelsTypes from './src/config/LogLevelsConfig.js';
-
-import * as NpmConstants from './src/constants/NpmConstants.js';
 
 import ErrorHandler from './src/helpers/ErrorHandler.js';
 import LogHelper from './src/helpers/LogHelper.js';
@@ -16,8 +13,6 @@ import PackageJsonHelper from './src/helpers/PackageJsonHelper.js';
 
 import ErrorUtils from './src/utils/ErrorUtils.js';
 import TypeUtils from './src/utils/TypeUtils.js';
-
-import NpmCliWrapper from './src/wrappers/NpmCliWrapper.js';
 
 import Logger from './src/interfaces/Logger.js';
 
@@ -47,12 +42,10 @@ export {
     LOG_LEVELS, 
 
     // Types
-    NpmTypes, 
     PackageJsonTypes, 
     LogLevelsTypes, 
     
     // Constants
-    NpmConstants, 
     
     // Helpers & Utils
     ErrorHandler, 
@@ -64,7 +57,6 @@ export {
     TypeUtils, 
 
     // Wrappers
-    NpmCliWrapper, 
 
     // Interfaces
     Logger, 
