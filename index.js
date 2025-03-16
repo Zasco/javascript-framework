@@ -28,6 +28,10 @@ import Commit from './src/models/Commit.js';
 
 import ConsoleLogger from './src/entities/ConsoleLogger.js';
 
+// Modules
+import * as npmModule from './src/modules/npm.js';
+
+
 // [TODO] Check if these could not be imported the other way...
 /**
  * @typedef {import('./src/types/package-json-types.js').PackageJson} PackageJsonType
@@ -73,4 +77,7 @@ export {
 
     // Entities
     ConsoleLogger, 
+
+    // Modules
+    npmModule, 
 };
