@@ -1,9 +1,9 @@
-import { NpmTypes } from 'javascript-framework';
+import { npmModule } from 'javascript-framework';
 
 /**
  * @since {NEXT_VERSION}
- * @see {@link NpmTypes.VersionBumpTypes}
+ * @see {@link npmModule.Types.VersionBumpTypes}
  * @readonly
- * @type {NpmTypes.VersionBumpTypes}
+ * @type {npmModule.Types.VersionBumpTypes}
  */
 export const VERSION_BUMP_TYPES = Object.freeze(['major', 'minor', 'patch']);

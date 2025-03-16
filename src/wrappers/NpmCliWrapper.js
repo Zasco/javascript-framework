@@ -4,14 +4,13 @@ import { execSync } from 'child_process';
 import { 
     SingletonTrait, 
     
-    NpmTypes, 
-    NpmConstants, 
-    
     ErrorUtils, 
     ErrorHandler,
     PackageJsonHelper, 
      
-    FileSystemPath 
+    FileSystemPath, 
+
+    npmModule, 
 } from 'javascript-framework';
 
 /**
@@ -88,7 +87,7 @@ export default class NpmCliWrapper {
      */
     static checkIsValidBumpType(type) {
         // @ts-ignore TypeScript isn't typed so that includes() can safely check any string against a readonly tuple of strings
-        if (!NpmConstants.VERSION_BUMP_TYPES.includes(type)) throw new TypeError(ErrorUtils.getStdSubjectMsg(`Invalid version bump type`, type));
+        if (!npmModule.Constants.VERSION_BUMP_TYPES.includes(type)) throw new TypeError(ErrorUtils.getStdSubjectMsg(`Invalid version bump type`, type));
 
         return true;
     }
@@ -145,7 +144,7 @@ export default class NpmCliWrapper {
      * @since 0.0.4
      * @static
      * @param {FileSystemPath | string} targetDir The path of the directory in which to execute the command
-     * @param {NpmTypes.VersionBumpType} versionBumpType The type of version bump to perform
+     * @param {npmModule.Types.VersionBumpType} versionBumpType The type of version bump to perform
      * @param {boolean} handleGit Whether to include the `--no-git-tag-version` flag and prevent `npm` to run Git operations.
      * @throws If an error happens during execution (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
      * - An unexpected error
