@@ -12,13 +12,6 @@ import * as packageJsonModule from './src/modules/packageJson.js';
 import * as npmModule from './src/modules/npm.js';
 import * as actionModule from './src/modules/action.js';
 
-
-// [TODO] Check if these could not be imported the other way...
-/**
- * @typedef {import('./src/types/package-json-types.js').PackageJson} PackageJsonType
- * @typedef {import('./src/models/Action.js').DefaultActionConfig} DefaultActionConfig
- */
-
 export {
     // Traits
     AbstractClassTrait, 
