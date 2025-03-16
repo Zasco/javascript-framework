@@ -1,7 +1,8 @@
 import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 
-import { AbstractClassTrait, ErrorUtils, ErrorHandler, FileSystemPath } from 'javascript-framework';
+import { AbstractClassTrait} from 'javascript-framework';
+import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
 /**
  * The base model for CLI wrappers.
