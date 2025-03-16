@@ -1,9 +1,3 @@
-import Helper from '../helpers/GitHelper.js';
-import Repository from '../models/Repository.js';
-import Commit from '../models/Commit.js';
-
-export { 
-    Helper,
-    Repository,
-    Commit
-}
+export { default as Helper } from '../helpers/GitHelper.js';
+export { default as Repository } from '../models/Repository.js';
+export { default as Commit } from '../models/Commit.js';
