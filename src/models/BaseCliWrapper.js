@@ -9,7 +9,7 @@ import { AbstractClassTrait, ErrorUtils, ErrorHandler, FileSystemPath } from 'ja
  * @since ${NEXT_VERSION}
  * @abstract
  */
-export default class CliWrapper {
+export default class BaseCliWrapper {
     /** @throws If instantiated (see {@link AbstractClassTrait.abstractClassConstructor}) */
     constructor() {
         AbstractClassTrait.abstractClassConstructor.call(this);
