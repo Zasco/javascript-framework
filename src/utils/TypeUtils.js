@@ -24,7 +24,7 @@ import {
 
 import { ErrorUtils, SingletonTrait } from 'javascript-framework';
 
-import JSTYPES from '../constants/js-types.js';
+import JS_TYPES from '../constants/js-types.js';
 import EXPANDED_TYPES from '../constants/expanded-types.js';
 
 /**
@@ -164,7 +164,7 @@ export default class TypeUtils {
     /**
      * Returns whether the payload is a {@link EXPANDED_TYPES.CLASS_FUNCTION}.
      * 
-     * WARNING: Will also return `true` for {@link JSTYPES.FUNCTION}s with a manually set `prototype`.
+     * WARNING: Will also return `true` for {@link JS_TYPES.FUNCTION}s with a manually set `prototype`.
      * 
      * @since 0.0.3
      * @static
@@ -211,11 +211,11 @@ export default class TypeUtils {
      * @param {ClassFunction} instanceClass
      * @param {boolean} [direct] If true, checks if {@link instance} is directly of the {@link instanceClass}
      * @returns {boolean}
-     * @throws {TypeError} If {@link instance} is not of types {@link JSTYPES.OBJECT} and {@link EXPANDED_TYPES.CLASS_INSTANCE_OBJECT} or {@link instanceClass} is not of types {@link JSTYPES.FUNCTION} AND {@link EXPANDED_TYPES.CLASS_FUNCTION}
+     * @throws {TypeError} If {@link instance} is not of types {@link JS_TYPES.OBJECT} and {@link EXPANDED_TYPES.CLASS_INSTANCE_OBJECT} or {@link instanceClass} is not of types {@link JS_TYPES.FUNCTION} AND {@link EXPANDED_TYPES.CLASS_FUNCTION}
      */
     static isInstanceOf(instance, instanceClass, direct = false) {
-        if (!this.isAnyObject(instance)) throw ErrorUtils.getStdTypeMismatchErr(JSTYPES.OBJECT, typeof instance);
-        if (!this.isFunction(instanceClass)) throw ErrorUtils.getStdTypeMismatchErr(JSTYPES.FUNCTION, typeof instanceClass);
+        if (!this.isAnyObject(instance)) throw ErrorUtils.getStdTypeMismatchErr(JS_TYPES.OBJECT, typeof instance);
+        if (!this.isFunction(instanceClass)) throw ErrorUtils.getStdTypeMismatchErr(JS_TYPES.FUNCTION, typeof instanceClass);
 
         if (!this.isClassInstanceObject(instance)) throw ErrorUtils.getStdTypeMismatchErr('class instance', 'plain object');
         if (!this.isClassFunction(instanceClass)) throw ErrorUtils.getStdTypeMismatchErr('class constructor', 'plain function');
