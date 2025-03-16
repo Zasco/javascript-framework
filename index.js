@@ -35,6 +35,7 @@ import ConsoleLogger from './src/entities/ConsoleLogger.js';
 import * as typesModule from './src/modules/types.js';
 import * as errorModule from './src/modules/error.js';
 import * as logModule from './src/modules/log.js';
+import * as fsModule from './src/modules/fs.js';
 import * as gitModule from './src/modules/git.js';
 import * as npmModule from './src/modules/npm.js';
 
@@ -82,6 +83,7 @@ export {
     typesModule, 
     errorModule, 
     logModule, 
+    fsModule, 
     gitModule, 
     npmModule, 
 };
