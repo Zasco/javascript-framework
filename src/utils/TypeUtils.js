@@ -24,7 +24,7 @@ import {
 
 import { ErrorUtils, SingletonTrait } from 'javascript-framework';
 
-import JSTYPES from '../constants/JSTypes.js';
+import JSTYPES from '../constants/js-types.js';
 import EXPANDED_TYPES from '../constants/ExpandedTypes.js';
 
 /**

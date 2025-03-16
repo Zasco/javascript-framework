@@ -1,6 +1,6 @@
 import {ErrorUtils, TypeUtils } from 'javascript-framework';
 
-import JSTYPES from '../constants/JSTypes.js';
+import JSTYPES from '../constants/js-types.js';
 
 /**
  * Represents a filesystem path as an object for type-safe operations.
