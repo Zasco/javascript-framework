@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import { SingletonTrait } from 'javascript-framework';
+import { traits } from 'javascript-framework/module/core';
 import { FileSystemPath } from 'javascript-framework/module/fs';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
@@ -35,9 +35,9 @@ export default class PackageJsonHelper {
      */
     static _VERSION_KEY = 'version';
     
-    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
+    /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
-        SingletonTrait.singletonConstructor.call(this);
+        traits.SingletonTrait.singletonConstructor.call(this);
     }
 
     /**

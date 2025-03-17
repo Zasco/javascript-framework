@@ -1,12 +1,12 @@
-import { SingletonTrait } from 'javascript-framework';
+import { traits } from 'javascript-framework/module/core';
 
 /**
  * @since 0.0.2
  */
 export default class LogUtils {
-    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
+    /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
-        SingletonTrait.singletonConstructor.call(this);
+        traits.SingletonTrait.singletonConstructor.call(this);
     }
 
     /**

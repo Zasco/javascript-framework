@@ -1,4 +1,4 @@
-import { SingletonTrait } from 'javascript-framework';
+import { traits } from 'javascript-framework/module/core';
 import { 
     types as logLevelsTypes, 
     LOG_LEVELS, 
@@ -15,9 +15,9 @@ export default class ErrorHandler {
     /** Wether warnings are critical. If true, warnings are treated as errors. Defaults to false. */
     static WARNINGS_ARE_CRITICAL = false;
 
-    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
+    /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
-        SingletonTrait.singletonConstructor.call(this);
+        traits.SingletonTrait.singletonConstructor.call(this);
     }
 
     /**

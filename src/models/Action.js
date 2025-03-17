@@ -1,4 +1,4 @@
-import { AbstractClassTrait } from 'javascript-framework';
+import { traits } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
 /**
@@ -47,9 +47,9 @@ export default class Action {
      */
     static _isDryRun;
 
-    /** @throws If instantiated (see {@link AbstractClassTrait.abstractClassConstructor}) */
+    /** @throws If instantiated (see {@link traits.AbstractClassTrait.abstractClassConstructor}) */
     constructor() {
-        AbstractClassTrait.abstractClassConstructor.call(this);
+        traits.AbstractClassTrait.abstractClassConstructor.call(this);
     };
 
     /**
