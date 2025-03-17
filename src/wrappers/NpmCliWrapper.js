@@ -1,12 +1,14 @@
 import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 
-import { traits } from 'javascript-framework/module/core';
+import { traits, TypeUtils } from 'javascript-framework/module/core';
 import { FileSystemPath } from 'javascript-framework/module/fs';
+import { BaseWrapper as BaseCliWrapper } from 'javascript-framework/module/cli';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 import { Helper as PackageJsonHelper } from 'javascript-framework/module/packageJson';
 
 import * as npmTypes from '../types/npm-types.js';
+import * as npmCliWrapperTypes from '../types/npm-cli-wrapper-types.js';
 import * as npmConstants from '../constants/npm-constants.js';
 
 /**
@@ -14,45 +16,39 @@ import * as npmConstants from '../constants/npm-constants.js';
  * 
  * @since 0.0.4
  */
-export default class NpmCliWrapper {
+export default class NpmCliWrapper extends BaseCliWrapper {
     /**
-     * The `npm` CLI command identifier.
-     * 
-     * @protected
-     * @static
-     * @type {string}
+     * @inheritdoc
+     * @see {@link BaseCliWrapper._CLI_COMMAND}
      */
     static _CLI_COMMAND = 'npm';
     
     /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
-        traits.SingletonTrait.singletonConstructor.call(this);
+        const singletonConstructor = () => traits.SingletonTrait.singletonConstructor.call(this);
+        try {super();} finally {singletonConstructor();}
     }
 
     /**
-     * Checks if `npm` is installed and available in the system.
-     * 
-     * @since 0.0.4
-     * @static
-     * @returns {true} If `npm` is installed
+     * @inheritdoc
+     * @see {@link CliWrapper._checkToolIsAvailable}
      * @throws {Error} If `npm` is not installed or available (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
      * - An unexpected error
      * - {@link execSync}
      */
-    static checkNpmIsAvailable() {
+    static _checkToolIsAvailable() {
         return ErrorHandler.withErrorHandling(
             () => {
-                execSync('npm --version', { stdio: 'pipe' });
+                execSync(`${this._CLI_COMMAND} --version`, { stdio: 'pipe' });
                 return true;
             }, 
-            '"npm" is not available on the system.', 
+            `"${this._CLI_COMMAND}" is not available on the system.`, 
         );
     }
 
     /**
      * Checks if the given directory is a valid `npm` directory.
      * 
-     * @since 0.0.4
      * @static
      * @param {FileSystemPath | string} directory The path to check
      * @returns {true} If the directory is a valid `npm` directory
@@ -60,7 +56,7 @@ export default class NpmCliWrapper {
      * - An unexpected error
      * - {@link PackageJsonHelper.checkConfigFileExists}
      */
-    static checkIsNpmDirectory(directory) {
+    static _checkIsNpmDirectory(directory) {
         return ErrorHandler.withErrorHandling(
             () => {
                 PackageJsonHelper.checkConfigFileExists(directory);
@@ -74,98 +70,55 @@ export default class NpmCliWrapper {
     /**
      * Checks if the given string is valid version bump type.
      * 
-     * @since 0.0.4
      * @static
      * @param {string} type
      * @returns {true} If the version bump type is valid
      * @throws {TypeError} If the version bump type is not valid
      * @throws If an unexpected error happens during check
      */
-    static checkIsValidBumpType(type) {
-        // @ts-ignore TypeScript isn't typed so that includes() can safely check any string against a readonly tuple of strings
+    static _checkIsValidBumpType(type) {
+        // @ts-expect-error TypeScript isn't typed so that includes() can safely check any string against a readonly tuple of strings
         if (!npmConstants.VERSION_BUMP_TYPES.includes(type)) throw new TypeError(ErrorUtils.getStdSubjectMsg(`Invalid version bump type`, type));
 
         return true;
     }
 
-    /**
-     * Returns the complete `npm` command with {@link _CLI_COMMAND}.
-     * 
-     * @since 0.0.4
-     * @static
-     * @param {string} command
-     * @returns {string}
-     * @throws If an unexpected error happens during completion
-     */
-    static getCompleteCommand(command) {
-        return `${this._CLI_COMMAND} ${command}`;
-    }
-
-    /**
-     * Executes the provided `npm` command in the provided directory.
-     * 
-     * @since 0.0.4
-     * @static
-     * @param {string} command
-     * @param {FileSystemPath | string} targetDir
-     * @param {childProcess.ExecSyncOptions} [options]
-     * @returns {true} If the command was executed successfully
-     * @throws If an error happens during execution (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
-     * - An unexpected error
-     * - {@link NpmCliWrapper.checkNpmIsAvailable}
-     * - {@link NpmCliWrapper.checkIsNpmDirectory}
-     * - {@link execSync}
-     */
-    static executeCommand(command, targetDir, options = undefined) {
-        const targetDirStr = String(targetDir);
-        
-        return ErrorHandler.withErrorHandling(
-            () => {
-                this.checkNpmIsAvailable();
-                this.checkIsNpmDirectory(targetDir);
-                
-                execSync(this.getCompleteCommand(command), { cwd: targetDirStr, stdio: 'inherit', ...options });
-                
-                return true;
-            },
-            ErrorUtils.getStdErrorMsg(`executing command ${command}`, 'in directory', targetDirStr)
-        );
-    }
-
     // [TODO] Add static version(targetDir, versionBumpType, handleGit) {}
 
     /**
-     * Executes `npm version` in the target directory with the provided version bump type and `Git tag` flag.
+     * Executes `npm version` with the provided version bump type and options.
      * 
      * @since 0.0.4
      * @static
-     * @param {FileSystemPath | string} targetDir The path of the directory in which to execute the command
      * @param {npmTypes.VersionBumpType} versionBumpType The type of version bump to perform
-     * @param {boolean} handleGit Whether to include the `--no-git-tag-version` flag and prevent `npm` to run Git operations.
+     * @param {npmCliWrapperTypes.VersionOptions} cmdOptions
+     * @param {childProcess.ExecSyncOptions} [execOptions]
      * @throws If an error happens during execution (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
      * - An unexpected error
      * - {@link NpmCliWrapper.checkIsValidBumpType}
-     * - {@link NpmCliWrapper.executeCommand}
+     * - {@link NpmCliWrapper._convertOptionsToArgs}
+     * - {@link NpmCliWrapper._executeCommand}
      */
-    static version(targetDir, versionBumpType, handleGit) {
-        const directoryStr = String(targetDir);
+    static version(versionBumpType, cmdOptions = {}, execOptions = {}) {
+        // [TODO] Improve this...
+        const completeCommand = `${this._CLI_COMMAND} ${versionBumpType}`;
         
         return ErrorHandler.withErrorHandling(
             () => {
-                this.checkIsValidBumpType(versionBumpType);
-        
-                const gitFlag = handleGit ? 
-                    '' : 
-                    '--no-git-tag-version'
-                ;
-                const command = `version ${versionBumpType} ${gitFlag}`;
+                this._checkIsValidBumpType(versionBumpType);
                 
                 console.log('');
-                console.log(this.getCompleteCommand(command));
+                console.log(completeCommand);
+
+                const cmdArgs = [
+                    npmConstants.COMMANDS.VERSION, 
+                    versionBumpType, 
+                    ...this._convertOptionsToArgs(cmdOptions)
+                ];
                 
-                this.executeCommand(command, targetDir);
+                this._executeCommand(cmdArgs, execOptions);
             }, 
-            ErrorUtils.getStdErrorMsg('executing "npm version"', 'in directory', directoryStr)
+            ErrorUtils.getStdErrorMsg(`executing "${completeCommand}"`, 'in directory', String(execOptions.cwd)), 
         );
     }
 }
