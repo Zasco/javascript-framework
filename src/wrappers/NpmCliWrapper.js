@@ -1,13 +1,13 @@
 import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 
-import { SingletonTrait } from 'javascript-framework';
+import { traits } from 'javascript-framework/module/core';
 import { FileSystemPath } from 'javascript-framework/module/fs';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 import { Helper as PackageJsonHelper } from 'javascript-framework/module/packageJson';
 
-import * as NpmTypes from '../types/npm-types.js';
-import * as NpmConstants from '../constants/npm-constants.js';
+import * as npmTypes from '../types/npm-types.js';
+import * as npmConstants from '../constants/npm-constants.js';
 
 /**
  * A wrapper to interact with `npm`.
@@ -24,9 +24,9 @@ export default class NpmCliWrapper {
      */
     static _CLI_COMMAND = 'npm';
     
-    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
+    /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
-        SingletonTrait.singletonConstructor.call(this);
+        traits.SingletonTrait.singletonConstructor.call(this);
     }
 
     /**
@@ -83,7 +83,7 @@ export default class NpmCliWrapper {
      */
     static checkIsValidBumpType(type) {
         // @ts-ignore TypeScript isn't typed so that includes() can safely check any string against a readonly tuple of strings
-        if (!NpmConstants.VERSION_BUMP_TYPES.includes(type)) throw new TypeError(ErrorUtils.getStdSubjectMsg(`Invalid version bump type`, type));
+        if (!npmConstants.VERSION_BUMP_TYPES.includes(type)) throw new TypeError(ErrorUtils.getStdSubjectMsg(`Invalid version bump type`, type));
 
         return true;
     }
@@ -140,7 +140,7 @@ export default class NpmCliWrapper {
      * @since 0.0.4
      * @static
      * @param {FileSystemPath | string} targetDir The path of the directory in which to execute the command
-     * @param {NpmTypes.VersionBumpType} versionBumpType The type of version bump to perform
+     * @param {npmTypes.VersionBumpType} versionBumpType The type of version bump to perform
      * @param {boolean} handleGit Whether to include the `--no-git-tag-version` flag and prevent `npm` to run Git operations.
      * @throws If an error happens during execution (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
      * - An unexpected error

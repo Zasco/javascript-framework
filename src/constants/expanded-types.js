@@ -1,4 +1,4 @@
-import JSTypes from './js-types.js';
+import JS_TYPES from './js-types.js';
 
 /**
  * The type of a `class instance` object.
@@ -24,8 +24,8 @@ import JSTypes from './js-types.js';
 * }}
 */
 const EXPANDED_TYPES = {
-   CLASS_INSTANCE_OBJECT: `class instance ${JSTypes.OBJECT}`, 
-   CLASS_FUNCTION: `class ${JSTypes.FUNCTION}`,
+   CLASS_INSTANCE_OBJECT: `class instance ${JS_TYPES.OBJECT}`, 
+   CLASS_FUNCTION: `class ${JS_TYPES.FUNCTION}`,
 };
 
 export default Object.freeze(EXPANDED_TYPES);

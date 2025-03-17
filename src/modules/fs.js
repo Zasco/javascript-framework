@@ -1,5 +1,1 @@
-import FileSystemPath from '../models/FileSystemPath.js';
-
-export {
-    FileSystemPath
-}
+export { default as FileSystemPath } from '../models/FileSystemPath.js';

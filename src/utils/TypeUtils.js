@@ -22,16 +22,12 @@ import {
     isUndefined, 
 } from 'is-what';
 
-import { SingletonTrait } from 'javascript-framework';
+import { traits } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
+import * as expandedTypes from '../constants/expanded-types.js';
 import JS_TYPES from '../constants/js-types.js';
 import EXPANDED_TYPES from '../constants/expanded-types.js';
-
-/**
- * @typedef {import('../constants/expanded-types.js').ClassInstanceObject} ClassInstanceObject
- * @typedef {import('../constants/expanded-types.js').ClassFunction} ClassFunction
- */
 
 /**
  * An utility for type operations and validations.
@@ -39,9 +35,9 @@ import EXPANDED_TYPES from '../constants/expanded-types.js';
  * @since 0.0.3
  */
 export default class TypeUtils {
-    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
+    /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
-        SingletonTrait.singletonConstructor.call(this);
+        traits.SingletonTrait.singletonConstructor.call(this);
     }
     
     
@@ -208,8 +204,8 @@ export default class TypeUtils {
      * 
      * @since 0.0.3
      * @static
-     * @param {ClassInstanceObject} instance
-     * @param {ClassFunction} instanceClass
+     * @param {expandedTypes.ClassInstanceObject} instance
+     * @param {expandedTypes.ClassFunction} instanceClass
      * @param {boolean} [direct] If true, checks if {@link instance} is directly of the {@link instanceClass}
      * @returns {boolean}
      * @throws {TypeError} If {@link instance} is not of types {@link JS_TYPES.OBJECT} and {@link EXPANDED_TYPES.CLASS_INSTANCE_OBJECT} or {@link instanceClass} is not of types {@link JS_TYPES.FUNCTION} AND {@link EXPANDED_TYPES.CLASS_FUNCTION}

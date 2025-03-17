@@ -1,4 +1,4 @@
-import { Utils as TypeUtils } from 'javascript-framework/module/types';
+import { TypeUtils } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
 import JS_TYPES from '../constants/js-types.js';

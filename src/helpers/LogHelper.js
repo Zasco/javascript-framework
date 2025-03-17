@@ -1,7 +1,7 @@
-import { SingletonTrait } from 'javascript-framework';
+import { traits } from 'javascript-framework/module/core';
 import { Handler as ErrorHandler } from 'javascript-framework/module/error';
 
-import * as LogLevelsTypes from '../config/LogLevelsConfig.js';
+import * as logLevelsTypes from '../config/LogLevelsConfig.js';
 import LOG_LEVELS from '../config/LogLevelsConfig.js';
 import LogUtils from '../utils/LogUtils.js';
 import Logger from '../interfaces/Logger.js';
@@ -25,9 +25,9 @@ export default class LogHelper {
      */
     static _consoleLoggerCache;
 
-    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
+    /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
-        SingletonTrait.singletonConstructor.call(this);
+        traits.SingletonTrait.singletonConstructor.call(this);
     }
 
     /**
@@ -74,7 +74,7 @@ export default class LogHelper {
      * @since 0.0.1
      * @static
      * @param {*} message The message to display.
-     * @param {LogLevelsTypes.LogLevel} level The log level. Defaults to `LOG`.
+     * @param {logLevelsTypes.LogLevel} level The log level. Defaults to `LOG`.
      * @param {string | undefined} summaryMessage The summary message to display in the VS Code window. Defaults to the first line of the message.
      * @returns {boolean} If the message was displayed successfully in every output.
      */
@@ -105,7 +105,7 @@ export default class LogHelper {
      * @since 0.0.1
      * @static
      * @param {*} message The message to log.
-     * @param {LogLevelsTypes.LogLevel} [level] The log level. Defaults to `LOG`.
+     * @param {logLevelsTypes.LogLevel} [level] The log level. Defaults to `LOG`.
      */
     static log(message, level = LOG_LEVELS.LOG) {
         this._consoleLogger.log(message, level);
@@ -117,7 +117,7 @@ export default class LogHelper {
      * @since 0.0.1
      * @static
      * @param {*} message The message to output.
-     * @param {LogLevelsTypes.LogLevel} level The log level.
+     * @param {logLevelsTypes.LogLevel} level The log level.
      * @returns {boolean} If the message was output successfully.
      */
     static output(message, level) {

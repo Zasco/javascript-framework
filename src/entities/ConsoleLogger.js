@@ -1,6 +1,6 @@
 import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
-import * as LogLevelsTypes from '../config/LogLevelsConfig.js';
+import * as logLevelsTypes from '../config/LogLevelsConfig.js';
 import LOG_LEVELS from '../config/LogLevelsConfig.js';
 import Logger from '../interfaces/Logger.js';
 
@@ -23,7 +23,7 @@ export default class ConsoleLogger extends Logger {
      * Returns the log function for a given {@link LOG_LEVELS}.
      * 
      * @since 0.0.2
-     * @param {LogLevelsTypes.LogLevel} level
+     * @param {logLevelsTypes.LogLevel} level
      * @returns {function}
      */
     getLogFunctionForLogLevel(level) {

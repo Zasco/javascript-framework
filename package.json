@@ -6,10 +6,11 @@
   "exports": {
     ".": "./index.js",
     
-    "./module/types": "./src/modules/types.js",
+    "./module/core": "./src/modules/core.js",
     "./module/error": "./src/modules/error.js",
     "./module/log": "./src/modules/log.js",
     "./module/fs": "./src/modules/fs.js",
+    "./module/cli": "./src/modules/cli.js",
     "./module/git": "./src/modules/git.js",
     "./module/packageJson": "./src/modules/packageJson.js",
     "./module/npm": "./src/modules/npm.js",

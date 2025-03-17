@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 
-import { SingletonTrait } from 'javascript-framework';
+import { traits } from 'javascript-framework/module/core';
 import { FileSystemPath } from 'javascript-framework/module/fs';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
-import * as PackageJsonTypes from '../types/package-json-types.js';
+import * as packageJsonTypes from '../types/package-json-types.js';
 
 /**
  * @since 0.0.3
@@ -35,9 +35,9 @@ export default class PackageJsonHelper {
      */
     static _VERSION_KEY = 'version';
     
-    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
+    /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
-        SingletonTrait.singletonConstructor.call(this);
+        traits.SingletonTrait.singletonConstructor.call(this);
     }
 
     /**
@@ -99,7 +99,7 @@ export default class PackageJsonHelper {
      * @readonly
      * @static
      * @param {string} packageConfigFilePath The path to the package config file.
-     * @returns {PackageJsonTypes.PackageJson} The package config object.
+     * @returns {packageJsonTypes.PackageJson} The package config object.
      * @throws {Error} If the file does not exist or is not a valid JSON file.
      */
     static getPackageConfig(packageConfigFilePath) {
@@ -117,7 +117,7 @@ export default class PackageJsonHelper {
      * 
      * @since 0.0.3
      * @static
-     * @param {PackageJsonTypes.PackageJson} packageConfig The package config object.
+     * @param {packageJsonTypes.PackageJson} packageConfig The package config object.
      * @returns {boolean}
      */
     static isValidConfig(packageConfig) {
@@ -134,7 +134,7 @@ export default class PackageJsonHelper {
      * @since 0.0.3
      * @readonly
      * @static
-     * @param {PackageJsonTypes.PackageJson} packageConfig The package config object.
+     * @param {packageJsonTypes.PackageJson} packageConfig The package config object.
      * @returns {string}
      */
     static getName(packageConfig) {
@@ -147,7 +147,7 @@ export default class PackageJsonHelper {
      * @since 0.0.3
      * @readonly
      * @static
-     * @param {PackageJsonTypes.PackageJson} packageConfig
+     * @param {packageJsonTypes.PackageJson} packageConfig
      * @returns {string}
      */
     static getVersion(packageConfig) {
