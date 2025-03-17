@@ -279,9 +279,7 @@ export default class ErrorUtils {
      * @param {string} subject The subject of the message.
      * @returns {string}
      */
-    static getStdSubjectMessage(message, subject) {
-        return this.getStdSubjectMsg(message, subject);
-    }
+    static getStdSubjectMessage = this.getStdSubjectMsg;
 
     /**
      * Returns an error indicating that an abstract class cannot be instantiated directly.
@@ -293,9 +291,7 @@ export default class ErrorUtils {
      * @param {string} className The name of the abstract class.
      * @returns {Error} The error indicating that the abstract class cannot be instantiated directly.
      */
-    static getAbstractClassError(className) {
-        return this.getAbstractInstanceErr(className);
-    }
+    static getAbstractClassError = this.getAbstractInstanceErr;
     
     /**
      * Returns an error indicating that an abstract method must be implemented.
@@ -307,9 +303,7 @@ export default class ErrorUtils {
      * @param {string} methodName The name of the abstract method.
      * @returns {Error} The error indicating that the abstract method must be implemented.
      */
-    static getAbstractMethodError(methodName) {
-        return this.getAbstractMethodErr(methodName);
-    }
+    static getAbstractMethodError = this.getAbstractMethodErr;
 
     /**
      * Builds a formatted error message including all causes.
@@ -321,7 +315,5 @@ export default class ErrorUtils {
      * @param {Error} error The error to process
      * @returns {string} Consolidated error message
      */
-    static buildFormattedErrorMessage(error) {
-        return this.getDetailedErrMsg(error);
-    }
+    static buildFormattedErrorMessage = this.getDetailedErrMsg;
 };
