@@ -1,7 +1,7 @@
 import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 
-import { SingletonTrait } from 'javascript-framework';
+import { traits } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils, Handler as ErrorHandler} from 'javascript-framework/module/error';
 
 import Repository from '../models/Repository.js';
@@ -21,9 +21,9 @@ export default class GitHelper {
      */
     static _CLI_COMMAND = 'git';
     
-    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
+    /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
-        SingletonTrait.singletonConstructor.call(this);
+        traits.SingletonTrait.singletonConstructor.call(this);
     }
     
     /**

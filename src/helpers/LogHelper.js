@@ -1,4 +1,4 @@
-import { SingletonTrait } from 'javascript-framework';
+import { traits } from 'javascript-framework/module/core';
 import { Handler as ErrorHandler } from 'javascript-framework/module/error';
 
 import * as LogLevelsTypes from '../config/LogLevelsConfig.js';
@@ -25,9 +25,9 @@ export default class LogHelper {
      */
     static _consoleLoggerCache;
 
-    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
+    /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
-        SingletonTrait.singletonConstructor.call(this);
+        traits.SingletonTrait.singletonConstructor.call(this);
     }
 
     /**

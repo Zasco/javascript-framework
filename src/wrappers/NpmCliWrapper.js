@@ -1,7 +1,7 @@
 import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 
-import { SingletonTrait } from 'javascript-framework';
+import { traits } from 'javascript-framework/module/core';
 import { FileSystemPath } from 'javascript-framework/module/fs';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 import { Helper as PackageJsonHelper } from 'javascript-framework/module/packageJson';
@@ -24,9 +24,9 @@ export default class NpmCliWrapper {
      */
     static _CLI_COMMAND = 'npm';
     
-    /** @throws If instantiated (see {@link SingletonTrait.singletonConstructor}) */
+    /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
-        SingletonTrait.singletonConstructor.call(this);
+        traits.SingletonTrait.singletonConstructor.call(this);
     }
 
     /**
