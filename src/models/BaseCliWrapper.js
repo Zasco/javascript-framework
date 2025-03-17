@@ -54,6 +54,7 @@ export default class BaseCliWrapper {
      */
     static _checkToolIsAvailable() {
         return traits.AbstractClassTrait.abstractMethod(this._checkToolIsAvailable.name);
+        // [TODO] Check tool version is supported...
     }
     
     /**
