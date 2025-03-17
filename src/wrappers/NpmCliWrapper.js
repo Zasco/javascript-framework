@@ -147,7 +147,7 @@ export default class NpmCliWrapper {
      * - {@link NpmCliWrapper.checkIsValidBumpType}
      * - {@link NpmCliWrapper.executeCommand}
      */
-    static executeNpmVersion(targetDir, versionBumpType, handleGit) {
+    static version(targetDir, versionBumpType, handleGit) {
         const directoryStr = String(targetDir);
         
         return ErrorHandler.withErrorHandling(
