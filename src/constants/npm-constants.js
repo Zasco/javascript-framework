@@ -6,4 +6,13 @@ import * as npmTypes from '../types/npm-types.js';
  * @readonly
  * @type {npmTypes.VersionBumpTypes}
  */
-export const VERSION_BUMP_TYPES = Object.freeze(['major', 'minor', 'patch']);
+export const VERSION_BUMP_TYPES = Object.freeze([
+    'major', 
+    'minor', 
+    'patch', 
+    'premajor', 
+    'preminor', 
+    'prepatch', 
+    'prerelease', 
+    'from-git', 
+]);
