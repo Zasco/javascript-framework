@@ -41,22 +41,6 @@ export default class BaseCliWrapper {
     }
 
     /**
-     * Checks wether the tool can execute in the {@link targetDir}.
-     * 
-     * @protected
-     * @static
-     * @param {FileSystemPath | string} targetDir
-     * @return {true} If the tool can execute
-     * @throws If an unexpected error happens during check
-     * @throws See {@link CliWrapper._checkToolIsAvailable}
-     */
-    static _checkCanExecute(targetDir) {
-        this._checkToolIsAvailable();
-
-        return true;
-    }
-
-    /**
      * Checks if the tool is available on the system.
      * 
      * @abstract
@@ -82,7 +66,6 @@ export default class BaseCliWrapper {
      * @returns {true} If the command was executed successfully
      * @throws If an error happens during execution (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
      * - An unexpected error
-     * - {@link CliWrapper._checkCanExecute}
      * - {@link execSync}
      */
     static _executeCommand(command, targetDir, options = undefined) {
@@ -90,7 +73,8 @@ export default class BaseCliWrapper {
 
         return ErrorHandler.withErrorHandling(
             () => {
-                this._checkCanExecute(targetDir);
+                this._checkToolIsAvailable();
+                
                 execSync(
                     fullCommand,
                     { cwd: String(targetDir), ...options }, 
