@@ -85,4 +85,46 @@ export default class BaseCliWrapper {
             ErrorUtils.getStdErrorMsg('executing', 'command', fullCommand)
         );
     }
+
+    /**
+     * Converts an object of {option: value} to an array (option, value) of command-line arguments.
+     * 
+     * @protected
+     * @static
+     * @param {cliWrapperTypes.CliOptions} options
+     * @param {cliWrapperTypes.OptionFlagsMap} [optionFlagsMap]
+     * @returns {string[]}
+     */
+    static _convertOptionsToArgs(options, optionFlagsMap = {}) {
+        /** @type {string[]} */
+        const cmdArgs = [];
+        
+        Object.entries(options)
+            .filter(([_, value]) => value !== undefined)
+            .forEach(([key, value]) => {
+                // Get the CLI option format from the map or generate it
+                const cliOption = optionFlagsMap[key]
+                    ? `-${optionFlagsMap[key]}` 
+                    : `--${key}`
+                ;
+                
+                if (TypeUtils.isBoolean(value)) {
+                    // For boolean true values, just add the flag
+                    if (value === true) cmdArgs.push(cliOption);
+                } 
+                else if (TypeUtils.isArray(value)) {
+                    // Add each value separately with the same flag
+                    value.forEach(item => {
+                        cmdArgs.push(cliOption);
+                        cmdArgs.push(`"${String(item)}"`);
+                    });
+                }
+                else if (TypeUtils.isString(value) || TypeUtils.isNumber(value)) {
+                    cmdArgs.push(cliOption);
+                    cmdArgs.push(`"${String(value)}"`);
+                }
+            });
+        
+        return cmdArgs;
+    }
 }
