@@ -40,6 +40,7 @@
 /**
  * Boolean-typed CLI `version` options.
  * 
+ * @since ${NEXT_VERSION}
  * @typedef {[
  *   'no-git-tag-version', 
  * ]} VersionBooleanOptions
@@ -50,6 +51,7 @@
  * 
  * Verified with version `11.2.0` and likely compatible with `^11.0.0`.
  * 
+ * @since ${NEXT_VERSION}
  * @typedef {[
  *  ...VersionBooleanOptions, 
  * ]} VersionCliOptions
@@ -58,11 +60,13 @@
 /**
  * A single CLI option for command `version`.
  * 
+ * @since ${NEXT_VERSION}
  * @typedef {VersionCliOptions[number]} VersionCliOption
  */
 
  /**
  * The types of the options.
  * 
+ * @since ${NEXT_VERSION}
  * @typedef {Record<VersionBooleanOptions[number], boolean>} VersionOptionTypes
  */
