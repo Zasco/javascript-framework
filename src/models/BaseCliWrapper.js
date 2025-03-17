@@ -4,6 +4,8 @@ import { execSync } from 'child_process';
 import { traits } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
+import * as cliWrapperTypes from '../types/cli-wrapper-types.js';
+
 /**
  * The base model for CLI wrappers.
  * 
