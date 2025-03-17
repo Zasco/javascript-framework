@@ -1,7 +1,7 @@
 import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 
-import { AbstractClassTrait} from 'javascript-framework';
+import { traits } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
 /**
@@ -13,7 +13,7 @@ import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framewo
 export default class BaseCliWrapper {
     /** @throws If instantiated (see {@link AbstractClassTrait.abstractClassConstructor}) */
     constructor() {
-        AbstractClassTrait.abstractClassConstructor.call(this);
+        traits.AbstractClassTrait.abstractClassConstructor.call(this);
     }
 
     /**
@@ -25,7 +25,7 @@ export default class BaseCliWrapper {
      * @type {string}
      */
     static get _CLI_COMMAND() {
-        return AbstractClassTrait.abstractMethod(this._CLI_COMMAND);
+        return traits.AbstractClassTrait.abstractMethod(this._CLI_COMMAND);
     }
 
     /**
@@ -65,7 +65,7 @@ export default class BaseCliWrapper {
      * @throws If the tool is not available 
      */
     static _checkToolIsAvailable() {
-        return AbstractClassTrait.abstractMethod(this._checkToolIsAvailable.name);
+        return traits.AbstractClassTrait.abstractMethod(this._checkToolIsAvailable.name);
     }
     
     /**
