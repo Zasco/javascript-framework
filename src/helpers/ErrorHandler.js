@@ -1,11 +1,11 @@
 import { SingletonTrait } from 'javascript-framework';
 import { 
-    Types as LogLevelsTypes, 
+    types as logLevelsTypes, 
     LOG_LEVELS, 
     Helper as LogHelper 
 } from 'javascript-framework/module/log';
 
-import * as ErrorLevelTypes from "../config/ErrorLevelsConfig.js";
+import * as errorLevelTypes from "../config/ErrorLevelsConfig.js";
 import ERROR_LEVELS from "../config/ErrorLevelsConfig.js";
 
 /**
@@ -25,8 +25,8 @@ export default class ErrorHandler {
      * 
      * @since 0.0.2
      * @static
-     * @param {ErrorLevelTypes.ErrorLevel} level The error level. Defaults to {@link ERROR_LEVELS.ERROR}.
-     * @returns {LogLevelsTypes.LogLevel}
+     * @param {errorLevelTypes.ErrorLevel} level The error level. Defaults to {@link ERROR_LEVELS.ERROR}.
+     * @returns {logLevelsTypes.LogLevel}
      */
     static getLogLevelForErrorLevel(level) {
         return level === ERROR_LEVELS.ERROR 
@@ -56,7 +56,7 @@ export default class ErrorHandler {
      * @since 0.0.1
      * @static
      * @param {Error} handledError The error to handle.
-     * @param {ErrorLevelTypes.ErrorLevel} [level] The failure level ({@link ERROR_LEVELS.ERROR} or {@link ERROR_LEVELS.WARNING}). Defaults to {@link ERROR_LEVELS.ERROR}.
+     * @param {errorLevelTypes.ErrorLevel} [level] The failure level ({@link ERROR_LEVELS.ERROR} or {@link ERROR_LEVELS.WARNING}). Defaults to {@link ERROR_LEVELS.ERROR}.
      * @param {boolean} [rethrow] Whether to rethrow the error after handling. Only applies to {@link ERROR_LEVELS.ERROR}.
      * @param {*} [fallbackValue] The value to return. Only applies to {@link ERROR_LEVELS.WARNING}.
      * @returns {* | undefined} The {@link fallbackValue} if handling a {@link ERROR_LEVELS.WARNING}, `undefined` if handling an {@link ERROR_LEVELS.ERROR} and {@link rethrow} is `false`.
@@ -107,7 +107,7 @@ export default class ErrorHandler {
     * @static
     * @param {() => (* | Promise<*>)} fn The function to execute.
     * @param {string} message The message if the function fails.
-    * @param {ErrorLevelTypes.ErrorLevel} [level] The error level ({@link ERROR_LEVELS}).
+    * @param {errorLevelTypes.ErrorLevel} [level] The error level ({@link ERROR_LEVELS}).
     * @param {boolean} [rethrow] Whether to rethrow the error. For {@link ERROR_LEVELS.ERROR} only.
     * @param {*} [fallbackValue] The value to return on failure. Defaults to `undefined`. For {@link ERROR_LEVELS.WARNING} only.
     * @returns {(* | undefined) | Promise<* | undefined>} The result of the function or, if the function fails, the fallback value if {@link ERROR_LEVELS.WARNING} or undefined if {@link ERROR_LEVELS.ERROR}. A promise if {@link fn} is async.

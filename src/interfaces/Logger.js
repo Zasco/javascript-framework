@@ -1,7 +1,7 @@
 import { AbstractClassTrait } from 'javascript-framework';
 import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
-import * as LogLevelsTypes from '../config/LogLevelsConfig.js';
+import * as logLevelsTypes from '../config/LogLevelsConfig.js';
 
 /**
  * @since 0.0.1
@@ -18,7 +18,7 @@ export default class Logger {
      * @since 0.0.1
      * @abstract
      * @param {*} message The message to log.
-     * @param {LogLevelsTypes.LogLevel} level The log level.
+     * @param {logLevelsTypes.LogLevel} level The log level.
      * @throws {Error} Must be implemented by concrete logger.
      */
     log(message, level) {
