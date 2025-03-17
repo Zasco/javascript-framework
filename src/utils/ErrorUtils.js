@@ -1,5 +1,5 @@
 import { SingletonTrait } from 'javascript-framework';
-import { Utils as TypeUtils } from 'javascript-framework/module/types';
+import { TypeUtils } from 'javascript-framework/module/core';
 
 /**
  * @since 0.0.2
