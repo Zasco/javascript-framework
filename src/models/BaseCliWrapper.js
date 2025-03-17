@@ -44,6 +44,7 @@ export default class BaseCliWrapper {
      * Checks wether the tool can execute in the {@link targetDir}.
      * 
      * @protected
+     * @static
      * @param {FileSystemPath | string} targetDir
      * @return {true} If the tool can execute
      * @throws If an unexpected error happens during check
@@ -60,6 +61,7 @@ export default class BaseCliWrapper {
      * 
      * @abstract
      * @protected
+     * @static
      * @returns {true} If the tool is available
      * @throws If an unexpected error happens during check
      * @throws If the tool is not available 
