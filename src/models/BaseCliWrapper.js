@@ -63,7 +63,7 @@ export default class BaseCliWrapper {
      * @param {string} command
      * @param {FileSystemPath | string} targetDir
      * @param {childProcess.ExecSyncOptions} [options]
-     * @returns {true} If the command was executed successfully
+     * @returns {true} The result of the command (if using `stdio: pipe`)
      * @throws If an error happens during execution (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
      * - An unexpected error
      * - {@link execSync}
@@ -75,7 +75,7 @@ export default class BaseCliWrapper {
             () => {
                 this._checkToolIsAvailable();
                 
-                execSync(
+                return execSync(
                     fullCommand,
                     { cwd: String(targetDir), ...options }, 
                 );
