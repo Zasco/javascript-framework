@@ -17,6 +17,9 @@ import {
     isPlainObject, 
     isFunction, 
 
+    // Boolean
+    isBoolean, 
+
     // Nullish
     isNull, 
     isUndefined, 
@@ -178,6 +181,15 @@ export default class TypeUtils {
             return error instanceof TypeError && error.message.includes('cannot be invoked without "new"');
         }
     }
+
+
+    // Boolean
+    /**
+     * @since ${NEXT_VERSION}
+     * @static
+     * @param {unknown} payload
+     */
+    static isBoolean = isBoolean;
 
 
     // Nullish
