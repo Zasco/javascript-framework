@@ -30,3 +30,4 @@ A set of reusable components for building **JavaScript** applications.
 - Add possibility to provide error type in `ErrorHandler.withHandling()`.
 - Improve `PackageJsonHelper.checkConfigFileExists()` to traverse up the directory tree.
 - Generate the `exports` section of the `package.json` accordingly to the `src/modules/` directory.
+- In a cli wrapper, ensure tool version installed is supported by framework (config -> constants/types). Check tool version running is in the range of the constants.
