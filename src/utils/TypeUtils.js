@@ -185,7 +185,7 @@ export default class TypeUtils {
 
     // Boolean
     /**
-     * @since ${NEXT_VERSION}
+     * @since 0.0.5
      * @static
      * @param {unknown} payload
      */

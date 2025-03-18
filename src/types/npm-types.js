@@ -8,7 +8,7 @@
 /**
  * A single command.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.5
  * @typedef {CommandsType[number]} CommandType
  */
 
@@ -33,14 +33,14 @@
 /**
  * A single version bump type.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.5
  * @typedef {VersionBumpTypes[number]} VersionBumpType
  */
 
 /**
  * Boolean-typed CLI `version` options.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.5
  * @typedef {[
  *   'no-git-tag-version', 
  * ]} VersionBooleanOptions
@@ -51,7 +51,7 @@
  * 
  * Verified with version `11.2.0` and likely compatible with `^11.0.0`.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.5
  * @typedef {[
  *  ...VersionBooleanOptions, 
  * ]} VersionCliOptions
@@ -60,13 +60,13 @@
 /**
  * A single CLI option for command `version`.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.5
  * @typedef {VersionCliOptions[number]} VersionCliOption
  */
 
  /**
  * The types of the options.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.5
  * @typedef {Record<VersionBooleanOptions[number], boolean>} VersionOptionTypes
  */

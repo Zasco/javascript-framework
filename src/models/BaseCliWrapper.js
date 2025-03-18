@@ -9,7 +9,7 @@ import * as cliWrapperTypes from '../types/cli-wrapper-types.js';
 /**
  * The base model for CLI wrappers.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.5
  * @abstract
  */
 export default class BaseCliWrapper {

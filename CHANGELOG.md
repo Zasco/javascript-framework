@@ -5,6 +5,122 @@
 
 
 
+### [v0.0.5](https://github.com/Zasco/javascript-framework/compare/v0.0.4...v0.0.5) -  17 March 2025 
+
+
+
+
+
+
+
+
+#### New Features
+
+- feat: implement AbstractClassTrait  ([ef49a98](https://github.com/Zasco/javascript-framework/commit/ef49a989e8ba010b0866112ef12a1c9c978047d4))
+- feat: export AbstractClassTrait  ([1d011e2](https://github.com/Zasco/javascript-framework/commit/1d011e2a876d5b80a719152c393ea819c736f3c4))
+- feat: add CliWrapper abstract model  ([5e24ab4](https://github.com/Zasco/javascript-framework/commit/5e24ab4a6f324bee7d9c75e30a819a44b12aed23))
+- feat: add abstractMethod() to AbstractClassTrait  ([3250e32](https://github.com/Zasco/javascript-framework/commit/3250e32baeb5ce2212f0f577d8cd74b644f9ac11))
+- feat: export CliWrapper  ([b581aab](https://github.com/Zasco/javascript-framework/commit/b581aab08b02027ea66b71257c173efb84d8d747))
+- feat: add module index  ([75eb897](https://github.com/Zasco/javascript-framework/commit/75eb89773a6af21981d77ab239052fd615c80772))
+- feat: export module  ([a647074](https://github.com/Zasco/javascript-framework/commit/a6470745bc35865c83e8d7badcf1c515b8720d34))
+- feat: add and export log module  ([3d0576b](https://github.com/Zasco/javascript-framework/commit/3d0576ba9c966218be59c8be4c1028e6784ee8eb))
+- feat: add and export error module  ([a90a573](https://github.com/Zasco/javascript-framework/commit/a90a5733380657c3fc44240dffe589ad870cdac0))
+- feat: add and export git module  ([995f0ca](https://github.com/Zasco/javascript-framework/commit/995f0ca869e6ae281540156ceb11bbc6fffddc56))
+- feat: add and export types module  ([9c8be17](https://github.com/Zasco/javascript-framework/commit/9c8be17149b8f20103530da2bd0457eb7e0d94b5))
+- feat: add and export fs module  ([defc86d](https://github.com/Zasco/javascript-framework/commit/defc86d9a0d68825675c28de4de9dcf7854858c5))
+- feat: add and export package.json module  ([432ba43](https://github.com/Zasco/javascript-framework/commit/432ba430524be1121927b8cb5663b51bf601a333))
+- feat: add and export action module  ([22f5648](https://github.com/Zasco/javascript-framework/commit/22f5648da04e41a2b6c460169d5b1bfd72d627a8))
+- feat: export modules in package.json  ([aee8f15](https://github.com/Zasco/javascript-framework/commit/aee8f158c477b241a7dd2d1d0e2b3d72ba8fa208))
+- feat: export action types alongside model  ([75fd0a1](https://github.com/Zasco/javascript-framework/commit/75fd0a1e5cee9de2b436491ba24d5ac743789231))
+- feat: add empty CLI module structure  ([60b8119](https://github.com/Zasco/javascript-framework/commit/60b81197aaee1895822713fc054e9e9294d55864))
+- feat: register CLI module in exports  ([6be68d9](https://github.com/Zasco/javascript-framework/commit/6be68d9fa480f0b007bd5cff119cafb4de0863eb))
+- feat: export BaseWrapper from CLI module  ([e0f9379](https://github.com/Zasco/javascript-framework/commit/e0f93794bcf092ed015055b4175f81e4f3a7e331))
+- feat: add core module with traits, types & consts  ([6fb66b9](https://github.com/Zasco/javascript-framework/commit/6fb66b9c1ccfe96a3102213d64d255564601c63c))
+- feat: export core module in entry points  ([d84f728](https://github.com/Zasco/javascript-framework/commit/d84f7281b4ae67de76b33b9036a6e7f076bd7ad1))
+- feat: export CLI module in package.json  ([3e100e8](https://github.com/Zasco/javascript-framework/commit/3e100e823993465eae7584193a09602a632cb102))
+- feat: return execSync() output  ([36fb9cd](https://github.com/Zasco/javascript-framework/commit/36fb9cd5a79944454d7c0f6a210d53f10359134a))
+- feat: add cli wrapper types  ([1ed7539](https://github.com/Zasco/javascript-framework/commit/1ed753975f77f964a7c7b1143330fac9defebb50))
+- feat: add isBoolean() to TypeUtils  ([03d08e6](https://github.com/Zasco/javascript-framework/commit/03d08e643c472388e85fbbe22917bba210d817e4))
+- feat: add _convertOptionsToArgs()  ([6448754](https://github.com/Zasco/javascript-framework/commit/6448754eedb420182a10c66b091795abc09cdd23))
+- feat: add new bump types to npm version  ([48ed9f5](https://github.com/Zasco/javascript-framework/commit/48ed9f52715f41f75fd34d49ab59f192eeebcea1))
+- feat: add new bump types constants  ([73f2a1d](https://github.com/Zasco/javascript-framework/commit/73f2a1d9fd6428765ca40d1b99fbc1873b903f83))
+- feat: add new npm types  ([9a2eff1](https://github.com/Zasco/javascript-framework/commit/9a2eff12cd7b3e2af77a3aaef06e11a351df6b18))
+- feat: add new npm constants  ([f86aa57](https://github.com/Zasco/javascript-framework/commit/f86aa5704b6613f0882a2d8585c245a526ae1d06))
+- feat: add npm cli wrapper types  ([9982e2c](https://github.com/Zasco/javascript-framework/commit/9982e2c6ce1d418423e0eeaab993212df5082fe5))
+
+#### Fixes
+
+- fix: loading order of CliWrapper  ([a6caf8f](https://github.com/Zasco/javascript-framework/commit/a6caf8ff1857430542841734c05f4c7121ce85d7))
+- fix: resolve circular dependency in npm imports  ([4af01e0](https://github.com/Zasco/javascript-framework/commit/4af01e0e66bff2e0196aa8b495aeb70a78be606b))
+- fix: update import paths to use kebab-case filenames  ([fa527f6](https://github.com/Zasco/javascript-framework/commit/fa527f632acfa5046ed5afaf056325700a1eb4e3))
+- fix(npm): export executeNpmVersion() method  ([37a444c](https://github.com/Zasco/javascript-framework/commit/37a444c7839c0fe8809c7be65fb7455ae4826eac))
+- fix: bind NpmCliWrapper.executeNpmVersion() method  ([3b2b25e](https://github.com/Zasco/javascript-framework/commit/3b2b25e144244a10d5178727409b5903c8229810))
+
+#### Chores And Housekeeping
+
+- chore: add .qodo/ to .gitignore  ([ce8c814](https://github.com/Zasco/javascript-framework/commit/ce8c8148738ae5fdba4fb71d2e730e7a885a5a87))
+- chore: remove redundant type imports from index.js  ([c7cbfc2](https://github.com/Zasco/javascript-framework/commit/c7cbfc29d8c88279b6d967d35281ec61ba6fb393))
+
+#### Documentation Changes
+
+- docs(README): remove completed task  ([4f6d02b](https://github.com/Zasco/javascript-framework/commit/4f6d02b8bfbbf546a95bdcfab48c40810187b77b))
+- docs(JSDoc): improve error documentation of method  ([efacba2](https://github.com/Zasco/javascript-framework/commit/efacba2dcd3c4cdf7a3789672d937530134c745a))
+- docs: add exports auto-generation task to backlog  ([014498a](https://github.com/Zasco/javascript-framework/commit/014498acb6f782276b6672cddc82729c5f634048))
+- docs(README): add types/constants split task  ([7f5ce9c](https://github.com/Zasco/javascript-framework/commit/7f5ce9cfaf89e0182c5366dbe1124e3f2be7be23))
+- docs(JSDoc): add missing @static tags  ([f68c771](https://github.com/Zasco/javascript-framework/commit/f68c7712f9cc02b627daea3326ccbc7072a8c0a8))
+- docs(TODO): support tool version support check  ([98e05e0](https://github.com/Zasco/javascript-framework/commit/98e05e004d91c461487ebafdef92a9edbd84cb7f))
+- docs(JSDoc): add missing @since tags  ([3ef7d2e](https://github.com/Zasco/javascript-framework/commit/3ef7d2eacf792c6f16c6e46c6b62b641833a31d4))
+- docs(README): update for new release  ([d0384a6](https://github.com/Zasco/javascript-framework/commit/d0384a6666538f0b65aea7bc3729060d9defc47b))
+
+#### Refactoring and Updates
+
+- refactor: implement AbstractClassTrait in classes  ([b01c395](https://github.com/Zasco/javascript-framework/commit/b01c395562342c533fadfaa96064e038187fffaf))
+- refactor: make targetDir mandatory in CliWrapper  ([7608be0](https://github.com/Zasco/javascript-framework/commit/7608be0ff08b52bff69213ad52478b8fae820c45))
+- refactor: use npmModule as index for types/consts  ([9b28acd](https://github.com/Zasco/javascript-framework/commit/9b28acdca18e20b011a1a104e87e53c72844ed6d))
+- refactor: rename NpmConstants to npm-constants  ([0b891ee](https://github.com/Zasco/javascript-framework/commit/0b891eedfec8d7c0d9fea51f282e041fc9a2c9ca))
+- refactor: rename helper to handler in error module  ([fdf1dd4](https://github.com/Zasco/javascript-framework/commit/fdf1dd42a5e2184913cfc3d93dd91b5c90f6dfb3))
+- refactor: rename JSTYPES to JS_TYPES  ([a7e2e99](https://github.com/Zasco/javascript-framework/commit/a7e2e9941077dfb08831e1abfeb9a47758956672))
+- refactor: rename JSTypes.js to js-types.js  ([fc75198](https://github.com/Zasco/javascript-framework/commit/fc751982343d6b03d38b3c41daa31bc4137d13d2))
+- refactor: rename ExpandedTypes to expanded-types  ([d5154c9](https://github.com/Zasco/javascript-framework/commit/d5154c995a65e738f8b6a56aefc048880d28a1ac))
+- refactor: migrate to module-specific imports  ([05d11f0](https://github.com/Zasco/javascript-framework/commit/05d11f0aad0b2fe572dce79aae65b6fc7456d809))
+- refactor: use direct types vs JSDoc typedefs  ([33e4eab](https://github.com/Zasco/javascript-framework/commit/33e4eab6ddf655fb567391a2f0ae38c4f57042e0))
+- refactor: use direct re-export syntax in index.js  ([c5192d9](https://github.com/Zasco/javascript-framework/commit/c5192d9e88e98769eb9f04d304f0ef12e0908b71))
+- refactor: simplify module exports with direct re-exports  ([4734172](https://github.com/Zasco/javascript-framework/commit/4734172e78dca05c6fc5c98e282da13a7a513376))
+- refactor: rename CliWrapper to BaseCliWrapper  ([0f6b79a](https://github.com/Zasco/javascript-framework/commit/0f6b79a490ab5197a0d921b18dc955a8163af032))
+- refactor: use module imports  ([fa2d09c](https://github.com/Zasco/javascript-framework/commit/fa2d09cfc599a01b9d8cd5218eed18db76e26058))
+- refactor: use core module for TypeUtils import  ([482e0fe](https://github.com/Zasco/javascript-framework/commit/482e0fed184db7c6a288fa9618256032663ba40c))
+- refactor: remove types module file  ([5c1e838](https://github.com/Zasco/javascript-framework/commit/5c1e83872d5485de66c201200f43838e17164dc1))
+- refactor: rename JSTypes import to JS_TYPES  ([aa01e02](https://github.com/Zasco/javascript-framework/commit/aa01e023cbc964bad70ec60314dd0699746e91a3))
+- refactor: replace JSDoc typedefs w/ direct imports  ([b7e387c](https://github.com/Zasco/javascript-framework/commit/b7e387c6a7cdaa95692001b325588006d2b4e4ea))
+- refactor: standardize camelCase for imports  ([0079629](https://github.com/Zasco/javascript-framework/commit/0079629408f8d68ddac33d48063b9cc865457302))
+- refactor: standardize camelCase for exports  ([c5505be](https://github.com/Zasco/javascript-framework/commit/c5505bea2458ed7815015ba74ede21d9bd1b3b12))
+- refactor: use traits from core module  ([4388479](https://github.com/Zasco/javascript-framework/commit/43884798b8aa72d4614be8e86dad4a2dc97d0a90))
+- refactor: use traits from core module  ([bbde826](https://github.com/Zasco/javascript-framework/commit/bbde8262023448c5b9dffdf34c6f3d6ca97d1c2e))
+- refactor: remove directory execution validation  ([d85fcd5](https://github.com/Zasco/javascript-framework/commit/d85fcd56af5cf53155c44984e319c647c1b90939))
+- refactor: import cli wrapper types in base model  ([8a22a39](https://github.com/Zasco/javascript-framework/commit/8a22a395b064b3691c55c210426936d8df02bcff))
+- refactor: import TypeUtils in base cli wrapper  ([6ee5633](https://github.com/Zasco/javascript-framework/commit/6ee56335e4f8217b2f76f2f146a2af7c2980b7a6))
+- refactor: make deprecated methods true aliases  ([e3d34ca](https://github.com/Zasco/javascript-framework/commit/e3d34ca7c5fbfc53b647825f63f98f2fc9dda726))
+- refactor: improve default re-export in npm module  ([11f8216](https://github.com/Zasco/javascript-framework/commit/11f82166c0da40295d33d68baaefca22d0154af9))
+
+
+#### Tidying of Code eg Whitespace
+
+- style: improve folder reference in .gitignore  ([31b9c7c](https://github.com/Zasco/javascript-framework/commit/31b9c7cb291b4ede7a94171e4675f27e260f89c5))
+- style(JSDoc): remove typo in method description  ([08cf962](https://github.com/Zasco/javascript-framework/commit/08cf9623e629c5c7696e3b69aefe02c9e2054bae))
+- style: implement hierarchical imp./exp. ordering  ([6ca975a](https://github.com/Zasco/javascript-framework/commit/6ca975af10fe6bc17a40c8ad4bd254ea08e599ab))
+
+
+#### General Changes
+
+- refactor!: remove individual npm exports  ([cb01cd1](https://github.com/Zasco/javascript-framework/commit/cb01cd14c7e9afe7d38114eb928f6054e5a7cf67))
+- refactor!: remove individual exports from index  ([e8d710d](https://github.com/Zasco/javascript-framework/commit/e8d710dad451cbff288c59115323654e3ddc4384))
+- refactor!: export level values not constants  ([33301d0](https://github.com/Zasco/javascript-framework/commit/33301d068e015589fe8f014d8dc07a58811104c1))
+- refactor!: replace types module with core module  ([733d507](https://github.com/Zasco/javascript-framework/commit/733d50712380d1f1b1d6ed3ab594e10ad4fc17e4))
+- refactor!: remove traits from main export  ([dc5a413](https://github.com/Zasco/javascript-framework/commit/dc5a4134f244d4aded69a61171e9823864f84435))
+- refactor!: change _executeCommand() parameters  ([2a98c7a](https://github.com/Zasco/javascript-framework/commit/2a98c7a4c2615e989c84f2e3d5962fd4a5ee51ed))
+- refactor!: make npm cli wrapper extend base model  ([8ac2177](https://github.com/Zasco/javascript-framework/commit/8ac217779cd9ff0e868d344ebc5c2f4a00291f0a))
+- refactor!: rename method to version()  ([777f583](https://github.com/Zasco/javascript-framework/commit/777f5837680c88d881847f5ca5edd3e306986e9b))
+
 ### [v0.0.4](https://github.com/Zasco/javascript-framework/compare/v0.0.3...v0.0.4) -  15 March 2025 
 
 
@@ -96,6 +212,7 @@
 - refactor!: remove splitted Commit properties  ([ab88b5f](https://github.com/Zasco/javascript-framework/commit/ab88b5fd1ebaaa33dc6fc1fc1f19857cda899333))
 - refactor!: change log levels types exports  ([7cf3dc4](https://github.com/Zasco/javascript-framework/commit/7cf3dc47c2567a2f95139a623f194ee7da061bf3))
 - refactor!: rename levels types  ([4f6f7a1](https://github.com/Zasco/javascript-framework/commit/4f6f7a1d3f510736e53ee87c232790bb4c86a05e))
+- Release version 0.0.4  ([e9aab7a](https://github.com/Zasco/javascript-framework/commit/e9aab7a635042a0783c9cd2f477544e929ad5679))
 
 ### [v0.0.3](https://github.com/Zasco/javascript-framework/compare/v0.0.2...v0.0.3) -  9 March 2025 
 
