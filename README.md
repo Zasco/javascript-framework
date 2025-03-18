@@ -3,13 +3,12 @@ A set of reusable components for building **JavaScript** applications.
 
 ## Roadmap
 ### Planned
-#### **0.0.5**
-- Refactor and move `GitHelper` to `GitCliWrapper` and dedicated folder.
+#### **0.0.6**
+- Refactor and move `GitHelper` to `GitCliWrapper` and dedicated folder. Use `BaseCliWrapper` as base model.
 - Use the `FileSystemPath` model where applicable.
 - Implement various new modules:
   
   **Primary**
-  - A `CliWrapper` base model for CLI wrappers (*npm* and *Git*) to group common logic in.
   - A `CliHelper` with `promptWithRetry()` and standard format headers methods.
   
   **Secondary**
@@ -30,4 +29,4 @@ A set of reusable components for building **JavaScript** applications.
 - Add possibility to provide error type in `ErrorHandler.withHandling()`.
 - Improve `PackageJsonHelper.checkConfigFileExists()` to traverse up the directory tree.
 - Generate the `exports` section of the `package.json` accordingly to the `src/modules/` directory.
-- In a cli wrapper, ensure tool version installed is supported by framework (config -> constants/types). Check tool version running is in the range of the constants.
+- In a **CLI** wrapper, ensure tool version installed is supported by framework (config -> constants/types). Check tool version running is in the range of the constants.
