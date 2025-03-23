@@ -4,8 +4,8 @@ import SingletonTrait from '../traits/SingletonTrait.js';
 import * as expandedTypes from '../types/expanded-types.js';
 
 import * as SPECIAL_CHARS from '../constants/special-chars.js';
-import JS_TYPES from '../constants/js-types.js';
-import EXPANDED_TYPES from '../constants/expanded-types.js';
+import * as JS_TYPES from '../constants/js-types.js';
+import * as EXPANDED_TYPES from '../constants/expanded-types.js';
 
 import TypeUtils from '../utils/TypeUtils.js';
 
