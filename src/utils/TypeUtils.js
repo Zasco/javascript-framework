@@ -28,9 +28,9 @@ import {
 import { traits } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
-import * as expandedTypes from '../constants/expanded-types.js';
-import JS_TYPES from '../constants/js-types.js';
-import EXPANDED_TYPES from '../constants/expanded-types.js';
+import * as expandedJsTypes from '../types/expanded-js-types.js';
+import * as JS_TYPES from '../constants/js-types.js';
+import * as EXPANDED_JS_TYPES from '../constants/expanded-js-types.js';
 
 /**
  * An utility for type operations and validations.
@@ -139,7 +139,7 @@ export default class TypeUtils {
     static isPlainObject = isPlainObject;
 
     /**
-     * Returns whether the payload is a {@link EXPANDED_TYPES.CLASS_INSTANCE_OBJECT}.
+     * Returns whether the payload is a {@link EXPANDED_JS_TYPES.CLASS_INSTANCE_OBJECT}.
      * 
      * @since 0.0.3
      * @static
@@ -162,7 +162,7 @@ export default class TypeUtils {
     static isFunction = isFunction;
 
     /**
-     * Returns whether the payload is a {@link EXPANDED_TYPES.CLASS_FUNCTION}.
+     * Returns whether the payload is a {@link EXPANDED_JS_TYPES.CLASS_FUNCTION}.
      * 
      * WARNING: Will also return `true` for {@link JS_TYPES.FUNCTION}s with a manually set `prototype`.
      * 
@@ -216,11 +216,11 @@ export default class TypeUtils {
      * 
      * @since 0.0.3
      * @static
-     * @param {expandedTypes.ClassInstanceObject} instance
-     * @param {expandedTypes.ClassFunction} instanceClass
+     * @param {expandedJsTypes.ClassInstanceObject} instance
+     * @param {expandedJsTypes.ClassFunction} instanceClass
      * @param {boolean} [direct] If true, checks if {@link instance} is directly of the {@link instanceClass}
      * @returns {boolean}
-     * @throws {TypeError} If {@link instance} is not of types {@link JS_TYPES.OBJECT} and {@link EXPANDED_TYPES.CLASS_INSTANCE_OBJECT} or {@link instanceClass} is not of types {@link JS_TYPES.FUNCTION} AND {@link EXPANDED_TYPES.CLASS_FUNCTION}
+     * @throws {TypeError} If {@link instance} is not of types {@link JS_TYPES.OBJECT} and {@link EXPANDED_JS_TYPES.CLASS_INSTANCE_OBJECT} or {@link instanceClass} is not of types {@link JS_TYPES.FUNCTION} AND {@link EXPANDED_JS_TYPES.CLASS_FUNCTION}
      */
     static isInstanceOf(instance, instanceClass, direct = false) {
         if (!this.isAnyObject(instance)) throw ErrorUtils.getStdTypeMismatchErr(JS_TYPES.OBJECT, typeof instance);
