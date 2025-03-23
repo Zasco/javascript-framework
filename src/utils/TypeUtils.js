@@ -28,7 +28,7 @@ import {
 import { traits } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
-import * as expandedTypes from '../constants/expanded-types.js';
+import * as expandedTypes from '../types/expanded-types.js';
 import JS_TYPES from '../constants/js-types.js';
 import EXPANDED_TYPES from '../constants/expanded-types.js';
 

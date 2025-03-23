@@ -1,7 +1,7 @@
 import AbstractClassTrait from '../traits/AbstractClassTrait.js';
 import SingletonTrait from '../traits/SingletonTrait.js';
 
-import * as expandedTypes from '../constants/expanded-types.js';
+import * as expandedTypes from '../types/expanded-types.js';
 
 import * as SPECIAL_CHARS from '../constants/special-chars.js';
 import JS_TYPES from '../constants/js-types.js';
