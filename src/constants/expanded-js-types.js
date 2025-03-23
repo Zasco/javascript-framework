@@ -4,18 +4,18 @@
  * @since 0.0.3
  */
 
-import * as expandedTypes from '../types/expanded-types.js';
+import * as expandedJSTypes from '../types/expanded-js-types.js';
 import * as JS_TYPES from './js-types.js';
 
 /**
  * @since 0.0.3
- * @type {expandedTypes.ClassInstanceObjectLiteral}
+ * @type {expandedJSTypes.ClassInstanceObjectLiteral}
  */
 export const CLASS_INSTANCE_OBJECT = `class-instance-${JS_TYPES.OBJECT}`;
 
 /**
  * @since 0.0.3
- * @type {expandedTypes.ClassFunctionLiteral}
+ * @type {expandedJSTypes.ClassFunctionLiteral}
  */
 export const CLASS_FUNCTION = `class-${JS_TYPES.FUNCTION}`;
 
@@ -29,8 +29,8 @@ export const CLASS_FUNCTION = `class-${JS_TYPES.FUNCTION}`;
  * @deprecated Use individual named exports instead
  * @readonly
  * @type {{
- *   'CLASS_INSTANCE_OBJECT': expandedTypes.ClassInstanceObjectLiteral, 
- *   'CLASS_FUNCTION': expandedTypes.ClassFunctionLiteral, 
+ *   'CLASS_INSTANCE_OBJECT': expandedJSTypes.ClassInstanceObjectLiteral, 
+ *   'CLASS_FUNCTION': expandedJSTypes.ClassFunctionLiteral, 
  * }}
  */
 const EXPANDED_TYPES = Object.freeze({
