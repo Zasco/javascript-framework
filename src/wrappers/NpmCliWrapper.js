@@ -1,7 +1,7 @@
 import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 
-import { traits, TypeUtils } from 'javascript-framework/module/core';
+import { traits } from 'javascript-framework/module/core';
 import { FileSystemPath } from 'javascript-framework/module/fs';
 import { BaseWrapper as BaseCliWrapper } from 'javascript-framework/module/cli';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
