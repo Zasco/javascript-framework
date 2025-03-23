@@ -1,7 +1,5 @@
-import { TypeUtils } from 'javascript-framework/module/core';
+import { JS_TYPES, TypeUtils } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils } from 'javascript-framework/module/error';
-
-import JS_TYPES from '../constants/js-types.js';
 
 /**
  * Represents a filesystem path as an object for type-safe operations.
