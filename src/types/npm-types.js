@@ -1,7 +1,7 @@
 /**
  * The available commands with `npm`.
  * 
- * @since {NEXT_VERSION}
+ * @since 0.0.5
  * @typedef {['version']} CommandsType
  */
 
@@ -17,7 +17,7 @@
  * 
  * Verified with version `11.2.0` and likely compatible with `^11.0.0`.
  * 
- * @since {NEXT_VERSION}
+ * @since 0.0.5
  * @typedef {readonly [
  *  'major', 
  *  'minor', 
