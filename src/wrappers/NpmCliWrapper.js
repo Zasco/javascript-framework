@@ -39,7 +39,7 @@ export default class NpmCliWrapper extends BaseCliWrapper {
     static _checkToolIsAvailable() {
         return ErrorHandler.withErrorHandling(
             () => {
-                execSync(`${this._CLI_COMMAND} --version`, { stdio: 'pipe' });
+                execSync(`${this._CLI_COMMAND} --${npmConstants.COMMANDS.VERSION}`, { stdio: 'pipe' });
                 return true;
             }, 
             `"${this._CLI_COMMAND}" is not available on the system.`, 
