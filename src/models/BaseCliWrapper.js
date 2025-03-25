@@ -127,4 +127,17 @@ export default class BaseCliWrapper {
             return arg;
         });
     }
+
+    /**
+     * Returns the wrapper or subcommand specific {@link dargs} convertion options.
+     * 
+     * @since ${NEXT_VERSION}
+     * @protected
+     * @static
+     * @param {string} [subcommand]
+     * @returns {dargs.Options | undefined}
+     */
+    static _getConvertOptions(subcommand = undefined) {
+        return undefined;
+    }
 }
