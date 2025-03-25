@@ -20,7 +20,8 @@
     "version": "node node_modules/coding-utils/src/scripts/auto-release.js ./.autoreleaserc.json"
   },
   "dependencies": {
-    "is-what": "~5.2.0"
+    "is-what": "~5.2.0",
+    "dargs": "~8.1.0"
   },
   "devDependencies": {
     "coding-utils": "github:zasco/coding-utils"
