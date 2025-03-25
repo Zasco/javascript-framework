@@ -31,7 +31,7 @@ export default class NpmCliWrapper extends BaseCliWrapper {
 
     /**
      * @inheritdoc
-     * @see {@link CliWrapper._checkToolIsAvailable}
+     * @see {@link BaseCliWrapper._checkToolIsAvailable}
      * @throws {Error} If `npm` is not installed or available (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
      * - An unexpected error
      * - {@link execSync}

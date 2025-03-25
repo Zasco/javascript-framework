@@ -58,19 +58,19 @@ export default class BaseCliWrapper {
     }
     
     /**
-     * Executes the provided {@link command} in the {@link targetDir}.
+     * Executes a command.
      * 
      * @since 0.0.4
      * @protected
      * @static
-     * @param {cliWrapperTypes.CliArgs} args
-     * @param {childProcess.ExecSyncOptions} [options]
-     * @returns {Buffer | string} The result of the command (if using `stdio: pipe`)
+     * @param {cliWrapperTypes.CliArgs} args The command arguments
+     * @param {childProcess.ExecSyncOptions} [execOptions] The process execution options
+     * @returns {Buffer | string} The result of the command (if using `stdio: pipe` in {@link execOptions})
      * @throws If an error happens during execution (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
      * - An unexpected error
      * - {@link execSync}
      */
-    static _executeCommand(args, options = undefined) {
+    static _executeCommand(args, execOptions = undefined) {
         const fullCommand = `${this._CLI_COMMAND} ${args.join(' ')}`;
 
         return ErrorHandler.withErrorHandling(
@@ -79,7 +79,7 @@ export default class BaseCliWrapper {
                 
                 return execSync(
                     fullCommand,
-                    options, 
+                    execOptions, 
                 );
             },
             ErrorUtils.getStdErrorMsg('executing', 'command', fullCommand)
