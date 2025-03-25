@@ -1,5 +1,6 @@
 import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
+import * as dargs from 'dargs';
 
 import { traits, TypeUtils } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
@@ -88,43 +89,55 @@ export default class BaseCliWrapper {
 
     /**
      * Converts an object of {option: value} to an array (option, value) of command-line arguments.
+     * - Internaly uses `dargs` with custom improvements:
+     *   - Add check for spaces in keys and throws if any found
+     *   - Quotes values containing spaces
+     * - Supports positional arguments (`_`)
+     * - Supports separated arguments (`--`)
      * 
      * @protected
      * @static
      * @param {cliWrapperTypes.CliOptions} options
-     * @param {cliWrapperTypes.OptionFlagsMap} [optionFlagsMap]
+     * @param {dargs.Options | undefined} dargsOptions
      * @returns {string[]}
      */
-    static _convertOptionsToArgs(options, optionFlagsMap = {}) {
-        /** @type {string[]} */
-        const cmdArgs = [];
+    static _convertOptionsToArgs(options, dargsOptions = undefined) {
+        Object.keys(options).forEach(key => {
+            if (key !== '_' && key !== '--' && key.includes(' ')) {
+                throw new Error(`Option key "${key}" contains spaces, which is not supported for command-line arguments`);
+            }
+        });
+
+        /** @type {cliWrapperTypes.dargsConvertedOptions} */
+        const convertedOptions = {};
+        Object.entries(options).forEach(([key, value]) => {
+            if (Array.isArray(value)) convertedOptions[key] = value.map(item => String(item));
+            else convertedOptions[key] = value;
+        });
         
-        Object.entries(options)
-            .filter(([_, value]) => value !== undefined)
-            .forEach(([key, value]) => {
-                // Get the CLI option format from the map or generate it
-                const cliOption = optionFlagsMap[key]
-                    ? `-${optionFlagsMap[key]}` 
-                    : `--${key}`
-                ;
-                
-                if (TypeUtils.isBoolean(value)) {
-                    // For boolean true values, just add the flag
-                    if (value === true) cmdArgs.push(cliOption);
-                } 
-                else if (TypeUtils.isArray(value)) {
-                    // Add each value separately with the same flag
-                    value.forEach(item => {
-                        cmdArgs.push(cliOption);
-                        cmdArgs.push(`"${String(item)}"`);
-                    });
-                }
-                else if (TypeUtils.isString(value) || TypeUtils.isNumber(value)) {
-                    cmdArgs.push(cliOption);
-                    cmdArgs.push(`"${String(value)}"`);
-                }
-            });
+        // Use dargs to convert the object to args array
+        const args = dargs.default(convertedOptions, dargsOptions);
         
-        return cmdArgs;
+        // Add quotes around string values if needed
+        return args.map(arg => {
+            // If the argument doesn't start with - and contains spaces, quote it
+            if (!arg.startsWith('-') && arg.includes(' ')) {
+                return `"${arg}"`;
+            }
+            return arg;
+        });
+    }
+
+    /**
+     * Returns the wrapper or subcommand specific {@link dargs} convertion options.
+     * 
+     * @since ${NEXT_VERSION}
+     * @protected
+     * @static
+     * @param {string} [subcommand]
+     * @returns {dargs.Options | undefined}
+     */
+    static _getConvertOptions(subcommand = undefined) {
+        return undefined;
     }
 }
