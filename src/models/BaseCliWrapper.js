@@ -61,7 +61,7 @@ export default class BaseCliWrapper {
     /**
      * Returns if the tool is available on the system.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.6
      * @readonly
      * @static
      * @returns {boolean}
@@ -148,7 +148,7 @@ export default class BaseCliWrapper {
     /**
      * Returns the wrapper or subcommand specific {@link dargs} convertion options.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.6
      * @protected
      * @static
      * @param {string} [subcommand]
@@ -161,7 +161,7 @@ export default class BaseCliWrapper {
     /**
      * Executes a subcommand.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.6
      * @protected
      * @static
      * @param {string} subcommand

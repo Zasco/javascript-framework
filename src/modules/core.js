@@ -12,30 +12,30 @@ import TypeUtils from '../utils/TypeUtils.js';
 
 // [NOTE] Here will also be the anticipated StringUtils.
 export { 
-  /** @since ${NEXT_VERSION} */
+  /** @since 0.0.6 */
   SPECIAL_CHARS, 
   /** @since 0.0.5 */
   JS_TYPES, 
-  /** @since ${NEXT_VERSION} */
+  /** @since 0.0.6 */
   EXPANDED_JS_TYPES, 
   
   TypeUtils, 
 
   /**
    * @since 0.0.5
-   * @deprecated ${NEXT_VERSION} Use {@link EXPANDED_JS_TYPES} instead
+   * @deprecated 0.0.6 Use {@link EXPANDED_JS_TYPES} instead
    */
   EXPANDED_JS_TYPES as EXPANDED_TYPES, 
 }
 
 /** @since 0.0.5 */
 export const types = {
-  /** @since ${NEXT_VERSION} */
+  /** @since 0.0.6 */
   expandedJsTypes, 
   
   /**
    * @since 0.0.5
-   * @deprecated ${NEXT_VERSION} Use {@link expandedJsTypes} instead
+   * @deprecated 0.0.6 Use {@link expandedJsTypes} instead
    */
   expandedTypes: expandedJsTypes, 
 }
@@ -44,12 +44,12 @@ export const types = {
 export const constants = {
   /** @since 0.0.5 */
   JS_TYPES,
-  /** @since ${NEXT_VERSION} */
+  /** @since 0.0.6 */
   EXPANDED_JS_TYPES, 
 
   /**
    * @since 0.0.5
-   * @deprecated ${NEXT_VERSION} Use {@link EXPANDED_JS_TYPES} instead
+   * @deprecated 0.0.6 Use {@link EXPANDED_JS_TYPES} instead
    */
   EXPANDED_TYPES: EXPANDED_JS_TYPES, 
 }

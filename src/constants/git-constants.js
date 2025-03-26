@@ -1,7 +1,7 @@
 /**
  * Constants for the `Git` command line tool.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  */
 
 import * as gitTypes from '../types/git-types.js';
@@ -12,7 +12,7 @@ import * as gitTypes from '../types/git-types.js';
 /**
  * The supported commands for `Git`.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  * @see {@link npmTypes.CommandsType}
  * @readonly
  * @type {Object<string, gitTypes.Command>}
@@ -33,7 +33,7 @@ export const COMMANDS = Object.freeze({
 /**
  * The CLI options for the `add` command.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  * @see {@link gitTypes.AddCliOptions}
  * @readonly
  * @type {Object<string, gitTypes.AddCliOption>}
@@ -48,7 +48,7 @@ export const ADD_OPTIONS = Object.freeze({
 /**
  * The CLI options for the `commit` command.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  * @see {@link gitTypes.CommitCliOptions}
  * @readonly
  * @type {Object<string, gitTypes.CommitCliOption>}
@@ -63,7 +63,7 @@ export const COMMIT_OPTIONS = Object.freeze({
 /**
  * The CLI options for the `diff` command.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  * @see {@link gitTypes.DiffCliOptions}
  * @readonly
  * @type {Object<string, gitTypes.DiffCliOption>}
@@ -79,7 +79,7 @@ export const DIFF_OPTIONS = Object.freeze({
 /**
  * The CLI options for the `rev-parse` command.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  * @see {@link gitTypes.RevParseCliOptions}
  * @readonly
  * @type {Object<string, gitTypes.RevParseCliOption>}
@@ -94,7 +94,7 @@ export const REV_PARSE_OPTIONS = Object.freeze({
 /**
  * The CLI options for the `tag` command.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  * @see {@link gitTypes.RevParseCliOptions}
  * @readonly
  * @type {Object<string, gitTypes.TagCliOption>}

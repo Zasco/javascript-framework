@@ -1,19 +1,19 @@
 /**
  * Constants representing special characters.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  */
 
 
 // Whitespace characters
 
-/** @since ${NEXT_VERSION} */
+/** @since 0.0.6 */
 export const NEW_LINE = '\n';
 
-/** @since ${NEXT_VERSION} */
+/** @since 0.0.6 */
 export const WINDOWS_NEW_LINE = '\r\n';
 
-/** @since ${NEXT_VERSION} */
+/** @since 0.0.6 */
 export const TAB = '\t';
 
 

@@ -10,7 +10,7 @@ import { BaseWrapper as BaseCliWrapper } from 'javascript-framework/module/cli';
 /**
  * A CLI wrapper to interact with `Git`.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  */
 export default class GitCliWrapper extends BaseCliWrapper {
     /**
@@ -50,7 +50,7 @@ export default class GitCliWrapper extends BaseCliWrapper {
     /**
      * Executes the `add` command with the provided options.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.6
      * @static
      * @param {gitCliWrapperTypes.AddOptions} [cmdOptions]
      * @param {childProcess.ExecSyncOptions} [execOptions]
@@ -68,7 +68,7 @@ export default class GitCliWrapper extends BaseCliWrapper {
     /**
      * Executes the `commit` command with the provided options.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.6
      * @static
      * @param {gitCliWrapperTypes.CommitOptions} [cmdOptions]
      * @param {childProcess.ExecSyncOptions} [execOptions]
@@ -86,7 +86,7 @@ export default class GitCliWrapper extends BaseCliWrapper {
     /**
      * Executes the `diff` command with the provided options.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.6
      * @static
      * @param {gitCliWrapperTypes.DiffOptions} [cmdOptions]
      * @param {childProcess.ExecSyncOptions} [execOptions]
@@ -104,7 +104,7 @@ export default class GitCliWrapper extends BaseCliWrapper {
     /**
      * Executes the `tag` command with the provided options.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.6
      * @static
      * @param {gitCliWrapperTypes.TagOptions} [cmdOptions]
      * @param {childProcess.ExecSyncOptions} [execOptions]
@@ -122,7 +122,7 @@ export default class GitCliWrapper extends BaseCliWrapper {
     /**
      * Executes the `push` command with the provided options.
      * 
-     * @since ${NEXT_VERSION}
+     * @since 0.0.6
      * @static
      * @param {gitCliWrapperTypes.PushOptions} [cmdOptions]
      * @param {childProcess.ExecSyncOptions} [execOptions]

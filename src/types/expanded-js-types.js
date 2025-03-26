@@ -1,7 +1,7 @@
 /**
  * Type definitions for JavaScript expanded types and types literals.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  */
 
 
@@ -25,11 +25,11 @@
 // Types literals
 
 /** 
- * @since ${NEXT_VERSION} 
+ * @since 0.0.6 
  * @typedef {'class-instance-object'} ClassInstanceObjectLiteral
  */
 
 /** 
- * @since ${NEXT_VERSION} 
+ * @since 0.0.6 
  * @typedef {'class-function'} ClassFunctionLiteral
  */

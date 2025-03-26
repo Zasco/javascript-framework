@@ -1,21 +1,21 @@
 /**
  * The positional CLI options.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  * @typedef {{'_'?: string[]}} positionalOptions
  */
 
 /**
  * The separated CLI options.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  * @typedef {{'--'?: string[]}} separatedOptions
  */
 
 /**
  * The named CLI options.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  * @typedef {Record<string, string | number | boolean | (string | number)[]>} namedOptions
  */
 
@@ -56,14 +56,14 @@
 /**
  * The named CLI options.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  * @typedef {Record<string, string | number | boolean | string[]>} dargsNamedOptions
 */
 
 /**
  * The converted CLI options.
  * 
- * @since ${NEXT_VERSION}
+ * @since 0.0.6
  * @typedef {positionalOptions 
  *  & separatedOptions 
  *  & dargsNamedOptions} dargsConvertedOptions
