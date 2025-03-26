@@ -4,7 +4,6 @@ A set of reusable components for building **JavaScript** applications.
 ## Roadmap
 ### Planned
 #### **0.0.6**
-- Refactor and move `GitHelper` to `GitCliWrapper` and dedicated folder. Use `BaseCliWrapper` as base model.
 - Use the `FileSystemPath` model where applicable.
 - Implement various new modules:
   
