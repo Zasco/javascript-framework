@@ -140,4 +140,30 @@ export default class BaseCliWrapper {
     static _getConvertOptions(subcommand = undefined) {
         return undefined;
     }
+
+    /**
+     * Executes a subcommand.
+     * 
+     * @since ${NEXT_VERSION}
+     * @protected
+     * @static
+     * @param {string} subcommand
+     * @param {cliWrapperTypes.CliOptions} [cmdOptions]
+     * @param {childProcess.ExecSyncOptions} [execOptions]
+     * @returns {ReturnType<BaseCliWrapper._executeCommand>}
+     */
+    static _executeSubcommand(subcommand, cmdOptions = {}, execOptions = undefined) {
+        return ErrorHandler.withErrorHandling(
+            () => {
+                // Convert options to arguments
+                const args = this._convertOptionsToArgs(cmdOptions, this._getConvertOptions());
+                
+                const allArgs = [subcommand, ...args];
+                
+                // Execute the command
+                return this._executeCommand(allArgs, execOptions);
+            },
+            ErrorUtils.getStdErrorMsg('executing', 'subcommand', subcommand), 
+        );
+    }
 }
