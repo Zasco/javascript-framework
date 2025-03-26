@@ -30,3 +30,4 @@ A set of reusable components for building **JavaScript** applications.
 - Improve `PackageJsonHelper.checkConfigFileExists()` to traverse up the directory tree.
 - Generate the `exports` section of the `package.json` accordingly to the `src/modules/` directory.
 - In a **CLI** wrapper, ensure tool version installed is supported by framework (config -> constants/types). Check tool version running is in the range of the constants.
+- Look into and implement [`type-fest`](https://github.com/sindresorhus/type-fest) (replace `util-types` with `type-fest`).
