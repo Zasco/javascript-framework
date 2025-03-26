@@ -57,6 +57,23 @@ export default class BaseCliWrapper {
         return traits.AbstractClassTrait.abstractMethod(this._checkToolIsAvailable.name);
         // [TODO] Check tool version is supported...
     }
+
+    /**
+     * Returns if the tool is available on the system.
+     * 
+     * @since ${NEXT_VERSION}
+     * @readonly
+     * @static
+     * @returns {boolean}
+     */
+    static get isAvailable() {
+        try {
+            this._checkToolIsAvailable();
+            return true;
+        } catch (error) {
+            return false;
+        }
+    }
     
     /**
      * Executes a command.
