@@ -2,7 +2,7 @@ import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 import * as dargs from 'dargs';
 
-import { traits, TypeUtils } from 'javascript-framework/module/core';
+import { traits } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
 import * as cliWrapperTypes from '../types/cli-wrapper-types.js';
