@@ -13,12 +13,19 @@
  */
 
 /**
+ * The named CLI options.
+ * 
+ * @since ${NEXT_VERSION}
+ * @typedef {Record<string, string | number | boolean | (string | number)[]>} namedOptions
+ */
+
+/**
  * A list of CLI options.
  * 
  * @since 0.0.5
  * @typedef {positionalOptions 
  *  & separatedOptions 
- *  & Record<string, string | number | boolean | (string | number)[]>
+ *  & namedOptions
  * } CliOptions
  */
 
@@ -44,13 +51,20 @@
  */
 
 
-// dargs
+// dargs (see https://github.com/sindresorhus/dargs)
 
 /**
- * `dargs` converted options (see {@link https://github.com/sindresorhus/dargs#api})
+ * The named CLI options.
+ * 
+ * @since ${NEXT_VERSION}
+ * @typedef {Record<string, string | number | boolean | string[]>} dargsNamedOptions
+*/
+
+/**
+ * The converted CLI options.
  * 
  * @since ${NEXT_VERSION}
  * @typedef {positionalOptions 
  *  & separatedOptions 
- *  & Record<string, string | number | boolean | string[]>} dargsConvertedOptions
+ *  & dargsNamedOptions} dargsConvertedOptions
  */
