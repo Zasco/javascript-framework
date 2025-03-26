@@ -3,14 +3,9 @@ A set of reusable components for building **JavaScript** applications.
 
 ## Roadmap
 ### Planned
-#### **0.0.6**
+#### **0.0.7**
 - Use the `FileSystemPath` model where applicable.
 - Implement various new modules:
-  
-  **Primary**
-  - A `CliHelper` with `promptWithRetry()` and standard format headers methods.
-  
-  **Secondary**
   - A `CheckHelper` of a sort in which to move common `check` logics to.
   - A `ProcessHelper` for common process operations
   - A `FileHelper` for common file operations (ex.: check if exists (used in `PackageJsonHelper` and `GitHelper`))
