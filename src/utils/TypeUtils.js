@@ -35,7 +35,7 @@ import * as EXPANDED_JS_TYPES from '../constants/expanded-js-types.js';
 /**
  * An utility for type operations and validations.
  * 
- * @since 0.0.3
+ * @since alpha-3.0.0
  */
 export default class TypeUtils {
     /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
@@ -47,7 +47,7 @@ export default class TypeUtils {
     // String
     
     /**
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      */
@@ -56,7 +56,7 @@ export default class TypeUtils {
     /**
      * Returns whether the payload is ''.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      * @returns {payload is ''}
@@ -69,7 +69,7 @@ export default class TypeUtils {
     // Number
     
     /**
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      */
@@ -78,7 +78,7 @@ export default class TypeUtils {
     /**
      * Returns whether the payload is a negative number (but not 0).
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      * @returns {payload is (number & { __negativeTag: true })}
@@ -90,7 +90,7 @@ export default class TypeUtils {
     /**
      * Returns whether the payload is a positive number (but not 0).
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      * @returns {payload is (number & { __positiveTag: true })}
@@ -103,14 +103,14 @@ export default class TypeUtils {
     // Array-related
     
     /**
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      */
     static isArray = isArray;
 
     /**
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      */
@@ -122,7 +122,7 @@ export default class TypeUtils {
     /**
      * Returns whether the payload is an any kind of object (including special classes or objects with different prototypes).
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      * @returns {payload is object}
@@ -132,7 +132,7 @@ export default class TypeUtils {
     }
     
     /**
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      */
@@ -141,7 +141,7 @@ export default class TypeUtils {
     /**
      * Returns whether the payload is a {@link EXPANDED_JS_TYPES.CLASS_INSTANCE_OBJECT}.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      * @returns {payload is (object & { constructor: Function })}
@@ -155,7 +155,7 @@ export default class TypeUtils {
     }
 
     /**
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      */
@@ -166,7 +166,7 @@ export default class TypeUtils {
      * 
      * WARNING: Will also return `true` for {@link JS_TYPES.FUNCTION}s with a manually set `prototype`.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      * @returns {payload is (new (...args: any[]) => any)}
@@ -185,7 +185,7 @@ export default class TypeUtils {
 
     // Boolean
     /**
-     * @since 0.0.5
+     * @since alpha-5.0.0
      * @static
      * @param {unknown} payload
      */
@@ -195,14 +195,14 @@ export default class TypeUtils {
     // Nullish
     
     /**
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      */
     static isNull = isNull;
     
     /**
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {unknown} payload
      */
@@ -214,7 +214,7 @@ export default class TypeUtils {
     /**
      * Returns if the provided object instance is of the provided class.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {expandedJsTypes.ClassInstanceObject} instance
      * @param {expandedJsTypes.ClassFunction} instanceClass
@@ -238,7 +238,7 @@ export default class TypeUtils {
      * 
      * An alias of {@link TypeUtils.isInstanceOf} with `direct` set to `true`.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {object} instance
      * @param {Function} instanceClass

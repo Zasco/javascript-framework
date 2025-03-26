@@ -6,7 +6,7 @@ import * as npmTypes from '../types/npm-types.js';
 /**
  * The supported commands for `npm`.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @see {@link npmTypes.CommandsType}
  * @readonly
  * @type {Object<string, npmTypes.CommandType>}
@@ -21,7 +21,7 @@ export const COMMANDS = Object.freeze({
 /**
  * The CLI options for command `version`.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @see {@link npmTypes.VersionCliOptions}
  * @readonly
  * @type {Object<string, npmTypes.VersionCliOption>}
@@ -33,7 +33,7 @@ export const VERSION_OPTIONS = Object.freeze({
 /**
  * The version bump types for `npm version`.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @see {@link npmTypes.VersionBumpTypes}
  * @readonly
  * @type {npmTypes.VersionBumpTypes}

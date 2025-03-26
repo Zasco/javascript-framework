@@ -2,7 +2,7 @@ import { traits } from 'javascript-framework/module/core';
 import { TypeUtils } from 'javascript-framework/module/core';
 
 /**
- * @since 0.0.2
+ * @since alpha-2.0.0
  */
 export default class ErrorUtils {
     /** Whether to display stack traces in error messages. Defaults to false.*/
@@ -20,7 +20,7 @@ export default class ErrorUtils {
      * Returns a message with subject with standard format:
      * - <{@link message}>: <{@link subject}>
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      * @param {string} message The message
@@ -37,7 +37,7 @@ export default class ErrorUtils {
      * - Error while <{@link action}> <{@link subject}>.
      * - Error while <{@link action}> <{@link subject}>: <{@link value}>
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      * @param {string} action The action that was performed when the error happened
@@ -61,7 +61,7 @@ export default class ErrorUtils {
     /**
      * Returns a detailed message for the provided {@link Error} including stack trace and causes.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      * @param {Error} error
@@ -113,7 +113,7 @@ export default class ErrorUtils {
     /**
      * Returns a {@link TypeError} with the standard "mismatch" message.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      * @param {string} expectedType The expected type
@@ -127,7 +127,7 @@ export default class ErrorUtils {
     /**
      * Returns a {@link TypeError} with the provided message.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      * @param {string} errorMessage
@@ -140,7 +140,7 @@ export default class ErrorUtils {
     /**
      * Returns an error indicating that an abstract class cannot be instantiated.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      * @param {string} className The name of the abstract class.
@@ -154,7 +154,7 @@ export default class ErrorUtils {
      * Returns an {@link Error} indicating that an abstract method must be implemented.
      * 
      * @see {@link ErrorUtils.getStdAbstractMethodErr} that provides more details.
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      * @param {string} methodName The name of the abstract method
@@ -167,7 +167,7 @@ export default class ErrorUtils {
     /**
      * Returns an {@link Error} indicating that an abstract method must be implemented.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      * @param {string} methodName The name of the abstract method
@@ -182,7 +182,7 @@ export default class ErrorUtils {
     /**
      * Returns an error indicating that a singleton class cannot be instantiated.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      * @param {string} className The name of the class
@@ -198,7 +198,7 @@ export default class ErrorUtils {
     /**
      * Checks if the provided instance is directly of the provided class and throws a {@link TypeError} if not.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {Object} instance The instance to check
      * @param {Function} instanceClass The class to check against
@@ -212,7 +212,7 @@ export default class ErrorUtils {
     /**
      * Checks if the provided instance is of the provided class and throws a {@link TypeError} if not.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {Object} instance The instance to check
      * @param {Function} instanceClass The class to check against
@@ -225,7 +225,7 @@ export default class ErrorUtils {
     /**
      * Checks if the provided instance is of a restricted class and throws a {@link TypeError} if so.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {Object} instance The instance to check
      * @param {Function} restrictedClass The class to check against
@@ -242,7 +242,7 @@ export default class ErrorUtils {
     /**
      * Checks if the provided instance is of the provided singleton class and throws a {@link TypeError} if so.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {Object} instance The instance to check
      * @param {Function} singletonClass The class to check against
@@ -255,7 +255,7 @@ export default class ErrorUtils {
     /**
      * Checks if the provided instance is of the provided abstract class and throws a {@link TypeError} if so.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {Object} instance The instance to check
      * @param {Function} abstractClass The class to check against
@@ -271,8 +271,8 @@ export default class ErrorUtils {
     /**
      * Returns a standardized message with subject.
      * 
-     * @since 0.0.2
-     * @deprecated 0.0.3
+     * @since alpha-2.0.0
+     * @deprecated alpha-3.0.0
      * @readonly
      * @static
      * @param {string} message The message to display.
@@ -284,8 +284,8 @@ export default class ErrorUtils {
     /**
      * Returns an error indicating that an abstract class cannot be instantiated directly.
      * 
-     * @since 0.0.2
-     * @deprecated 0.0.3
+     * @since alpha-2.0.0
+     * @deprecated alpha-3.0.0
      * @readonly
      * @static
      * @param {string} className The name of the abstract class.
@@ -296,8 +296,8 @@ export default class ErrorUtils {
     /**
      * Returns an error indicating that an abstract method must be implemented.
      * 
-     * @since 0.0.2
-     * @deprecated 0.0.3
+     * @since alpha-2.0.0
+     * @deprecated alpha-3.0.0
      * @readonly
      * @static
      * @param {string} methodName The name of the abstract method.
@@ -308,8 +308,8 @@ export default class ErrorUtils {
     /**
      * Builds a formatted error message including all causes.
      * 
-     * @since 0.0.2
-     * @deprecated 0.0.3
+     * @since alpha-2.0.0
+     * @deprecated alpha-3.0.0
      * @readonly
      * @static
      * @param {Error} error The error to process

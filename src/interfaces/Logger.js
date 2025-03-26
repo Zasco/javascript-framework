@@ -4,7 +4,7 @@ import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 import * as logLevelsTypes from '../config/LogLevelsConfig.js';
 
 /**
- * @since 0.0.1
+ * @since alpha-1.0.0
  */
 export default class Logger {
     /** @throws If instantiated (see {@link traits.AbstractClassTrait.abstractClassConstructor}) */
@@ -15,7 +15,7 @@ export default class Logger {
     /**
      * Logs a message to the output.
      * 
-     * @since 0.0.1
+     * @since alpha-1.0.0
      * @abstract
      * @param {*} message The message to log.
      * @param {logLevelsTypes.LogLevel} level The log level.

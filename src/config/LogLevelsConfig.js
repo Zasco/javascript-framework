@@ -1,5 +1,5 @@
 /**
- * @since 0.0.2
+ * @since alpha-2.0.0
  * @typedef {{
  *  'DEBUG': 0, 
  *  'INFO': 1, 
@@ -13,7 +13,7 @@
 /**
  * Defines the different levels of log.
  * 
- * @since 0.0.2
+ * @since alpha-2.0.0
  * @type {LogLevels}
  */
 const LOG_LEVELS = {

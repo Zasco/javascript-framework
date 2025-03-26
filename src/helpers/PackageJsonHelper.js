@@ -8,7 +8,7 @@ import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framewo
 import * as packageJsonTypes from '../types/package-json-types.js';
 
 /**
- * @since 0.0.3
+ * @since alpha-3.0.0
  */
 export default class PackageJsonHelper {
     /**
@@ -43,7 +43,7 @@ export default class PackageJsonHelper {
     /**
      * The default package config file name.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      */    
@@ -54,7 +54,7 @@ export default class PackageJsonHelper {
     /**
      * The key holding the package name in the package config.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      */
@@ -65,7 +65,7 @@ export default class PackageJsonHelper {
     /**
      * The key holding the package version in the package config.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      */
@@ -77,7 +77,7 @@ export default class PackageJsonHelper {
      * Checks if a `package.json` file exists in the provided directory.
      * Unlike `npm` and `git` which traverse up the directory tree, this method only checks the exact provided directory.
      * 
-     * @since 0.0.4
+     * @since alpha-4.0.0
      * @static
      * @param {FileSystemPath | string} directory
      * @returns {true} If `package.json` exists
@@ -95,7 +95,7 @@ export default class PackageJsonHelper {
     /**
      * Returns the package config object.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      * @param {string} packageConfigFilePath The path to the package config file.
@@ -115,7 +115,7 @@ export default class PackageJsonHelper {
     /**
      * Returns if the package config is valid.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @static
      * @param {packageJsonTypes.PackageJson} packageConfig The package config object.
      * @returns {boolean}
@@ -131,7 +131,7 @@ export default class PackageJsonHelper {
     /**
      * Returns the package name from the config.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      * @param {packageJsonTypes.PackageJson} packageConfig The package config object.
@@ -144,7 +144,7 @@ export default class PackageJsonHelper {
     /**
      * Returns the package version from the config.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      * @static
      * @param {packageJsonTypes.PackageJson} packageConfig

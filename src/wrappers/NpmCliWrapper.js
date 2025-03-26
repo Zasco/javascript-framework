@@ -14,7 +14,7 @@ import * as npmConstants from '../constants/npm-constants.js';
 /**
  * A wrapper to interact with `npm`.
  * 
- * @since 0.0.4
+ * @since alpha-4.0.0
  */
 export default class NpmCliWrapper extends BaseCliWrapper {
     /**
@@ -88,7 +88,7 @@ export default class NpmCliWrapper extends BaseCliWrapper {
     /**
      * Executes `npm version` with the provided version bump type and options.
      * 
-     * @since 0.0.4
+     * @since alpha-4.0.0
      * @static
      * @param {npmTypes.VersionBumpType} versionBumpType The type of version bump to perform
      * @param {npmCliWrapperTypes.VersionOptions} cmdOptions

@@ -5,7 +5,7 @@ import LOG_LEVELS from '../config/LogLevelsConfig.js';
 import Logger from '../interfaces/Logger.js';
 
 /**
- * @since 0.0.1
+ * @since alpha-1.0.0
  */
 export default class ConsoleLogger extends Logger {
     /**
@@ -22,7 +22,7 @@ export default class ConsoleLogger extends Logger {
     /**
      * Returns the log function for a given {@link LOG_LEVELS}.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @param {logLevelsTypes.LogLevel} level
      * @returns {function}
      */

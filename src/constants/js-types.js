@@ -1,36 +1,36 @@
 /**
  * Constants representing JavaScript type identifiers with values dynamically derived using `typeof` operations.
  * 
- * @since 0.0.3
+ * @since alpha-3.0.0
  */
 
 import * as JsTypesLiterals from '../types/js-types-literals.js';
 
-/** @since 0.0.3 */
+/** @since alpha-3.0.0 */
 export const STRING = /** @type {JsTypesLiterals.String} */ (typeof String());
 
-/** @since 0.0.3 */
+/** @since alpha-3.0.0 */
 export const NUMBER = /** @type {JsTypesLiterals.Number} */ (typeof Number());
 
-/** @since 0.0.3 */
+/** @since alpha-3.0.0 */
 export const BOOLEAN = /** @type {JsTypesLiterals.Boolean} */ (typeof Boolean());
 
-/** @since 0.0.3 */
+/** @since alpha-3.0.0 */
 export const OBJECT = /** @type {JsTypesLiterals.Object} */ (typeof {});
 
-/** @since 0.0.3 */
+/** @since alpha-3.0.0 */
 export const UNDEFINED = /** @type {JsTypesLiterals.Undefined} */ (typeof undefined);
 
-/** @since 0.0.3 */
+/** @since alpha-3.0.0 */
 export const FUNCTION = /** @type {JsTypesLiterals.Function} */ (typeof function(){});
 
-/** @since 0.0.3 */
+/** @since alpha-3.0.0 */
 export const SYMBOL = /** @type {JsTypesLiterals.Symbol} */ (typeof Symbol());
 
-/** @since 0.0.3 */
+/** @since alpha-3.0.0 */
 export const BIGINT = /** @type {JsTypesLiterals.BigInt} */ (typeof BigInt(0));
 
-/** @since 0.0.3 */
+/** @since alpha-3.0.0 */
 export const NULL = /** @type {JsTypesLiterals.Null} */ (typeof null);
 
 
@@ -39,7 +39,7 @@ export const NULL = /** @type {JsTypesLiterals.Null} */ (typeof null);
 /**
  * All JavaScript types.
  * 
- * @since 0.0.3
+ * @since alpha-3.0.0
  * @deprecated Use individual named exports instead
  * @readonly
  * @type {{

@@ -1,5 +1,5 @@
 /**
- * @since 0.0.3
+ * @since alpha-3.0.0
  * @typedef {{
  *   'hash'?: string, 
  *   'commitDate'?: Date, 
@@ -11,7 +11,7 @@
 /**
  * Represents a git commit.
  * 
- * @since 0.0.3
+ * @since alpha-3.0.0
  */
 export default class Commit {
     /**
@@ -45,7 +45,7 @@ export default class Commit {
     /**
      * The hash of the commit.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      */
     get hash() {
@@ -55,7 +55,7 @@ export default class Commit {
     /**
      * The commit date of the commit.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      */
     get commitDate() {
@@ -65,7 +65,7 @@ export default class Commit {
     /**
      * The message of the commit.
      * 
-     * @since 0.0.4
+     * @since alpha-4.0.0
      * @readonly
      */
     get msg() {

@@ -4,7 +4,7 @@ import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 /**
  * Represents a filesystem path as an object for type-safe operations.
  * 
- * @since 0.0.3
+ * @since alpha-3.0.0
  */
 export default class FileSystemPath {
     /**
@@ -27,7 +27,7 @@ export default class FileSystemPath {
     /**
      * Returns the string representation.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @returns {string}
      */
     toString() {

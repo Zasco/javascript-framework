@@ -1,5 +1,5 @@
 /**
- * @since 0.0.3
+ * @since alpha-3.0.0
  */
 export default class Repository {
     /**
@@ -17,7 +17,7 @@ export default class Repository {
     /**
      * The path of the repository.
      * 
-     * @since 0.0.3
+     * @since alpha-3.0.0
      * @readonly
      */
     get path() {

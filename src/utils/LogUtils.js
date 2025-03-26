@@ -1,7 +1,7 @@
 import { traits } from 'javascript-framework/module/core';
 
 /**
- * @since 0.0.2
+ * @since alpha-2.0.0
  */
 export default class LogUtils {
     /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
@@ -12,7 +12,7 @@ export default class LogUtils {
     /**
      * Exposes an object.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {Object} obj The object to expose.
      * @returns {{
@@ -39,7 +39,7 @@ export default class LogUtils {
     /**
      * Exposes a `Response` object.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {Response} response
      * @returns {{

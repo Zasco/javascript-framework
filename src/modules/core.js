@@ -12,52 +12,52 @@ import TypeUtils from '../utils/TypeUtils.js';
 
 // [NOTE] Here will also be the anticipated StringUtils.
 export { 
-  /** @since 0.0.6 */
+  /** @since alpha-6.0.0 */
   SPECIAL_CHARS, 
-  /** @since 0.0.5 */
+  /** @since alpha-5.0.0 */
   JS_TYPES, 
-  /** @since 0.0.6 */
+  /** @since alpha-6.0.0 */
   EXPANDED_JS_TYPES, 
   
   TypeUtils, 
 
   /**
-   * @since 0.0.5
-   * @deprecated 0.0.6 Use {@link EXPANDED_JS_TYPES} instead
+   * @since alpha-5.0.0
+   * @deprecated alpha-6.0.0 Use {@link EXPANDED_JS_TYPES} instead
    */
   EXPANDED_JS_TYPES as EXPANDED_TYPES, 
 }
 
-/** @since 0.0.5 */
+/** @since alpha-5.0.0 */
 export const types = {
-  /** @since 0.0.6 */
+  /** @since alpha-6.0.0 */
   expandedJsTypes, 
   
   /**
-   * @since 0.0.5
-   * @deprecated 0.0.6 Use {@link expandedJsTypes} instead
+   * @since alpha-5.0.0
+   * @deprecated alpha-6.0.0 Use {@link expandedJsTypes} instead
    */
   expandedTypes: expandedJsTypes, 
 }
 
-/** @since 0.0.5 */
+/** @since alpha-5.0.0 */
 export const constants = {
-  /** @since 0.0.5 */
+  /** @since alpha-5.0.0 */
   JS_TYPES,
-  /** @since 0.0.6 */
+  /** @since alpha-6.0.0 */
   EXPANDED_JS_TYPES, 
 
   /**
-   * @since 0.0.5
-   * @deprecated 0.0.6 Use {@link EXPANDED_JS_TYPES} instead
+   * @since alpha-5.0.0
+   * @deprecated alpha-6.0.0 Use {@link EXPANDED_JS_TYPES} instead
    */
   EXPANDED_TYPES: EXPANDED_JS_TYPES, 
 }
 
-/** @since 0.0.5 */
+/** @since alpha-5.0.0 */
 export const traits = {
-  /** @since 0.0.5 */
+  /** @since alpha-5.0.0 */
   AbstractClassTrait, 
-  /** @since 0.0.5 */
+  /** @since alpha-5.0.0 */
   SingletonTrait, 
 }

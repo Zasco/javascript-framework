@@ -10,7 +10,7 @@ import * as cliWrapperTypes from '../types/cli-wrapper-types.js';
 /**
  * The base model for CLI wrappers.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @abstract
  */
 export default class BaseCliWrapper {
@@ -61,7 +61,7 @@ export default class BaseCliWrapper {
     /**
      * Returns if the tool is available on the system.
      * 
-     * @since 0.0.6
+     * @since alpha-6.0.0
      * @readonly
      * @static
      * @returns {boolean}
@@ -78,7 +78,7 @@ export default class BaseCliWrapper {
     /**
      * Executes a command.
      * 
-     * @since 0.0.4
+     * @since alpha-4.0.0
      * @protected
      * @static
      * @param {cliWrapperTypes.CliArgs} args The command arguments
@@ -148,7 +148,7 @@ export default class BaseCliWrapper {
     /**
      * Returns the wrapper or subcommand specific {@link dargs} convertion options.
      * 
-     * @since 0.0.6
+     * @since alpha-6.0.0
      * @protected
      * @static
      * @param {string} [subcommand]
@@ -161,7 +161,7 @@ export default class BaseCliWrapper {
     /**
      * Executes a subcommand.
      * 
-     * @since 0.0.6
+     * @since alpha-6.0.0
      * @protected
      * @static
      * @param {string} subcommand

@@ -1,28 +1,28 @@
 /**
  * The positional CLI options.
  * 
- * @since 0.0.6
+ * @since alpha-6.0.0
  * @typedef {{'_'?: string[]}} positionalOptions
  */
 
 /**
  * The separated CLI options.
  * 
- * @since 0.0.6
+ * @since alpha-6.0.0
  * @typedef {{'--'?: string[]}} separatedOptions
  */
 
 /**
  * The named CLI options.
  * 
- * @since 0.0.6
+ * @since alpha-6.0.0
  * @typedef {Record<string, string | number | boolean | (string | number)[]>} namedOptions
  */
 
 /**
  * A list of CLI options.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @typedef {positionalOptions 
  *  & separatedOptions 
  *  & namedOptions
@@ -32,21 +32,21 @@
 /**
  * A single CLI option.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @typedef {CliOptions[keyof CliOptions]} CliOptionType
  */
 
 /**
  * A mapping of options to their CLI flag counterpart.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @typedef {Record<string, string>} OptionFlagsMap
  */
 
 /**
  * A list of CLI arguments.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @typedef {string[]} CliArgs
  */
 
@@ -56,14 +56,14 @@
 /**
  * The named CLI options.
  * 
- * @since 0.0.6
+ * @since alpha-6.0.0
  * @typedef {Record<string, string | number | boolean | string[]>} dargsNamedOptions
 */
 
 /**
  * The converted CLI options.
  * 
- * @since 0.0.6
+ * @since alpha-6.0.0
  * @typedef {positionalOptions 
  *  & separatedOptions 
  *  & dargsNamedOptions} dargsConvertedOptions

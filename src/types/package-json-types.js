@@ -1,5 +1,5 @@
 /**
- * @since 0.0.3
+ * @since alpha-3.0.0
  * @typedef {{
  *  'name': string,
  *  'version': string,

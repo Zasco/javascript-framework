@@ -9,7 +9,7 @@ import * as errorLevelTypes from "../config/ErrorLevelsConfig.js";
 import ERROR_LEVELS from "../config/ErrorLevelsConfig.js";
 
 /**
- * @since 0.0.1
+ * @since alpha-1.0.0
  */
 export default class ErrorHandler {
     /** Wether warnings are critical. If true, warnings are treated as errors. Defaults to false. */
@@ -23,7 +23,7 @@ export default class ErrorHandler {
     /**
      * Returns the {@link LOG_LEVELS} for a given {@link ERROR_LEVELS}.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {errorLevelTypes.ErrorLevel} level The error level. Defaults to {@link ERROR_LEVELS.ERROR}.
      * @returns {logLevelsTypes.LogLevel}
@@ -38,7 +38,7 @@ export default class ErrorHandler {
     /**
      * Creates a new error with a cause.
      * 
-     * @since 0.0.1
+     * @since alpha-1.0.0
      * @static
      * @param {string} errorMessage The error message.
      * @param {Error} causingError The error that caused this error.
@@ -53,7 +53,7 @@ export default class ErrorHandler {
     /**
      * Handles an error and displays it appropriately.
      * 
-     * @since 0.0.1
+     * @since alpha-1.0.0
      * @static
      * @param {Error} handledError The error to handle.
      * @param {errorLevelTypes.ErrorLevel} [level] The failure level ({@link ERROR_LEVELS.ERROR} or {@link ERROR_LEVELS.WARNING}). Defaults to {@link ERROR_LEVELS.ERROR}.
@@ -103,7 +103,7 @@ export default class ErrorHandler {
     /**
     * Runs a function with warning/error handling.
     * 
-    * @since 0.0.1
+    * @since alpha-1.0.0
     * @static
     * @param {() => (* | Promise<*>)} fn The function to execute.
     * @param {string} message The message if the function fails.
@@ -142,7 +142,7 @@ export default class ErrorHandler {
     /**
      * Runs a function with warning handling. Never rethrows and always returns a fallback value on failure.
      * 
-     * @since 0.0.1
+     * @since alpha-1.0.0
      * @static
      * @param {() => (* | Promise<*>)} fn The function to execute.
      * @param {string} message The warning message if the function fails.
@@ -164,7 +164,7 @@ export default class ErrorHandler {
     /**
      * Runs a function with error handling.
      * 
-     * @since 0.0.1
+     * @since alpha-1.0.0
      * @static
      * @param {() => (* | Promise<*>)} fn The function to execute.
      * @param {string} message The error message if the function fails.

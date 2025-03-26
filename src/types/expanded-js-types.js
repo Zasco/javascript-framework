@@ -1,7 +1,7 @@
 /**
  * Type definitions for JavaScript expanded types and types literals.
  * 
- * @since 0.0.6
+ * @since alpha-6.0.0
  */
 
 
@@ -10,14 +10,14 @@
 /**
  * The type of a `class instance` object.
  * 
- * @since 0.0.3
+ * @since alpha-3.0.0
  * @typedef {Object} ClassInstanceObject
  */
 
 /**
  * The type of a `class` function.
  * 
- * @since 0.0.3
+ * @since alpha-3.0.0
  * @typedef {Function} ClassFunction
  */
 
@@ -25,11 +25,11 @@
 // Types literals
 
 /** 
- * @since 0.0.6 
+ * @since alpha-6.0.0 
  * @typedef {'class-instance-object'} ClassInstanceObjectLiteral
  */
 
 /** 
- * @since 0.0.6 
+ * @since alpha-6.0.0 
  * @typedef {'class-function'} ClassFunctionLiteral
  */

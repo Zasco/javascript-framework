@@ -9,7 +9,7 @@ import Repository from '../models/Repository.js';
 /**
  * A wrapper to interact with `Git`.
  * 
- * @since 0.0.2
+ * @since alpha-2.0.0
  */
 export default class GitHelper {
     /**
@@ -29,7 +29,7 @@ export default class GitHelper {
     /**
      * Checks if the given path is a valid repository.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {string} path The path to check.
      * @returns {true} If the path is a repository.
@@ -51,7 +51,7 @@ export default class GitHelper {
     /**
      * Returns if the given path is a valid repository.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {string} path The path to check.
      * @returns {boolean}
@@ -67,7 +67,7 @@ export default class GitHelper {
     /**
      * Returns the repository object for the given path.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {string} path The path of the repository.
      * @returns {Repository} The target repository object.
@@ -82,7 +82,7 @@ export default class GitHelper {
     /**
      * Runs a `Git` command.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {string} command The command to run.
      * @param {Repository} repo The target repository object.
@@ -107,7 +107,7 @@ export default class GitHelper {
     /**
      * Returns if the repository has staged changes.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {Repository} repo The target repository object.
      * @returns {boolean}
@@ -126,7 +126,7 @@ export default class GitHelper {
     /**
      * Returns if a tag with the given name already exists in the provided repository.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {string} tagName The tag name to check.
      * @param {Repository} repo The target repository object.
@@ -146,7 +146,7 @@ export default class GitHelper {
     /**
      * Stages all changes in the repository.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {Repository} repo The target repository object.
      * @returns {true} If the changes were staged successfully.
@@ -165,7 +165,7 @@ export default class GitHelper {
     /**
      * Commits the changes with the given message in the repository.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {string} message The commit message.
      * @param {Repository} repo The target repository object.
@@ -188,7 +188,7 @@ export default class GitHelper {
     /**
      * Creates a new tag with the given name in the repository.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {string} tagName The tag name to create.
      * @param {Repository} repo The target repository object.
@@ -209,7 +209,7 @@ export default class GitHelper {
     /**
      * Pushes the changes to the remote repository.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {Repository} repo The target repository object.
      * @returns {true} If the changes were pushed successfully.

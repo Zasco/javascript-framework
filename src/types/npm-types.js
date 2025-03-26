@@ -1,14 +1,14 @@
 /**
  * The available commands with `npm`.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @typedef {['version']} CommandsType
  */
 
 /**
  * A single command.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @typedef {CommandsType[number]} CommandType
  */
 
@@ -17,7 +17,7 @@
  * 
  * Verified with version `11.2.0` and likely compatible with `^11.0.0`.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @typedef {readonly [
  *  'major', 
  *  'minor', 
@@ -33,14 +33,14 @@
 /**
  * A single version bump type.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @typedef {VersionBumpTypes[number]} VersionBumpType
  */
 
 /**
  * Boolean-typed CLI `version` options.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @typedef {[
  *   'no-git-tag-version', 
  * ]} VersionBooleanOptions
@@ -51,7 +51,7 @@
  * 
  * Verified with version `11.2.0` and likely compatible with `^11.0.0`.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @typedef {[
  *  ...VersionBooleanOptions, 
  * ]} VersionCliOptions
@@ -60,13 +60,13 @@
 /**
  * A single CLI option for command `version`.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @typedef {VersionCliOptions[number]} VersionCliOption
  */
 
  /**
  * The types of the options.
  * 
- * @since 0.0.5
+ * @since alpha-5.0.0
  * @typedef {Record<VersionBooleanOptions[number], boolean>} VersionOptionTypes
  */

@@ -8,7 +8,7 @@ import Logger from '../interfaces/Logger.js';
 import ConsoleLogger from '../entities/ConsoleLogger.js';
 
 /**
- * @since 0.0.1
+ * @since alpha-1.0.0
  */
 export default class LogHelper {
     /**
@@ -48,7 +48,7 @@ export default class LogHelper {
     /**
      * Registers a logger instance.
      * 
-     * @since 0.0.1
+     * @since alpha-1.0.0
      * @static
      * @param {Logger} logger The logger instance to register.
      */
@@ -71,7 +71,7 @@ export default class LogHelper {
     /**
      * Displays a message in the console, the output and the VS Code window.
      * 
-     * @since 0.0.1
+     * @since alpha-1.0.0
      * @static
      * @param {*} message The message to display.
      * @param {logLevelsTypes.LogLevel} level The log level. Defaults to `LOG`.
@@ -102,7 +102,7 @@ export default class LogHelper {
     /**
      * Logs a message to the console.
      * 
-     * @since 0.0.1
+     * @since alpha-1.0.0
      * @static
      * @param {*} message The message to log.
      * @param {logLevelsTypes.LogLevel} [level] The log level. Defaults to `LOG`.
@@ -114,7 +114,7 @@ export default class LogHelper {
     /**
      * Outputs a message to the the registered loggers.
      * 
-     * @since 0.0.1
+     * @since alpha-1.0.0
      * @static
      * @param {*} message The message to output.
      * @param {logLevelsTypes.LogLevel} level The log level.
@@ -143,7 +143,7 @@ export default class LogHelper {
     /**
      * Logs a `Response` object to the console in a readable format.
      * 
-     * @since 0.0.2
+     * @since alpha-2.0.0
      * @static
      * @param {Response} response The response object to output.
      */
