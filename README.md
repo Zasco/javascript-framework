@@ -6,7 +6,6 @@ A set of reusable components for building **JavaScript** applications.
 #### **alpha-7.0.0**
 - Implement new versioning convention:
   - Replace versions:
-    - In documentations ([CHANGELOG.md](CHANGELOG.md))
     - In `@since` tags
     - In `package.json`
 

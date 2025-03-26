@@ -1,6 +1,6 @@
 ## Changelog
 
-### [v0.0.6](https://github.com/Zasco/javascript-framework/compare/v0.0.5...v0.0.6) -  26 March 2025 
+### [a6.0.0](https://github.com/Zasco/javascript-framework/compare/a5.0.0...a6.0.0) -  26 March 2025 
 
 #### New Features
 
@@ -55,7 +55,7 @@
 - Merge commit 'deea7cb4f70ae8dda928cb078f9515a4319886d8'  ([22f21bb](https://github.com/Zasco/javascript-framework/commit/22f21bb67d2a0a6a66ae2174cd9c75e2f2017457))
 - Revert "refactor!: remove action module types exp."  ([6b20dcc](https://github.com/Zasco/javascript-framework/commit/6b20dcce1916069432200563d3cb2ebb3d47f572))
 
-### [v0.0.5](https://github.com/Zasco/javascript-framework/compare/v0.0.4...v0.0.5) -  18 March 2025 
+### [a5.0.0](https://github.com/Zasco/javascript-framework/compare/a4.0.0...a5.0.0) -  18 March 2025 
 
 #### New Features
 
@@ -163,7 +163,7 @@
 - refactor!: rename method to version()  ([777f583](https://github.com/Zasco/javascript-framework/commit/777f5837680c88d881847f5ca5edd3e306986e9b))
 - Release version 0.0.5  ([6aa61a6](https://github.com/Zasco/javascript-framework/commit/6aa61a6aec9790ecfce0a13547a76ed1c13afe74))
 
-### [v0.0.4](https://github.com/Zasco/javascript-framework/compare/v0.0.3...v0.0.4) -  15 March 2025 
+### [a4.0.0](https://github.com/Zasco/javascript-framework/compare/a3.0.0...a4.0.0) -  15 March 2025 
 
 #### New Features
 
@@ -247,7 +247,7 @@
 - refactor!: rename levels types  ([4f6f7a1](https://github.com/Zasco/javascript-framework/commit/4f6f7a1d3f510736e53ee87c232790bb4c86a05e))
 - Release version 0.0.4  ([e9aab7a](https://github.com/Zasco/javascript-framework/commit/e9aab7a635042a0783c9cd2f477544e929ad5679))
 
-### [v0.0.3](https://github.com/Zasco/javascript-framework/compare/v0.0.2...v0.0.3) -  26 March 2025 
+### [a3.0.0](https://github.com/Zasco/javascript-framework/compare/a2.0.0...a3.0.0) -  26 March 2025 
 
 #### New Features
 
@@ -323,7 +323,7 @@
 - refactor!: rename getAbstractMethodErr()  ([7f09e5c](https://github.com/Zasco/javascript-framework/commit/7f09e5cd25dbcb2e9df05b4f7e2160e97316de04))
 - Release version 0.0.3  ([57533b1](https://github.com/Zasco/javascript-framework/commit/57533b1c9799a318497cc48d64858a10dccd9b12))
 
-### [v0.0.2](https://github.com/Zasco/javascript-framework/compare/v0.0.1...v0.0.2) -  26 March 2025 
+### [a2.0.0](https://github.com/Zasco/javascript-framework/compare/a1.0.0...a2.0.0) -  26 March 2025 
 
 #### New Features
 
@@ -414,7 +414,7 @@
 - build: use coding-utils auto-release script  ([a918471](https://github.com/Zasco/javascript-framework/commit/a9184718163ae00f0a7d6af0de22cca96f14595d))
 - Release version 0.0.2  ([eaf02e1](https://github.com/Zasco/javascript-framework/commit/eaf02e1345477f14ae5133c12cfc208e8ecda271))
 
-### v0.0.1
+### a1.0.0
 
 #### General Changes
 
