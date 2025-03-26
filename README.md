@@ -3,12 +3,22 @@ A set of reusable components for building **JavaScript** applications.
 
 ## Roadmap
 ### Planned
-#### **0.0.7**
+#### **alpha-7.0.0**
+- Implement new versioning convention:
+  - Replace versions:
+    - In documentations ([CHANGELOG.md](CHANGELOG.md))
+    - In `@since` tags
+    - In `package.json`
+
+#### **alpha-8.0.0**
+- Migrate CLI wrappers and features to a dedicated package.
+
+#### **alpha-8.1.0**
 - Use the `FileSystemPath` model where applicable.
 - Implement various new modules:
   - A `CheckHelper` of a sort in which to move common `check` logics to.
   - A `ProcessHelper` for common process operations
-  - A `FileHelper` for common file operations (ex.: check if exists (used in `PackageJsonHelper` and `GitHelper`))
+  - A `FileHelper` for common file operations (ex.: check file exists (used in `PackageJsonHelper`))
   - A `StringUtils` for string manipulations like uppercase/lowercase.
 
 ### Backlog
