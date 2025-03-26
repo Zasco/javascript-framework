@@ -7,7 +7,6 @@ A set of reusable components for building **JavaScript** applications.
 - Implement new versioning convention:
   - Replace versions:
     - In `@since` tags
-    - In `package.json`
 
 #### **alpha-8.0.0**
 - Migrate CLI wrappers and features to a dedicated package.
