@@ -3,9 +3,6 @@ A set of reusable components for building **JavaScript** applications.
 
 ## Roadmap
 ### Planned
-#### **alpha-7.0.0**
-- Implement new versioning convention
-
 #### **alpha-8.0.0**
 - Migrate CLI wrappers and features to a dedicated package.
 
