@@ -3,6 +3,12 @@ A set of reusable components for building **JavaScript** applications.
 
 ## Roadmap
 ### Planned
+#### **alpha-7.1.0**
+- Allow import of `.ts` files
+
+#### **alpha-7.2.0**
+- Implement and use `dargs` types and constants
+
 #### **alpha-8.0.0**
 - Migrate CLI wrappers and features to a dedicated package.
 
