@@ -6,7 +6,8 @@
         "checkJs": true,
         "strictNullChecks": true,
         "noImplicitAny": true,
-        "noUnusedParameters": false
+        "noUnusedParameters": false,
+        "allowImportingTsExtensions": true,
     },
     "include": [
         "src/**/*"
