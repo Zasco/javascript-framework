@@ -1,6 +1,6 @@
 {
   "name": "javascript-framework",
-  "version": "alpha-7.0.0",
+  "version": "alpha-7.2.0",
   "type": "module",
   "main": "index.js",
   "exports": {

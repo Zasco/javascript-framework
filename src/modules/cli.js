@@ -4,7 +4,7 @@ export { default as BaseWrapper } from '../models/BaseCliWrapper.js';
 
 // dargs
 
-/** @since ${NEXT_VERSION} */
+/** @since alpha-7.2.0 */
 export * as dargsTypes from '../types/dargs-types.ts';
-/** @since ${NEXT_VERSION} */
+/** @since alpha-7.2.0 */
 export * as dargsConstants from '../constants/dargs.js';
