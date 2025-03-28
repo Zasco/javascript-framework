@@ -2,7 +2,7 @@ import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 import * as dargs from 'dargs';
 
-import { traits } from 'javascript-framework/module/core';
+import { traits, TypeUtils } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
 import * as cliWrapperTypes from '../types/cli-wrapper-types.ts';
@@ -115,11 +115,13 @@ export default class BaseCliWrapper {
      * 
      * @protected
      * @static
-     * @param {cliWrapperTypes.CliOptions} options
+     * @param {cliWrapperTypes.CliOptions} [options]
      * @param {dargsTypes.ConversionOptions} [dargsOptions]
      * @returns {cliWrapperTypes.CliArgs}
      */
     static _convertOptionsToArgs(options, dargsOptions = undefined) {
+        if (TypeUtils.isUndefined(options)) return [];
+        
         Object.keys(options).forEach(key => {
             if (key !== '_' && key !== '--' && key.includes(' ')) {
                 throw new Error(`Option key "${key}" contains spaces, which is not supported for command-line arguments`);
