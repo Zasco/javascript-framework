@@ -4,8 +4,14 @@ import {
     SEPARATED_OPTIONS_KEY as DARGS_SEPARATED_OPTIONS_KEY 
 } from "./dargs.js";
 
-/** @since alpha-7.4.0 */
+/**
+ * @since alpha-7.4.0
+ * @see {@link DARGS_POSITIONAL_OPTIONS_KEY}
+ */
 export const POSITIONAL_OPTIONS_KEY = DARGS_POSITIONAL_OPTIONS_KEY;
 
-/** @since alpha-7.4.0 */
+/**
+ * @since alpha-7.4.0
+ * @see {@link DARGS_SEPARATED_OPTIONS_KEY}
+ */
 export const SEPARATED_OPTIONS_KEY = DARGS_SEPARATED_OPTIONS_KEY;
