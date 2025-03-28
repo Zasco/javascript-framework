@@ -27,21 +27,21 @@ type SingleOrArrayOption = StrLikeOption | ArrayOption;
  * 
  * @since ${NEXT_VERSION}
  */
-export type PositionalOptions = {[POSITIONAL_OPTIONS_KEY]: SingleOrArrayOption;};
+type PositionalOptions = {[POSITIONAL_OPTIONS_KEY]: SingleOrArrayOption;};
 
 /**
  * The separated CLI options.
  * 
  * @since ${NEXT_VERSION}
  */
-export type SeparatedOptions = {[SEPARATED_OPTIONS_KEY]: SingleOrArrayOption;}
+type SeparatedOptions = {[SEPARATED_OPTIONS_KEY]: SingleOrArrayOption;}
 
 /**
  * The named CLI options.
  * 
  * @since alpha-6.0.0
  */
-export type NamedOptions = Record<string, string | number | boolean | ArrayOption>;
+type NamedOptions = Record<string, string | number | boolean | ArrayOption>;
 
 /**
  * A list of CLI options.
@@ -55,14 +55,14 @@ export type CliOptions = Partial<PositionalOptions & SeparatedOptions> & NamedOp
  * 
  * @since alpha-5.0.0
  */
-export type CliOptionType = CliOptions[keyof CliOptions];
+type CliOptionType = CliOptions[keyof CliOptions];
 
 /**
  * A mapping of options to their CLI flag counterpart.
  * 
  * @since alpha-5.0.0
  */
-export type OptionFlagsMap = Record<string, string>;
+type OptionFlagsMap = Record<string, string>;
 
 /**
  * A list of CLI arguments.
