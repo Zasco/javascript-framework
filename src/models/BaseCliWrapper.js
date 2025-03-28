@@ -6,6 +6,7 @@ import { traits } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
 import * as cliWrapperTypes from '../types/cli-wrapper-types.ts';
+import * as dargsTypes from '../types/dargs-types.ts';
 
 /**
  * The base model for CLI wrappers.
@@ -125,7 +126,7 @@ export default class BaseCliWrapper {
             }
         });
 
-        /** @type {cliWrapperTypes.dargsConvertedOptions} */
+        /** @type {dargsTypes.ConvertedOptions} */
         const convertedOptions = {};
         Object.entries(options).forEach(([key, value]) => {
             if (Array.isArray(value)) convertedOptions[key] = value.map(item => String(item));
