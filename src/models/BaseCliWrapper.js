@@ -5,7 +5,7 @@ import * as dargs from 'dargs';
 import { traits } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
-import * as cliWrapperTypes from '../types/cli-wrapper-types.js';
+import * as cliWrapperTypes from '../types/cli-wrapper-types.ts';
 
 /**
  * The base model for CLI wrappers.
