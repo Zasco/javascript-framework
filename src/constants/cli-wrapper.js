@@ -1,11 +1,11 @@
-/** @since ${NEXT_VERSION} */
+/** @since alpha-7.4.0 */
 import { 
     POSITIONAL_OPTIONS_KEY as DARGS_POSITIONAL_OPTIONS_KEY, 
     SEPARATED_OPTIONS_KEY as DARGS_SEPARATED_OPTIONS_KEY 
 } from "./dargs.js";
 
-/** @since ${NEXT_VERSION} */
+/** @since alpha-7.4.0 */
 export const POSITIONAL_OPTIONS_KEY = DARGS_POSITIONAL_OPTIONS_KEY;
 
-/** @since ${NEXT_VERSION} */
+/** @since alpha-7.4.0 */
 export const SEPARATED_OPTIONS_KEY = DARGS_SEPARATED_OPTIONS_KEY;

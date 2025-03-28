@@ -4,35 +4,35 @@ import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/darg
 /**
  * The type of the string-like options.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.4.0
  */
 type StrLikeOption = string | number;
 
 /**
  * The type of the array options.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.4.0
  */
 type ArrayOption = StrLikeOption[];
 
 /**
  * The type of a {@link StrLikeOption|string like option} OR {@link ArrayOption|array option}.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.4.0
  */
 type SingleOrArrayOption = StrLikeOption | ArrayOption;
 
 /**
  * The positional CLI options.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.4.0
  */
 type PositionalOptions = {[POSITIONAL_OPTIONS_KEY]: SingleOrArrayOption;};
 
 /**
  * The separated CLI options.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.4.0
  */
 type SeparatedOptions = {[SEPARATED_OPTIONS_KEY]: SingleOrArrayOption;}
 
@@ -80,7 +80,7 @@ export type CliArgs = string[];
  * The named CLI options.
  * 
  * @since alpha-6.0.0
- * @deprecated ${NEXT_VERSION} Use {@link dargsTypes.NamedOptions} instead.
+ * @deprecated alpha-7.4.0 Use {@link dargsTypes.NamedOptions} instead.
  */
 export type DargsNamedOptions = Record<string, string | number | boolean | string[]>;
 
@@ -88,7 +88,7 @@ export type DargsNamedOptions = Record<string, string | number | boolean | strin
  * The converted CLI options.
  * 
  * @since alpha-6.0.0
- * @deprecated ${NEXT_VERSION} Use {@link dargsTypes.ConvertedOptions} instead.
+ * @deprecated alpha-7.4.0 Use {@link dargsTypes.ConvertedOptions} instead.
  */
 export type DargsConvertedOptions = PositionalOptions & SeparatedOptions & DargsNamedOptions;
 
@@ -97,7 +97,7 @@ export type DargsConvertedOptions = PositionalOptions & SeparatedOptions & Dargs
  * The positional CLI options.
  * 
  * @since alpha-6.0.0
- * @deprecated ${NEXT_VERSION} Use {@link PositionalOptions} instead.
+ * @deprecated alpha-7.4.0 Use {@link PositionalOptions} instead.
  */
 export type positionalOptions = PositionalOptions;
 
@@ -105,6 +105,6 @@ export type positionalOptions = PositionalOptions;
  * The separated CLI options.
  * 
  * @since alpha-6.0.0
- * @deprecated ${NEXT_VERSION} Use {@link SeparatedOptions} instead.
+ * @deprecated alpha-7.4.0 Use {@link SeparatedOptions} instead.
  */
 export type separatedOptions = SeparatedOptions;
