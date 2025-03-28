@@ -117,7 +117,7 @@ export default class BaseCliWrapper {
      * @static
      * @param {cliWrapperTypes.CliOptions} options
      * @param {dargs.Options | undefined} dargsOptions
-     * @returns {string[]}
+     * @returns {cliWrapperTypes.CliArgs}
      */
     static _convertOptionsToArgs(options, dargsOptions = undefined) {
         Object.keys(options).forEach(key => {
