@@ -82,7 +82,7 @@ export type CliArgs = string[];
  * @since alpha-6.0.0
  * @deprecated alpha-7.4.0 Use {@link dargsTypes.NamedOptions} instead.
  */
-export type DargsNamedOptions = Record<string, string | number | boolean | string[]>;
+export type dargsNamedOptions = Record<string, string | number | boolean | string[]>;
 
 /**
  * The converted CLI options.
@@ -90,7 +90,7 @@ export type DargsNamedOptions = Record<string, string | number | boolean | strin
  * @since alpha-6.0.0
  * @deprecated alpha-7.4.0 Use {@link dargsTypes.ConvertedOptions} instead.
  */
-export type DargsConvertedOptions = PositionalOptions & SeparatedOptions & DargsNamedOptions;
+export type dargsConvertedOptions = PositionalOptions & SeparatedOptions & dargsNamedOptions;
 
 
 /**
