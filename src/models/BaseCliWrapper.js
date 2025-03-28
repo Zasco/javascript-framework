@@ -116,7 +116,7 @@ export default class BaseCliWrapper {
      * @protected
      * @static
      * @param {cliWrapperTypes.CliOptions} options
-     * @param {dargs.Options | undefined} dargsOptions
+     * @param {dargsTypes.ConversionOptions} [dargsOptions]
      * @returns {cliWrapperTypes.CliArgs}
      */
     static _convertOptionsToArgs(options, dargsOptions = undefined) {
