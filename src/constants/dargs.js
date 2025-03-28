@@ -1,5 +1,5 @@
 /**
- * Constants for the `dargs` library.
+ * Constants for the `dargs` library (see https://github.com/sindresorhus/dargs).
  * 
  * Valid with version `8.1.0`.
  * 
