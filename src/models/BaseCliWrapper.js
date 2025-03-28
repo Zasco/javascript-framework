@@ -107,7 +107,7 @@ export default class BaseCliWrapper {
 
     /**
      * Converts an object of {option: value} to an array (option, value) of command-line arguments.
-     * - Internaly uses `dargs` with custom improvements:
+     * - Internaly uses [`dargs`](https://github.com/sindresorhus/dargs) with custom improvements:
      *   - Add check for spaces in keys and throws if any found
      *   - Quotes values containing spaces
      * - Supports positional arguments (`_`)
