@@ -1,15 +1,17 @@
+import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/dargs.js';
+
 /**
  * The positional CLI options.
  * 
  * @since alpha-6.0.0
- * @typedef {{'_'?: string[]}} positionalOptions
+ * @typedef {{[POSITIONAL_OPTIONS_KEY]?: string[]}} positionalOptions
  */
 
 /**
  * The separated CLI options.
  * 
  * @since alpha-6.0.0
- * @typedef {{'--'?: string[]}} separatedOptions
+ * @typedef {{[SEPARATED_OPTIONS_KEY]?: string[]}} separatedOptions
  */
 
 /**
