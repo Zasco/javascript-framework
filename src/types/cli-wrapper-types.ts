@@ -2,25 +2,46 @@ import * as dargsTypes from './dargs-types.ts';
 import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/dargs.js';
 
 /**
+ * The type of the string-like options.
+ * 
+ * @since ${NEXT_VERSION}
+ */
+type StrLikeOption = string | number;
+
+/**
+ * The type of the array options.
+ * 
+ * @since ${NEXT_VERSION}
+ */
+type ArrayOption = StrLikeOption[];
+
+/**
+ * The type of a {@link StrLikeOption|string like option} OR {@link ArrayOption|array option}.
+ * 
+ * @since ${NEXT_VERSION}
+ */
+type SingleOrArrayOption = StrLikeOption | ArrayOption;
+
+/**
  * The positional CLI options.
  * 
  * @since ${NEXT_VERSION}
  */
-export type PositionalOptions = {[POSITIONAL_OPTIONS_KEY]: string[];};
+export type PositionalOptions = {[POSITIONAL_OPTIONS_KEY]: SingleOrArrayOption;};
 
 /**
  * The separated CLI options.
  * 
  * @since ${NEXT_VERSION}
  */
-export type SeparatedOptions = {[SEPARATED_OPTIONS_KEY]: string[];}
+export type SeparatedOptions = {[SEPARATED_OPTIONS_KEY]: SingleOrArrayOption;}
 
 /**
  * The named CLI options.
  * 
  * @since alpha-6.0.0
  */
-export type NamedOptions = Record<string, string | number | boolean | (string | number)[]>;
+export type NamedOptions = Record<string, string | number | boolean | ArrayOption>;
 
 /**
  * A list of CLI options.
