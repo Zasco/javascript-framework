@@ -3,9 +3,6 @@ A set of reusable components for building **JavaScript** applications.
 
 ## Roadmap
 ### Planned
-#### **alpha-7.3.0**
-- Implement `dargs` types validation
-
 #### **alpha-8.0.0**
 - Migrate CLI wrappers and features to a dedicated package.
 
