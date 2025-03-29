@@ -17,6 +17,7 @@
   },
   "author": "Zasco",
   "scripts": {
+    "generate-d-ts-shells": "node node_modules/coding-utils/src/scripts/generate-d-ts-shells.js -d ./src/types/",
     "version": "node node_modules/coding-utils/src/scripts/auto-release.js ./.autoreleaserc.json"
   },
   "dependencies": {
