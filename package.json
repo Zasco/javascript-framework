@@ -17,13 +17,15 @@
   },
   "author": "Zasco",
   "scripts": {
-    "version": "node node_modules/coding-utils/src/scripts/auto-release.js ./.autoreleaserc.json"
+    "generate-d-ts-shells": "node node_modules/coding-utils/src/scripts/generate-d-ts-shells.js -d ./src/types/",
+    "version": "node node_modules/coding-utils/src/scripts/auto-release.js ./.autoreleaserc.json",
+    "postinstall": "npm run generate-d-ts-shells"
   },
   "dependencies": {
     "is-what": "~5.2.0",
     "dargs": "~8.1.0"
   },
   "devDependencies": {
-    "coding-utils": "github:zasco/coding-utils"
+    "coding-utils": "github:zasco/coding-utils#a8.1.0"
   }
 }

@@ -1,4 +1,4 @@
-import * as dargsTypes from './dargs-types.ts';
+import * as dargsTypes from './dargs-types.d.ts';
 import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/dargs.js';
 
 /**
