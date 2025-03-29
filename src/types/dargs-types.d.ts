@@ -61,7 +61,6 @@ export type NamedOptions = Record<NamedOption, NamedOptionValue>;
  * @since alpha-7.2.0
  */
 export type ConvertedOptions = Partial<PositionalOptions & SeparatedOptions> & NamedOptions;
-//export type ConvertedOptions = Partial<PositionalOptions & SeparatedOptions & NamedOptions>;
 
 /**
  * The conversion options object.
