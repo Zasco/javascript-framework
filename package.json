@@ -24,6 +24,6 @@
     "dargs": "~8.1.0"
   },
   "devDependencies": {
-    "coding-utils": "github:zasco/coding-utils"
+    "coding-utils": "github:zasco/coding-utils#a8.1.0"
   }
 }
