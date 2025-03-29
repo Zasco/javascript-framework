@@ -5,6 +5,7 @@ A set of reusable components for building **JavaScript** applications.
 ### Planned
 #### **alpha-8.0.0**
 - Migrate CLI wrappers and features to a dedicated package.
+- Migrate to API exports (see `cli-wrappers` for example).
 
 #### **alpha-8.1.0**
 - Use the `FileSystemPath` model where applicable.
