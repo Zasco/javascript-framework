@@ -18,7 +18,8 @@
   "author": "Zasco",
   "scripts": {
     "generate-d-ts-shells": "node node_modules/coding-utils/src/scripts/generate-d-ts-shells.js -d ./src/types/",
-    "version": "node node_modules/coding-utils/src/scripts/auto-release.js ./.autoreleaserc.json"
+    "version": "node node_modules/coding-utils/src/scripts/auto-release.js ./.autoreleaserc.json",
+    "postinstall": "npm run generate-d-ts-shells"
   },
   "dependencies": {
     "is-what": "~5.2.0",
