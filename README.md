@@ -27,6 +27,9 @@ For more details on this `TypeScript`/`JavaScript` interoperability approach, se
   - A `FileHelper` for common file operations (ex.: check file exists (used in `PackageJsonHelper`))
   - A `StringUtils` for string manipulations like uppercase/lowercase.
 
+#### **alpha-8.X.X**
+- Move the [`Build`](#build) section of `README` to a reusable common location.
+
 ### Backlog
 - Implement error handling in the `Action` model through `ErrorHandler`.
 - Fix type definitions
