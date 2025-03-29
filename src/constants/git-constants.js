@@ -4,7 +4,7 @@
  * @since alpha-6.0.0
  */
 
-import * as gitTypes from '../types/git-types.js';
+import * as gitTypes from '../types/js/git-types.js';
 
 
 // Commands

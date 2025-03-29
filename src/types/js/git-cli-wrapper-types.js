@@ -5,7 +5,7 @@
  */
 
 import * as utilTypes from './util-types.js';
-import * as cliWrapperTypes from './cli-wrapper-types.js';
+import * as cliWrapperTypes from '../cli-wrapper-types.js';
 import * as gitTypes from './git-types.js';
 
 /**
