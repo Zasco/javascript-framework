@@ -14,6 +14,35 @@ This process is also required on type definitions change.
 
 For more details on this `TypeScript`/`JavaScript` interoperability approach, see the related [documentation](https://github.com/Zasco/coding-utils/blob/a8.1.0/docs/ts-in-js.md) in [`coding-utils`](https://github.com/Zasco/coding-utils).
 
+## Dependency Requirements
+`coding-utils` is a development dependency that's **required for production** functionality (see [build section](#build)). When installing this package as a dependency in your project, `coding-utils` won't be automatically installed as it's defined as a "*development dependency*".
+
+Additionally, even if it were a "*regular dependency*", *Git* dependencies like don't benefit from *npm*'s version resolution like registry packages do. If your project or its dependencies require different versions of `coding-utils`, only one version will be installed (typically the one directly specified in the root `package.json`).
+
+>[!WARNING]
+>To ensure proper functionality:
+>1. Check the `engines` field (in [`package.json`](package.json)) for the minimum required version of `coding-utils`
+>2. Ensure that version (or higher) is installed in your root project
+
+Without the proper version of `coding-utils` installed, you'll see this error during installation:
+```sh
+npm info run javascript-framework@1.0.0-alpha7.6.1 postinstall node_modules/javascript-framework coding-utils.generate-d-ts-shells -d ./src/types/
+npm info run javascript-framework@1.0.0-alpha7.6.1 postinstall { code: 127, signal: null }
+npm verbose stack Error: command failed
+npm verbose pkgid javascript-framework@1.0.0-alpha7.6.1
+npm error code 127
+npm error path <root project path>/node_modules/javascript-framework
+npm error command failed
+npm error command sh -c coding-utils.generate-d-ts-shells -d ./src/types/
+npm error sh: 1: coding-utils.generate-d-ts-shells: not found
+npm verbose cwd <root project path>
+```
+
+>[!NOTE]
+>This issue will be addressed in future versions by either:
+>- Migrating to the use of a regular registry (supporting version resolution) instead of *Git* dependencies and moving `coding-utils` to a regular dependency
+>- Publishing the artifacts files
+
 ## Roadmap
 ### Planned
 #### **alpha-8.0.0**
