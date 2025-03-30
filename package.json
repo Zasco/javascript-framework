@@ -16,6 +16,9 @@
     "./module/action": "./src/modules/action.js"
   },
   "author": "Zasco",
+  "engines": {
+    "coding-utils": ">=a8.1.1"
+  },
   "scripts": {
     "version": "coding-utils.auto-release ./.autoreleaserc.json",
     "postinstall": "coding-utils.generate-d-ts-shells -d ./src/types/"
