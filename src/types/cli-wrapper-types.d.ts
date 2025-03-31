@@ -6,6 +6,7 @@ import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/darg
 /**
  * The process options for `_execute()`.
  * 
+ * @see {@link ExecSyncOptions}
  * @since ${NEXT_VERSION}
  */
 
@@ -14,6 +15,7 @@ export type ExecuteProcessOptions = ExecSyncOptions;
 /**
  * The return of `_execute()`.
  * 
+ * @see {@link execSync}
  * @since ${NEXT_VERSION}
  */
 export type ExecuteReturn = ReturnType<typeof execSync>;
