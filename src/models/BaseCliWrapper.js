@@ -104,18 +104,18 @@ export default class BaseCliWrapper {
      * - {@link execSync}
      */
     static _executeCommand(args, execOptions = undefined) {
-        const fullCommand = `${this._CLI_COMMAND} ${args.join(' ')}`;
+        const commandStr = this._getCommandStr(args);
 
         return ErrorHandler.withErrorHandling(
             () => {
                 this._checkToolIsAvailable();
                 
                 return execSync(
-                    fullCommand,
+                    commandStr,
                     execOptions, 
                 );
             },
-            ErrorUtils.getStdErrorMsg('executing', 'command', fullCommand)
+            ErrorUtils.getStdErrorMsg('executing', 'command', commandStr)
         );
     }
 
