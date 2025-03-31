@@ -35,6 +35,7 @@ export default class BaseCliWrapper {
     /**
      * Returns the complete CLI command with identifier.
      * 
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link BaseCliWrapper._getCommandStr} instead.
      * @protected
      * @static
      * @param {string} command The partial command
@@ -42,6 +43,19 @@ export default class BaseCliWrapper {
      */
     static _getCompleteCommand(command) {
         return `${this._CLI_COMMAND} ${command}`;
+    }
+
+    /**
+     * Returns the command string with the provided arguments.
+     * 
+     * @since ${NEXT_VERSION}
+     * @protected
+     * @static
+     * @param {cliWrapperTypes.CliArgs} args
+     * @returns {string}
+     */
+    static _getCommandStr(args) {
+        return `${this._CLI_COMMAND} ${args.join(' ')}`;
     }
 
     /**
