@@ -8,6 +8,8 @@ import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framewo
 import * as cliWrapperTypes from '../types/cli-wrapper-types.js';
 import * as dargsTypes from '../types/dargs-types.js';
 
+import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/cli-wrapper.js'; 
+
 /**
  * The base model for CLI wrappers.
  * 
@@ -35,6 +37,7 @@ export default class BaseCliWrapper {
     /**
      * Returns the complete CLI command with identifier.
      * 
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link BaseCliWrapper._getCommandString} instead.
      * @protected
      * @static
      * @param {string} command The partial command
@@ -42,6 +45,19 @@ export default class BaseCliWrapper {
      */
     static _getCompleteCommand(command) {
         return `${this._CLI_COMMAND} ${command}`;
+    }
+
+    /**
+     * Returns the command's string with the provided {@link args|arguments}.
+     * 
+     * @since ${NEXT_VERSION}
+     * @protected
+     * @static
+     * @param {cliWrapperTypes.CliArgs} args
+     * @returns {string}
+     */
+    static _getCommandString(args) {
+        return `${this._CLI_COMMAND} ${args.join(' ')}`;
     }
 
     /**
@@ -90,28 +106,30 @@ export default class BaseCliWrapper {
      * - {@link execSync}
      */
     static _executeCommand(args, execOptions = undefined) {
-        const fullCommand = `${this._CLI_COMMAND} ${args.join(' ')}`;
+        const commandStr = this._getCommandString(args);
 
         return ErrorHandler.withErrorHandling(
             () => {
                 this._checkToolIsAvailable();
                 
                 return execSync(
-                    fullCommand,
+                    commandStr,
                     execOptions, 
                 );
             },
-            ErrorUtils.getStdErrorMsg('executing', 'command', fullCommand)
+            ErrorUtils.getStdErrorMsg('executing', 'command', commandStr)
         );
     }
 
     /**
      * Converts an object of {option: value} to an array (option, value) of command-line arguments.
      * - Internaly uses [`dargs`](https://github.com/sindresorhus/dargs) with custom improvements:
-     *   - Add check for spaces in keys and throws if any found
+     *   - Added check for spaces in options names and throws if any found
      *   - Quotes values containing spaces
-     * - Supports positional arguments (`_`)
-     * - Supports separated arguments (`--`)
+     * - Supports:
+     *   - Positional arguments (`_`)
+     *   - Separated arguments (`--`)
+     *   - Any string-named argument
      * 
      * @protected
      * @static
@@ -123,8 +141,7 @@ export default class BaseCliWrapper {
         if (TypeUtils.isUndefined(options)) return [];
         
         Object.keys(options).forEach(key => {
-            // [TODO] Use constants here...
-            if (key !== '_' && key !== '--' && key.includes(' ')) {
+            if (key !== POSITIONAL_OPTIONS_KEY && key !== SEPARATED_OPTIONS_KEY && key.includes(' ')) {
                 throw new Error(`Option key "${key}" contains spaces, which is not supported for command-line arguments`);
             }
         });
@@ -132,8 +149,8 @@ export default class BaseCliWrapper {
         /** @type {dargsTypes.ConvertedOptions} */
         const convertedOptions = {};
         Object.entries(options).forEach(([key, value]) => {
-            if ((key === '_' || key === '--') && TypeUtils.isString(value)) {
-                // [NOTE] dargs only supports array for _ and --, contrary to this wrapper...
+            // [NOTE] dargs only supports an array for _ and --, contrary to this wrapper...
+            if ((key === POSITIONAL_OPTIONS_KEY || key === SEPARATED_OPTIONS_KEY) && TypeUtils.isString(value)) {
                 convertedOptions[key] = [value];
                 return;
             }
