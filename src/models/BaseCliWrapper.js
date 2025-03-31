@@ -124,10 +124,12 @@ export default class BaseCliWrapper {
     /**
      * Converts an object of {option: value} to an array (option, value) of command-line arguments.
      * - Internaly uses [`dargs`](https://github.com/sindresorhus/dargs) with custom improvements:
-     *   - Add check for spaces in keys and throws if any found
+     *   - Added check for spaces in options names and throws if any found
      *   - Quotes values containing spaces
-     * - Supports positional arguments (`_`)
-     * - Supports separated arguments (`--`)
+     * - Supports:
+     *   - Positional arguments (`_`)
+     *   - Separated arguments (`--`)
+     *   - Any string-named argument
      * 
      * @protected
      * @static
@@ -147,8 +149,8 @@ export default class BaseCliWrapper {
         /** @type {dargsTypes.ConvertedOptions} */
         const convertedOptions = {};
         Object.entries(options).forEach(([key, value]) => {
+            // [NOTE] dargs only supports an array for _ and --, contrary to this wrapper...
             if ((key === POSITIONAL_OPTIONS_KEY || key === SEPARATED_OPTIONS_KEY) && TypeUtils.isString(value)) {
-                // [NOTE] dargs only supports array for _ and --, contrary to this wrapper...
                 convertedOptions[key] = [value];
                 return;
             }
