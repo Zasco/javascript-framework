@@ -30,11 +30,23 @@ type SingleOrArrayOption = StrLikeOption | ArrayOption;
 type PositionalOptions = {[POSITIONAL_OPTIONS_KEY]: SingleOrArrayOption;};
 
 /**
+ * @since alpha-7.8.0
+ * @see {@link dargsTypes.PositionalOptionsKey}
+ */
+export type PositionalOptionsKey = dargsTypes.PositionalOptionsKey;
+
+/**
  * The separated CLI options.
  * 
  * @since alpha-7.4.0
  */
 type SeparatedOptions = {[SEPARATED_OPTIONS_KEY]: SingleOrArrayOption;}
+
+/**
+ * @since alpha-7.8.0
+ * @see {@link dargsTypes.SeparatedOptionsKey}
+ */
+export type SeparatedOptionsKey = dargsTypes.SeparatedOptionsKey;
 
 /**
  * The named CLI options.
