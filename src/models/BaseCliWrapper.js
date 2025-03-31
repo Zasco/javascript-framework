@@ -37,7 +37,7 @@ export default class BaseCliWrapper {
     /**
      * Returns the complete CLI command with identifier.
      * 
-     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link BaseCliWrapper._getCommandStr} instead.
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link BaseCliWrapper._getCommandString} instead.
      * @protected
      * @static
      * @param {string} command The partial command
@@ -48,7 +48,7 @@ export default class BaseCliWrapper {
     }
 
     /**
-     * Returns the command string with the provided arguments.
+     * Returns the command's string with the provided {@link args|arguments}.
      * 
      * @since ${NEXT_VERSION}
      * @protected
@@ -56,7 +56,7 @@ export default class BaseCliWrapper {
      * @param {cliWrapperTypes.CliArgs} args
      * @returns {string}
      */
-    static _getCommandStr(args) {
+    static _getCommandString(args) {
         return `${this._CLI_COMMAND} ${args.join(' ')}`;
     }
 
@@ -106,7 +106,7 @@ export default class BaseCliWrapper {
      * - {@link execSync}
      */
     static _executeCommand(args, execOptions = undefined) {
-        const commandStr = this._getCommandStr(args);
+        const commandStr = this._getCommandString(args);
 
         return ErrorHandler.withErrorHandling(
             () => {
