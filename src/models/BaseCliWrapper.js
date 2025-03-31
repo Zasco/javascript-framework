@@ -7,7 +7,7 @@ import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framewo
 import * as cliWrapperTypes from '../types/cli-wrapper-types.js';
 import * as dargsTypes from '../types/dargs-types.js';
 
-import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/cli-wrapper.js'; 
+import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/cli-wrapper.js';
 
 /**
  * The base model for CLI wrappers.
@@ -148,7 +148,7 @@ export default class BaseCliWrapper {
         /** @type {dargsTypes.ConvertedOptions} */
         const convertedOptions = {};
         Object.entries(options).forEach(([key, value]) => {
-            // [NOTE] dargs only supports an array for _ and --, contrary to this wrapper...
+            // [NOTE] dargs only supports an array for "_" and "--", contrary to this wrapper...
             if ((key === POSITIONAL_OPTIONS_KEY || key === SEPARATED_OPTIONS_KEY) && TypeUtils.isString(value)) {
                 convertedOptions[key] = [value];
                 return;
