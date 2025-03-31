@@ -8,6 +8,8 @@ import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framewo
 import * as cliWrapperTypes from '../types/cli-wrapper-types.js';
 import * as dargsTypes from '../types/dargs-types.js';
 
+import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/cli-wrapper.js'; 
+
 /**
  * The base model for CLI wrappers.
  * 
@@ -137,8 +139,7 @@ export default class BaseCliWrapper {
         if (TypeUtils.isUndefined(options)) return [];
         
         Object.keys(options).forEach(key => {
-            // [TODO] Use constants here...
-            if (key !== '_' && key !== '--' && key.includes(' ')) {
+            if (key !== POSITIONAL_OPTIONS_KEY && key !== SEPARATED_OPTIONS_KEY && key.includes(' ')) {
                 throw new Error(`Option key "${key}" contains spaces, which is not supported for command-line arguments`);
             }
         });
@@ -146,7 +147,7 @@ export default class BaseCliWrapper {
         /** @type {dargsTypes.ConvertedOptions} */
         const convertedOptions = {};
         Object.entries(options).forEach(([key, value]) => {
-            if ((key === '_' || key === '--') && TypeUtils.isString(value)) {
+            if ((key === POSITIONAL_OPTIONS_KEY || key === SEPARATED_OPTIONS_KEY) && TypeUtils.isString(value)) {
                 // [NOTE] dargs only supports array for _ and --, contrary to this wrapper...
                 convertedOptions[key] = [value];
                 return;
