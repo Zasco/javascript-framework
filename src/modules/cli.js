@@ -1,10 +1,18 @@
 /** @since alpha-5.0.0 */
 export { default as BaseWrapper } from '../models/BaseCliWrapper.js';
 
-/** @since alpha-7.4.0 */
-export * as wrapperTypes from '../types/cli-wrapper-types.js';
-/** @since alpha-7.4.0 */
-export * as wrapperConstants from '../constants/cli-wrapper.js';
+import * as cliWrapperTypes from '../types/cli-wrapper-types.js';
+/**
+ * @since alpha-7.4.0
+ * @see {@link cliWrapperTypes}
+ */
+export const wrapperTypes = cliWrapperTypes;
+import * as cliWrapperConstants from '../constants/cli-wrapper.js';
+/**
+ * @since alpha-7.4.0
+ * @see {@link cliWrapperConstants}
+ */
+export const wrapperConstants = cliWrapperConstants;
 
 
 // Deprecated
