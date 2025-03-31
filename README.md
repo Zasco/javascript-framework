@@ -15,7 +15,7 @@ This process is also required on type definitions change.
 For more details on this `TypeScript`/`JavaScript` interoperability approach, see the related [documentation](https://github.com/Zasco/coding-utils/blob/a8.1.0/docs/ts-in-js.md) in [`coding-utils`](https://github.com/Zasco/coding-utils).
 
 ## Dependency Requirements
-`coding-utils` is a development dependency that's **required for production** functionality (see [build section](#build)). When installing this package as a dependency in your project, `coding-utils` won't be automatically installed as it's defined as a "*development dependency*".
+`coding-utils` is a development dependency that is **required for production** functionality (see [build section](#build)). When installing this package as a dependency in your project, `coding-utils` won't be automatically installed as it's defined as a "*development dependency*".
 
 Additionally, even if it were a "*regular dependency*", *Git* dependencies don't benefit from *npm*'s version resolution like registry packages do. If your project or its dependencies require different versions of `coding-utils`, only one version will be installed (typically the one directly specified in the root `package.json`).
 
@@ -76,4 +76,4 @@ npm verbose cwd <root project path>
 - Improve `PackageJsonHelper.checkConfigFileExists()` to traverse up the directory tree.
 - Generate the `exports` section of the `package.json` accordingly to the `src/modules/` directory.
 - In a **CLI** wrapper, ensure tool version installed is supported by framework (config -> constants/types). Check tool version running is in the range of the constants.
-- Look into and implement [`type-fest`](https://github.com/sindresorhus/type-fest) (replace `util-types` with `type-fest`).
+- Look into and implement [`type-fest`](https://github.com/sindresorhus/type-fest) (replace [`util-types`](src/types/js/util-types.js) with it).
