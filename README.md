@@ -76,4 +76,11 @@ npm verbose cwd <root project path>
 - Improve `PackageJsonHelper.checkConfigFileExists()` to traverse up the directory tree.
 - Generate the `exports` section of the `package.json` accordingly to the `src/modules/` directory.
 - In a **CLI** wrapper, ensure tool version installed is supported by framework (config -> constants/types). Check tool version running is in the range of the constants.
-- Look into and implement [`type-fest`](https://github.com/sindresorhus/type-fest) (replace [`util-types`](src/types/js/util-types.js) with it).
+- Look into and implement [`type-fest`](https://github.com/sindresorhus/type-fest) (replace `util-types` with `type-fest`).
+
+#### ErrorHandler & LogHelper
+- Make `ErrorHandler` somehow configurable
+- Make `LogHelper` instantiable so you can have multiple registries of loggers (ex.: one for errors and one for debug)
+
+#### **CLI** Wrapper
+- Add and implement `command` and `subcommand` models for better OOP design.
