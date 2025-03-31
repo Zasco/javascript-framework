@@ -60,6 +60,9 @@ npm verbose cwd <root project path>
 #### **alpha-8.X.X**
 - Move the [`Build`](#build) section of `README` to a reusable common location.
 
+#### **alpha-9.0.0**
+- Rename package to use `@zasco/` scope and publish to registry to enable version resolution.
+
 ### Backlog
 - Implement error handling in the `Action` model through `ErrorHandler`.
 - Fix type definitions
