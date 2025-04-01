@@ -1,5 +1,25 @@
+import { ExecSyncOptions, execSync } from 'child_process';
+
 import * as dargsTypes from './dargs-types.d.ts';
 import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/dargs.js';
+
+/**
+ * The process options for `_execute()`.
+ * 
+ * @see {@link ExecSyncOptions}
+ * @since alpha-7.9.0
+ */
+
+export type ExecuteProcessOptions = ExecSyncOptions;
+
+/**
+ * The return of `_execute()`.
+ * 
+ * @see {@link execSync}
+ * @since alpha-7.9.0
+ */
+export type ExecuteReturn = ReturnType<typeof execSync>;
+
 
 /**
  * The type of the string-like options.

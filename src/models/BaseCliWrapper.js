@@ -1,4 +1,3 @@
-import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 import * as dargs from 'dargs';
 
@@ -99,8 +98,8 @@ export default class BaseCliWrapper {
      * @protected
      * @static
      * @param {cliWrapperTypes.CliArgs} args The command arguments
-     * @param {childProcess.ExecSyncOptions} [execOptions] The process execution options
-     * @returns {Buffer | string} The result of the command (if using `stdio: pipe` in {@link execOptions})
+     * @param {cliWrapperTypes.ExecuteProcessOptions} [execOptions] The process execution options
+     * @returns {cliWrapperTypes.ExecuteReturn} The output of the command
      * @throws If an error happens during execution (see {@link ErrorHandler.withErrorHandling}). The original error may come from:
      * - An unexpected error
      * - {@link execSync}
@@ -193,7 +192,7 @@ export default class BaseCliWrapper {
      * @static
      * @param {string} subcommand
      * @param {cliWrapperTypes.CliOptions} [cmdOptions]
-     * @param {childProcess.ExecSyncOptions} [execOptions]
+     * @param {cliWrapperTypes.ExecuteProcessOptions} [execOptions]
      * @returns {ReturnType<BaseCliWrapper._executeCommand>}
      */
     static _executeSubcommand(subcommand, cmdOptions = {}, execOptions = undefined) {

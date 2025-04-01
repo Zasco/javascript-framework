@@ -1,19 +1,19 @@
 {
   "name": "javascript-framework",
-  "version": "1.0.0-alpha7.8.0",
+  "version": "1.0.0-alpha7.9.0",
   "type": "module",
   "main": "index.js",
   "exports": {
     ".": "./index.js",
-    "./module/core": "./src/modules/core.js",
-    "./module/error": "./src/modules/error.js",
-    "./module/log": "./src/modules/log.js",
-    "./module/fs": "./src/modules/fs.js",
-    "./module/cli": "./src/modules/cli.js",
-    "./module/git": "./src/modules/git.js",
-    "./module/packageJson": "./src/modules/packageJson.js",
-    "./module/npm": "./src/modules/npm.js",
-    "./module/action": "./src/modules/action.js"
+    "./module/core": "./api/core.js",
+    "./module/error": "./api/error.js",
+    "./module/log": "./api/log.js",
+    "./module/fs": "./api/fs.js",
+    "./module/cli": "./api/cli.js",
+    "./module/git": "./api/git.js",
+    "./module/packageJson": "./api/packageJson.js",
+    "./module/npm": "./api/npm.js",
+    "./module/action": "./api/action.js"
   },
   "author": "Zasco",
   "engines": {

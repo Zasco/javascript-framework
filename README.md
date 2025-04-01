@@ -45,9 +45,13 @@ npm verbose cwd <root project path>
 
 ## Roadmap
 ### Planned
+#### **alpha-7.X.X**
+- Move the [`Build`](#build) section of `README` to a reusable common location.
+- Add feature documentation about `BaseCliWrapper`.
+- Migrate **CLI** wrapper types to simply **CLI** types and re-export `cliOptions` and `cliArgs` in wrapper types.
+
 #### **alpha-8.0.0**
 - Migrate CLI wrappers and features to a dedicated package.
-- Migrate to API exports (see `cli-wrappers` for example).
 
 #### **alpha-8.1.0**
 - Use the `FileSystemPath` model where applicable.
@@ -56,11 +60,6 @@ npm verbose cwd <root project path>
   - A `ProcessHelper` for common process operations
   - A `FileHelper` for common file operations (ex.: check file exists (used in `PackageJsonHelper`))
   - A `StringUtils` for string manipulations like uppercase/lowercase.
-
-#### **alpha-8.X.X**
-- Move the [`Build`](#build) section of `README` to a reusable common location.
-- Add feature documentation about `BaseCliWrapper`.
-- Migrate **CLI** wrapper types to simply **CLI** types and re-export `cliOptions` and `cliArgs` in wrapper types.
 
 #### **alpha-9.0.0**
 - Rename package to use `@zasco/` scope and publish to registry to enable version resolution.
