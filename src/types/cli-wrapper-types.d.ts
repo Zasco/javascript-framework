@@ -9,7 +9,6 @@ import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/darg
  * @see {@link ExecSyncOptions}
  * @since ${NEXT_VERSION}
  */
-
 export type ExecuteProcessOptions = ExecSyncOptions;
 
 /**
