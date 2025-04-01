@@ -23,7 +23,7 @@ export {
 
   /**
    * @since alpha-5.0.0
-   * @deprecated alpha-6.0.0 Use {@link EXPANDED_JS_TYPES} instead
+   * @deprecated alpha-6.0.0; Will be removed in `alpha-8.0.0`; Use {@link EXPANDED_JS_TYPES} instead
    */
   EXPANDED_JS_TYPES as EXPANDED_TYPES, 
 }
@@ -35,7 +35,7 @@ export const types = {
   
   /**
    * @since alpha-5.0.0
-   * @deprecated alpha-6.0.0 Use {@link expandedJsTypes} instead
+   * @deprecated alpha-6.0.0; Will be removed in `alpha-8.0.0`; Use {@link expandedJsTypes} instead
    */
   expandedTypes: expandedJsTypes, 
 }
