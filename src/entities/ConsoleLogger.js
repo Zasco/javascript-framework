@@ -10,14 +10,15 @@ import Logger from '../interfaces/Logger.js';
 export default class ConsoleLogger extends Logger {
     /**
      * @inheritdoc
-     * @see {@link Logger}
+     * @see {@link Logger.log}
+     * @param {Parameters<InstanceType<typeof Logger>['log']>} params
+     * @returns {ReturnType<InstanceType<typeof Logger>['log']>}
      */
-    // @ts-expect-error The parameters types are inherited from the parent class.
-    log(message, level) {
+    log(...[message, level]) {
         const logFunction = this.getLogFunctionForLogLevel(level);
         if (message instanceof Error) message = ErrorUtils.getDetailedErrMsg(message);
         logFunction(message);
-    };
+    }
 
     /**
      * Returns the log function for a given {@link LOG_LEVELS}.
@@ -44,5 +45,5 @@ export default class ConsoleLogger extends Logger {
             default:
                 return console.log;
         }
-    };
+    }
 };
