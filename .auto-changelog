@@ -1,5 +1,5 @@
 {
-  "template": "node_modules/coding-utils/config/templates/auto-changelog.hbs",
+  "template": "node_modules/coding-utils/commons/config/templates/auto-changelog.hbs",
   "commitLimit": false,
   "hideCredit": true,
   "remote": "GitHub",
