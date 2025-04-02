@@ -18,7 +18,7 @@ export default class ConsoleLogger extends Logger {
         const logFunction = this.getLogFunctionForLogLevel(level);
         if (message instanceof Error) message = ErrorUtils.getDetailedErrMsg(message);
         logFunction(message);
-    };
+    }
 
     /**
      * Returns the log function for a given {@link LOG_LEVELS}.
@@ -45,5 +45,5 @@ export default class ConsoleLogger extends Logger {
             default:
                 return console.log;
         }
-    };
+    }
 };
