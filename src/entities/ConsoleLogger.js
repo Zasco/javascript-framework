@@ -10,7 +10,7 @@ import Logger from '../interfaces/Logger.js';
 export default class ConsoleLogger extends Logger {
     /**
      * @inheritdoc
-     * @see {@link Logger}
+     * @see {@link Logger.log}
      * @param {Parameters<InstanceType<typeof Logger>['log']>} params
      * @returns {ReturnType<InstanceType<typeof Logger>['log']>}
      */
