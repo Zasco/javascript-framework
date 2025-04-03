@@ -1,4 +1,3 @@
-
 /**
  * Type definitions for JavaScript type literals.
  * These types represent the string literals returned by the JavaScript `typeof` operator.
