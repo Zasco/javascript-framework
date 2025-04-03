@@ -3,6 +3,7 @@
         "module": "NodeNext",
         "target": "ES2022",
         "moduleResolution": "nodenext",
+
         "checkJs": true,
         "strictNullChecks": true,
         "noImplicitAny": true,
@@ -13,5 +14,6 @@
         "src/**/*",
         "api/**/*",
         "tests/**/*",
+        "./index.js",
     ]
 }

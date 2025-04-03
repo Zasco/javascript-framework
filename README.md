@@ -84,4 +84,4 @@ npm verbose cwd <root project path>
 - Make `LogHelper` instantiable so you can have multiple registries of loggers (ex.: one for errors and one for debug)
 
 #### **CLI** Wrapper
-- Add and implement `command` and `subcommand` models for better OOP design.
+- Add and implement `command` and `subcommand` models for better OOP design. Make it somehow wrappers arround [`commander`](https://github.com/tj/commander.js)'s [`Command` model](https://github.com/tj/commander.js/blob/master/lib/command.js).
