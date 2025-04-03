@@ -92,9 +92,9 @@ export default class PackageJsonHelper {
      */
     static checkConfigFileExists(directory) {
         const directoryStr = String(directory);
-        const packageJsonPath = path.join(directoryStr, this.FILE_NAME);
+        const packageJsonPath = path.join(directoryStr, DEFAULT_FILE_NAME);
         
-        if (!fs.existsSync(packageJsonPath)) throw new Error(`No ${this.FILE_NAME} found in ${directoryStr}`);
+        if (!fs.existsSync(packageJsonPath)) throw new Error(`No ${DEFAULT_FILE_NAME} found in ${directoryStr}`);
 
         return true;
     }
@@ -130,8 +130,8 @@ export default class PackageJsonHelper {
     static isValidConfig(packageConfig) {
         return packageConfig !== undefined 
             && typeof packageConfig === 'object' 
-            && packageConfig.hasOwnProperty(this.NAME_KEY) 
-            && packageConfig.hasOwnProperty(this.VERSION_KEY)
+            && packageConfig.hasOwnProperty(DEFAULT_NAME_KEY) 
+            && packageConfig.hasOwnProperty(DEFAULT_VERSION_KEY)
         ;
     }
 
@@ -145,7 +145,7 @@ export default class PackageJsonHelper {
      * @returns {string}
      */
     static getName(packageConfig) {
-        return packageConfig[this.NAME_KEY];
+        return packageConfig[DEFAULT_NAME_KEY];
     }
 
     /**
@@ -158,6 +158,6 @@ export default class PackageJsonHelper {
      * @returns {string}
      */
     static getVersion(packageConfig) {
-        return packageConfig[this.VERSION_KEY];
+        return packageConfig[DEFAULT_VERSION_KEY];
     }
 };
