@@ -8,7 +8,7 @@
 export const DEFAULT_FILE_NAME = 'package.json';
     
 /** @since ${NEXT_VERSION} */
-export const DEFAULT_NAME_KEY = 'name';
+export const NAME_KEY = 'name';
 
 /** @since ${NEXT_VERSION} */
-export const DEFAULT_VERSION_KEY = 'version';
+export const VERSION_KEY = 'version';

@@ -6,7 +6,7 @@ import { FileSystemPath } from 'javascript-framework/module/fs';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
 import * as packageJsonTypes from '../types/package-json.js';
-import { DEFAULT_FILE_NAME, DEFAULT_NAME_KEY, DEFAULT_VERSION_KEY} from '../constants/package-json.js';
+import { DEFAULT_FILE_NAME, NAME_KEY, VERSION_KEY} from '../constants/package-json.js';
 
 /**
  * @since alpha-3.0.0
@@ -22,22 +22,22 @@ export default class PackageJsonHelper {
     static _FILE_NAME = DEFAULT_FILE_NAME;
     
     /**
-     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_NAME_KEY} instead.
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link NAME_KEY} instead.
      * @see {@link PackageJsonHelper.NAME_KEY}
      * @protected
      * @static
      * @type {string}
      */
-    static _NAME_KEY = DEFAULT_NAME_KEY;
+    static _NAME_KEY = NAME_KEY;
     
     /**
-     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_VERSION_KEY} instead.
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link VERSION_KEY} instead.
      * @see {@link PackageJsonHelper.VERSION_KEY}
      * @protected
      * @static
      * @type {string}
      */
-    static _VERSION_KEY = DEFAULT_VERSION_KEY;
+    static _VERSION_KEY = VERSION_KEY;
     
     /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
@@ -130,8 +130,8 @@ export default class PackageJsonHelper {
     static isValidConfig(packageConfig) {
         return packageConfig !== undefined 
             && typeof packageConfig === 'object' 
-            && packageConfig.hasOwnProperty(DEFAULT_NAME_KEY) 
-            && packageConfig.hasOwnProperty(DEFAULT_VERSION_KEY)
+            && packageConfig.hasOwnProperty(NAME_KEY) 
+            && packageConfig.hasOwnProperty(VERSION_KEY)
         ;
     }
 
@@ -145,7 +145,7 @@ export default class PackageJsonHelper {
      * @returns {string}
      */
     static getName(packageConfig) {
-        return packageConfig[DEFAULT_NAME_KEY];
+        return packageConfig[NAME_KEY];
     }
 
     /**
@@ -158,6 +158,6 @@ export default class PackageJsonHelper {
      * @returns {string}
      */
     static getVersion(packageConfig) {
-        return packageConfig[DEFAULT_VERSION_KEY];
+        return packageConfig[VERSION_KEY];
     }
 };
