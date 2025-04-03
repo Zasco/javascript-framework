@@ -1,4 +1,12 @@
-/** @since alpha-5.0.0 */
-export * as types from '../src/models/Action.js';
-/** @since alpha-5.0.0 */
-export { default as Action } from '../src/models/Action.js';
+import * as actionTypes from '../src/models/Action.js';
+/**
+ * @since alpha-5.0.0
+ * @see {@link actionTypes}
+ */
+export const types = actionTypes;
+import BaseAction from '../src/models/Action.js';
+/**
+ * @since alpha-5.0.0
+ * @see {@link BaseAction}
+ */
+export const Action = BaseAction;
