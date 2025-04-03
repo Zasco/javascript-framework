@@ -27,5 +27,6 @@ export type Schema = {
  * The type of a `package.json` file.
  * 
  * @since alpha-3.0.0
+ * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`. Use {@link Schema} instead.
  */
 export type PackageJson = Schema;
