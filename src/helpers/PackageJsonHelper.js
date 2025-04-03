@@ -6,6 +6,7 @@ import { FileSystemPath } from 'javascript-framework/module/fs';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
 import * as packageJsonTypes from '../types/package-json.js';
+import { DEFAULT_FILE_NAME, DEFAULT_NAME_KEY, DEFAULT_VERSION_KEY} from '../constants/package-json.js';
 
 /**
  * @since alpha-3.0.0
@@ -17,7 +18,7 @@ export default class PackageJsonHelper {
      * @static
      * @type {string}
      */
-    static _FILE_NAME = 'package.json';
+    static _FILE_NAME = DEFAULT_FILE_NAME;
     
     /**
      * @see {@link PackageJsonHelper.NAME_KEY}
@@ -25,7 +26,7 @@ export default class PackageJsonHelper {
      * @static
      * @type {string}
      */
-    static _NAME_KEY = 'name';
+    static _NAME_KEY = DEFAULT_NAME_KEY;
     
     /**
      * @see {@link PackageJsonHelper.VERSION_KEY}
@@ -33,7 +34,7 @@ export default class PackageJsonHelper {
      * @static
      * @type {string}
      */
-    static _VERSION_KEY = 'version';
+    static _VERSION_KEY = DEFAULT_VERSION_KEY;
     
     /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
