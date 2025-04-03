@@ -106,7 +106,7 @@ export default class PackageJsonHelper {
      * @readonly
      * @static
      * @param {string} packageConfigFilePath The path to the package config file.
-     * @returns {packageJsonTypes.PackageJson} The package config object.
+     * @returns {packageJsonTypes.Schema} The package config object.
      * @throws {Error} If the file does not exist or is not a valid JSON file.
      */
     static getPackageConfig(packageConfigFilePath) {
@@ -124,7 +124,7 @@ export default class PackageJsonHelper {
      * 
      * @since alpha-3.0.0
      * @static
-     * @param {packageJsonTypes.PackageJson} packageConfig The package config object.
+     * @param {packageJsonTypes.Schema} packageConfig The package config object.
      * @returns {boolean}
      */
     static isValidConfig(packageConfig) {
@@ -141,7 +141,7 @@ export default class PackageJsonHelper {
      * @since alpha-3.0.0
      * @readonly
      * @static
-     * @param {packageJsonTypes.PackageJson} packageConfig The package config object.
+     * @param {packageJsonTypes.Schema} packageConfig The package config object.
      * @returns {string}
      */
     static getName(packageConfig) {
@@ -154,7 +154,7 @@ export default class PackageJsonHelper {
      * @since alpha-3.0.0
      * @readonly
      * @static
-     * @param {packageJsonTypes.PackageJson} packageConfig
+     * @param {packageJsonTypes.Schema} packageConfig
      * @returns {string}
      */
     static getVersion(packageConfig) {
