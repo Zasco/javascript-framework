@@ -13,6 +13,7 @@ import { DEFAULT_FILE_NAME, DEFAULT_NAME_KEY, DEFAULT_VERSION_KEY} from '../cons
  */
 export default class PackageJsonHelper {
     /**
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_FILE_NAME} instead.
      * @see {@link PackageJsonHelper.FILE_NAME}
      * @protected
      * @static
@@ -21,6 +22,7 @@ export default class PackageJsonHelper {
     static _FILE_NAME = DEFAULT_FILE_NAME;
     
     /**
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_NAME_KEY} instead.
      * @see {@link PackageJsonHelper.NAME_KEY}
      * @protected
      * @static
@@ -29,6 +31,7 @@ export default class PackageJsonHelper {
     static _NAME_KEY = DEFAULT_NAME_KEY;
     
     /**
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_VERSION_KEY} instead.
      * @see {@link PackageJsonHelper.VERSION_KEY}
      * @protected
      * @static
@@ -44,6 +47,7 @@ export default class PackageJsonHelper {
     /**
      * The default package config file name.
      * 
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_FILE_NAME} instead.
      * @since alpha-3.0.0
      * @readonly
      * @static
@@ -56,6 +60,7 @@ export default class PackageJsonHelper {
      * The key holding the package name in the package config.
      * 
      * @since alpha-3.0.0
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_FILE_NAME} instead.
      * @readonly
      * @static
      */
@@ -67,6 +72,7 @@ export default class PackageJsonHelper {
      * The key holding the package version in the package config.
      * 
      * @since alpha-3.0.0
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_FILE_NAME} instead.
      * @readonly
      * @static
      */
