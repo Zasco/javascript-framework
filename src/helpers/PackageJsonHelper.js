@@ -5,35 +5,39 @@ import { traits } from 'javascript-framework/module/core';
 import { FileSystemPath } from 'javascript-framework/module/fs';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
-import * as packageJsonTypes from '../types/js/package-json-types.js';
+import * as packageJsonTypes from '../types/package-json.def.js';
+import { DEFAULT_FILE_NAME, NAME_KEY, VERSION_KEY} from '../constants/package-json.js';
 
 /**
  * @since alpha-3.0.0
  */
 export default class PackageJsonHelper {
     /**
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_FILE_NAME} instead.
      * @see {@link PackageJsonHelper.FILE_NAME}
      * @protected
      * @static
      * @type {string}
      */
-    static _FILE_NAME = 'package.json';
+    static _FILE_NAME = DEFAULT_FILE_NAME;
     
     /**
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link NAME_KEY} instead.
      * @see {@link PackageJsonHelper.NAME_KEY}
      * @protected
      * @static
      * @type {string}
      */
-    static _NAME_KEY = 'name';
+    static _NAME_KEY = NAME_KEY;
     
     /**
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link VERSION_KEY} instead.
      * @see {@link PackageJsonHelper.VERSION_KEY}
      * @protected
      * @static
      * @type {string}
      */
-    static _VERSION_KEY = 'version';
+    static _VERSION_KEY = VERSION_KEY;
     
     /** @throws If instantiated (see {@link traits.SingletonTrait.singletonConstructor}) */
     constructor() {
@@ -43,6 +47,7 @@ export default class PackageJsonHelper {
     /**
      * The default package config file name.
      * 
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_FILE_NAME} instead.
      * @since alpha-3.0.0
      * @readonly
      * @static
@@ -55,6 +60,7 @@ export default class PackageJsonHelper {
      * The key holding the package name in the package config.
      * 
      * @since alpha-3.0.0
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_FILE_NAME} instead.
      * @readonly
      * @static
      */
@@ -66,6 +72,7 @@ export default class PackageJsonHelper {
      * The key holding the package version in the package config.
      * 
      * @since alpha-3.0.0
+     * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_FILE_NAME} instead.
      * @readonly
      * @static
      */
@@ -85,9 +92,9 @@ export default class PackageJsonHelper {
      */
     static checkConfigFileExists(directory) {
         const directoryStr = String(directory);
-        const packageJsonPath = path.join(directoryStr, this.FILE_NAME);
+        const packageJsonPath = path.join(directoryStr, DEFAULT_FILE_NAME);
         
-        if (!fs.existsSync(packageJsonPath)) throw new Error(`No ${this.FILE_NAME} found in ${directoryStr}`);
+        if (!fs.existsSync(packageJsonPath)) throw new Error(`No ${DEFAULT_FILE_NAME} found in ${directoryStr}`);
 
         return true;
     }
@@ -99,7 +106,7 @@ export default class PackageJsonHelper {
      * @readonly
      * @static
      * @param {string} packageConfigFilePath The path to the package config file.
-     * @returns {packageJsonTypes.PackageJson} The package config object.
+     * @returns {packageJsonTypes.Schema} The package config object.
      * @throws {Error} If the file does not exist or is not a valid JSON file.
      */
     static getPackageConfig(packageConfigFilePath) {
@@ -117,14 +124,14 @@ export default class PackageJsonHelper {
      * 
      * @since alpha-3.0.0
      * @static
-     * @param {packageJsonTypes.PackageJson} packageConfig The package config object.
+     * @param {packageJsonTypes.Schema} packageConfig The package config object.
      * @returns {boolean}
      */
     static isValidConfig(packageConfig) {
         return packageConfig !== undefined 
             && typeof packageConfig === 'object' 
-            && packageConfig.hasOwnProperty(this.NAME_KEY) 
-            && packageConfig.hasOwnProperty(this.VERSION_KEY)
+            && packageConfig.hasOwnProperty(NAME_KEY) 
+            && packageConfig.hasOwnProperty(VERSION_KEY)
         ;
     }
 
@@ -134,11 +141,11 @@ export default class PackageJsonHelper {
      * @since alpha-3.0.0
      * @readonly
      * @static
-     * @param {packageJsonTypes.PackageJson} packageConfig The package config object.
+     * @param {packageJsonTypes.Schema} packageConfig The package config object.
      * @returns {string}
      */
     static getName(packageConfig) {
-        return packageConfig[this.NAME_KEY];
+        return packageConfig[NAME_KEY];
     }
 
     /**
@@ -147,10 +154,10 @@ export default class PackageJsonHelper {
      * @since alpha-3.0.0
      * @readonly
      * @static
-     * @param {packageJsonTypes.PackageJson} packageConfig
+     * @param {packageJsonTypes.Schema} packageConfig
      * @returns {string}
      */
     static getVersion(packageConfig) {
-        return packageConfig[this.VERSION_KEY];
+        return packageConfig[VERSION_KEY];
     }
 };

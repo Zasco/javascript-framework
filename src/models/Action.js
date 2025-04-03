@@ -26,7 +26,7 @@ export default class Action {
             /** @see {@link Action._isDryRun} */
             isDryRun: false, 
         }
-    };
+    }
 
     /**
      * Storage for the merged configuration.
@@ -50,7 +50,7 @@ export default class Action {
     /** @throws If instantiated (see {@link traits.AbstractClassTrait.abstractClassConstructor}) */
     constructor() {
         traits.AbstractClassTrait.abstractClassConstructor.call(this);
-    };
+    }
 
     /**
      * Executes the provided function only if not in `dry-run` mode.
