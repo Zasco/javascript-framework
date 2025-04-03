@@ -22,3 +22,10 @@ export type Schema = {
     [DEFAULT_NAME_KEY]: FieldValue, 
     [DEFAULT_VERSION_KEY]: FieldValue, 
 } & Record<KeyName, FieldValue>;
+
+/**
+ * The type of a `package.json` file.
+ * 
+ * @since alpha-3.0.0
+ */
+export type PackageJson = Schema;
