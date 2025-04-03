@@ -5,7 +5,7 @@ import { traits } from 'javascript-framework/module/core';
 import { FileSystemPath } from 'javascript-framework/module/fs';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
-import * as packageJsonTypes from '../types/package-json.js';
+import * as packageJsonTypes from '../types/package-json.def.js';
 import { DEFAULT_FILE_NAME, NAME_KEY, VERSION_KEY} from '../constants/package-json.js';
 
 /**

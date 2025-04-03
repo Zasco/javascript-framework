@@ -1,4 +1,4 @@
-import * as packageJsonTypes from '../src/types/package-json.js';
+import * as packageJsonTypes from '../src/types/package-json.def.js';
 /**
  * @since alpha-5.0.0
  * @see {@link packageJsonTypes}
