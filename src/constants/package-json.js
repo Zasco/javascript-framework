@@ -1,14 +1,14 @@
 /**
  * Constants for the `package.json` file.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.10.0
  */
 
-/** @since ${NEXT_VERSION} */
+/** @since alpha-7.10.0 */
 export const DEFAULT_FILE_NAME = 'package.json';
     
-/** @since ${NEXT_VERSION} */
+/** @since alpha-7.10.0 */
 export const NAME_KEY = 'name';
 
-/** @since ${NEXT_VERSION} */
+/** @since alpha-7.10.0 */
 export const VERSION_KEY = 'version';
