@@ -1,3 +1,10 @@
+/**
+ * A test to ensure all expected exports from the 'javascript-framework/module' are available.
+ * Simply uses IDE validation.
+ * 
+ * @since alpha-7.9.0
+ */
+
 // action.js exports
 import { types as actionTypes } from 'javascript-framework/module/action';
 import { Action } from 'javascript-framework/module/action';
