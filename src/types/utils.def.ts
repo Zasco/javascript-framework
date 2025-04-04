@@ -1,13 +1,14 @@
 /**
  * Utility type definitions.
  * 
- * @since alpha-6.0.0
+ * @since ${NEXT_VERSION}
  */
 
 /**
  * Makes all properties in `T` mutable (removes `readonly`). Top-level only.
  * 
- * @since alpha-6.0.0
- * @template T
- * @typedef {{-readonly [K in keyof T]: T[K]}} Mutable
+ * @since ${NEXT_VERSION}
  */
+export type Mutable<T> = {
+    -readonly [K in keyof T]: T[K]
+};

@@ -4,7 +4,7 @@
  * @since alpha-6.0.0
  */
 
-import * as utilTypes from './util-types.js';
+import * as utilTypes from '../utils.def.js';
 import * as cliWrapperTypes from '../cli-wrapper-types.js';
 import * as gitTypes from './git-types.js';
 
