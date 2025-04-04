@@ -1,4 +1,4 @@
-export * as coreModule from './api/core.js';
+export * as coreModule from './api/core/index.js';
 export * as errorModule from './api/error.js';
 export * as logModule from './api/log.js';
 export * as fsModule from './api/fs.js';

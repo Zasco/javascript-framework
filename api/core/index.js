@@ -1,14 +1,11 @@
-import AbstractClassTrait from '../src/traits/AbstractClassTrait.js';
-import SingletonTrait from '../src/traits/SingletonTrait.js';
+import AbstractClassTrait from '../../src/traits/AbstractClassTrait.js';
+import SingletonTrait from '../../src/traits/SingletonTrait.js';
 
-import * as expandedJsTypes from '../src/types/js/expanded-js-types.js';
-import * as utilTypes from '../src/types/utils.def.js';
+import * as SPECIAL_CHARS_CONSTANTS from '../../src/constants/special-chars.js';
+import * as JS_TYPES_CONSTANTS from '../../src/constants/js-types.js';
+import * as EXPANDED_JS_TYPES_CONSTANTS from '../../src/constants/expanded-js-types.js';
 
-import * as SPECIAL_CHARS_CONSTANTS from '../src/constants/special-chars.js';
-import * as JS_TYPES_CONSTANTS from '../src/constants/js-types.js';
-import * as EXPANDED_JS_TYPES_CONSTANTS from '../src/constants/expanded-js-types.js';
-
-import TypeUtilsClass from '../src/utils/TypeUtils.js';
+import TypeUtilsClass from '../../src/utils/TypeUtils.js';
 
 // Types
 

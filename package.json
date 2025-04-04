@@ -5,7 +5,7 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
-    "./module/core": "./api/core.js",
+    "./module/core": "./api/core/index.js",
     "./module/error": "./api/error.js",
     "./module/log": "./api/log.js",
     "./module/fs": "./api/fs.js",
