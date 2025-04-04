@@ -4,6 +4,7 @@ import * as actionTypes from '../src/models/Action.js';
  * @see {@link actionTypes}
  */
 export const types = actionTypes;
+
 import BaseAction from '../src/models/Action.js';
 /**
  * @since alpha-5.0.0
