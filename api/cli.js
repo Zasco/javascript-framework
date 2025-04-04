@@ -5,7 +5,7 @@ import BaseCliWrapper from '../src/models/BaseCliWrapper.js';
  */
 export const BaseWrapper = BaseCliWrapper;
 
-import * as cliWrapperTypes from '../src/types/cli-wrapper-types.js';
+import * as cliWrapperTypes from '../src/types/cli-wrapper-types.def.js';
 /**
  * @since alpha-7.4.0
  * @see {@link cliWrapperTypes}
@@ -22,7 +22,7 @@ export const wrapperConstants = cliWrapperConstants;
 
 // Deprecated
 
-import * as dargsTypesImport from '../src/types/dargs-types.js';
+import * as dargsTypesImport from '../src/types/dargs-types.def.js';
 /**
  * @since alpha-7.2.0
  * @deprecated alpha-7.10.1; Will be removed in `alpha-8.0.0`; No replacement, stop using.

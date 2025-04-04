@@ -6,7 +6,7 @@
  * @since alpha-7.2.0
  */
 
-import * as dargsTypes from '../types/dargs-types.js';
+import * as dargsTypes from '../types/dargs-types.def.js';
 
 /**
  * @since alpha-7.2.0
