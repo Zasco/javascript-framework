@@ -2,6 +2,7 @@ import AbstractClassTrait from '../src/traits/AbstractClassTrait.js';
 import SingletonTrait from '../src/traits/SingletonTrait.js';
 
 import * as expandedJsTypes from '../src/types/js/expanded-js-types.js';
+import * as utilTypes from '../src/types/utils.def.js';
 
 import * as SPECIAL_CHARS_CONSTANTS from '../src/constants/special-chars.js';
 import * as JS_TYPES_CONSTANTS from '../src/constants/js-types.js';
@@ -44,6 +45,8 @@ export const EXPANDED_TYPES = EXPANDED_JS_TYPES_CONSTANTS;
 export const types = {
   /** @since alpha-6.0.0 */
   expandedJsTypes, 
+  /** @since ${NEXT_VERSION} */
+  utilTypes, 
   
   /**
    * @since alpha-5.0.0
