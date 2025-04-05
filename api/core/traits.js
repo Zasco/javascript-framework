@@ -7,4 +7,4 @@ export {
 
     /** @since alpha-5.0.0 */
     SingletonTrait,
-}
+};

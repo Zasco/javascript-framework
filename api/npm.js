@@ -1,21 +1,25 @@
-import * as npmTypes from '../src/types/npm.def.js';
-/**
- * @since alpha-5.0.0
- * @see {@link npmTypes}
- */
-export const types = npmTypes;
+import * as types from '../src/types/npm.def.js';
+import * as constants from '../src/constants/npm.js';
+import Wrapper from '../src/wrappers/NpmCliWrapper.js';
 
-import * as npmConstants from '../src/constants/npm.js';
-/**
- * @since alpha-5.0.0
- * @see {@link npmConstants}
- */
-export const constants = npmConstants;
+export {
+    /**
+     * @since alpha-5.0.0
+     * @see {@link types}
+     */
+    types,
+    
+    /**
+     * @since alpha-5.0.0
+     * @see {@link constants}
+     */
+    constants,
+    
+    /**
+     * @since alpha-5.0.0
+     * @see {@link Wrapper}
+     */
+    Wrapper,
+};
 
-import NpmCliWrapper from '../src/wrappers/NpmCliWrapper.js';
-/**
- * @since alpha-5.0.0
- * @see {@link NpmCliWrapper}
- */
-export const Wrapper = NpmCliWrapper;
 export default Wrapper;

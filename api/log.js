@@ -1,34 +1,37 @@
-import * as logLevelsConfig from '../src/config/LogLevelsConfig.js';
-/**
- * @since alpha-5.0.0
- * @see {@link logLevelsConfig}
- */
-export const types = logLevelsConfig;
+import * as types from '../src/config/LogLevelsConfig.js';
+import LOG_LEVELS from '../src/config/LogLevelsConfig.js';
+import Helper from '../src/helpers/LogHelper.js';
+import Logger from '../src/interfaces/Logger.js';
+import ConsoleLogger from '../src/entities/ConsoleLogger.js';
 
-import LOG_LEVELS_CONFIG from '../src/config/LogLevelsConfig.js';
-/**
- * @since alpha-5.0.0
- * @see {@link LOG_LEVELS_CONFIG}
- */
-export const LOG_LEVELS = LOG_LEVELS_CONFIG;
-
-import LogHelper from '../src/helpers/LogHelper.js';
-/**
- * @since alpha-5.0.0
- * @see {@link LogHelper}
- */
-export const Helper = LogHelper;
-
-import LoggerInterface from '../src/interfaces/Logger.js';
-/**
- * @since alpha-5.0.0
- * @see {@link LoggerInterface}
- */
-export const Logger = LoggerInterface;
-
-import ConsoleLoggerClass from '../src/entities/ConsoleLogger.js';
-/**
- * @since alpha-5.0.0
- * @see {@link ConsoleLoggerClass}
- */
-export const ConsoleLogger = ConsoleLoggerClass;
+export {
+    /**
+     * @since alpha-5.0.0
+     * @see {@link types}
+     */
+    types,
+    
+    /**
+     * @since alpha-5.0.0
+     * @see {@link LOG_LEVELS}
+     */
+    LOG_LEVELS,
+    
+    /**
+     * @since alpha-5.0.0
+     * @see {@link Helper}
+     */
+    Helper,
+    
+    /**
+     * @since alpha-5.0.0
+     * @see {@link Logger}
+     */
+    Logger,
+    
+    /**
+     * @since alpha-5.0.0
+     * @see {@link ConsoleLogger}
+     */
+    ConsoleLogger,
+};
