@@ -2,7 +2,7 @@ import * as childProcess from 'child_process';
 import { execSync } from 'child_process';
 
 import * as gitCliWrapperTypes from '../types/git-cli-wrapper.def.js';
-import * as gitConstants from '../constants/git-constants.js';
+import * as gitConstants from '../constants/git.js';
 import { traits } from 'javascript-framework/module/core';
 import { Handler as ErrorHandler} from 'javascript-framework/module/error';
 import { BaseWrapper as BaseCliWrapper } from 'javascript-framework/module/cli';

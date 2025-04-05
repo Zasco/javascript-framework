@@ -5,7 +5,7 @@ import * as npmTypes from '../src/types/npm.def.js';
  */
 export const types = npmTypes;
 
-import * as npmConstants from '../src/constants/npm-constants.js';
+import * as npmConstants from '../src/constants/npm.js';
 /**
  * @since alpha-5.0.0
  * @see {@link npmConstants}
