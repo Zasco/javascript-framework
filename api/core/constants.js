@@ -20,4 +20,4 @@ export {
      * @deprecated alpha-6.0.0 Use {@link EXPANDED_JS_TYPES} instead
      */
     EXPANDED_JS_TYPES as EXPANDED_TYPES,
-}
+};

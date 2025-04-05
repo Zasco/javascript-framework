@@ -16,4 +16,4 @@ export {
      * @deprecated alpha-6.0.0; Will be removed in `alpha-8.0.0`; Use {@link expandedJsTypes} instead.
      */
     expandedJsTypes as expandedTypes, 
-}
+};
