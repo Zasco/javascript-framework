@@ -4,7 +4,7 @@
  * @since alpha-3.0.0
  */
 
-import * as JsTypesLiterals from '../types/js/js-types-literals.js';
+import * as JsTypesLiterals from '../types/js-types-literals.def.js';
 
 /** @since alpha-3.0.0 */
 export const STRING = /** @type {JsTypesLiterals.String} */ (typeof String());
