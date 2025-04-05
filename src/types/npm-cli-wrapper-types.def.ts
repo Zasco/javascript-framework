@@ -1,4 +1,4 @@
-import * as npmTypes from './js/npm-types.js';
+import * as npmTypes from './npm-types.def.js';
 
 /**
  * The options to pass to `version()`.
