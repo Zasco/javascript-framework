@@ -1,4 +1,4 @@
-import * as npmTypes from '../src/types/npm-types.def.js';
+import * as npmTypes from '../src/types/npm.def.js';
 /**
  * @since alpha-5.0.0
  * @see {@link npmTypes}

@@ -5,8 +5,8 @@
  */
 
 import * as utilTypes from './utils.def.js';
-import * as cliWrapperTypes from './cli-wrapper-types.def.js';
-import * as gitTypes from './git-types.def.js';
+import * as cliWrapperTypes from './cli-wrapper.def.js';
+import * as gitTypes from './git.def.js';
 
 /**
  * The options to pass to `add()`.

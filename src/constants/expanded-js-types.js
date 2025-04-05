@@ -4,7 +4,7 @@
  * @since alpha-3.0.0
  */
 
-import * as expandedJSTypes from '../types/expanded-js-types.def.js';
+import * as expandedJSTypes from '../types/expanded-js.def.js';
 import * as JS_TYPES from './js-types.js';
 
 /**

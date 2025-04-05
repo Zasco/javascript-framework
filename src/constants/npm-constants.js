@@ -1,4 +1,4 @@
-import * as npmTypes from '../types/npm-types.def.js';
+import * as npmTypes from '../types/npm.def.js';
 
 
 // Commands

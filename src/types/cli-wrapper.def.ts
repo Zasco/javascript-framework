@@ -1,6 +1,6 @@
 import { ExecSyncOptions, execSync } from 'child_process';
 
-import * as dargsTypes from './dargs-types.def.js';
+import * as dargsTypes from './dargs.def.js';
 import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/dargs.js';
 
 /**
