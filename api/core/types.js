@@ -1,4 +1,4 @@
-import * as expandedJsTypes from '../../src/types/expanded-js-types.def.js';
+import * as expandedJsTypes from '../../src/types/expanded-js.def.js';
 import * as utilTypes from '../../src/types/utils.def.js';
 
 export {

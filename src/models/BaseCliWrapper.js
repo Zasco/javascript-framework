@@ -4,8 +4,8 @@ import * as dargs from 'dargs';
 import { traits, TypeUtils } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 
-import * as cliWrapperTypes from '../types/cli-wrapper-types.def.js';
-import * as dargsTypes from '../types/dargs-types.def.js';
+import * as cliWrapperTypes from '../types/cli-wrapper.def.js';
+import * as dargsTypes from '../types/dargs.def.js';
 
 import { POSITIONAL_OPTIONS_KEY, SEPARATED_OPTIONS_KEY } from '../constants/cli-wrapper.js'; 
 
