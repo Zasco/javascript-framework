@@ -11,25 +11,25 @@
  * The type of a `class instance` object.
  * 
  * @since alpha-3.0.0
- * @typedef {Object} ClassInstanceObject
  */
+export type ClassInstanceObject = Object;
 
 /**
  * The type of a `class` function.
  * 
  * @since alpha-3.0.0
- * @typedef {Function} ClassFunction
- */
+*/
+export type ClassFunction = Function;
 
 
 // Types literals
 
 /** 
  * @since alpha-6.0.0 
- * @typedef {'class-instance-object'} ClassInstanceObjectLiteral
  */
+export type ClassInstanceObjectLiteral = 'class-instance-object';
 
 /** 
  * @since alpha-6.0.0 
- * @typedef {'class-function'} ClassFunctionLiteral
  */
+export type ClassFunctionLiteral = 'class-function';
