@@ -7,8 +7,8 @@ import { BaseWrapper as BaseCliWrapper } from 'javascript-framework/module/cli';
 import { Utils as ErrorUtils, Handler as ErrorHandler } from 'javascript-framework/module/error';
 import { Helper as PackageJsonHelper } from 'javascript-framework/module/packageJson';
 
-import * as npmTypes from '../types/js/npm-types.js';
-import * as npmCliWrapperTypes from '../types/js/npm-cli-wrapper-types.js';
+import * as npmTypes from '../types/npm-types.def.js';
+import * as npmCliWrapperTypes from '../types/npm-cli-wrapper-types.def.js';
 import * as npmConstants from '../constants/npm-constants.js';
 
 /**

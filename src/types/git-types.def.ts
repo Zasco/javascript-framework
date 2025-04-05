@@ -12,23 +12,23 @@
  * The available commands.
  * 
  * @since alpha-6.0.0
- * @typedef {readonly [
- *  'add', 
- *  'commit', 
- *  'diff', 
- *  'push', 
- *  'rev-parse', 
- *  'tag', 
- *  'version', 
- * ]} Commands
  */
+export type Commands = readonly [
+    'add',
+    'commit',
+    'diff',
+    'push',
+    'rev-parse',
+    'tag',
+    'version',
+];
 
 /**
  * A single command.
  * 
  * @since alpha-6.0.0
- * @typedef {Commands[number]} Command
  */
+export type Command = Commands[number];
 
 
 // Subcommands
@@ -39,33 +39,33 @@
  * Boolean-typed CLI option for the `add` command.
  * 
  * @since alpha-6.0.0
- * @typedef {readonly [
-*   'all', 
-* ]} AddBooleanOptions
-*/
+ */
+export type AddBooleanOptions = readonly [
+    'all'
+];
 
 /**
  * The CLI options for the `add` command.
  * 
  * @since alpha-6.0.0
- * @typedef {readonly [
-*  ...AddBooleanOptions, 
-* ]} AddCliOptions
-*/
+ */
+export type AddCliOptions = readonly [
+    ...AddBooleanOptions
+];
 
 /**
 * A single CLI option for the `add` command.
 * 
 * @since alpha-6.0.0
-* @typedef {AddCliOptions[number]} AddCliOption
-*/
+ */
+export type AddCliOption = AddCliOptions[number];
 
 /**
 * The types of the `add` command options.
 * 
 * @since alpha-6.0.0
-* @typedef {Readonly<Record<AddBooleanOptions[number], boolean>>} AddOptionTypes
-*/
+ */
+export type AddOptionTypes = Readonly<Record<AddBooleanOptions[number], boolean>>;
 
 
 // `commit`
@@ -74,33 +74,33 @@
  * String-typed CLI option for the `commit` command.
  * 
  * @since alpha-6.0.0
- * @typedef {readonly [
- *   'message', 
- * ]} CommitStringOptions
  */
+export type CommitStringOptions = readonly [
+    'message'
+];
 
 /**
  * The CLI options for the `commit` command.
  * 
  * @since alpha-6.0.0
- * @typedef {readonly [
- *  ...CommitStringOptions, 
- * ]} CommitCliOptions
  */
+export type CommitCliOptions = readonly [
+    ...CommitStringOptions
+];
 
 /**
  * A single CLI option for the `commit` command.
  * 
  * @since alpha-6.0.0
- * @typedef {CommitCliOptions[number]} CommitCliOption
  */
+export type CommitCliOption = CommitCliOptions[number];
 
 /**
  * The types of the `commit` command options.
  * 
  * @since alpha-6.0.0
- * @typedef {Readonly<Record<CommitStringOptions[number], string>>} CommitOptionTypes
  */
+export type CommitOptionTypes = Readonly<Record<CommitStringOptions[number], string>>;
 
 
 // `diff`
@@ -109,34 +109,34 @@
  * Boolean-typed CLI option for the `diff` command.
  * 
  * @since alpha-6.0.0
- * @typedef {readonly [
- *   'cached', 
- *   'name-only', 
- * ]} DiffBooleanOptions
  */
+export type DiffBooleanOptions = readonly [
+    'cached',
+    'name-only',
+];
 
 /**
  * The CLI options for the `diff` command.
  * 
  * @since alpha-6.0.0
- * @typedef {readonly [
- *  ...DiffBooleanOptions, 
- * ]} DiffCliOptions
  */
+export type DiffCliOptions = readonly [
+    ...DiffBooleanOptions
+];
 
 /**
  * A single CLI option for the `diff` command.
  * 
  * @since alpha-6.0.0
- * @typedef {DiffCliOptions[number]} DiffCliOption
  */
+export type DiffCliOption = DiffCliOptions[number];
 
 /**
  * The types of the `diff` command options.
  * 
  * @since alpha-6.0.0
- * @typedef {Readonly<Record<DiffBooleanOptions[number], boolean>>} DiffOptionTypes
  */
+export type DiffOptionTypes = Readonly<Record<DiffBooleanOptions[number], boolean>>;
 
 
 // `rev-parse`
@@ -145,33 +145,33 @@
  * Boolean-typed CLI option for the `rev-parse` command.
  * 
  * @since alpha-6.0.0
- * @typedef {readonly [
- *   'is-inside-work-tree', 
-* ]} RevParseBooleanOptions
-*/
+ */
+export type RevParseBooleanOptions = readonly [
+    'is-inside-work-tree'
+];
 
 /**
 * The CLI options for the `rev-parse` command.
 * 
 * @since alpha-6.0.0
-* @typedef {readonly [
-*  ...RevParseBooleanOptions, 
-* ]} RevParseCliOptions
-*/
+ */
+export type RevParseCliOptions = readonly [
+    ...RevParseBooleanOptions
+];
 
 /**
 * A single CLI option for the `rev-parse` command.
 * 
 * @since alpha-6.0.0
-* @typedef {RevParseCliOptions[number]} RevParseCliOption
-*/
+ */
+export type RevParseCliOption = RevParseCliOptions[number];
 
 /**
 * The types of the `rev-parse` command options.
 * 
 * @since alpha-6.0.0
-* @typedef {Readonly<Record<RevParseBooleanOptions[number], boolean>>} RevParseOptionTypes
-*/
+ */
+export type RevParseOptionTypes = Readonly<Record<RevParseBooleanOptions[number], boolean>>;
 
 
 // `tag`
@@ -180,28 +180,28 @@
  * Array-typed CLI option for the `tag` command.
  * 
  * @since alpha-6.0.0
- * @typedef {readonly [
- *   'list', 
- * ]} TagArrayOptions
  */
+export type TagArrayOptions = readonly [
+    'list'
+];
 
 /**
  * The CLI options for the `tag` command.
  * 
  * @since alpha-6.0.0
- * @typedef {readonly [...TagArrayOptions]} TagCliOptions
  */
+export type TagCliOptions = readonly [...TagArrayOptions];
 
 /**
  * A single CLI option for the `tag` command.
  * 
  * @since alpha-6.0.0
- * @typedef {TagCliOptions[number]} TagCliOption
  */
+export type TagCliOption = TagCliOptions[number];
 
 /**
  * The types of the `tag` command options.
  * 
  * @since alpha-6.0.0
- * @typedef {Readonly<Record<TagArrayOptions[number], string[]>>} TagOptionTypes
  */
+export type TagOptionTypes = Readonly<Record<TagArrayOptions[number], string[]>>;
