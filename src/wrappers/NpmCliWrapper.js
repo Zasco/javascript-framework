@@ -9,7 +9,7 @@ import { Helper as PackageJsonHelper } from 'javascript-framework/module/package
 
 import * as npmTypes from '../types/npm.def.js';
 import * as npmCliWrapperTypes from '../types/npm-cli-wrapper.def.js';
-import * as npmConstants from '../constants/npm-constants.js';
+import * as npmConstants from '../constants/npm.js';
 
 /**
  * A wrapper to interact with `npm`.
