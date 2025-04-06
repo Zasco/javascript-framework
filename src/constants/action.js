@@ -9,6 +9,7 @@ import * as actionTypes from '../types/action.def.js';
 
 // Configuration keys
 // Defaulted
+
 /**
  * @since ${NEXT_VERSION}
  * @see {@link DEFAULT_CONFIG.isDryRun}
@@ -18,6 +19,7 @@ export const DRY_RUN_KEY = 'isDryRun';
 
 // Mandatory
 // None in base class.
+
 
 /**
  * The default configuration object.
