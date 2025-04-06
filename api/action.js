@@ -1,4 +1,4 @@
-import * as types from '../src/models/Action.js';
+import * as types from '../src/types/action-public.def.js';
 import * as constants from '../src/constants/action.js';
 import Action from '../src/models/Action.js';
 
