@@ -1,10 +1,9 @@
 /**
- * Public type definitions for the abstract {@link Action} model.
- * 
  * @since ${NEXT_VERSION}
+ * @see {@link actionTypes}
  */
 
-import type Action from "../models/Action.js";
+import type * as actionTypes from './action.def.js';
 
 import { 
     DeriveDefaultConfigSchema, 
