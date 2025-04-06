@@ -51,9 +51,9 @@ export type DeriveDefaultConfigSchema<DefaultConfigType> = utilTypes.WidenLitera
  * 
  * @since ${NEXT_VERSION}
  */
-export type DeriveExecuteConfigSchema<DefaultConfigSchema, MandatoryConfigSchema> = 
-    Partial<utilTypes.Mutable<DefaultConfigSchema>> 
-    & MandatoryConfigSchema
+export type DeriveExecuteConfigSchema<TDefaultConfigSchema, TMandatoryConfigSchema> = 
+    Partial<utilTypes.Mutable<TDefaultConfigSchema>> 
+    & TMandatoryConfigSchema
 ;
 
 /**
