@@ -5,7 +5,8 @@
  */
 
 /**
- * Makes all properties in `T` mutable (removes `readonly`). Top-level only.
+ * Makes all properties in `T` mutable (removes `readonly`).
+ * Top-level only.
  * 
  * @since ${NEXT_VERSION}
  */
