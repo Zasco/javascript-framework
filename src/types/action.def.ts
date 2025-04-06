@@ -25,7 +25,7 @@ export type ConfigKey = string;
  * 
  * @since ${NEXT_VERSION}
  */
-type ConfigValue = string | number | boolean | string[];
+type ConfigValue = string | number | boolean | object | string[];
 
 /**
  * The entries of a configuration schema.
