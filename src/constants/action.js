@@ -11,7 +11,8 @@ import * as actionTypes from '../types/action.def.js';
 // Defaulted
 /**
  * @since ${NEXT_VERSION}
- * @readonly
+ * @see {@link DEFAULT_CONFIG.isDryRun}
+ * @default DEFAULT_CONFIG.isDryRun
  */
 export const DRY_RUN_KEY = 'isDryRun';
 
@@ -24,12 +25,14 @@ export const DRY_RUN_KEY = 'isDryRun';
  * 
  * @since ${NEXT_VERSION}
  * @readonly
+ * @see {@link actionTypes.DefaultConfigSchema}
  */
 export const DEFAULT_CONFIG = Object.freeze({
     /**
      * If the action should be executed in `dry-run` mode.
      * 
      * @since ${NEXT_VERSION}
+     * @see {@link DRY_RUN_KEY}
      */
     [DRY_RUN_KEY]: false, 
 });
