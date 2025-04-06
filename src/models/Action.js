@@ -18,6 +18,7 @@ export default class Action {
      * @readonly
      * @static
      * @type {actionTypes.DefaultConfigSchema}
+     * @see {@link actionConstants.DEFAULT_CONFIG} & {@link actionTypes.DefaultConfigSchema}
      */
     static _DEFAULT_CONFIG = actionConstants.DEFAULT_CONFIG;
 
@@ -27,16 +28,16 @@ export default class Action {
      * @protected
      * @static
      * @type {actionTypes.CompleteConfigSchema}
+     * @see {@link actionTypes.CompleteConfigSchema}
      */
     static _config;
 
     /**
-     * Whether the action is running in `dry-run` mode.
-     * 
      * @protected
      * @readonly
      * @static
-     * @type {boolean}
+     * @type {actionTypes.DefaultConfigSchema[actionConstants.DRY_RUN_KEY]}
+     * @see {@link actionConstants.DRY_RUN_KEY}
      */
     static _isDryRun;
 
