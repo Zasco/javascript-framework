@@ -1,4 +1,5 @@
 import * as types from '../src/models/Action.js';
+import * as constants from '../src/constants/action.js';
 import Action from '../src/models/Action.js';
 
 export {
@@ -7,6 +8,12 @@ export {
      * @see {@link types}
      */
     types,
+
+    /**
+     * @since ${NEXT_VERSION}
+     * @see {@link constants}
+     */
+    constants, 
     
     /**
      * @since alpha-5.0.0
