@@ -47,4 +47,4 @@ export const DEFAULT_CONFIG = Object.freeze({
  * @readonly
  * @type {readonly actionTypes.ConfigKey[]}
  */
-export const REQUIRED_CONFIG_KEYS = Object.freeze([]);
+const REQUIRED_CONFIG_KEYS = Object.freeze([]);
