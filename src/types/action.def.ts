@@ -83,19 +83,19 @@ export type DeriveCompleteConfigSchema<ExecuteConfigSchema> = Required<ExecuteCo
 
 // Configuration schemas
 
-//// Validity
+//// Bases
 
 /**
- * A valid configuration schema.
+ * A configuration schema.
  * 
  * @since ${NEXT_VERSION} */
-type ValidConfigSchema = ConfigEntries;
+type ConfigSchema = ConfigEntries;
 
 /**
  * A sub-actions configuration schema.
  * 
  * @since ${NEXT_VERSION} */
-export type SubActionsConfigSchema = Record<ConfigKey, ValidConfigSchema>;
+export type SubActionsConfigSchema = Record<ConfigKey, ConfigSchema>;
 
 
 //// Implementations
@@ -114,7 +114,7 @@ export type DefaultConfigSchema = DeriveDefaultConfigSchema<typeof DEFAULT_CONFI
  * 
  * @since ${NEXT_VERSION}
  */
-type MandatoryConfigSchema = ValidConfigSchema;
+type MandatoryConfigSchema = ConfigSchema;
 
 /**
  * The core configuration schema (action-specific) of the {@link ExecuteConfigSchema}.
