@@ -2,7 +2,7 @@
  * Constants for the abstract `Action` model.
  * Also serves as a model for defining the ones of a concrete implementation.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  */
 
 import * as actionTypes from '../types/action.def.js';
@@ -14,7 +14,7 @@ import * as actionTypes from '../types/action.def.js';
 /**
  * The configuration for sub-actions.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  */
 export const SUB_ACTIONS_CONFIG_KEY = 'subActionsConfig';
 
@@ -23,7 +23,7 @@ export const SUB_ACTIONS_CONFIG_KEY = 'subActionsConfig';
 /**
  * If the action should be executed in `dry-run` mode.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  * @see {@link DEFAULT_CONFIG.isDryRun}
  * @default DEFAULT_CONFIG.isDryRun
  */
@@ -37,13 +37,13 @@ export const DRY_RUN_KEY = 'isDryRun';
  * The default configuration object.
  * Must contain all the defaulted configuration keys.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  * @readonly
  * @see {@link actionTypes.DefaultConfigSchema}
  */
 export const DEFAULT_CONFIG = Object.freeze({
     /**
-     * @since ${NEXT_VERSION}
+     * @since alpha-7.11.0
      * @see {@link DRY_RUN_KEY}
      */
     [DRY_RUN_KEY]: false, 
@@ -53,7 +53,7 @@ export const DEFAULT_CONFIG = Object.freeze({
  * The mandatory configuration keys in the {@link actionTypes.ExecuteConfigSchema|`execute()` configuration object}.
  * Must contain all the mandatory configuration keys.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  * @readonly
  * @type {readonly actionTypes.ConfigKey[]}
  */

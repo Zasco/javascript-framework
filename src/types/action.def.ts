@@ -2,7 +2,7 @@
  * Type definitions for the abstract {@link Action} model.
  * Also serves as a model for defining the ones of a concrete implementation.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  */
 
 import * as utilTypes from "../types/utils.def.js";
@@ -15,7 +15,7 @@ import type Action from "../models/Action.js";
 /**
  * The allowed type for a configuration key.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  */
 export type ConfigKey = string;
 
@@ -23,14 +23,14 @@ export type ConfigKey = string;
 /**
  * The allowed types for a configuration value.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  */
 type ConfigValue = string | number | boolean | object | string[];
 
 /**
  * A configuration schema.
  * 
- * @since ${NEXT_VERSION} */
+ * @since alpha-7.11.0 */
 type ConfigSchema = Record<ConfigKey, ConfigValue>;
 
 
@@ -40,7 +40,7 @@ type ConfigSchema = Record<ConfigKey, ConfigValue>;
  * Derives the {@link DefaultConfigSchema} from a {@link DefaultConfigType}.
  * Widens the types from a {@link DefaultConfigType}.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  */
 export type DeriveDefaultConfigSchema<DefaultConfigType> = utilTypes.WidenLiterals<DefaultConfigType>;
 
@@ -48,7 +48,7 @@ export type DeriveDefaultConfigSchema<DefaultConfigType> = utilTypes.WidenLitera
  * Derives the {@link CoreExecuteConfigSchema} (action-specific) from the {@link DefaultConfigSchema} and {@link MandatoryConfigSchema}.
  * Makes {@link DefaultConfigSchema} partial and all of it's properties {@link utilTypes.Mutable}.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  */
 type DeriveCoreExecuteConfigSchema<TDefaultConfigSchema, TMandatoryConfigSchema> = 
     Partial<utilTypes.Mutable<TDefaultConfigSchema>> 
@@ -58,7 +58,7 @@ type DeriveCoreExecuteConfigSchema<TDefaultConfigSchema, TMandatoryConfigSchema>
 /**
  * Derives the {@link ExecuteConfigSchema} from the {@link DefaultConfigSchema} and {@link MandatoryConfigSchema} and optional {@link SubActionsConfigSchema}.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  */
 export type DeriveExecuteConfigSchema<
     TDefaultConfigSchema, 
@@ -75,7 +75,7 @@ export type DeriveExecuteConfigSchema<
  * Derives the {@link CompleteConfigSchema} from the {@link ExecuteConfigSchema}.
  * Makes all properties from {@link ExecuteConfigSchema} required.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  */
 export type DeriveCompleteConfigSchema<ExecuteConfigSchema> = Required<ExecuteConfigSchema>;
 
@@ -85,7 +85,7 @@ export type DeriveCompleteConfigSchema<ExecuteConfigSchema> = Required<ExecuteCo
 /**
  * The default configuration schema as accessed from {@link Action._DEFAULT_CONFIG}.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  * @see {@link DEFAULT_CONFIG}
  */
 export type DefaultConfigSchema = DeriveDefaultConfigSchema<typeof DEFAULT_CONFIG>;
@@ -94,14 +94,14 @@ export type DefaultConfigSchema = DeriveDefaultConfigSchema<typeof DEFAULT_CONFI
  * The mandatory configuration schema.
  * To be defined for concrete implementations of {@link Action}.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  */
 type MandatoryConfigSchema = ConfigSchema;
 
 /**
  * The core configuration schema (action-specific) of the {@link ExecuteConfigSchema}.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  */
 export type CoreExecuteConfigSchema = DeriveExecuteConfigSchema<
     DefaultConfigSchema, 
@@ -111,13 +111,13 @@ export type CoreExecuteConfigSchema = DeriveExecuteConfigSchema<
 /**
  * A sub-actions configuration schema.
  * 
- * @since ${NEXT_VERSION} */
+ * @since alpha-7.11.0 */
 export type SubActionsConfigSchema = Record<ConfigKey, ConfigSchema>;
 
 /**
  * The configuration schema (with sub-actions config) provided to the {@link Action.execute} method.
  * 
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  */
 export type ExecuteConfigSchema = DeriveExecuteConfigSchema<
     DefaultConfigSchema, 
@@ -128,20 +128,20 @@ export type ExecuteConfigSchema = DeriveExecuteConfigSchema<
 /**
  * The complete configuration schema as stored in {@link Action._config}.
  * 
- * @since ${NEXT_VERSION} */
+ * @since alpha-7.11.0 */
 export type CompleteConfigSchema = DeriveCompleteConfigSchema<CoreExecuteConfigSchema>;
 
 // [TODO] Add file config schema...
 
 // Configuration keys
 
-/** @since ${NEXT_VERSION} */
+/** @since alpha-7.11.0 */
 type DefaultConfigKey = keyof DefaultConfigSchema;
 
-/** @since ${NEXT_VERSION} */
+/** @since alpha-7.11.0 */
 type ExecuteConfigKey = keyof ExecuteConfigSchema;
 
-/** @since ${NEXT_VERSION} */
+/** @since alpha-7.11.0 */
 type CompleteConfigKey = keyof CompleteConfigSchema;
 
 
@@ -149,6 +149,6 @@ type CompleteConfigKey = keyof CompleteConfigSchema;
 
 /**
  * @since alpha-3.0.0
- * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_CONFIG} instead.
+ * @deprecated alpha-7.11.0; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_CONFIG} instead.
  */
 export type DefaultActionConfig = DefaultConfigSchema;

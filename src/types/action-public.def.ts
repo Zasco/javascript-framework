@@ -1,5 +1,5 @@
 /**
- * @since ${NEXT_VERSION}
+ * @since alpha-7.11.0
  * @see {@link actionTypes}
  */
 
@@ -16,11 +16,11 @@ import {
 export {
     // Schema derivation utilities
     
-    /** @since ${NEXT_VERSION} */
+    /** @since alpha-7.11.0 */
     DeriveDefaultConfigSchema, 
-    /** @since ${NEXT_VERSION} */
+    /** @since alpha-7.11.0 */
     DeriveExecuteConfigSchema, 
-    /** @since ${NEXT_VERSION} */
+    /** @since alpha-7.11.0 */
     DeriveCompleteConfigSchema, 
 
 

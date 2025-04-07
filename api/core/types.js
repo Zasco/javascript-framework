@@ -5,7 +5,7 @@ export {
     /** @since alpha-6.0.0 */
     expandedJsTypes, 
 
-    /** @since ${NEXT_VERSION} */
+    /** @since alpha-7.11.0 */
     utilTypes, 
 
 

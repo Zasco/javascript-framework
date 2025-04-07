@@ -19,19 +19,19 @@ export {
 
 /**
  * @since alpha-6.0.0
- * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link constants.SPECIAL_CHARS} instead.
+ * @deprecated alpha-7.11.0; Will be removed in `alpha-8.0.0`; Use {@link constants.SPECIAL_CHARS} instead.
  */
 export const SPECIAL_CHARS = constants.SPECIAL_CHARS;
 
 /**
  * @since alpha-5.0.0
- * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link constants.JS_TYPES} instead.
+ * @deprecated alpha-7.11.0; Will be removed in `alpha-8.0.0`; Use {@link constants.JS_TYPES} instead.
  */
 export const JS_TYPES = constants.JS_TYPES;
 
 /**
  * @since alpha-6.0.0
- * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link constants.EXPANDED_JS_TYPES} instead.
+ * @deprecated alpha-7.11.0; Will be removed in `alpha-8.0.0`; Use {@link constants.EXPANDED_JS_TYPES} instead.
  */
 export const EXPANDED_JS_TYPES = constants.EXPANDED_JS_TYPES;
 

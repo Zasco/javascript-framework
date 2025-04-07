@@ -3,7 +3,7 @@ import * as JS_TYPES from '../../src/constants/js-types.js';
 import * as EXPANDED_JS_TYPES from '../../src/constants/expanded-js-types.js';
 
 export {
-    /** @since ${NEXT_VERSION} */
+    /** @since alpha-7.11.0 */
     SPECIAL_CHARS,
 
     /** @since alpha-5.0.0 */
