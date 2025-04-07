@@ -75,6 +75,12 @@ export type DeriveCompleteConfigSchema<ExecuteConfigSchema> = Required<ExecuteCo
  * @since ${NEXT_VERSION} */
 type ValidConfigSchema = ConfigEntries;
 
+/**
+ * A valid sub-configuration schema.
+ * 
+ * @since ${NEXT_VERSION} */
+export type ValidSubConfigSchema = Record<ConfigKey, ValidConfigSchema>;
+
 
 //// Implementations
 
