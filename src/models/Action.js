@@ -73,7 +73,7 @@ export default class Action {
      * @protected
      * @abstract
      * @static
-     * @param {actionTypes.ValidSubConfigSchema} [subActionsConfig]
+     * @param {actionTypes.BaseSubActionsConfigSchema} [subActionsConfig]
      * @returns {boolean} Indicates whether the action-specific logic executed successfully
      * @throws {Error} When called directly without implementation in child class
      */
@@ -87,7 +87,7 @@ export default class Action {
      * @since alpha-3.0.0
      * @static
      * @param {actionTypes.ExecuteConfigSchema} config The configuration to merge with defaults
-     * @param {actionTypes.ValidSubConfigSchema} [subActionsConfig] The configuration for sub-actions
+     * @param {actionTypes.BaseSubActionsConfigSchema} [subActionsConfig] The configuration for sub-actions
      * @returns {boolean} Whether the action executed successfully
      */
     static execute(config, subActionsConfig = undefined) {
