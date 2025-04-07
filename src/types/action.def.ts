@@ -131,6 +131,7 @@ export type ExecuteConfigSchema = DeriveExecuteConfigSchema<
  * @since ${NEXT_VERSION} */
 export type CompleteConfigSchema = DeriveCompleteConfigSchema<CoreExecuteConfigSchema>;
 
+// [TODO] Add file config schema...
 
 // Configuration keys
 
