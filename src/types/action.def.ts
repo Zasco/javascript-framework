@@ -79,7 +79,7 @@ type ValidConfigSchema = ConfigEntries;
  * A sub-actions configuration schema.
  * 
  * @since ${NEXT_VERSION} */
-export type BaseSubActionsConfigSchema = Record<ConfigKey, ValidConfigSchema>;
+export type SubActionsConfigSchema = Record<ConfigKey, ValidConfigSchema>;
 
 
 //// Implementations
