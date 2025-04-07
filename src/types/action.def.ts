@@ -46,14 +46,30 @@ type ConfigEntries = Record<ConfigKey, ConfigValue>;
 export type DeriveDefaultConfigSchema<DefaultConfigType> = utilTypes.WidenLiterals<DefaultConfigType>;
 
 /**
- * Derives the {@link ExecuteConfigSchema} from the {@link DefaultConfigSchema} and {@link MandatoryConfigSchema}.
+ * Derives the {@link CoreExecuteConfigSchema} (action-specific) from the {@link DefaultConfigSchema} and {@link MandatoryConfigSchema}.
  * Makes {@link DefaultConfigSchema} partial and all of it's properties {@link utilTypes.Mutable}.
  * 
  * @since ${NEXT_VERSION}
  */
-export type DeriveExecuteConfigSchema<TDefaultConfigSchema, TMandatoryConfigSchema> = 
+type DeriveCoreExecuteConfigSchema<TDefaultConfigSchema, TMandatoryConfigSchema> = 
     Partial<utilTypes.Mutable<TDefaultConfigSchema>> 
     & TMandatoryConfigSchema
+;
+
+/**
+ * Derives the {@link ExecuteConfigSchema} from the {@link DefaultConfigSchema} and {@link MandatoryConfigSchema} and optional {@link SubActionsConfigSchema}.
+ * 
+ * @since ${NEXT_VERSION}
+ */
+export type DeriveExecuteConfigSchema<
+    TDefaultConfigSchema, 
+    TMandatoryConfigSchema, 
+    TSubActionsConfigSchema = undefined
+> = 
+    DeriveCoreExecuteConfigSchema<TDefaultConfigSchema, TMandatoryConfigSchema> 
+    & (TSubActionsConfigSchema extends undefined 
+        ? {} 
+        : Partial<{[SUB_ACTIONS_CONFIG_KEY]: TSubActionsConfigSchema}>)
 ;
 
 /**
@@ -101,20 +117,25 @@ export type DefaultConfigSchema = DeriveDefaultConfigSchema<typeof DEFAULT_CONFI
 type MandatoryConfigSchema = ValidConfigSchema;
 
 /**
- * The core configuration schema (action-specific) provided to the {@link Action.execute} method.
+ * The core configuration schema (action-specific) of the {@link ExecuteConfigSchema}.
  * 
  * @since ${NEXT_VERSION}
  */
-export type CoreExecuteConfigSchema = DeriveExecuteConfigSchema<DefaultConfigSchema, MandatoryConfigSchema>;
+export type CoreExecuteConfigSchema = DeriveExecuteConfigSchema<
+    DefaultConfigSchema, 
+    MandatoryConfigSchema
+>;
 
 /**
  * The configuration schema (with sub-actions config) provided to the {@link Action.execute} method.
  * 
  * @since ${NEXT_VERSION}
  */
-export type ExecuteConfigSchema = CoreExecuteConfigSchema
-    & Partial<{[SUB_ACTIONS_CONFIG_KEY]: BaseSubActionsConfigSchema}>
-;
+export type ExecuteConfigSchema = DeriveExecuteConfigSchema<
+    DefaultConfigSchema, 
+    MandatoryConfigSchema, 
+    SubActionsConfigSchema
+>;
 
 /**
  * The complete configuration schema as stored in {@link Action._config}.
