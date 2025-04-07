@@ -82,17 +82,6 @@ export type DeriveCompleteConfigSchema<ExecuteConfigSchema> = Required<ExecuteCo
 
 // Configuration schemas
 
-//// Bases
-
-/**
- * A sub-actions configuration schema.
- * 
- * @since ${NEXT_VERSION} */
-export type SubActionsConfigSchema = Record<ConfigKey, ConfigSchema>;
-
-
-//// Implementations
-
 /**
  * The default configuration schema as accessed from {@link Action._DEFAULT_CONFIG}.
  * 
@@ -118,6 +107,12 @@ export type CoreExecuteConfigSchema = DeriveExecuteConfigSchema<
     DefaultConfigSchema, 
     MandatoryConfigSchema
 >;
+
+/**
+ * A sub-actions configuration schema.
+ * 
+ * @since ${NEXT_VERSION} */
+export type SubActionsConfigSchema = Record<ConfigKey, ConfigSchema>;
 
 /**
  * The configuration schema (with sub-actions config) provided to the {@link Action.execute} method.
