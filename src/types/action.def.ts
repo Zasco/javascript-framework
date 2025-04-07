@@ -101,17 +101,26 @@ export type DefaultConfigSchema = DeriveDefaultConfigSchema<typeof DEFAULT_CONFI
 type MandatoryConfigSchema = ValidConfigSchema;
 
 /**
- * The configuration schema provided to the {@link Action.execute} method.
+ * The core configuration schema (action-specific) provided to the {@link Action.execute} method.
  * 
  * @since ${NEXT_VERSION}
  */
-export type ExecuteConfigSchema = DeriveExecuteConfigSchema<DefaultConfigSchema, MandatoryConfigSchema>;
+export type CoreExecuteConfigSchema = DeriveExecuteConfigSchema<DefaultConfigSchema, MandatoryConfigSchema>;
+
+/**
+ * The configuration schema (with sub-actions config) provided to the {@link Action.execute} method.
+ * 
+ * @since ${NEXT_VERSION}
+ */
+export type ExecuteConfigSchema = CoreExecuteConfigSchema
+    & Partial<{[SUB_ACTIONS_CONFIG_KEY]: BaseSubActionsConfigSchema}>
+;
 
 /**
  * The complete configuration schema as stored in {@link Action._config}.
  * 
  * @since ${NEXT_VERSION} */
-export type CompleteConfigSchema = DeriveCompleteConfigSchema<ExecuteConfigSchema>;
+export type CompleteConfigSchema = DeriveCompleteConfigSchema<CoreExecuteConfigSchema>;
 
 
 // Configuration keys
