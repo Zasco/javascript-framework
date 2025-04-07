@@ -6,7 +6,7 @@
  */
 
 import * as utilTypes from "../types/utils.def.js";
-import { DEFAULT_CONFIG } from "../constants/action.js";
+import { DEFAULT_CONFIG, SUB_ACTIONS_CONFIG_KEY } from "../constants/action.js";
 import type Action from "../models/Action.js";
 
 
