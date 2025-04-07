@@ -15,12 +15,18 @@ type FileName = string;
 type KeyName = string;
 
 /** @since alpha-7.10.0 */
-type FieldValue = string;
+type FieldValue = 
+    | string 
+    | boolean 
+    | null
+    | FieldValue[] 
+    | { [key: string]: FieldValue }
+;
 
 /** @since alpha-7.10.0 */
 export type Schema = {
-    [NAME_KEY]: FieldValue, 
-    [VERSION_KEY]: FieldValue, 
+    [NAME_KEY]: string, 
+    [VERSION_KEY]: string, 
 } & Record<KeyName, FieldValue>;
 
 /**

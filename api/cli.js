@@ -1,39 +1,47 @@
-import BaseCliWrapper from '../src/models/BaseCliWrapper.js';
-/**
- * @since alpha-5.0.0
- * @see {@link BaseCliWrapper}
- */
-export const BaseWrapper = BaseCliWrapper;
-
-import * as cliWrapperTypes from '../src/types/cli-wrapper-types.js';
-/**
- * @since alpha-7.4.0
- * @see {@link cliWrapperTypes}
- */
-export const wrapperTypes = cliWrapperTypes;
-
-import * as cliWrapperConstants from '../src/constants/cli-wrapper.js';
-/**
- * @since alpha-7.4.0
- * @see {@link cliWrapperConstants}
- */
-export const wrapperConstants = cliWrapperConstants;
+import BaseWrapper from '../src/models/BaseCliWrapper.js';
+import * as wrapperTypes from '../src/types/cli-wrapper.def.js';
+import * as wrapperConstants from '../src/constants/cli-wrapper.js';
 
 
 // Deprecated
 
-import * as dargsTypesImport from '../src/types/dargs-types.js';
-/**
- * @since alpha-7.2.0
- * @deprecated alpha-7.10.1; Will be removed in `alpha-8.0.0`; No replacement, stop using.
- * @see {@link dargsTypesImport}
- */
-export const dargsTypes = dargsTypesImport;
+import * as dargsTypes from '../src/types/dargs.def.js';
+import * as dargsConstants from '../src/constants/dargs.js';
 
-import * as dargsConstantsImport from '../src/constants/dargs.js';
-/**
- * @since alpha-7.2.0
- * @deprecated alpha-7.10.1; Will be removed in `alpha-8.0.0`; No replacement, stop using.
- * @see {@link dargsConstantsImport}
- */
-export const dargsConstants = dargsConstantsImport;
+
+export {
+    /**
+     * @since alpha-5.0.0
+     * @see {@link BaseWrapper}
+     */
+    BaseWrapper,
+    
+    /**
+     * @since alpha-7.4.0
+     * @see {@link wrapperTypes}
+     */
+    wrapperTypes,
+    
+    /**
+     * @since alpha-7.4.0
+     * @see {@link wrapperConstants}
+     */
+    wrapperConstants,
+    
+    
+    // Deprecated
+    
+    /**
+     * @since alpha-7.2.0
+     * @deprecated alpha-7.10.1; Will be removed in `alpha-8.0.0`; No replacement, stop using.
+     * @see {@link dargsTypes}
+     */
+    dargsTypes,
+    
+    /**
+     * @since alpha-7.2.0
+     * @deprecated alpha-7.10.1; Will be removed in `alpha-8.0.0`; No replacement, stop using.
+     * @see {@link dargsConstants}
+     */
+    dargsConstants,
+};

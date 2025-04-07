@@ -1,10 +1,8 @@
 import { traits } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
-/**
- * @since alpha-3.0.0
- * @typedef {{'isDryRun': boolean}} DefaultActionConfig
- */
+import * as actionTypes from '../types/action.def.js'
+import * as actionConstants from '../constants/action.js'
 
 /**
  * A base class with standardized execution flow and configuration handling for actions.
@@ -19,33 +17,37 @@ export default class Action {
      * @protected
      * @readonly
      * @static
-     * @type {DefaultActionConfig}
+     * @type {actionTypes.DefaultConfigSchema}
+     * @see {@link actionConstants.DEFAULT_CONFIG} & {@link actionTypes.DefaultConfigSchema}
      */
-    static get _DEFAULT_CONFIG() {
-        return {
-            /** @see {@link Action._isDryRun} */
-            isDryRun: false, 
-        }
-    }
+    static _DEFAULT_CONFIG = actionConstants.DEFAULT_CONFIG;
 
     /**
      * Storage for the merged configuration.
      * 
      * @protected
      * @static
-     * @type {DefaultActionConfig}
+     * @type {actionTypes.CompleteConfigSchema}
+     * @see {@link actionTypes.CompleteConfigSchema}
      */
     static _config;
 
+
+    // Placeholder properties for proxied getters (IDE support).
+    // Defaulted
+    
     /**
-     * Whether the action is running in `dry-run` mode.
-     * 
      * @protected
      * @readonly
      * @static
-     * @type {boolean}
+     * @type {actionTypes.DefaultConfigSchema[actionConstants.DRY_RUN_KEY]}
+     * @see {@link actionConstants.DRY_RUN_KEY}
      */
     static _isDryRun;
+
+    // Mandatory
+    // None in base class.
+
 
     /** @throws If instantiated (see {@link traits.AbstractClassTrait.abstractClassConstructor}) */
     constructor() {
@@ -73,16 +75,18 @@ export default class Action {
         this._config;
     }
 
+    // [TODO] Improve typing here...
     /**
      * Defines action-specific logic in child classes.
      * 
      * @protected
      * @abstract
      * @static
+     * @param {actionTypes.SubActionsConfigSchema} [subActionsConfig]
      * @returns {boolean} Indicates whether the action-specific logic executed successfully
      * @throws {Error} When called directly without implementation in child class
      */
-    static _executeAction() {
+    static _executeAction(subActionsConfig = undefined) {
         throw ErrorUtils.getStdAbstractMethodErr(this._executeAction.name, Action.name, this.name);
     }
 
@@ -91,15 +95,17 @@ export default class Action {
      * 
      * @since alpha-3.0.0
      * @static
-     * @param {Object} config The configuration to merge with defaults
+     * @param {actionTypes.ExecuteConfigSchema} config The configuration to merge with defaults
+     * @param {actionTypes.SubActionsConfigSchema} [subActionsConfig] The configuration for sub-actions
      * @returns {boolean} Whether the action executed successfully
      */
-    static execute(config) {
+    static execute(config, subActionsConfig = undefined) {
         // [TODO] Add async support in here...
         // [TODO] Add error handling with `ErrorHandler`...
         // [TODO] Implement validation prior to execution...
         try {
             const ProxiedAction = new Proxy(this, {
+                // [TODO] Add parameter types (infered from `get())...
                 get(target, prop) {
                     const stringProp = String(prop);
                     
@@ -117,19 +123,24 @@ export default class Action {
                     if (descriptor?.get) return descriptor.get.call(ProxiedAction);
                     
                     // It's a regular method
+                    // @ts-expect-error See types TODO higher.
                     const value = target[prop];
                     return typeof value === 'function' 
                         ? value.bind(ProxiedAction) 
-                        : value;
+                        : value
+                    ;
                 }
             });
+
+            const { subActionsConfig: extractedSubActionsConfig, ...definedConfig } = config;
             
-            ProxiedAction._config = { ...ProxiedAction._DEFAULT_CONFIG, ...config };
+            // [TODO] Ensure config is properly typed to be merged into _config...
+            ProxiedAction._config = { ...ProxiedAction._DEFAULT_CONFIG, ...definedConfig };
             
             console.log(`Executing "${ProxiedAction.name}"${ProxiedAction._isDryRun ? ' [DRY-RUN]' : ''}...`);
             console.log('.....');
             
-            const result = ProxiedAction._executeAction();
+            const result = ProxiedAction._executeAction(subActionsConfig ?? extractedSubActionsConfig);
             
             console.log(`Execution of "${ProxiedAction.name}" completed!`);
             console.log('-----');

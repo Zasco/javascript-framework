@@ -1,23 +1,30 @@
+/**
+ * A test to ensure all expected exports from the 'javascript-framework/module' are available.
+ * Simply uses IDE validation.
+ * 
+ * @since alpha-7.9.0
+ */
+
 // action.js exports
 import { types as actionTypes } from 'javascript-framework/module/action';
 import { Action } from 'javascript-framework/module/action';
 
 // cli.js exports
+import { wrapperTypes } from 'javascript-framework/module/cli';
+import { wrapperConstants } from 'javascript-framework/module/cli';
 import { BaseWrapper } from 'javascript-framework/module/cli';
 import { dargsTypes } from 'javascript-framework/module/cli';
 import { dargsConstants } from 'javascript-framework/module/cli';
-import { wrapperTypes } from 'javascript-framework/module/cli';
-import { wrapperConstants } from 'javascript-framework/module/cli';
 
 // core.js exports
-import { SPECIAL_CHARS } from 'javascript-framework/module/core';
-import { JS_TYPES } from 'javascript-framework/module/core';
-import { EXPANDED_JS_TYPES } from 'javascript-framework/module/core';
-import { TypeUtils } from 'javascript-framework/module/core';
-import { EXPANDED_TYPES } from 'javascript-framework/module/core';
 import { types as coreTypes } from 'javascript-framework/module/core';
 import { constants as coreConstants } from 'javascript-framework/module/core';
 import { traits } from 'javascript-framework/module/core';
+import { TypeUtils } from 'javascript-framework/module/core';
+import { SPECIAL_CHARS } from 'javascript-framework/module/core';
+import { JS_TYPES } from 'javascript-framework/module/core';
+import { EXPANDED_JS_TYPES } from 'javascript-framework/module/core';
+import { EXPANDED_TYPES } from 'javascript-framework/module/core';
 
 // error.js exports
 import { types as errorTypes } from 'javascript-framework/module/error';

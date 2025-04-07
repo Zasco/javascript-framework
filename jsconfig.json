@@ -8,7 +8,6 @@
         "strictNullChecks": true,
         "noImplicitAny": true,
         "noUnusedParameters": false,
-        "allowImportingTsExtensions": true,
     },
     "include": [
         "src/**/*",

@@ -45,6 +45,11 @@ npm verbose cwd <root project path>
 
 ## Roadmap
 ### Planned
+#### **alpha-7.12.0**
+**Improvements in `Action` model**
+- Implement config validation.
+- Automatic command generation from configuration (see [`commander`](https://github.com/tj/commander.js)).
+
 #### **alpha-7.X.X**
 - Move the [`Build`](#build) section of `README` to a reusable common location.
 - Add feature documentation about `BaseCliWrapper`.

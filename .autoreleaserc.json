@@ -1,0 +1,7 @@
+{
+  "subActionsConfig": {
+    "replaceVersionPlaceholders": {
+        "updatedDirectories": ["src", "api", "tests"]
+    }
+  }
+}

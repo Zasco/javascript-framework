@@ -1,5 +1,5 @@
-import { ConvertedOptions } from './dargs-types.d.ts';
-import { ConvertedOptions as ExtractedConvertedOptions } from './dargs-extracted-types.d.ts';
+import { ConvertedOptions } from '../src/types/dargs.def.js';
+import { ConvertedOptions as ExtractedConvertedOptions } from '../src/types/dargs-extracted.def.js';
 
 // Type assertion to verify compatibility between custom types and extracted types
 type _ConvertedOptionsMatchCheck = ConvertedOptions extends ExtractedConvertedOptions ? true : false;
