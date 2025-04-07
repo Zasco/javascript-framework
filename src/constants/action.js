@@ -20,7 +20,7 @@ import * as actionTypes from '../types/action.def.js';
 export const DRY_RUN_KEY = 'isDryRun';
 
 // Mandatory
-// None in base class.
+// (None in base class)
 
 
 /**
