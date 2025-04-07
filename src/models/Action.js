@@ -32,6 +32,10 @@ export default class Action {
      */
     static _config;
 
+
+    // Placeholder properties for proxied getters (IDE support).
+    // Defaulted
+    
     /**
      * @protected
      * @readonly
@@ -40,6 +44,10 @@ export default class Action {
      * @see {@link actionConstants.DRY_RUN_KEY}
      */
     static _isDryRun;
+
+    // Mandatory
+    // None in base class.
+
 
     /** @throws If instantiated (see {@link traits.AbstractClassTrait.abstractClassConstructor}) */
     constructor() {
@@ -67,6 +75,7 @@ export default class Action {
         this._config;
     }
 
+    // [TODO] Improve typing here...
     /**
      * Defines action-specific logic in child classes.
      * 
@@ -94,6 +103,7 @@ export default class Action {
         // [TODO] Implement validation prior to execution...
         try {
             const ProxiedAction = new Proxy(this, {
+                // [TODO] Add parameter types (infered from `get())...
                 get(target, prop) {
                     const stringProp = String(prop);
                     
@@ -111,13 +121,16 @@ export default class Action {
                     if (descriptor?.get) return descriptor.get.call(ProxiedAction);
                     
                     // It's a regular method
+                    // @ts-expect-error See types TODO higher.
                     const value = target[prop];
                     return typeof value === 'function' 
                         ? value.bind(ProxiedAction) 
-                        : value;
+                        : value
+                    ;
                 }
             });
             
+            // [TODO] Ensure config is properly typed to be merged into _config...
             ProxiedAction._config = { ...ProxiedAction._DEFAULT_CONFIG, ...config };
             
             console.log(`Executing "${ProxiedAction.name}"${ProxiedAction._isDryRun ? ' [DRY-RUN]' : ''}...`);

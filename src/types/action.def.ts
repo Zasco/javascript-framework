@@ -124,6 +124,6 @@ type CompleteConfigKey = keyof CompleteConfigSchema;
 
 /**
  * @since alpha-3.0.0
- * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Stop using.
+ * @deprecated ${NEXT_VERSION}; Will be removed in `alpha-8.0.0`; Use {@link DEFAULT_CONFIG} instead.
  */
 export type DefaultActionConfig = DefaultConfigSchema;
