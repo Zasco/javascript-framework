@@ -28,11 +28,10 @@ export type ConfigKey = string;
 type ConfigValue = string | number | boolean | object | string[];
 
 /**
- * The entries of a configuration schema.
+ * A configuration schema.
  * 
- * @since ${NEXT_VERSION}
- */
-type ConfigEntries = Record<ConfigKey, ConfigValue>;
+ * @since ${NEXT_VERSION} */
+type ConfigSchema = Record<ConfigKey, ConfigValue>;
 
 
 // Schema derivation utilities
@@ -84,12 +83,6 @@ export type DeriveCompleteConfigSchema<ExecuteConfigSchema> = Required<ExecuteCo
 // Configuration schemas
 
 //// Bases
-
-/**
- * A configuration schema.
- * 
- * @since ${NEXT_VERSION} */
-type ConfigSchema = ConfigEntries;
 
 /**
  * A sub-actions configuration schema.
