@@ -1,10 +1,8 @@
 import { traits } from 'javascript-framework/module/core';
 import { Utils as ErrorUtils } from 'javascript-framework/module/error';
 
-/**
- * @since alpha-3.0.0
- * @typedef {{'isDryRun': boolean}} DefaultActionConfig
- */
+import * as actionTypes from '../types/action.def.js'
+import * as actionConstants from '../constants/action.js'
 
 /**
  * A base class with standardized execution flow and configuration handling for actions.
@@ -19,31 +17,27 @@ export default class Action {
      * @protected
      * @readonly
      * @static
-     * @type {DefaultActionConfig}
+     * @type {actionTypes.DefaultConfigSchema}
+     * @see {@link actionConstants.DEFAULT_CONFIG} & {@link actionTypes.DefaultConfigSchema}
      */
-    static get _DEFAULT_CONFIG() {
-        return {
-            /** @see {@link Action._isDryRun} */
-            isDryRun: false, 
-        }
-    }
+    static _DEFAULT_CONFIG = actionConstants.DEFAULT_CONFIG;
 
     /**
      * Storage for the merged configuration.
      * 
      * @protected
      * @static
-     * @type {DefaultActionConfig}
+     * @type {actionTypes.CompleteConfigSchema}
+     * @see {@link actionTypes.CompleteConfigSchema}
      */
     static _config;
 
     /**
-     * Whether the action is running in `dry-run` mode.
-     * 
      * @protected
      * @readonly
      * @static
-     * @type {boolean}
+     * @type {actionTypes.DefaultConfigSchema[actionConstants.DRY_RUN_KEY]}
+     * @see {@link actionConstants.DRY_RUN_KEY}
      */
     static _isDryRun;
 
@@ -91,7 +85,7 @@ export default class Action {
      * 
      * @since alpha-3.0.0
      * @static
-     * @param {Object} config The configuration to merge with defaults
+     * @param {actionTypes.ExecuteConfigSchema} config The configuration to merge with defaults
      * @returns {boolean} Whether the action executed successfully
      */
     static execute(config) {
