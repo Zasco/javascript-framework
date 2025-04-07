@@ -119,13 +119,15 @@ export default class Action {
                         : value;
                 }
             });
+
+            const { subActionsConfig: extractedSubActionsConfig, ...definedConfig } = config;
             
-            ProxiedAction._config = { ...ProxiedAction._DEFAULT_CONFIG, ...config };
+            ProxiedAction._config = { ...ProxiedAction._DEFAULT_CONFIG, ...definedConfig };
             
             console.log(`Executing "${ProxiedAction.name}"${ProxiedAction._isDryRun ? ' [DRY-RUN]' : ''}...`);
             console.log('.....');
             
-            const result = ProxiedAction._executeAction(subActionsConfig);
+            const result = ProxiedAction._executeAction(subActionsConfig ?? extractedSubActionsConfig);
             
             console.log(`Execution of "${ProxiedAction.name}" completed!`);
             console.log('-----');
