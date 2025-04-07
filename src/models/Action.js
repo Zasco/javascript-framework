@@ -82,10 +82,11 @@ export default class Action {
      * @protected
      * @abstract
      * @static
+     * @param {actionTypes.SubActionsConfigSchema} [subActionsConfig]
      * @returns {boolean} Indicates whether the action-specific logic executed successfully
      * @throws {Error} When called directly without implementation in child class
      */
-    static _executeAction() {
+    static _executeAction(subActionsConfig = undefined) {
         throw ErrorUtils.getStdAbstractMethodErr(this._executeAction.name, Action.name, this.name);
     }
 
@@ -95,9 +96,10 @@ export default class Action {
      * @since alpha-3.0.0
      * @static
      * @param {actionTypes.ExecuteConfigSchema} config The configuration to merge with defaults
+     * @param {actionTypes.SubActionsConfigSchema} [subActionsConfig] The configuration for sub-actions
      * @returns {boolean} Whether the action executed successfully
      */
-    static execute(config) {
+    static execute(config, subActionsConfig = undefined) {
         // [TODO] Add async support in here...
         // [TODO] Add error handling with `ErrorHandler`...
         // [TODO] Implement validation prior to execution...
@@ -129,14 +131,16 @@ export default class Action {
                     ;
                 }
             });
+
+            const { subActionsConfig: extractedSubActionsConfig, ...definedConfig } = config;
             
             // [TODO] Ensure config is properly typed to be merged into _config...
-            ProxiedAction._config = { ...ProxiedAction._DEFAULT_CONFIG, ...config };
+            ProxiedAction._config = { ...ProxiedAction._DEFAULT_CONFIG, ...definedConfig };
             
             console.log(`Executing "${ProxiedAction.name}"${ProxiedAction._isDryRun ? ' [DRY-RUN]' : ''}...`);
             console.log('.....');
             
-            const result = ProxiedAction._executeAction();
+            const result = ProxiedAction._executeAction(subActionsConfig ?? extractedSubActionsConfig);
             
             console.log(`Execution of "${ProxiedAction.name}" completed!`);
             console.log('-----');
