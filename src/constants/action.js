@@ -7,6 +7,14 @@
 
 import * as actionTypes from '../types/action.def.js';
 
+/**
+ * The configuration for sub-actions.
+ * 
+ * @since ${NEXT_VERSION}
+ */
+export const SUB_ACTIONS_CONFIG_KEY = 'subActionsConfig';
+
+
 // Configuration keys
 // Defaulted
 
