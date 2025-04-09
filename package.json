@@ -21,7 +21,7 @@
   },
   "scripts": {
     "version": "coding-utils.auto-release ./.autoreleaserc.json",
-    "postinstall": "coding-utils.generate-d-ts-shells -d ./src/types/"
+    "postinstall": "generate-d-ts-shells ./src/types/"
   },
   "dependencies": {
     "is-what": "~5.2.0",
