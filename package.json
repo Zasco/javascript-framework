@@ -25,7 +25,8 @@
   },
   "dependencies": {
     "is-what": "~5.2.0",
-    "dargs": "~8.1.0"
+    "dargs": "~8.1.0",
+    "d-ts-shell-generator": "github:zasco/d-ts-shell-generator#0.1.0"
   },
   "devDependencies": {
     "coding-utils": "github:zasco/coding-utils#a8.1.2"
